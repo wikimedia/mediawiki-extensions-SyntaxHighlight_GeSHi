@@ -3,14 +3,14 @@ This extension allows source code to be syntax highlighted on the wiki pages.
 == Installation ==
 
 Download the latest stable build from http://geshi.org/, and unzip it into
-extensions/Highlight/ directory. (Note: the zip file creates a sub-directory
-called geshi/, and places a file geshi.php there)
+extensions/SyntaxHighlight_GeSHi/ directory. (Note: the zip file creates a 
+sub-directory called geshi/, and places a file geshi.php there)
 
 Add this line to your LocalSettings.php:
 
-	require_once("extensions/Highlight/SyntaxHighlight.php");
+	require_once("extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php");
 
-If needed, change the following line on SyntaxHighlight.php to suit the path of
+If needed, change the following line on SyntaxHighlight_GeSHi.php to suit the path of
 your geshi.php file
     
 	require_once( 'geshi/geshi.php' );
@@ -37,7 +37,4 @@ for detailed information to use some of the parameters.
 * lang;		Defines the language 
 * line;		Corresponds to enable_line_numbers method on GeSHi
 * start;	Corresponds to start_line_numbers_at method on GeSHi
-* case;		Corresponds to set_case_keywords method on GeSHi
-* tab;		Corresponds to set_tab_width method on GeSHi
-* header;	Corresponds to set_header_type method on GeSHi
 * strict;	Corresponds to enable_strict_mode method on GeSHi

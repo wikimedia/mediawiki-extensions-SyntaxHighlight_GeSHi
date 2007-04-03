@@ -41,49 +41,49 @@
 if( !defined( 'MEDIAWIKI' ) )
 	die();
 
-$wgExtensionFunctions[] = 'syntaxSetup';
-$wgExtensionCredits['parserhook']['SyntaxHighlight'] = array(
+$wgExtensionFunctions[] = 'syntaxHighlightSetup';
+$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'name'          => 'SyntaxHighlight',
 	'author'        => 'Brion Vibber',
 	'description'   => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Higlighter]',
 );
-$wgHooks['LoadAllMessages'][] = 'syntaxLoadMessages';
+$wgHooks['LoadAllMessages'][] = 'syntaxHighlightLoadMessages';
 
-function syntaxSetup() {
+function syntaxHighlightSetup() {
 	global $wgParser;
-	$wgParser->setHook( 'source', 'syntaxHook' );
+	$wgParser->setHook( 'source', 'syntaxHighlightHook' );
 }
 
-function syntaxLoadMessages() {
+function syntaxHighlightLoadMessages() {
 	static $loaded = false;
 	if ( $loaded ) {
 		return;
 	}
 	global $wgMessageCache;
-	require_once( dirname( __FILE__ ) . '/SyntaxHighlight.i18n.php' );
+	require_once( dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.i18n.php' );
 	foreach( efSyntaxHighlightMessages() as $lang => $messages )
 		$wgMessageCache->addMessages( $messages, $lang );
 }
 
-function syntaxHook( $text, $params = array(), $parser ) {
+function syntaxHighlightHook( $text, $params = array(), $parser ) {
 	if ( !class_exists( 'GeSHi' ) ) {
 		require( 'geshi/geshi.php' );
 	}	
-	syntaxLoadMessages();
+	syntaxHighlightLoadMessages();
 	return isset( $params['lang'] )
-		? syntaxFormat( trim( $text ), $params, $parser )
-		: syntaxHelp();
+		? syntaxHighlightFormat( trim( $text ), $params, $parser )
+		: syntaxHighlightHelp();
 }
 
-function syntaxFormat( $text, $params, $parser ) {
+function syntaxHighlightFormat( $text, $params, $parser ) {
 	$lang = $params['lang'];
 	if ( !preg_match( '/^[A-Za-z_0-9-]*$/', $lang ) ) {
-		return syntaxHelp( wfMsgHtml( 'syntaxhighlight-err-language' ) );
+		return syntaxHighlightHelp( wfMsgHtml( 'syntaxhighlight-err-language' ) );
 	}
 
 	$geshi = new GeSHi( $text, $lang );
 	if ( $geshi->error == GESHI_ERROR_NO_SUCH_LANG ) {
-		return syntaxHelp( wfMsgHtml( 'syntaxhighlight-err-language' ) );
+		return syntaxHighlightHelp( wfMsgHtml( 'syntaxhighlight-err-language' ) );
 	}
 
 	$geshi->set_encoding( 'UTF-8' );
@@ -107,7 +107,7 @@ function syntaxFormat( $text, $params, $parser ) {
 	$error = $geshi->error();
 
 	if ( $error ) {
-		return syntaxHelp( $error );
+		return syntaxHighlightHelp( $error );
 	} else {
 		$geshi->set_overall_class( "source-$lang" );
 		$parser->mOutput->addHeadItem( 
@@ -123,13 +123,13 @@ function syntaxFormat( $text, $params, $parser ) {
  * Return a syntax help message
  * @param string $error HTML error message
  */
-function syntaxHelp( $error = false ) {
-	return syntaxError( 
+function syntaxHighlightHelp( $error = false ) {
+	return syntaxHighlightError( 
 		( $error ? "<p>$error</p>" : '' ) . 
 		'<p>' . wfMsg( 'syntaxhighlight-specify' ) . ' ' .
 		'<samp>&lt;source lang=&quot;html&quot;&gt;...&lt;/source&gt;</samp></p>' .
 		'<p>' . wfMsg( 'syntaxhighlight-supported' ) . '</p>' .
-		syntaxFormatList( syntaxLanguageList() ) );
+		syntaxHighlightFormatList( syntaxHighlightLanguageList() ) );
 }
 
 /**
@@ -137,23 +137,23 @@ function syntaxHelp( $error = false ) {
  * @param string $contents HTML error message
  * @return HTML
  */
-function syntaxError( $contents ) {
+function syntaxHighlightError( $contents ) {
 	return "<div style=\"border:solid red 1px; padding:.5em;\">$contents</div>";
 }
 
-function syntaxFormatList( $list ) {
+function syntaxHighlightFormatList( $list ) {
 	return empty( $list )
 		? wfMsg( 'syntaxhighlight-err-loading' )
 		: '<p style="padding:0em 1em;">' .
-			implode( ', ', array_map( 'syntaxListItem', $list ) ) .
+			implode( ', ', array_map( 'syntaxHighlightListItem', $list ) ) .
 			'</p>';
 }
 
-function syntaxListItem( $item ) {
+function syntaxHighlightListItem( $item ) {
 	return "<samp>" . htmlspecialchars( $item ) . "</samp>";
 }
 
-function syntaxLanguageList() {
+function syntaxHighlightLanguageList() {
 	$langs = array();
 	$langroot = @opendir( GESHI_LANG_ROOT );
 	if( $langroot ) {
