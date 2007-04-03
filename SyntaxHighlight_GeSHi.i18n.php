@@ -17,6 +17,14 @@ function efSyntaxHighlightMessages() {
 'syntaxhighlight-err-language' => 'Invalid language.',
 ),
 
+/* German (Raymond) */
+'de' => array(
+'syntaxhighlight-specify' => 'Die gewünschte Sprache muss wie folgt definiert werden:',
+'syntaxhighlight-supported' => 'Unterstützte Sprachen für die Syntax-Hervorhebung:',
+'syntaxhighlight-err-loading' => '(Fehler beim Laden der Sprachenliste)',
+'syntaxhighlight-err-language' => 'Ungültige Sprache.',
+),
+
 /* French */
 'fr' => array(
 'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
