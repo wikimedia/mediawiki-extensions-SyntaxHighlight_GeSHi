@@ -61,14 +61,14 @@ function syntaxHighlightLoadMessages() {
 	}
 	global $wgMessageCache;
 	require_once( dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.i18n.php' );
-	foreach( efSyntaxHighlightMessages() as $lang => $messages )
+	foreach( efSyntaxHighlight_GeSHiMessages() as $lang => $messages )
 		$wgMessageCache->addMessages( $messages, $lang );
 }
 
 function syntaxHighlightHook( $text, $params = array(), $parser ) {
 	if ( !class_exists( 'GeSHi' ) ) {
 		require( 'geshi/geshi.php' );
-	}	
+	}
 	syntaxHighlightLoadMessages();
 	return isset( $params['lang'] )
 		? syntaxHighlightFormat( trim( $text ), $params, $parser )
@@ -110,8 +110,8 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 		return syntaxHighlightHelp( $error );
 	} else {
 		$geshi->set_overall_class( "source-$lang" );
-		$parser->mOutput->addHeadItem( 
-			"<style><!--\n" .		
+		$parser->mOutput->addHeadItem(
+			"<style><!--\n" .
 			$geshi->get_stylesheet( false ) .
 			"--></style>\n",
 			"source-$lang" );
@@ -124,8 +124,8 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
  * @param string $error HTML error message
  */
 function syntaxHighlightHelp( $error = false ) {
-	return syntaxHighlightError( 
-		( $error ? "<p>$error</p>" : '' ) . 
+	return syntaxHighlightError(
+		( $error ? "<p>$error</p>" : '' ) .
 		'<p>' . wfMsg( 'syntaxhighlight-specify' ) . ' ' .
 		'<samp>&lt;source lang=&quot;html&quot;&gt;...&lt;/source&gt;</samp></p>' .
 		'<p>' . wfMsg( 'syntaxhighlight-supported' ) . '</p>' .

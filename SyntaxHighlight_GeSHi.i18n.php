@@ -6,7 +6,7 @@
  * @addtogroup Extensions
  */
 
-function efSyntaxHighlightMessages() {
+function efSyntaxHighlight_GeSHiMessages() {
 	return array(
 
 /* English (Brion Vibber) */
@@ -37,6 +37,7 @@ function efSyntaxHighlightMessages() {
 'syntaxhighlight-specify' => 'Anda harus menentukan suatu bahasa seperti ini:',
 'syntaxhighlight-supported' => 'Bahasa-bahasa yang didukung oleh pewarnaan sintaks:',
 'syntaxhighlight-err-loading' => '(kesalahan pemuatan daftar bahasa yang didukung)',
+'syntaxhighlight-err-language' => 'Bahasa tak sah.',
 ),
 
 /* Italian (BrokenArrow) */
