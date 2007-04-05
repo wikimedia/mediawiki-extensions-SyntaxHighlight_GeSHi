@@ -90,14 +90,22 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 	$geshi->enable_classes();
 	$geshi->set_overall_class( "source source-$lang" );
 
+	if ( isset( $params['enclose'] ) && $params['enclose'] == 'div' ) {
+		$enclose = GESHI_HEADER_DIV;
+	} else {
+		$enclose = GESHI_HEADER_PRE;
+	}
+
 	if ( isset( $params['line'] ) ) {
+		// Pre mode with line numbers generates invalid HTML, need div mode
+		// http://sourceforge.net/tracker/index.php?func=detail&aid=1201963&group_id=114997&atid=670231
+		$enclose = GESHI_HEADER_DIV;
 		$geshi->enable_line_numbers( GESHI_FANCY_LINE_NUMBERS );
 	}
 	if ( isset( $params['start'] ) ) {
 		$geshi->start_line_numbers_at( $params['start'] );
 	}
-	// Header type not optional because MW doesn't like <div> mode
-	// $geshi->set_header_type( GESHI_HEADER_PRE );
+	$geshi->set_header_type( $enclose );
 
 	if ( isset( $params['strict'] ) ) {
 		$geshi->enable_strict_mode();
@@ -109,11 +117,19 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 	if ( $error ) {
 		return syntaxHighlightHelp( $error );
 	} else {
+		// Armour for doBlockLevels
+		if ( $enclose == GESHI_HEADER_DIV ) {
+			$out = str_replace( "\n", '', $out );
+		}
+
+		// Per-language class for stylesheet
 		$geshi->set_overall_class( "source-$lang" );
 		$parser->mOutput->addHeadItem(
-			"<style><!--\n" .
+			"<style type=\"text/css\">/*<![CDATA[*/\n" .
+			".source-$lang {line-height: normal;}\n" .
+			".source-$lang li {line-height: normal;}\n" .
 			$geshi->get_stylesheet( false ) .
-			"--></style>\n",
+			"/*]]>*/</style>\n",
 			"source-$lang" );
 		return $out;
 	}
