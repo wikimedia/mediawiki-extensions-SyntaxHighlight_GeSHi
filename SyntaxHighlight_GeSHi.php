@@ -46,6 +46,7 @@ $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'name'          => 'SyntaxHighlight',
 	'author'        => 'Brion Vibber',
 	'description'   => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Higlighter]',
+	'url'           => 'http://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
 );
 $wgHooks['LoadAllMessages'][] = 'syntaxHighlightLoadMessages';
 
