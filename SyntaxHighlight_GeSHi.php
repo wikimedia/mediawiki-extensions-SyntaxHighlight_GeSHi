@@ -126,12 +126,26 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 
 		// Per-language class for stylesheet
 		$geshi->set_overall_class( "source-$lang" );
+
+		// Enable [[MediaWiki:GeSHi.css]] (bug #9951)
+		$sitecss = '';
+		global $wgUseSiteCss;
+		if( $wgUseSiteCss ) {
+			global $wgUser, $wgSquidMaxage ;
+			$query = "usemsgcache=yes&action=raw&ctype=text/css&smaxage=$wgSquidMaxage";
+			$sk = $wgUser->getSkin();
+			$sitecss =
+				"<style type=\"text/css\">/*<![CDATA[*/\n" .
+				'@import "' . $sk->makeNSUrl( 'GeSHi.css', $query, NS_MEDIAWIKI ) . "\";\n" .
+				"/*]]>*/</style>\n" ;
+		}
+
 		$parser->mOutput->addHeadItem(
 			"<style type=\"text/css\">/*<![CDATA[*/\n" .
 			".source-$lang {line-height: normal;}\n" .
 			".source-$lang li {line-height: normal;}\n" .
 			$geshi->get_stylesheet( false ) .
-			"/*]]>*/</style>\n",
+			"/*]]>*/</style>\n$sitecss",
 			"source-$lang" );
 		return $out;
 	}
