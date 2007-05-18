@@ -90,6 +90,7 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 	$geshi->set_encoding( 'UTF-8' );
 	$geshi->enable_classes();
 	$geshi->set_overall_class( "source source-$lang" );
+	$geshi->enable_keyword_links(false);
 
 	if ( isset( $params['enclose'] ) && $params['enclose'] == 'div' ) {
 		$enclose = GESHI_HEADER_DIV;
