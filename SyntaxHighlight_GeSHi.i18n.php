@@ -15,14 +15,16 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-supported' => 'Supported languages for syntax highlighting:',
 'syntaxhighlight-err-loading' => '(error loading support language list)',
 'syntaxhighlight-err-language' => 'Invalid language.',
+'GeSHi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 ),
 
 /* German (Raymond) */
 'de' => array(
-'syntaxhighlight-specify' => 'Die gewünschte Sprache muss wie folgt definiert werden:',
-'syntaxhighlight-supported' => 'Unterstützte Sprachen für die Syntax-Hervorhebung:',
-'syntaxhighlight-err-loading' => '(Fehler beim Laden der Sprachenliste)',
+'syntaxhighlight-specify'      => 'Die gewünschte Sprache muss wie folgt definiert werden:',
+'syntaxhighlight-supported'    => 'Unterstützte Sprachen für die Syntax-Hervorhebung:',
+'syntaxhighlight-err-loading'  => '(Fehler beim Laden der Sprachenliste)',
 'syntaxhighlight-err-language' => 'Ungültige Sprache.',
+'GeSHi.css'                    => '/* CSS in dieser MediaWiki-Systemnachricht wird auf die GeSHi-Syntaxhervorhebung angewendet */',
 ),
 
 /* French */
