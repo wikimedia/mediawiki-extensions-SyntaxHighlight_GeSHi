@@ -128,7 +128,7 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 		// Per-language class for stylesheet
 		$geshi->set_overall_class( "source-$lang" );
 
-		// Enable [[MediaWiki:GeSHi.css]] (bug #9951)
+		// Enable [[MediaWiki:Geshi.css]] (bug #9951)
 		$sitecss = '';
 		global $wgUseSiteCss;
 		if( $wgUseSiteCss ) {
@@ -137,7 +137,7 @@ function syntaxHighlightFormat( $text, $params, $parser ) {
 			$sk = $wgUser->getSkin();
 			$sitecss =
 				"<style type=\"text/css\">/*<![CDATA[*/\n" .
-				'@import "' . $sk->makeNSUrl( 'GeSHi.css', $query, NS_MEDIAWIKI ) . "\";\n" .
+				'@import "' . $sk->makeNSUrl( 'Geshi.css', $query, NS_MEDIAWIKI ) . "\";\n" .
 				"/*]]>*/</style>\n" ;
 		}
 
