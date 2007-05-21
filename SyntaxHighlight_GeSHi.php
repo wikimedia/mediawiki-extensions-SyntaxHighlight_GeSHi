@@ -58,12 +58,13 @@ function syntaxHighlightSetup() {
 function syntaxHighlightLoadMessages() {
 	static $loaded = false;
 	if ( $loaded ) {
-		return;
+		return true;
 	}
 	global $wgMessageCache;
 	require_once( dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.i18n.php' );
 	foreach( efSyntaxHighlight_GeSHiMessages() as $lang => $messages )
 		$wgMessageCache->addMessages( $messages, $lang );
+	return true;
 }
 
 function syntaxHighlightHook( $text, $params = array(), $parser ) {
