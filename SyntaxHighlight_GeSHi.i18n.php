@@ -50,6 +50,14 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-err-loading' => '(errore nel caricamento dell\'elenco dei linguaggi supportati)',
 ),
 
+/* Japanese */
+'ja' => array(
+'syntaxhighlight-specify' => '以下のように言語を指定する必要があります:',
+'syntaxhighlight-supported' => 'シンタックスハイライト機能に対応している言語は以下の通りです:',
+'syntaxhighlight-err-loading' => '（対応言語のロード時にエラーが発生しました）',
+'syntaxhighlight-err-language' => '不正な言語名です。',
+),
+
 /* nld / Dutch (Siebrand Mazeland) */
 'nl' => array(
 'syntaxhighlight-specify' => 'Geef een taal op zoals:',
