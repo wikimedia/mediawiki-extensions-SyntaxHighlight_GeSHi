@@ -65,6 +65,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
 ),
 
+/* Portuguese (Lugusto) */
+'pt' => array(
+'syntaxhighlight-specify'      => 'Você precisa especificar uma linguagem, tal como:',
+'syntaxhighlight-supported'    => 'Linguagens suportadas no realce de sintaxe:',
+'syntaxhighlight-err-loading'  => '(erro ao carregar a lista de linguagens suportadas)',
+'syntaxhighlight-err-language' => 'Linguagem inválida.',
+'geshi.css'                    => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
+),
+
 /* Chinese (China) (Shinjiman) */
 'zh-cn' => array(
 'syntaxhighlight-specify' => '您需要指定一种语言，像这样:',
