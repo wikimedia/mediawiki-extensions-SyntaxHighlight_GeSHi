@@ -7,7 +7,7 @@
  */
 
 function efSyntaxHighlight_GeSHiMessages() {
-	return array(
+	$messages = array(
 
 /* English (Brion Vibber) */
 'en' => array(
@@ -56,6 +56,31 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-supported' => 'シンタックスハイライト機能に対応している言語は以下の通りです:',
 'syntaxhighlight-err-loading' => '（対応言語のロード時にエラーが発生しました）',
 'syntaxhighlight-err-language' => '不正な言語名です。',
+),
+
+/* Kazakh Cyrillic (AlefZet) */
+'kk-kz' => array(
+'syntaxhighlight-specify' => 'Тілді былайша көрсетуіңіз қажет:',
+'syntaxhighlight-supported' => 'Синтаксисі көмескі жарықталатын сүйемелденген тілдер:',
+'syntaxhighlight-err-loading' => '(сүйемелденген тілдер тізімін жүктеу қатесі)',
+'syntaxhighlight-err-language' => 'Жарамсыз тіл.',
+'geshi.css' => '/* Мындағы CSS әмірлері GeSHi синтаксисті көмескі жарықтауға қолданылады */',
+),
+/* Kazakh Latin (AlefZet) */
+'kk-tr' => array(
+'syntaxhighlight-specify' => 'Tildi bılaýşa körsetwiñiz qajet:',
+'syntaxhighlight-supported' => 'Sïntaksïsi kömeski jarıqtalatın süýemeldengen tilder:',
+'syntaxhighlight-err-loading' => '(süýemeldengen tilder tizimin jüktew qatesi)',
+'syntaxhighlight-err-language' => 'Jaramsız til.',
+'geshi.css' => '/* Mındağı CSS ämirleri GeSHi sïntaksïsti kömeski jarıqtawğa qoldanıladı */',
+),
+/* Kazakh Arabic (AlefZet) */
+'kk-cn' => array(
+'syntaxhighlight-specify' => 'تٸلدٸ بىلايشا كٶرسەتۋٸڭٸز قاجەت:',
+'syntaxhighlight-supported' => 'سينتاكسيسٸ كٶمەسكٸ جارىقتالاتىن سٷيەمەلدەنگەن تٸلدەر:',
+'syntaxhighlight-err-loading' => '(سٷيەمەلدەنگەن تٸلدەر تٸزٸمٸن جٷكتەۋ قاتەسٸ)',
+'syntaxhighlight-err-language' => 'جارامسىز تٸل.',
+'geshi.css' => '/* مىنداعى CSS ٵمٸرلەرٸ GeSHi سينتاكسيستٸ كٶمەسكٸ جارىقتاۋعا قولدانىلادى */',
 ),
 
 /* nld / Dutch (Siebrand Mazeland) */
@@ -110,6 +135,12 @@ function efSyntaxHighlight_GeSHiMessages() {
 ),
 
 	);
+
+	/* Kazakh default, fallback to kk-kz */
+	$messages['kk'] = $messages['kk-kz'];
+
+	return $messages; 
+
 }
 
 ?>
