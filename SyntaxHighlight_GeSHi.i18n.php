@@ -99,6 +99,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 'geshi.css'                    => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
 ),
 
+/* Russian */
+'ru' => array(
+'syntaxhighlight-specify' => 'Вы должны указать язык следующим образом:',
+'syntaxhighlight-supported' => 'Поддерживаемые языки:',
+'syntaxhighlight-err-loading' => '(невозможно загрузить список языков)',
+'syntaxhighlight-err-language' => 'Неправильный язык.',
+'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
+),
+
 /* Chinese (China) (Shinjiman) */
 'zh-cn' => array(
 'syntaxhighlight-specify' => '您需要指定一种语言，像这样:',
