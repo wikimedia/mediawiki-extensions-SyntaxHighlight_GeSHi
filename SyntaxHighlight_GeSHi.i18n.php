@@ -104,7 +104,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-specify' => 'Вы должны указать язык следующим образом:',
 'syntaxhighlight-supported' => 'Поддерживаемые языки:',
 'syntaxhighlight-err-loading' => '(невозможно загрузить список языков)',
-'syntaxhighlight-err-language' => 'Неправильный язык.',
+'syntaxhighlight-err-language' => 'Указан неподдерживаемый язык.',
 'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 ),
 
