@@ -77,7 +77,7 @@ class SyntaxHighlight_GeSHi {
 	 * @param OutputPage $output
 	 * @return bool
 	 */
-	public static function viewHook( &$text, $title, $output ) {
+	public static function viewHook( $text, $title, $output ) {
 		// Determine the language
 		preg_match( '!\.(css|js)$!u', $title->getText(), $matches );
 		$lang = $matches[1] == 'css' ? 'css' : 'javascript';
@@ -88,7 +88,7 @@ class SyntaxHighlight_GeSHi {
 			if( !$geshi->error() ) {
 				// Done
 				$output->addHeadItem( "source-$lang", self::buildHeadItem( $geshi ) );
-				$text = $out;
+				$output->addHtml( "<div dir=\"ltr\">{$out}</div>" );
 				return false;
 			}
 		}
