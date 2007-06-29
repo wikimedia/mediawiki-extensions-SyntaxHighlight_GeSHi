@@ -13,7 +13,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 'en' => array(
 'syntaxhighlight-specify' => 'You need to specify a language like this:',
 'syntaxhighlight-supported' => 'Supported languages for syntax highlighting:',
-'syntaxhighlight-err-loading' => '(error loading support language list)',
+'syntaxhighlight-err-loading' => '(error loading supported language list)',
 'syntaxhighlight-err-language' => 'Invalid language.',
 'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 ),
