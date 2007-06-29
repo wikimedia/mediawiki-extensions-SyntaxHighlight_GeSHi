@@ -6,8 +6,9 @@ for updated informations:
 
 == Installation ==
 
-Download the latest stable build from http://geshi.org/, and unzip it into
-extensions/SyntaxHighlight_GeSHi/ directory. (Note: the zip file creates a 
+Download the latest stable build from
+http://sourceforge.net/project/showfiles.php?group_id=114997, and unzip it into
+your extensions/SyntaxHighlight_GeSHi/ directory. (Note: the zip file creates a 
 sub-directory called geshi/, and places a file geshi.php there)
 
 Add this line to your LocalSettings.php:
