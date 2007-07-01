@@ -69,34 +69,6 @@ class SyntaxHighlight_GeSHi {
 	}
 	
 	/**
-	 * Hook into Article::view() to provide syntax highlighting for
-	 * custom CSS and JavaScript pages
-	 *
-	 * @param string $text
-	 * @param Title $title
-	 * @param OutputPage $output
-	 * @return bool
-	 */
-	public static function viewHook( $text, $title, $output ) {
-		// Determine the language
-		preg_match( '!\.(css|js)$!u', $title->getText(), $matches );
-		$lang = $matches[1] == 'css' ? 'css' : 'javascript';
-		// Attempt to format
-		$geshi = self::prepare( $text, $lang );
-		if( $geshi instanceof GeSHi ) {
-			$out = $geshi->parse_code();
-			if( !$geshi->error() ) {
-				// Done
-				$output->addHeadItem( "source-$lang", self::buildHeadItem( $geshi ) );
-				$output->addHtml( "<div dir=\"ltr\">{$out}</div>" );
-				return false;
-			}
-		}
-		// Bottle out
-		return true;
-	}
-
-	/**
 	 * Initialise a GeSHi object to format some code, performing
 	 * common setup for all our uses of it
 	 *
