@@ -49,6 +49,7 @@ $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 );
 
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.class.php';
+$wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
 $wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
 
 /**
