@@ -166,9 +166,8 @@ class SyntaxHighlight_GeSHi {
 		$langs = self::getSupportedLanguages();
 		$list = array();
 		if( count( $langs ) > 0 ) {
-			for( $i = 0; $i < count( $langs ); $i++ ) {
-				if( preg_match( '!/([^\.]+)\.php$!u', $langs[$i], $m ) )
-					$list[] = '<samp>' . $m[1] . '</samp>';
+			foreach( $langs as $lang ) {
+				$list[] = '<samp>' . htmlspecialchars( $lang ) . '</samp>';
 			}
 			return '<p style="padding: 0em 1em;">' . implode( ', ', $list ) . '</p>';
 		} else {
@@ -184,7 +183,10 @@ class SyntaxHighlight_GeSHi {
 	private static function getSupportedLanguages() {
 		if( !is_array( self::$languages ) ) {
 			self::initialise();
-			self::$languages = glob( GESHI_LANG_ROOT . "/*.php" );
+			self::$languages = array();
+			foreach( glob( GESHI_LANG_ROOT . "/*.php" ) as $file ) {
+				self::$languages[] = basename( $file, '.php' );
+			}
 			sort( self::$languages );
 		}
 		return self::$languages;
