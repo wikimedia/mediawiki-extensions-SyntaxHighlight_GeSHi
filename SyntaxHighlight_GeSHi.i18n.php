@@ -108,6 +108,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 ),
 
+/* Swedish */
+'sv' => array(
+'syntaxhighlight-specify' => 'Du måste ange vilket språk som används, så här:',
+'syntaxhighlight-supported' => 'Det finns stöd för följande språk:',
+'syntaxhighlight-err-loading' => '(fel vid laddning av listan över stödda språk)',
+'syntaxhighlight-err-language' => 'Ogiltigt språk.',
+'geshi.css' => '/* CSS som skrivs här används för syntax highlighting med GeSHI */',
+),
+
 /* Cantonese (Shinjiman) */
 'yue' => array(
 'syntaxhighlight-specify' => '你需要指定一種語言，好似咁:',
@@ -150,6 +159,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 	return $messages; 
 
 }
+
 
 
 
