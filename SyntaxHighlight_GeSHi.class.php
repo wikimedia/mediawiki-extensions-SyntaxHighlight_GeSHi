@@ -130,13 +130,16 @@ class SyntaxHighlight_GeSHi {
 		$css[] = ".source-$lang {line-height: normal;}";
 		$css[] = ".source-$lang li {line-height: normal;}";
 		$css[] = $geshi->get_stylesheet( false );
+		$css[] = '/*]]>*/';
+		$css[] = '</style>';
 		if( $wgUseSiteCss ) {
 			$title = Title::makeTitle( NS_MEDIAWIKI, 'Geshi.css' );
 			$q = "usemsgcache=yes&action=raw&ctype=text/css&smaxage={$wgSquidMaxage}";
+			$css[] = '<style type="text/css">/*<![CDATA[*/';
 			$css[] = '@import "' . $title->getLocalUrl( $q ) . '";';
+			$css[] = '/*]]>*/';
+			$css[] = '</style>';
 		}
-		$css[] = '/*]]>*/';
-		$css[] = '</style>';
 		return implode( "\n", $css );
 	}
 	
