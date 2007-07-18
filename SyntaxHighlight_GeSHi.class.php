@@ -64,7 +64,7 @@ class SyntaxHighlight_GeSHi {
 				$out = str_replace( "\n", '', $out );
 			// Register CSS
 			$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
-			return $out;
+			return '<div dir="ltr">'.$out.'</div>';
 		}
 	}
 	
@@ -127,7 +127,7 @@ class SyntaxHighlight_GeSHi {
 		global $wgUseSiteCss, $wgSquidMaxage;
 		$lang = $geshi->language;
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
-		$css[] = ".source-$lang {direction: ltr; line-height: normal;}";
+		$css[] = ".source-$lang {line-height: normal;}";
 		$css[] = ".source-$lang li {line-height: normal;}";
 		$css[] = $geshi->get_stylesheet( false );
 		$css[] = '/*]]>*/';
