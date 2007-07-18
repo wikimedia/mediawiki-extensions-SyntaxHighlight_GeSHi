@@ -127,7 +127,7 @@ class SyntaxHighlight_GeSHi {
 		global $wgUseSiteCss, $wgSquidMaxage;
 		$lang = $geshi->language;
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
-		$css[] = ".source-$lang {line-height: normal;}";
+		$css[] = ".source-$lang {direction: ltr; line-height: normal;}";
 		$css[] = ".source-$lang li {line-height: normal;}";
 		$css[] = $geshi->get_stylesheet( false );
 		$css[] = '/*]]>*/';
