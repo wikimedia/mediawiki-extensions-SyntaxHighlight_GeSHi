@@ -27,6 +27,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 'geshi.css'                    => '/* CSS in dieser MediaWiki-Systemnachricht wird auf die GeSHi-Syntaxhervorhebung angewendet */',
 ),
 
+/* Estonian [[et:Kasutaja:M2s17]] */
+'et' => array(
+'syntaxhighlight-specify' => 'Sa pead täpsustama keelt nõnda:',
+'syntaxhighlight-supported' => 'Süntaksi esiletoomise on toetatud järgnevates keeltes:',
+'syntaxhighlight-err-loading' => '(toetatud keelte loetelu laadimisel esines viga)',
+'syntaxhighlight-err-language' => 'antud keel on mittekehtiv',
+'geshi.css' => '/* CSS mis on asetatud siia, määrab GeSHi süntaksi esiletoomise stiili */',
+),
+
 /* French */
 'fr' => array(
 'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
