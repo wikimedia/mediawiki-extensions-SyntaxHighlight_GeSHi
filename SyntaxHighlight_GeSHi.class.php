@@ -199,15 +199,29 @@ class SyntaxHighlight_GeSHi {
 	 * Initialise messages and ensure the GeSHi class is loaded
 	 */
 	private static function initialise() {
-		global $wgMessageCache;
 		if( !self::$initialised ) {
-			require_once( dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.i18n.php' );
-			foreach( efSyntaxHighlight_GeSHiMessages() as $lang => $messages )
-				$wgMessageCache->addMessages( $messages, $lang );
+			self::loadMessages();
 			if( !class_exists( 'GeSHi' ) )
 				require( 'geshi/geshi.php' );
 			self::$initialised = true;
 		}
+		return true;
+	}
+	
+	/**
+	 * Load extension messages
+	 *
+	 * @return bool
+	 */
+	public static function loadMessages() {
+		static $done = false;
+		if( !$done ) {
+			global $wgMessageCache;
+			require_once( dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.i18n.php' );
+			foreach( efSyntaxHighlight_GeSHiMessages() as $lang => $messages )
+				$wgMessageCache->addMessages( $messages, $lang );
+		}
+		return true;
 	}
 
 }
