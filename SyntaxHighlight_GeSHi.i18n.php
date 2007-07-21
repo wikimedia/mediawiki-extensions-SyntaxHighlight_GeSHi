@@ -168,7 +168,3 @@ function efSyntaxHighlight_GeSHiMessages() {
 	return $messages; 
 
 }
-
-
-
-
