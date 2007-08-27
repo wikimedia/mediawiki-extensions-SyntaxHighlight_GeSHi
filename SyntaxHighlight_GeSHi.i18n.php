@@ -94,9 +94,10 @@ function efSyntaxHighlight_GeSHiMessages() {
 
 /* nld / Dutch (Siebrand Mazeland) */
 'nl' => array(
-'syntaxhighlight-specify' => 'Geef een taal op zoals:',
+'syntaxhighlight-specify' => 'Geef een taal als volgt op:',
 'syntaxhighlight-supported' => 'Ondersteunde talen voor syntaxismarkering:',
 'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
+'syntaxhighlight-err-language' => 'Onjuiste taal.',
 ),
 
 /* Portuguese (Lugusto) */
