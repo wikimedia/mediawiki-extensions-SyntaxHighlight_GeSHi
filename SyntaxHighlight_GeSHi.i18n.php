@@ -159,6 +159,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 	/* Kazakh default, fallback to kk-kz */
 	$messages['kk'] = $messages['kk-kz'];
 	/* Chinese defaults, fallback to zh-hans or zh-hant */
+	$messages['zh'] = $messages['zh-hans'];
 	$messages['zh-cn'] = $messages['zh-hans'];
 	$messages['zh-hk'] = $messages['zh-hant'];
 	$messages['zh-sg'] = $messages['zh-hans'];
