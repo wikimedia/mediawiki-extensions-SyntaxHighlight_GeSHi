@@ -44,6 +44,14 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-err-language' => 'Language invalide.',
 ),
 
+'hsb' => array(
+'syntaxhighlight-specify' => 'Dyrbiš rěč takle definować:',
+'syntaxhighlight-supported' => 'Podpěrowane rěče za syntaksowe wuzběhnjenje:',
+'syntaxhighlight-err-loading' => '(Zmylk při začitanju lisćiny rěčow)',
+'syntaxhighlight-err-language' => 'Njepłaćiwa rěč.',
+'geshi.css' => '/* CSS w tutej zdźělence so na syntaksowe wuzběhnjenje GeSHi nałoži */',
+),
+
 /* Indonesian (Ivan Lanin) */
 'id' => array(
 'syntaxhighlight-specify' => 'Anda harus menentukan suatu bahasa seperti ini:',
