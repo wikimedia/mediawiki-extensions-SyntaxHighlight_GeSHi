@@ -25,11 +25,11 @@ class SyntaxHighlight_GeSHi {
 		$text = trim( $text );
 		// Validate language
 		if( isset( $args['lang'] ) ) {
-			$lang = $args['lang'];
+			$lang = strtolower( $args['lang'] );
 		} else {
 			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
 		}
-		if( !preg_match( '/^[A-Za-z_0-9-]*$/', $lang ) )
+		if( !preg_match( '/^[a-z_0-9-]*$/', $lang ) )
 			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
 		$geshi = self::prepare( $text, $lang );
 		if( !$geshi instanceof GeSHi )
