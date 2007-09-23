@@ -18,6 +18,10 @@ function efSyntaxHighlight_GeSHiMessages() {
 'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 ),
 
+'ar' => array(
+'syntaxhighlight-err-language' => 'لغة غير صحيحة.',
+),
+
 /* German (Raymond) */
 'de' => array(
 'syntaxhighlight-specify'      => 'Die gewünschte Sprache muss wie folgt definiert werden:',
@@ -106,6 +110,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-supported' => 'Ondersteunde talen voor syntaxismarkering:',
 'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
 'syntaxhighlight-err-language' => 'Onjuiste taal.',
+'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi syntax highlighting */',
 ),
 
 /* Portuguese (Lugusto) */
