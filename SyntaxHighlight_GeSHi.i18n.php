@@ -19,6 +19,8 @@ function efSyntaxHighlight_GeSHiMessages() {
 ),
 
 'ar' => array(
+'syntaxhighlight-specify' => 'يجب عليك تحديد لغة مثل هذه:',
+'syntaxhighlight-supported' => 'اللغات المدعومة لتظليل الصياغة:',
 'syntaxhighlight-err-language' => 'لغة غير صحيحة.',
 ),
 
