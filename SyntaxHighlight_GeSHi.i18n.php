@@ -115,6 +115,14 @@ function efSyntaxHighlight_GeSHiMessages() {
 'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi syntax highlighting */',
 ),
 
+'pl' => array(
+'syntaxhighlight-specify' => 'Musisz wybrać język w następujący sposób:',
+'syntaxhighlight-supported' => 'Języki obsługiwane w podświetlaniu składni:',
+'syntaxhighlight-err-loading' => '(błąd przy wczytywaniu listy obsługiwanych języków)',
+'syntaxhighlight-err-language' => 'Nieprawidłowy język.',
+'geshi.css' => '/* CSS umieszczony tutaj będzie zastosowany do kolorowania składni GeSHi  */',
+),
+
 /* Portuguese (Lugusto) */
 'pt' => array(
 'syntaxhighlight-specify'      => 'Você precisa especificar uma linguagem, tal como:',
