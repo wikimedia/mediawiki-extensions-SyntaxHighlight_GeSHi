@@ -21,7 +21,9 @@ function efSyntaxHighlight_GeSHiMessages() {
 'ar' => array(
 'syntaxhighlight-specify' => 'يجب عليك تحديد لغة مثل هذه:',
 'syntaxhighlight-supported' => 'اللغات المدعومة لتظليل الصياغة:',
+'syntaxhighlight-err-loading' => '(خطأ في تحميل قائمة اللغات المدعومة)',
 'syntaxhighlight-err-language' => 'لغة غير صحيحة.',
+'geshi.css' => '/* الأنماط المتراصة CSS المعروضة هنا ستطبق على GeSHi syntax highlighting */',
 ),
 
 /* German (Raymond) */
