@@ -121,7 +121,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 'syntaxhighlight-specify' => 'Musisz wybrać język w następujący sposób:',
 'syntaxhighlight-supported' => 'Języki obsługiwane w podświetlaniu składni:',
 'syntaxhighlight-err-loading' => '(błąd przy wczytywaniu listy obsługiwanych języków)',
-'syntaxhighlight-err-language' => 'Nieprawidłowy język.',
+'syntaxhighlight-err-language' => 'Niepoprawny język.',
 'geshi.css' => '/* CSS umieszczony tutaj będzie zastosowany do kolorowania składni GeSHi  */',
 ),
 
