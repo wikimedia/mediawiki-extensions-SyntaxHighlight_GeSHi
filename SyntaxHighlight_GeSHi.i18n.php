@@ -68,6 +68,14 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* CSS w tutej zdźělence so na syntaksowe wuzběhnjenje GeSHi nałoži */',
 ),
 
+'hu' => array(
+	'syntaxhighlight-specify' => 'Meg kell adnod egy nyelvet az alábbi módon:',
+	'syntaxhighlight-supported' => 'Támogatott programozási nyelvek:',
+	'syntaxhighlight-err-loading' => '(hiba történt a támogatott nyelvek listájának betöltése közben)',
+	'syntaxhighlight-err-language' => 'Érvénytelen nyelv.',
+	'geshi.css' => '/* Az itt elhelyezett CSS-t fogja alkalmazni a GeSHi szintaxiskiemelő */',
+),
+
 /* Indonesian (Ivan Lanin) */
 'id' => array(
 	'syntaxhighlight-specify' => 'Anda harus menentukan suatu bahasa seperti ini:',
@@ -125,6 +133,13 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
 	'syntaxhighlight-err-language' => 'Onjuiste taal.',
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi syntax highlighting */',
+),
+
+'oc' => array(
+	'syntaxhighlight-specify' => 'Devètz especificar un lengatge coma aquò :',
+	'syntaxhighlight-supported' => 'Lengatges suportats per la coloracion sintaxica :',
+	'syntaxhighlight-err-loading' => '(error en cargant la lista dels lengatges suportats)',
+	'syntaxhighlight-err-language' => 'Lengatge invalid.',
 ),
 
 'pl' => array(
