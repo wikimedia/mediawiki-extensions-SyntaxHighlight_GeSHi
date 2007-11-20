@@ -44,6 +44,10 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* CSS mis on asetatud siia, määrab GeSHi süntaksi esiletoomise stiili */',
 ),
 
+'eu' => array(
+	'syntaxhighlight-err-language' => 'Baliogabeko hizkuntza.',
+),
+
 /* French */
 'fr' => array(
 	'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
