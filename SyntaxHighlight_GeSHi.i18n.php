@@ -65,6 +65,14 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 ),
 
+'hr' => array(
+	'syntaxhighlight-specify' => 'Molimo navedite jezik na slijedeći način:',
+	'syntaxhighlight-supported' => 'Jezici podržani za bojanje sintakse:',
+	'syntaxhighlight-err-loading' => '(greška pri učitavanju popisa podržanih jezika)',
+	'syntaxhighlight-err-language' => 'Nevaljani jezik.',
+	'geshi.css' => '/* CSS kod napisan ovdje će biti primijenjen na GeSHi bojanje sintakse */',
+),
+
 'hsb' => array(
 	'syntaxhighlight-specify' => 'Dyrbiš rěč takle definować:',
 	'syntaxhighlight-supported' => 'Podpěrowane rěče za syntaksowe wuzběhnjenje:',
