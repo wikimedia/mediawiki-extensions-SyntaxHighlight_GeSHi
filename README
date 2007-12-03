@@ -15,8 +15,15 @@ Add this line to your LocalSettings.php:
 
 	require_once("extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php");
 
-If needed, change the following line on SyntaxHighlight_GeSHi.php to suit the path of
-your geshi.php file
+If your MediaWiki software is obtained via Subversion, then the latest build 
+can be downloaded via the Subversion repository. First of all, is to switch 
+into your extensions/SyntaxHighlight_GeSHi/ directory. Then invoke the command 
+to obtain the latest build of the GeSHi code:
+
+	svn checkout http://geshi.svn.sourceforge.net/svnroot/geshi/trunk/geshi-1.0.X/src/ geshi
+
+If needed, change the following line on SyntaxHighlight_GeSHi.class.php to 
+suit the path of your geshi.php file
     
 	require_once( 'geshi/geshi.php' );
 
