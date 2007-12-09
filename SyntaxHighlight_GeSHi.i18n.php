@@ -53,7 +53,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
 	'syntaxhighlight-supported' => 'Langages supportés pour la coloration syntaxique :',
 	'syntaxhighlight-err-loading' => '(erreur en chargeant la liste des langages supportés)',
-	'syntaxhighlight-err-language' => 'Language invalide.',
+	'syntaxhighlight-err-language' => 'Langage invalide',
 	'geshi.css' => '/* Le code CSS inséré ici sera appliqué par GeSHi pour la coloration syntaxique. */',
 ),
 
