@@ -65,6 +65,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 ),
 
+/* Hebrew (Rotem Liss) */
+'he' => array(
+	'syntaxhighlight-specify'      => 'עליכם לציין שפה באופן הבא:',
+	'syntaxhighlight-supported'    => 'שפות נתמכות:',
+	'syntaxhighlight-err-loading'  => '(שגיאה בטעינת הרשימה של השפות הנתמכות)',
+	'syntaxhighlight-err-language' => 'שפה שגויה.',
+	'geshi.css'                    => '/* סגנונות CSS שייכתבו כאן יפעלו על התגית source */',
+),
+
 'hr' => array(
 	'syntaxhighlight-specify' => 'Molimo navedite jezik na slijedeći način:',
 	'syntaxhighlight-supported' => 'Jezici podržani za bojanje sintakse:',
