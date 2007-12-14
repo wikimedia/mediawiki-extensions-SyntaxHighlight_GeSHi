@@ -64,7 +64,7 @@ class SyntaxHighlight_GeSHi {
 				$out = str_replace( "\n", '', $out );
 			// Register CSS
 			$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
-			return '<div dir="ltr">' . $out . '</div>';
+			return '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
 		}
 	}
 	
