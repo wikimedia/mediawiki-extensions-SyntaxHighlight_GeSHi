@@ -157,6 +157,17 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi syntax highlighting */',
 ),
 
+/** Norwegian (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+'no' => array(
+	'syntaxhighlight-specify'      => 'Du må oppgi et språk slik:',
+	'syntaxhighlight-supported'    => 'Støttede språk for syntaksutheving:',
+	'syntaxhighlight-err-loading'  => '(feil under last av liste over støttede språk)',
+	'syntaxhighlight-err-language' => 'Ugyldig språk.',
+	'geshi.css'                    => '/* CSS plassert her gjelder GeSHi syntaksutheving */',
+),
+
 'oc' => array(
 	'syntaxhighlight-specify' => 'Devètz especificar un lengatge coma aquò :',
 	'syntaxhighlight-supported' => 'Lengatges suportats per la coloracion sintaxica :',
