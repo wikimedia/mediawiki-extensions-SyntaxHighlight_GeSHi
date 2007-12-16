@@ -168,11 +168,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css'                    => '/* CSS plassert her gjelder GeSHi syntaksutheving */',
 ),
 
+/** Occitan (Occitan)
+ * @author Cedric31
+ */
 'oc' => array(
-	'syntaxhighlight-specify' => 'Devètz especificar un lengatge coma aquò :',
-	'syntaxhighlight-supported' => 'Lengatges suportats per la coloracion sintaxica :',
-	'syntaxhighlight-err-loading' => '(error en cargant la lista dels lengatges suportats)',
+	'syntaxhighlight-specify'      => 'Devètz especificar un lengatge coma aquò :',
+	'syntaxhighlight-supported'    => 'Lengatges suportats per la coloracion sintaxica :',
+	'syntaxhighlight-err-loading'  => '(error en cargant la lista dels lengatges suportats)',
 	'syntaxhighlight-err-language' => 'Lengatge invalid.',
+	'geshi.css'                    => '/* Lo còde CSS inserit aicí serà aplicat per GeSHi per la coloracion sintaxica. */',
 ),
 
 'pl' => array(
