@@ -122,7 +122,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 ),
 
 /* Kazakh Cyrillic (AlefZet) */
-'kk-kz' => array(
+'kk-cyrl' => array(
 	'syntaxhighlight-specify' => 'Тілді былайша көрсетуіңіз қажет:',
 	'syntaxhighlight-supported' => 'Синтаксисі көмескі жарықталатын сүйемелденген тілдер:',
 	'syntaxhighlight-err-loading' => '(сүйемелденген тілдер тізімін жүктеу қатесі)',
@@ -131,7 +131,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 ),
 
 /* Kazakh Latin (AlefZet) */
-'kk-tr' => array(
+'kk-latn' => array(
 	'syntaxhighlight-specify' => 'Tildi bılaýşa körsetwiñiz qajet:',
 	'syntaxhighlight-supported' => 'Sïntaksïsi kömeski jarıqtalatın süýemeldengen tilder:',
 	'syntaxhighlight-err-loading' => '(süýemeldengen tilder tizimin jüktew qatesi)',
@@ -140,7 +140,7 @@ function efSyntaxHighlight_GeSHiMessages() {
 ),
 
 /* Kazakh Arabic (AlefZet) */
-'kk-cn' => array(
+'kk-arab' => array(
 	'syntaxhighlight-specify' => 'تٸلدٸ بىلايشا كٶرسەتۋٸڭٸز قاجەت:',
 	'syntaxhighlight-supported' => 'سينتاكسيسٸ كٶمەسكٸ جارىقتالاتىن سٷيەمەلدەنگەن تٸلدەر:',
 	'syntaxhighlight-err-loading' => '(سٷيەمەلدەنگەن تٸلدەر تٸزٸمٸن جٷكتەۋ قاتەسٸ)',
@@ -251,8 +251,12 @@ function efSyntaxHighlight_GeSHiMessages() {
 
 	);
 
-	/* Kazakh default, fallback to kk-kz */
-	$messages['kk'] = $messages['kk-kz'];
+	/* Kazakh fallbacks */
+	$messages['kk-kz'] = $messages['kk-cyrl'];
+	$messages['kk-tr'] = $messages['kk-latn'];
+	$messages['kk-cn'] = $messages['kk-arab'];
+	$messages['kk'] = $messages['kk-cyrl'];
+
 	/* Chinese defaults, fallback to zh-hans or zh-hant */
 	$messages['zh'] = $messages['zh-hans'];
 	$messages['zh-cn'] = $messages['zh-hans'];
