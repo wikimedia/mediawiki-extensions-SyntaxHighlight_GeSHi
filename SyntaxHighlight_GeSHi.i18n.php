@@ -35,6 +35,13 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css'                    => '/* CSS in dieser MediaWiki-Systemnachricht wird auf die GeSHi-Syntaxhervorhebung angewendet */',
 ),
 
+/** Greek (Ελληνικά)
+ * @author Consta
+ */
+'el' => array(
+	'syntaxhighlight-err-language' => 'Άκυρη γλώσσα.',
+),
+
 /* Estonian [[et:Kasutaja:M2s17]] */
 'et' => array(
 	'syntaxhighlight-specify' => 'Sa pead täpsustama keelt nõnda:',
