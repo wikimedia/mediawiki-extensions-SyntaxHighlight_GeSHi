@@ -220,6 +220,17 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 ),
 
+/** Seeltersk (Seeltersk)
+ * @author Pyt
+ */
+'stq' => array(
+	'syntaxhighlight-specify'      => 'Ju wonskede Sproake mout as foulget definierd wäide:',
+	'syntaxhighlight-supported'    => 'Unnerstöände Sproaken foar ju Syntax-Betoonenge:',
+	'syntaxhighlight-err-loading'  => '(Failer bie dät Leeden fon ju Sproakenlieste)',
+	'syntaxhighlight-err-language' => 'Uungultige Sproake.',
+	'geshi.css'                    => '/* CSS in disse MediaWiki-Systemättergjucht wäd ap ju GeSHi-Syntaxbetoonenge anwoand */',
+),
+
 /* Swedish */
 'sv' => array(
 	'syntaxhighlight-specify' => 'Du måste ange vilket språk som används, så här:',
