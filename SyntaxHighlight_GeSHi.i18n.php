@@ -26,6 +26,13 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* الأنماط المتراصة CSS المعروضة هنا ستطبق على GeSHi syntax highlighting */',
 ),
 
+/** Bulgarian (Български)
+ * @author DCLXVI
+ */
+'bg' => array(
+	'syntaxhighlight-err-language' => 'Невалиден език.',
+),
+
 /* German (Raymond) */
 'de' => array(
 	'syntaxhighlight-specify'      => 'Die gewünschte Sprache muss wie folgt definiert werden:',
@@ -245,6 +252,13 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-loading' => '(fel vid laddning av listan över stödda språk)',
 	'syntaxhighlight-err-language' => 'Ogiltigt språk.',
 	'geshi.css' => '/* CSS som skrivs här används för syntax highlighting med GeSHI */',
+),
+
+/** Volapük (Volapük)
+ * @author Malafaya
+ */
+'vo' => array(
+	'syntaxhighlight-err-language' => 'Pük no dabinöl.',
 ),
 
 /* Cantonese (Shinjiman) */
