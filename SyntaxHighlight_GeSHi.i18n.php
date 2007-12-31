@@ -155,6 +155,13 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* مىنداعى CSS ٵمٸرلەرٸ GeSHi سينتاكسيستٸ كٶمەسكٸ جارىقتاۋعا قولدانىلادى */',
 ),
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+'lb' => array(
+	'syntaxhighlight-err-language' => 'Ongëlteg Sprooch',
+),
+
 /* nld / Dutch (Siebrand Mazeland) */
 'nl' => array(
 	'syntaxhighlight-specify' => 'Geef een taal als volgt op:',
