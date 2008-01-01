@@ -178,6 +178,7 @@ function efSyntaxHighlight_GeSHiMessages() {
  * @author Robby
  */
 'lb' => array(
+	'syntaxhighlight-specify'      => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
 	'syntaxhighlight-err-language' => 'Ongëlteg Sprooch',
 ),
 
