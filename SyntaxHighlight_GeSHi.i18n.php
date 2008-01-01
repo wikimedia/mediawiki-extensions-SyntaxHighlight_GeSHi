@@ -62,7 +62,19 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-language' => 'Baliogabeko hizkuntza.',
 ),
 
-/* French */
+/** Finnish (Suomi)
+ * @author Nike
+ */
+'fi' => array(
+	'syntaxhighlight-supported'    => 'Syntaksinkorostus on mahdollista seuraaville kielille:',
+	'syntaxhighlight-err-loading'  => '(tuettujen kielten luettelon lataaminen epäonnistui)',
+	'syntaxhighlight-err-language' => 'Kelpaamaton kieli.',
+	'geshi.css'                    => '/* Tänne lisätty CSS vaikuttaa GeSHi-syntaksinkorostukseen */',
+),
+
+/** French
+ *@author 
+ */
 'fr' => array(
 	'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
 	'syntaxhighlight-supported' => 'Langages supportés pour la coloration syntaxique :',
