@@ -66,6 +66,7 @@ function efSyntaxHighlight_GeSHiMessages() {
  * @author Nike
  */
 'fi' => array(
+	'syntaxhighlight-specify'      => 'Kieli pitää määritellä seuraavasti:',
 	'syntaxhighlight-supported'    => 'Syntaksinkorostus on mahdollista seuraaville kielille:',
 	'syntaxhighlight-err-loading'  => '(tuettujen kielten luettelon lataaminen epäonnistui)',
 	'syntaxhighlight-err-language' => 'Kelpaamaton kieli.',
@@ -132,11 +133,15 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-language' => 'Bahasa tak sah.',
 ),
 
-/* Italian (BrokenArrow) */
+/** Italian (Italiano)
+ * @author BrokenArrow
+ */
 'it' => array(
-	'syntaxhighlight-specify' => 'È necessario specificare un linguaggio in questo modo:',
-	'syntaxhighlight-supported' => 'Linguaggi di cui è possibile evidenziare la sintassi in colore:',
-	'syntaxhighlight-err-loading' => '(errore nel caricamento dell\'elenco dei linguaggi supportati)',
+	'syntaxhighlight-specify'      => 'È necessario specificare un linguaggio in questo modo:',
+	'syntaxhighlight-supported'    => 'Linguaggi di cui è possibile evidenziare la sintassi in colore:',
+	'syntaxhighlight-err-loading'  => "(errore nel caricamento dell'elenco dei linguaggi supportati)",
+	'syntaxhighlight-err-language' => 'Linguaggio non riconosciuto.',
+	'geshi.css'                    => "/* Gli stili CSS inseriti qui si applicano all'evidenziazione di sintassi con GeSHi */",
 ),
 
 /* Japanese */
