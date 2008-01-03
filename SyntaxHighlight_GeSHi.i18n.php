@@ -252,6 +252,17 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 ),
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
+'sk' => array(
+	'syntaxhighlight-specify'      => 'Musíte uviesť jazyk takto:',
+	'syntaxhighlight-supported'    => 'Jazyky, pre ktoré je zvýrazňovanie syntaxe podporované:',
+	'syntaxhighlight-err-loading'  => '(chyba pri načítaní zoznamu podporovaných jazykov)',
+	'syntaxhighlight-err-language' => 'Neplatný jazyk.',
+	'geshi.css'                    => '/* Tu umiestnené CSS sa použije pre zvýrazňovanie syntaxe GeSHi */',
+),
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
