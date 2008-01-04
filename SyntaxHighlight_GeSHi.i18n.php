@@ -33,6 +33,17 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-language' => 'Невалиден език.',
 ),
 
+/** Czech (Česky)
+ * @author Li-sung
+ */
+'cs' => array(
+	'syntaxhighlight-specify'      => 'Musíte určit jazyk tímto způsobem:',
+	'syntaxhighlight-supported'    => 'Seznam jazyků, u kterých je podporováno zvýrazňování syntaxe:',
+	'syntaxhighlight-err-loading'  => '(chyba při načítání seznamu podporovaných jazyků)',
+	'syntaxhighlight-err-language' => 'Neplatný jazyk.',
+	'geshi.css'                    => '/* Zde uvedené CSS bude ovlivňovat zvýrazňování syntaxe GeSHi */',
+),
+
 /* German (Raymond) */
 'de' => array(
 	'syntaxhighlight-specify'      => 'Die gewünschte Sprache muss wie folgt definiert werden:',
