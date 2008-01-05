@@ -33,6 +33,16 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-language' => 'Невалиден език.',
 ),
 
+/** Catalan (Català)
+ * @author SMP
+ */
+'ca' => array(
+	'syntaxhighlight-specify'      => "Heu d'especificar un dels llenguatges:",
+	'syntaxhighlight-supported'    => 'Llenguatges admesos per al ressaltament sintàctic:',
+	'syntaxhighlight-err-loading'  => '(error en carregar la llista de llenguatges)',
+	'syntaxhighlight-err-language' => 'Llenguatge invàlid.',
+),
+
 /** Czech (Česky)
  * @author Li-sung
  */
