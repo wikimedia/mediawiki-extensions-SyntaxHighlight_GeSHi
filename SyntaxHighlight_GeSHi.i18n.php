@@ -33,6 +33,13 @@ function efSyntaxHighlight_GeSHiMessages() {
 	'syntaxhighlight-err-language' => 'Невалиден език.',
 ),
 
+/** Bengali (বাংলা)
+ * @author Zaheen
+ */
+'bn' => array(
+	'syntaxhighlight-err-language' => 'অবৈধ ভাষা।',
+),
+
 /** Catalan (Català)
  * @author SMP
  */
