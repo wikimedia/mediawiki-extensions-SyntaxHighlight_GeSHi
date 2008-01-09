@@ -37,7 +37,11 @@ function efSyntaxHighlight_GeSHiMessages() {
  * @author Zaheen
  */
 'bn' => array(
+	'syntaxhighlight-specify'      => 'আপনাকে এভাবে একটি ভাষা নির্দিষ্ট করতে হবে:',
+	'syntaxhighlight-supported'    => 'যেসব ভাষার জন্য সিনট্যাক্স হাইলাইটিং সমর্থিত:',
+	'syntaxhighlight-err-loading'  => '(সমর্থিত ভাষার তালিকা আনতে ত্রুটি)',
 	'syntaxhighlight-err-language' => 'অবৈধ ভাষা।',
+	'geshi.css'                    => '/* এখানে স্থাপিত CSS কোড GeSHi সিনট্যাক্স হাইলাইটিং-এ ব্যবহার করা হবে */',
 ),
 
 /** Catalan (Català)
