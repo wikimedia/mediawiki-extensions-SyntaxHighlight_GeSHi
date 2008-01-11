@@ -6,7 +6,7 @@ class SyntaxHighlight_GeSHi {
 	 * Has GeSHi been initialised this session?
 	 */
 	private static $initialised = false;
-	
+
 	/**
 	 * List of languages available to GeSHi
 	 */
@@ -67,7 +67,7 @@ class SyntaxHighlight_GeSHi {
 			return '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
 		}
 	}
-	
+
 	/**
 	 * Hook into Article::view() to provide syntax highlighting for
 	 * custom CSS and JavaScript pages
@@ -115,7 +115,7 @@ class SyntaxHighlight_GeSHi {
 		$geshi->enable_keyword_links( false );
 		return $geshi;
 	}
-	
+
 	/**
 	 * Prepare a CSS snippet suitable for use as a ParserOutput/OutputPage
 	 * head item
@@ -142,7 +142,7 @@ class SyntaxHighlight_GeSHi {
 		}
 		return implode( "\n", $css );
 	}
-	
+
 	/**
 	 * Format an error message
 	 *
@@ -159,7 +159,7 @@ class SyntaxHighlight_GeSHi {
 			. self::formatLanguages();
 		return "<div style=\"border: solid red 1px; padding: .5em;\">{$html}</div>";
 	}
-	
+
 	/**
 	 * Format the list of supported languages
 	 *
@@ -177,7 +177,7 @@ class SyntaxHighlight_GeSHi {
 			return '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-loading' ) ) . '</p>';
 		}
 	}
-	
+
 	/**
 	 * Get the list of supported languages
 	 *
@@ -200,28 +200,11 @@ class SyntaxHighlight_GeSHi {
 	 */
 	private static function initialise() {
 		if( !self::$initialised ) {
-			self::loadMessages();
+			wfLoadExtensionMessages( 'SyntaxHighlight_GeSHi' );
 			if( !class_exists( 'GeSHi' ) )
 				require( 'geshi/geshi.php' );
 			self::$initialised = true;
 		}
 		return true;
 	}
-	
-	/**
-	 * Load extension messages
-	 *
-	 * @return bool
-	 */
-	public static function loadMessages() {
-		static $done = false;
-		if( !$done ) {
-			global $wgMessageCache;
-			require_once( dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.i18n.php' );
-			foreach( efSyntaxHighlight_GeSHiMessages() as $lang => $messages )
-				$wgMessageCache->addMessages( $messages, $lang );
-		}
-		return true;
-	}
-
 }

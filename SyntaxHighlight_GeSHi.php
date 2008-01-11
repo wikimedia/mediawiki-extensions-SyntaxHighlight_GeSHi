@@ -43,14 +43,16 @@ if( !defined( 'MEDIAWIKI' ) )
 
 $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'name'          => 'SyntaxHighlight',
+	'version'       => '2008-01-11',
 	'author'        => array( 'Brion Vibber', 'Tim Starling', 'Rob Church' ),
 	'description'   => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'url'           => 'http://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
 );
 
-$wgAutoloadClasses['SyntaxHighlight_GeSHi'] = dirname( __FILE__ ) . '/SyntaxHighlight_GeSHi.class.php';
+$dir = dirname(__FILE__) . '/';
+$wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
+$wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
 $wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
-$wgHooks['LoadAllMessages'][] = 'SyntaxHighlight_GeSHi::loadMessages';
 $wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
 
 /**
