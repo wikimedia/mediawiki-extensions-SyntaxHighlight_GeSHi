@@ -214,11 +214,11 @@ $messages['kk-latn'] = array(
 
 /* Kazakh Arabic (AlefZet) */
 $messages['kk-arab'] = array(
-	'syntaxhighlight-specify' => 'تٸلدٸ بىلايشا كٶرسەتۋٸڭٸز قاجەت:',
-	'syntaxhighlight-supported' => 'سينتاكسيسٸ كٶمەسكٸ جارىقتالاتىن سٷيەمەلدەنگەن تٸلدەر:',
-	'syntaxhighlight-err-loading' => '(سٷيەمەلدەنگەن تٸلدەر تٸزٸمٸن جٷكتەۋ قاتەسٸ)',
-	'syntaxhighlight-err-language' => 'جارامسىز تٸل.',
-	'geshi.css' => '/* مىنداعى CSS ٵمٸرلەرٸ GeSHi سينتاكسيستٸ كٶمەسكٸ جارىقتاۋعا قولدانىلادى */',
+	'syntaxhighlight-specify' => 'ٴتىلدى بىلايشا كورسەتۋىڭىز قاجەت:',
+	'syntaxhighlight-supported' => 'سىينتاكسىيسى كومەسكى جارىقتالاتىن سۇيەمەلدەنگەن تىلدەر:',
+	'syntaxhighlight-err-loading' => '(سۇيەمەلدەنگەن تىلدەر ٴتىزىمىن جۇكتەۋ قاتەسى)',
+	'syntaxhighlight-err-language' => 'جارامسىز ٴتىل.',
+	'geshi.css' => '/* مىنداعى CSS امىرلەرى GeSHi سىينتاكسىيستى كومەسكى جارىقتاۋعا قولدانىلادى */',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
