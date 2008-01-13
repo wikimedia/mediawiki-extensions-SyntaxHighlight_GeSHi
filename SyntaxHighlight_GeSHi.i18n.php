@@ -194,6 +194,15 @@ $messages['ja'] = array(
 	'syntaxhighlight-err-language' => '不正な言語名です。',
 );
 
+/* Kazakh Arabic (AlefZet) */
+$messages['kk-arab'] = array(
+	'syntaxhighlight-specify' => 'ٴتىلدى بىلايشا كورسەتۋىڭىز قاجەت:',
+	'syntaxhighlight-supported' => 'سىينتاكسىيسى كومەسكى جارىقتالاتىن سۇيەمەلدەنگەن تىلدەر:',
+	'syntaxhighlight-err-loading' => '(سۇيەمەلدەنگەن تىلدەر ٴتىزىمىن جۇكتەۋ قاتەسى)',
+	'syntaxhighlight-err-language' => 'جارامسىز ٴتىل.',
+	'geshi.css' => '/* مىنداعى CSS امىرلەرى GeSHi سىينتاكسىيستى كومەسكى جارىقتاۋعا قولدانىلادى */',
+);
+
 /* Kazakh Cyrillic (AlefZet) */
 $messages['kk-cyrl'] = array(
 	'syntaxhighlight-specify' => 'Тілді былайша көрсетуіңіз қажет:',
@@ -210,15 +219,6 @@ $messages['kk-latn'] = array(
 	'syntaxhighlight-err-loading' => '(süýemeldengen tilder tizimin jüktew qatesi)',
 	'syntaxhighlight-err-language' => 'Jaramsız til.',
 	'geshi.css' => '/* Mındağı CSS ämirleri GeSHi sïntaksïsti kömeski jarıqtawğa qoldanıladı */',
-);
-
-/* Kazakh Arabic (AlefZet) */
-$messages['kk-arab'] = array(
-	'syntaxhighlight-specify' => 'ٴتىلدى بىلايشا كورسەتۋىڭىز قاجەت:',
-	'syntaxhighlight-supported' => 'سىينتاكسىيسى كومەسكى جارىقتالاتىن سۇيەمەلدەنگەن تىلدەر:',
-	'syntaxhighlight-err-loading' => '(سۇيەمەلدەنگەن تىلدەر ٴتىزىمىن جۇكتەۋ قاتەسى)',
-	'syntaxhighlight-err-language' => 'جارامسىز ٴتىل.',
-	'geshi.css' => '/* مىنداعى CSS امىرلەرى GeSHi سىينتاكسىيستى كومەسكى جارىقتاۋعا قولدانىلادى */',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -260,12 +260,16 @@ $messages['oc'] = array(
 	'geshi.css'                    => '/* Lo còde CSS inserit aicí serà aplicat per GeSHi per la coloracion sintaxica. */',
 );
 
+/** Polish (Polski)
+ * @author Derbeth
+ * @author Sp5uhe
+ */
 $messages['pl'] = array(
-	'syntaxhighlight-specify' => 'Musisz wybrać język w następujący sposób:',
-	'syntaxhighlight-supported' => 'Języki obsługiwane w podświetlaniu składni:',
-	'syntaxhighlight-err-loading' => '(błąd przy wczytywaniu listy obsługiwanych języków)',
+	'syntaxhighlight-specify'      => 'Musisz wybrać język w następujący sposób:',
+	'syntaxhighlight-supported'    => 'Języki obsługiwane w podświetlaniu składni:',
+	'syntaxhighlight-err-loading'  => '(błąd przy wczytywaniu listy obsługiwanych języków)',
 	'syntaxhighlight-err-language' => 'Niepoprawny język.',
-	'geshi.css' => '/* CSS umieszczony tutaj będzie zastosowany do kolorowania składni GeSHi  */',
+	'geshi.css'                    => '/* CSS umieszczony tutaj zostanie użyty do kolorowania składni GeSHi  */',
 );
 
 $messages['pms'] = array(
@@ -359,10 +363,10 @@ $messages['zh-hant'] = array(
 	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
+$messages['kk'] = $messages['kk-cyrl'];
+$messages['kk-cn'] = $messages['kk-arab'];
 $messages['kk-kz'] = $messages['kk-cyrl'];
 $messages['kk-tr'] = $messages['kk-latn'];
-$messages['kk-cn'] = $messages['kk-arab'];
-$messages['kk'] = $messages['kk-cyrl'];
 $messages['zh'] = $messages['zh-hans'];
 $messages['zh-cn'] = $messages['zh-hans'];
 $messages['zh-hk'] = $messages['zh-hant'];
