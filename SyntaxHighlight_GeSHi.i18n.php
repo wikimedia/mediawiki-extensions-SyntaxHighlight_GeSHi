@@ -363,7 +363,6 @@ $messages['zh-hant'] = array(
 	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
-# Fallbacks:
 $messages['de-formal'] = $messages['de'];
 $messages['kk'] = $messages['kk-cyrl'];
 $messages['kk-cn'] = $messages['kk-arab'];
