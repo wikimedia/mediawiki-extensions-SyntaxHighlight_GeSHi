@@ -226,7 +226,10 @@ $messages['kk-latn'] = array(
  */
 $messages['lb'] = array(
 	'syntaxhighlight-specify'      => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
+	'syntaxhighlight-supported'    => "Ënnerstetzte Sproochen fir d'Syntax faarweg ze markéieren",
+	'syntaxhighlight-err-loading'  => '(Feeler beim Luede vun der Lëscht vun den ënnerstetzte Sproochen)',
 	'syntaxhighlight-err-language' => 'Ongëlteg Sprooch',
+	'geshi.css'                    => "/* Den CSS deen hei steet gëtt benotzt fir d'GeSHi Syntax faarweg ze markéieren. /*",
 );
 
 /* nld / Dutch (Siebrand Mazeland) */
