@@ -126,6 +126,17 @@ $messages['fr'] = array(
 	'geshi.css' => '/* Le code CSS inséré ici sera appliqué par GeSHi pour la coloration syntaxique. */',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'syntaxhighlight-specify'      => 'Vos dête spècefiar un lengâjo d’ense :',
+	'syntaxhighlight-supported'    => 'Lengâjos sotegnus por la coloracion sintaxica :',
+	'syntaxhighlight-err-loading'  => '(èrror en chargient la lista des lengâjos sotegnus)',
+	'syntaxhighlight-err-language' => 'Lengâjo envalido',
+	'geshi.css'                    => '/* Lo css placiê ique serat aplicâ per GeSHi por la coloracion sintaxica. */',
+);
+
 $messages['gl'] = array(
 	'syntaxhighlight-specify' => 'Ten que especificar unha linguaxe así:',
 	'syntaxhighlight-supported' => 'Linguaxes coñecidas para resaltar a sintaxe:',
