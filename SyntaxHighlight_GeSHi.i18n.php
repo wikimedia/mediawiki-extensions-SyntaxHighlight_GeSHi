@@ -243,6 +243,13 @@ $messages['lb'] = array(
 	'geshi.css'                    => "/* Den CSS deen hei steet gëtt benotzt fir d'GeSHi Syntax faarweg ze markéieren. /*",
 );
 
+/** Lithuanian (Lietuvių)
+ * @author Matasg
+ */
+$messages['lt'] = array(
+	'syntaxhighlight-err-language' => 'Bloga kalba.',
+);
+
 /* nld / Dutch (Siebrand Mazeland) */
 $messages['nl'] = array(
 	'syntaxhighlight-specify' => 'Geef een taal als volgt op:',
