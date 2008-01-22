@@ -244,10 +244,14 @@ $messages['lb'] = array(
 );
 
 /** Lithuanian (Lietuvių)
+ * @author Garas
  * @author Matasg
  */
 $messages['lt'] = array(
-	'syntaxhighlight-err-language' => 'Bloga kalba.',
+	'syntaxhighlight-specify'      => 'Jums reikia nurodyti kalbą kaip čia:',
+	'syntaxhighlight-supported'    => 'Palaikomos kalbos sintaksės paryškinimui:',
+	'syntaxhighlight-err-loading'  => '(klaida įkeliant palaikomų kalbų sąrašą)',
+	'syntaxhighlight-err-language' => 'Neleistina kalba.',
 );
 
 /* nld / Dutch (Siebrand Mazeland) */
