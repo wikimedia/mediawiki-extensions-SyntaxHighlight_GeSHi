@@ -354,6 +354,13 @@ $messages['sv'] = array(
 	'geshi.css' => '/* CSS som skrivs här används för syntax highlighting med GeSHI */',
 );
 
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'syntaxhighlight-specify' => 'భాషని ఈ విధంగా ఇవ్వాలి:',
+);
+
 /** Volapük (Volapük)
  * @author Malafaya
  */
