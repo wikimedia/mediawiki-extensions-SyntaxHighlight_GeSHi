@@ -363,8 +363,10 @@ $messages['te'] = array(
 
 /** Volapük (Volapük)
  * @author Malafaya
+ * @author Smeira
  */
 $messages['vo'] = array(
+	'syntaxhighlight-specify'      => 'Nedol välön püki ön mod soik:',
 	'syntaxhighlight-err-language' => 'Pük no dabinöl.',
 );
 
