@@ -81,6 +81,13 @@ $messages['el'] = array(
 	'syntaxhighlight-err-language' => 'Άκυρη γλώσσα.',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'syntaxhighlight-err-language' => 'Nevalida lingvo.',
+);
+
 /* Estonian [[et:Kasutaja:M2s17]] */
 $messages['et'] = array(
 	'syntaxhighlight-specify' => 'Sa pead täpsustama keelt nõnda:',
@@ -359,6 +366,13 @@ $messages['sv'] = array(
  */
 $messages['te'] = array(
 	'syntaxhighlight-specify' => 'భాషని ఈ విధంగా ఇవ్వాలి:',
+);
+
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'syntaxhighlight-err-language' => 'Ngôn ngữ không hợp lệ.',
 );
 
 /** Volapük (Volapük)
