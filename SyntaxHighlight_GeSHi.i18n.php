@@ -368,6 +368,13 @@ $messages['te'] = array(
 	'syntaxhighlight-specify' => 'భాషని ఈ విధంగా ఇవ్వాలి:',
 );
 
+/** Turkish (Türkçe)
+ * @author Erkan Yilmaz
+ */
+$messages['tr'] = array(
+	'syntaxhighlight-err-language' => 'Geçersiz dil.',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
