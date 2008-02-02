@@ -26,6 +26,15 @@ $messages['ar'] = array(
 	'geshi.css' => '/* الأنماط المتراصة CSS المعروضة هنا ستطبق على GeSHi syntax highlighting */',
 );
 
+/** Asturian (Asturianu)
+ * @author Esbardu
+ */
+$messages['ast'] = array(
+	'syntaxhighlight-specify'      => 'Necesites conseñar una llingua como esta:',
+	'syntaxhighlight-err-loading'  => '(error al cargar la llista de llingües sofitaes)',
+	'syntaxhighlight-err-language' => 'Llingua non válida.',
+);
+
 /** Bulgarian (Български)
  * @author DCLXVI
  */
@@ -328,6 +337,16 @@ $messages['ru'] = array(
 	'syntaxhighlight-err-loading' => '(невозможно загрузить список языков)',
 	'syntaxhighlight-err-language' => 'Указан неподдерживаемый язык.',
 	'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
+);
+
+/** Yakut (Саха тыла)
+ * @author HalanTul
+ */
+$messages['sah'] = array(
+	'syntaxhighlight-specify'      => 'Омугун тылын маннык ыйыахтааххын:',
+	'syntaxhighlight-supported'    => 'Өйөнүллэр тыллара:',
+	'syntaxhighlight-err-loading'  => '(тылларын испииһэгэ кыайан көрдөрүллүбэтэ)',
+	'syntaxhighlight-err-language' => 'Өйөнүллүбэт тыл эбит.',
 );
 
 /** Slovak (Slovenčina)
