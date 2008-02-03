@@ -18,6 +18,13 @@ $messages['en'] = array(
 	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author SPQRobin
+ */
+$messages['af'] = array(
+	'syntaxhighlight-err-language' => 'Ongeldige taal.',
+);
+
 $messages['ar'] = array(
 	'syntaxhighlight-specify' => 'يجب عليك تحديد لغة مثل هذه:',
 	'syntaxhighlight-supported' => 'اللغات المدعومة لتظليل الصياغة:',
@@ -31,8 +38,10 @@ $messages['ar'] = array(
  */
 $messages['ast'] = array(
 	'syntaxhighlight-specify'      => 'Necesites conseñar una llingua como esta:',
+	'syntaxhighlight-supported'    => 'Llingües sofitaes pa la sintaxis en colores:',
 	'syntaxhighlight-err-loading'  => '(error al cargar la llista de llingües sofitaes)',
 	'syntaxhighlight-err-language' => 'Llingua non válida.',
+	'geshi.css'                    => '/* El códigu CSS allugáu equí va ser aplicáu por GeSHi pa la sintaxis en colores */',
 );
 
 /** Bulgarian (Български)
@@ -384,7 +393,9 @@ $messages['sv'] = array(
  * @author Veeven
  */
 $messages['te'] = array(
-	'syntaxhighlight-specify' => 'భాషని ఈ విధంగా ఇవ్వాలి:',
+	'syntaxhighlight-specify'      => 'భాషని ఈ విధంగా ఇవ్వాలి:',
+	'syntaxhighlight-err-loading'  => '(తోడ్పాటున్న భాషల జాబితా లోడింగులో పొరపాటు జరిగింది)',
+	'syntaxhighlight-err-language' => 'తప్పుడు భాష.',
 );
 
 /** Turkish (Türkçe)
