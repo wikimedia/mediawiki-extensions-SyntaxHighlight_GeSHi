@@ -356,6 +356,7 @@ $messages['sah'] = array(
 	'syntaxhighlight-supported'    => 'Өйөнүллэр тыллара:',
 	'syntaxhighlight-err-loading'  => '(тылларын испииһэгэ кыайан көрдөрүллүбэтэ)',
 	'syntaxhighlight-err-language' => 'Өйөнүллүбэт тыл эбит.',
+	'geshi.css'                    => '/* манна баар CSS-куод GeSHI синтаксииһын сырдатарга туттуллуо */',
 );
 
 /** Slovak (Slovenčina)
