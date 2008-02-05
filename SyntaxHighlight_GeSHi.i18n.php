@@ -268,6 +268,17 @@ $messages['lb'] = array(
 	'geshi.css'                    => "/* Den CSS deen hei steet gëtt benotzt fir d'GeSHi Syntax faarweg ze markéieren. /*",
 );
 
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
+$messages['li'] = array(
+	'syntaxhighlight-specify'      => "Gaef 'ne taal es volg op:",
+	'syntaxhighlight-supported'    => 'Óngersteunde täöl veur syntaxismarkering:',
+	'syntaxhighlight-err-loading'  => "(fout bie 't laje vanne lies mit óngersteunde täöl)",
+	'syntaxhighlight-err-language' => 'Ónzjuuste taal.',
+	'geshi.css'                    => '/* Hiej geplaatste CBBS wuuertj toegepas op GeSHo syntax markering */',
+);
+
 /** Lithuanian (Lietuvių)
  * @author Garas
  * @author Matasg
