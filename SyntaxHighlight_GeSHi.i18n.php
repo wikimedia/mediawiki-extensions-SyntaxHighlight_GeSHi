@@ -410,6 +410,15 @@ $messages['te'] = array(
 	'syntaxhighlight-err-language' => 'తప్పుడు భాష.',
 );
 
+/** Tajik (Тоҷикӣ)
+ * @author Ibrahim
+ */
+$messages['tg'] = array(
+	'syntaxhighlight-specify'      => 'Шумо бояд бо ин шакл забонеро мушаххас кунед:',
+	'syntaxhighlight-supported'    => 'Забонҳои пуштибонишуда барои рангин кардани дастуроти наҳвӣ:',
+	'syntaxhighlight-err-language' => 'Забони ғайри миҷоз.',
+);
+
 /** Turkish (Türkçe)
  * @author Erkan Yilmaz
  */
