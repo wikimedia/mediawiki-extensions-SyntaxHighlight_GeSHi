@@ -42,11 +42,12 @@ if( !defined( 'MEDIAWIKI' ) )
 	die();
 
 $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
-	'name'          => 'SyntaxHighlight',
-	'version'       => '2008-01-11',
-	'author'        => array( 'Brion Vibber', 'Tim Starling', 'Rob Church' ),
-	'description'   => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'url'           => 'http://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
+	'name'           => 'SyntaxHighlight',
+	'version'        => '2008-02-06',
+	'author'         => array( 'Brion Vibber', 'Tim Starling', 'Rob Church' ),
+	'description'    => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'descriptionmsg' => 'syntaxhighlight-desc',
+	'url'            => 'http://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
 );
 
 $dir = dirname(__FILE__) . '/';

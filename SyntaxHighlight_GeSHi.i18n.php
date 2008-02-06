@@ -7,10 +7,11 @@
 
 $messages = array();
 
-/* English
+/** English
  * @author Brion Vibber
  */
 $messages['en'] = array(
+	'syntaxhighlight-desc' => 'Provides syntax highlighting <tt><nowiki><source></nowiki></tt> using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'You need to specify a language like this:',
 	'syntaxhighlight-supported' => 'Supported languages for syntax highlighting:',
 	'syntaxhighlight-err-loading' => '(error loading supported language list)',
@@ -83,8 +84,11 @@ $messages['cs'] = array(
 	'geshi.css'                    => '/* Zde uvedené CSS bude ovlivňovat zvýrazňování syntaxe GeSHi */',
 );
 
-/* German (Raymond) */
+/** German (Deutsch)
+ * @author Raimond Spekking
+ */
 $messages['de'] = array(
+	'syntaxhighlight-desc'         => 'Syntax-Hervorhebung <tt><nowiki><source></nowiki></tt> mit Hilfe des [http://qbnz.com/highlighter/ GeSHi-Highlighters]',
 	'syntaxhighlight-specify'      => 'Die gewünschte Sprache muss wie folgt definiert werden:',
 	'syntaxhighlight-supported'    => 'Unterstützte Sprachen für die Syntax-Hervorhebung:',
 	'syntaxhighlight-err-loading'  => '(Fehler beim Laden der Sprachenliste)',
@@ -469,7 +473,6 @@ $messages['zh-hant'] = array(
 	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
-$messages['de-formal'] = $messages['de'];
 $messages['kk'] = $messages['kk-cyrl'];
 $messages['kk-cn'] = $messages['kk-arab'];
 $messages['kk-kz'] = $messages['kk-cyrl'];
