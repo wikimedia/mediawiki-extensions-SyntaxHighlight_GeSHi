@@ -123,8 +123,11 @@ $messages['eu'] = array(
 	'syntaxhighlight-err-language' => 'Baliogabeko hizkuntza.',
 );
 
-# فارسی (Huji)
+/** فارسی (فارسی)
+ * @author Huji
+ */
 $messages['fa'] = array(
+	'syntaxhighlight-desc'         => 'امکان رنگین کردن دستورات <tt><nowiki><source></nowiki></tt> با استفاده از [http://qbnz.com/highlighter/ GeSHi Highlighter] را فراهم می‌آورد',
 	'syntaxhighlight-specify'      => 'شما باید به این شکل زبانی را مشخص کنید:',
 	'syntaxhighlight-supported'    => 'زبان‌های پشتیبانی‌شده برای رنگین‌کردن دستورات:',
 	'syntaxhighlight-err-loading'  => '(خطا در بارگذاری فهرست زبان‌های پشتیبانی‌شده)',
