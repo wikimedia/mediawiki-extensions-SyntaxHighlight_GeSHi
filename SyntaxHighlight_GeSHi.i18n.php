@@ -153,15 +153,17 @@ $messages['fi'] = array(
 	'geshi.css'                    => '/* Tänne lisätty CSS vaikuttaa GeSHi-syntaksinkorostukseen */',
 );
 
-/** French
- *@author 
+/** French (Français)
+ * @author Sherbrooke
+ * @author Grondin
  */
 $messages['fr'] = array(
-	'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
-	'syntaxhighlight-supported' => 'Langages supportés pour la coloration syntaxique :',
-	'syntaxhighlight-err-loading' => '(erreur en chargeant la liste des langages supportés)',
+	'syntaxhighlight-desc'         => 'Fournit la mise en relief de la syntaxe par la balise <tt><nowiki><source></nowiki></tt> en utilisant [http://qbnz.com/highlighter/ la coloration syntaxique GeSHi]',
+	'syntaxhighlight-specify'      => 'Vous devez spécifier un langage comme ceci :',
+	'syntaxhighlight-supported'    => 'Langages supportés pour la coloration syntaxique :',
+	'syntaxhighlight-err-loading'  => '(erreur en chargeant la liste des langages supportés)',
 	'syntaxhighlight-err-language' => 'Langage invalide',
-	'geshi.css' => '/* Le code CSS inséré ici sera appliqué par GeSHi pour la coloration syntaxique. */',
+	'geshi.css'                    => '/* Le code CSS inséré ici sera appliqué par GeSHi pour la coloration syntaxique. */',
 );
 
 /** Franco-Provençal (Arpetan)
@@ -415,10 +417,10 @@ $messages['stq'] = array(
 );
 
 /** Swedish (Svenska)
- * @author Max sonnelid
+ * @author Lejonel
  */
 $messages['sv'] = array(
-	'syntaxhighlight-desc'         => 'Erbjuder syntax framhävande <tt><nowiki><source></nowiki></tt> användande [http://qbnz.com/highlighter/ GeSHi Märkpenna]',
+	'syntaxhighlight-desc'         => 'Ger syntaxmarkering med [http://qbnz.com/highlighter/ GeSHi Highlighter] inuti <tt><nowiki><source></nowiki></tt>-taggar',
 	'syntaxhighlight-specify'      => 'Du måste ange vilket språk som används, så här:',
 	'syntaxhighlight-supported'    => 'Det finns stöd för följande språk:',
 	'syntaxhighlight-err-loading'  => '(fel vid laddning av listan över stödda språk)',
@@ -495,3 +497,4 @@ $messages['zh-hant'] = array(
 	'syntaxhighlight-err-language' => '無效的語言。',
 	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
 );
+
