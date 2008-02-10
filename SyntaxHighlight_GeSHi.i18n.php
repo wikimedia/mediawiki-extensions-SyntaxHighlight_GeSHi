@@ -210,12 +210,16 @@ $messages['hsb'] = array(
 	'geshi.css' => '/* CSS w tutej zdźělence so na syntaksowe wuzběhnjenje GeSHi nałoži */',
 );
 
+/** Hungarian (Magyar)
+ * @author Bdanee
+ */
 $messages['hu'] = array(
-	'syntaxhighlight-specify' => 'Meg kell adnod egy nyelvet az alábbi módon:',
-	'syntaxhighlight-supported' => 'Támogatott programozási nyelvek:',
-	'syntaxhighlight-err-loading' => '(hiba történt a támogatott nyelvek listájának betöltése közben)',
+	'syntaxhighlight-desc'         => 'Lehetőséget nyújt szintaxis-kiemelésre a <tt><nowiki><source></nowiki></tt> tag-gel, a [http://qbnz.com/highlighter/ GeSHi Highlighter] használatával',
+	'syntaxhighlight-specify'      => 'Meg kell adnod egy nyelvet az alábbi módon:',
+	'syntaxhighlight-supported'    => 'Támogatott programozási nyelvek:',
+	'syntaxhighlight-err-loading'  => '(hiba történt a támogatott nyelvek listájának betöltése közben)',
 	'syntaxhighlight-err-language' => 'Érvénytelen nyelv.',
-	'geshi.css' => '/* Az itt elhelyezett CSS-t fogja alkalmazni a GeSHi szintaxiskiemelő */',
+	'geshi.css'                    => '/* Az itt elhelyezett CSS-t fogja alkalmazni a GeSHi szintaxiskiemelő */',
 );
 
 /* Indonesian (Ivan Lanin) */
