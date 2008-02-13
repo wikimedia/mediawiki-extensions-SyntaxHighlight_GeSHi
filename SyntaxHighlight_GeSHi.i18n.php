@@ -338,6 +338,7 @@ $messages['no'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
+	'syntaxhighlight-desc'         => 'Provesís la mesa en relèu de la sintaxi per la balisa <tt><nowiki><source></nowiki></tt> en utilizant [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi]',
 	'syntaxhighlight-specify'      => 'Devètz especificar un lengatge coma aquò :',
 	'syntaxhighlight-supported'    => 'Lengatges suportats per la coloracion sintaxica :',
 	'syntaxhighlight-err-loading'  => '(error en cargant la lista dels lengatges suportats)',
@@ -377,13 +378,16 @@ $messages['pt'] = array(
 	'geshi.css'                    => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
 );
 
-/* Russian */
+/** Russian (Русский)
+ * @author .:Ajvol:.
+ */
 $messages['ru'] = array(
-	'syntaxhighlight-specify' => 'Вы должны указать язык следующим образом:',
-	'syntaxhighlight-supported' => 'Поддерживаемые языки:',
-	'syntaxhighlight-err-loading' => '(невозможно загрузить список языков)',
+	'syntaxhighlight-desc'         => 'Позволяет использовать тег <tt><nowiki><source></nowiki></tt> для подсветки синтаксиса с помощью [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Вы должны указать язык следующим образом:',
+	'syntaxhighlight-supported'    => 'Поддерживаемые языки:',
+	'syntaxhighlight-err-loading'  => '(невозможно загрузить список языков)',
 	'syntaxhighlight-err-language' => 'Указан неподдерживаемый язык.',
-	'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
+	'geshi.css'                    => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 );
 
 /** Yakut (Саха тыла)
