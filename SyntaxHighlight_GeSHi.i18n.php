@@ -351,6 +351,7 @@ $messages['oc'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
+	'syntaxhighlight-desc'         => 'Zapewnia kolorowanie składni dla znacznika <tt><nowiki><source></nowiki></tt> wykorzystując [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify'      => 'Musisz wybrać język w następujący sposób:',
 	'syntaxhighlight-supported'    => 'Języki obsługiwane w podświetlaniu składni:',
 	'syntaxhighlight-err-loading'  => '(błąd przy wczytywaniu listy obsługiwanych języków)',
