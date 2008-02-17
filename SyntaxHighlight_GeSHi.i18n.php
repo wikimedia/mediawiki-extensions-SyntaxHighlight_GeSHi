@@ -60,6 +60,7 @@ $messages['bg'] = array(
  * @author Zaheen
  */
 $messages['bn'] = array(
+	'syntaxhighlight-desc'         => '[http://qbnz.com/highlighter/ GeSHi হাইলাইটার] ব্যবহার করে <tt><nowiki><source></nowiki></tt> সিনট্যাক্স হাইলাইটিং-এর ক্ষমতা দেয়',
 	'syntaxhighlight-specify'      => 'আপনাকে এভাবে একটি ভাষা নির্দিষ্ট করতে হবে:',
 	'syntaxhighlight-supported'    => 'যেসব ভাষার জন্য সিনট্যাক্স হাইলাইটিং সমর্থিত:',
 	'syntaxhighlight-err-loading'  => '(সমর্থিত ভাষার তালিকা আনতে ত্রুটি)',
