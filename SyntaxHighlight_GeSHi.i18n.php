@@ -396,6 +396,7 @@ $messages['ru'] = array(
  * @author HalanTul
  */
 $messages['sah'] = array(
+	'syntaxhighlight-desc'         => '[http://qbnz.com/highlighter/ GeSHi Highlighter] көмөтүнэн синтаксис подсветкатын холбуурга <tt><nowiki><source></nowiki></tt> тиэги туһанар кыах биэрэр.',
 	'syntaxhighlight-specify'      => 'Омугун тылын маннык ыйыахтааххын:',
 	'syntaxhighlight-supported'    => 'Өйөнүллэр тыллара:',
 	'syntaxhighlight-err-loading'  => '(тылларын испииһэгэ кыайан көрдөрүллүбэтэ)',
