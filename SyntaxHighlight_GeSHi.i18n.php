@@ -171,11 +171,12 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
+	'syntaxhighlight-desc'         => 'Fornét la misa en relièf de la sintaxa per la balisa <tt><nowiki><source></nowiki></tt> en utilisent [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi].',
 	'syntaxhighlight-specify'      => 'Vos dête spècefiar un lengâjo d’ense :',
 	'syntaxhighlight-supported'    => 'Lengâjos sotegnus por la coloracion sintaxica :',
 	'syntaxhighlight-err-loading'  => '(èrror en chargient la lista des lengâjos sotegnus)',
 	'syntaxhighlight-err-language' => 'Lengâjo envalido',
-	'geshi.css'                    => '/* Lo css placiê ique serat aplicâ per GeSHi por la coloracion sintaxica. */',
+	'geshi.css'                    => '/* Lo CSS placiê ique serat aplicâ per GeSHi por la coloracion sintaxica. */',
 );
 
 $messages['gl'] = array(
