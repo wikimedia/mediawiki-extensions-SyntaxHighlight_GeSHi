@@ -26,6 +26,17 @@ $messages['af'] = array(
 	'syntaxhighlight-err-language' => 'Ongeldige taal.',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'syntaxhighlight-desc'         => 'Premite o resalte sintactico <tt><nowiki><source></nowiki></tt> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => "Ha d'endicar un lenguache asinas:",
+	'syntaxhighlight-supported'    => 'Lenguaches suportatos ta o resalte sintactico:',
+	'syntaxhighlight-err-loading'  => '(error cargando a lista de lenguaches suportatos)',
+	'syntaxhighlight-err-language' => 'Lenguache incorreuto.',
+);
+
 /** Arabic (العربية)
  * @author Meno25
  */
@@ -333,7 +344,7 @@ $messages['nl'] = array(
  */
 $messages['no'] = array(
 	'syntaxhighlight-desc'         => 'Gir syntaks som framhever <tt><nowiki><source></nowiki></tt> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'syntaxhighlight-specify'      => 'Du må oppgi et språk slik:',
+	'syntaxhighlight-specify'      => 'Du må angi et språk slik:',
 	'syntaxhighlight-supported'    => 'Støttede språk for syntaksutheving:',
 	'syntaxhighlight-err-loading'  => '(feil under last av liste over støttede språk)',
 	'syntaxhighlight-err-language' => 'Ugyldig språk.',
