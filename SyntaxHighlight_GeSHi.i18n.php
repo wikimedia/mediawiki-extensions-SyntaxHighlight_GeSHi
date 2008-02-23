@@ -384,6 +384,13 @@ $messages['pms'] = array(
 	'geshi.css' => '/* ël CSS piassà ambelessì a sarà aplicà a l\'evidensiassion ëd sintassi GeSHi */',
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'syntaxhighlight-err-language' => 'ناسمه ژبه.',
+);
+
 /** Portuguese (Português)
  * @author Malafaya
  */
