@@ -247,6 +247,7 @@ $messages['id'] = array(
  * @author BrokenArrow
  */
 $messages['it'] = array(
+	'syntaxhighlight-desc'         => 'Evidenzia la sintassi dei linguaggi di programmazione <tt><nowiki><source></nowiki></tt> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify'      => 'È necessario specificare un linguaggio in questo modo:',
 	'syntaxhighlight-supported'    => 'Linguaggi di cui è possibile evidenziare la sintassi in colore:',
 	'syntaxhighlight-err-loading'  => "(errore nel caricamento dell'elenco dei linguaggi supportati)",
