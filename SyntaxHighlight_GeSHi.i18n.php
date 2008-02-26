@@ -235,12 +235,16 @@ $messages['hu'] = array(
 	'geshi.css'                    => '/* Az itt elhelyezett CSS-t fogja alkalmazni a GeSHi szintaxiskiemelő */',
 );
 
-/* Indonesian (Ivan Lanin) */
+/** Indonesian (Bahasa Indonesia)
+ * @author IvanLanin
+ */
 $messages['id'] = array(
+	'syntaxhighlight-desc' => 'Memberikan penyorotan sintaks <tt><nowiki><source></nowiki></tt> menggunakan [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Anda harus menentukan suatu bahasa seperti ini:',
 	'syntaxhighlight-supported' => 'Bahasa-bahasa yang didukung oleh pewarnaan sintaks:',
 	'syntaxhighlight-err-loading' => '(kesalahan pemuatan daftar bahasa yang didukung)',
 	'syntaxhighlight-err-language' => 'Bahasa tak sah.',
+	'geshi.css' => '/* CSS di sini akan diterapkan untuk penyorotan sintaks GeSHi */',
 );
 
 /** Italian (Italiano)
