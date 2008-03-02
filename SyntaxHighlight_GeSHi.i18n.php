@@ -35,6 +35,7 @@ $messages['an'] = array(
 	'syntaxhighlight-supported'    => 'Lenguaches suportatos ta o resalte sintactico:',
 	'syntaxhighlight-err-loading'  => '(error cargando a lista de lenguaches suportatos)',
 	'syntaxhighlight-err-language' => 'Lenguache incorreuto.',
+	'geshi.css'                    => "/* Iste codigo CSS s'aplicará ta destacar a sintacsis GeSHi*/",
 );
 
 /** Arabic (العربية)
@@ -296,6 +297,13 @@ $messages['kk-latn'] = array(
 	'syntaxhighlight-err-loading' => '(süýemeldengen tilder tizimin jüktew qatesi)',
 	'syntaxhighlight-err-language' => 'Jaramsız til.',
 	'geshi.css' => '/* Mındağı CSS ämirleri GeSHi sïntaksïsti kömeski jarıqtawğa qoldanıladı */',
+);
+
+/** Khmer (ភាសាខ្មែរ)
+ * @author Chhorran
+ */
+$messages['km'] = array(
+	'syntaxhighlight-err-language' => 'ភាសា គ្មានសុពលភាព ។',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
