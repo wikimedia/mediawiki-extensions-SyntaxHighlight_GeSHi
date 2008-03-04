@@ -62,10 +62,15 @@ $messages['ast'] = array(
 );
 
 /** Bulgarian (Български)
+ * @author Borislav
  * @author DCLXVI
  */
 $messages['bg'] = array(
+	'syntaxhighlight-specify'      => 'Нужно е да укажете език по следния начин:',
+	'syntaxhighlight-supported'    => 'Поддържани езици за синтактично открояване:',
+	'syntaxhighlight-err-loading'  => '(грешка при зареждането на списъка на поддържаните езици)',
 	'syntaxhighlight-err-language' => 'Невалиден език.',
+	'geshi.css'                    => '/* Евентуален код на CSS, поставен тук, ще бъде използван за синтактичното открояване чрез GeSHi */',
 );
 
 /** Bengali (বাংলা)
@@ -303,6 +308,7 @@ $messages['kk-latn'] = array(
  * @author Chhorran
  */
 $messages['km'] = array(
+	'syntaxhighlight-specify'      => 'អ្នកចាំបាច់ សំដៅ មួយភាសា ដូច នេះ ៖',
 	'syntaxhighlight-err-language' => 'ភាសា គ្មានសុពលភាព ។',
 );
 
