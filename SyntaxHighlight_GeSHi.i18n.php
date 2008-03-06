@@ -346,6 +346,13 @@ $messages['lt'] = array(
 	'syntaxhighlight-err-language' => 'Neleistina kalba.',
 );
 
+/** Marathi (मराठी)
+ * @author Mahitgar
+ */
+$messages['mr'] = array(
+	'syntaxhighlight-err-language' => 'गैरलागू भाषा',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
