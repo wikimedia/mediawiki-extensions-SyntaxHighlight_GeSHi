@@ -501,9 +501,12 @@ $messages['te'] = array(
  * @author Ibrahim
  */
 $messages['tg'] = array(
+	'syntaxhighlight-desc'         => 'Имкони дастуроти рангин карданро <tt><nowiki><source></nowiki></tt> бо истифода аз [http://qbnz.com/highlighter/ GeSHi Highlighter]-ро фароҳам меоварад',
 	'syntaxhighlight-specify'      => 'Шумо бояд бо ин шакл забонеро мушаххас кунед:',
 	'syntaxhighlight-supported'    => 'Забонҳои пуштибонишуда барои рангин кардани дастуроти наҳвӣ:',
+	'syntaxhighlight-err-loading'  => '(хато дар богузории забонҳои пуштибонишуда)',
 	'syntaxhighlight-err-language' => 'Забони ғайри миҷоз.',
+	'geshi.css'                    => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
 );
 
 /** Turkish (Türkçe)
