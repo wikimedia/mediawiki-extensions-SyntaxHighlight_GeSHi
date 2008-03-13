@@ -353,6 +353,13 @@ $messages['mr'] = array(
 	'syntaxhighlight-err-language' => 'गैरलागू भाषा',
 );
 
+/** Low German (Plattdüütsch)
+ * @author Slomox
+ */
+$messages['nds'] = array(
+	'syntaxhighlight-err-language' => 'Spraak gellt nich.',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
