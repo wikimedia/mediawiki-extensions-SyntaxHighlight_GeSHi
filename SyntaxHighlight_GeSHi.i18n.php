@@ -357,7 +357,9 @@ $messages['mr'] = array(
  * @author Slomox
  */
 $messages['nds'] = array(
+	'syntaxhighlight-err-loading'  => '(Fehler bi dat Laden vun de Sprakenlist)',
 	'syntaxhighlight-err-language' => 'Spraak gellt nich.',
+	'geshi.css'                    => '/* CSS in disse MediaWiki-Systemnaricht warrt för dat GeSHi-Syntaxrutheven bruukt */',
 );
 
 /** Dutch (Nederlands)
