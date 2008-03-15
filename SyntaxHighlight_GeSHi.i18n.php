@@ -131,6 +131,9 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'syntaxhighlight-specify'      => 'Vi nepre specifigu lingvon ĉi tiel:',
+	'syntaxhighlight-supported'    => 'Subtenaj lingvoj por sintaksa emfazo',
+	'syntaxhighlight-err-loading'  => '(eraro ŝarĝante subtenitan lingvo-liston)',
 	'syntaxhighlight-err-language' => 'Nevalida lingvo.',
 );
 
@@ -347,10 +350,16 @@ $messages['lt'] = array(
 );
 
 /** Marathi (मराठी)
+ * @author Kaustubh
  * @author Mahitgar
  */
 $messages['mr'] = array(
+	'syntaxhighlight-desc'         => '[http://qbnz.com/highlighter/ GeSHi हायलायटर] वापरून सिन्टॅक्स हायलाईट करा <tt><nowiki><source></nowiki></tt>',
+	'syntaxhighlight-specify'      => 'तुम्ही याप्रमाणे भाषा देणे गरजेचे आहे:',
+	'syntaxhighlight-supported'    => 'सिन्टॅक्स हायलायटींग खालील भाषांवर वापरता येते:',
+	'syntaxhighlight-err-loading'  => '(सहाय्य देणार्‍या भाषांची यादी दाखविण्यास असमर्थ)',
 	'syntaxhighlight-err-language' => 'गैरलागू भाषा',
+	'geshi.css'                    => '/* इथे लिहिलेले CSS GeSHi सिन्टॅक्स हायलायटींग साठी वापरले जाईल */',
 );
 
 /** Low German (Plattdüütsch)
