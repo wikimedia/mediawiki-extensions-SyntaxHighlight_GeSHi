@@ -280,6 +280,17 @@ $messages['ja'] = array(
 	'geshi.css'                    => '/* ここへ、GeShi 構文ハイライト機能に適用する CSS を記述してください */',
 );
 
+/** Jutish (Jysk)
+ * @author Huslåke
+ */
+$messages['jut'] = array(
+	'syntaxhighlight-specify'      => 'Du nødst til spæsifiær en språg als dette:',
+	'syntaxhighlight-supported'    => 'Understønde språg før syntaks highlighting:',
+	'syntaxhighlight-err-loading'  => '(fejl lægende understønde språg liste)',
+	'syntaxhighlight-err-language' => 'Fejl språg.',
+	'geshi.css'                    => '/* CSS platsk her hvil være appliærn til GeSHi syntaks highlighting */',
+);
+
 /* Kazakh Arabic (AlefZet) */
 $messages['kk-arab'] = array(
 	'syntaxhighlight-specify' => 'ٴتىلدى بىلايشا كورسەتۋىڭىز قاجەت:',
