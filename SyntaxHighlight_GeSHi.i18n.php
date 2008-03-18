@@ -282,8 +282,10 @@ $messages['ja'] = array(
 
 /** Jutish (Jysk)
  * @author Huslåke
+ * @author Ælsån
  */
 $messages['jut'] = array(
+	'syntaxhighlight-desc'         => 'Gäv syntaks highlighting <tt><nowiki><source></nowiki></tt> via [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify'      => 'Du nødst til spæsifiær en språg als dette:',
 	'syntaxhighlight-supported'    => 'Understønde språg før syntaks highlighting:',
 	'syntaxhighlight-err-loading'  => '(fejl lægende understønde språg liste)',
