@@ -121,9 +121,13 @@ $messages['de'] = array(
 );
 
 /** Greek (Ελληνικά)
+ * @author ZaDiak
  * @author Consta
  */
 $messages['el'] = array(
+	'syntaxhighlight-specify'      => 'Πρέπει να δηλώσεις μια γλώσσα σαν κι αυτήν:',
+	'syntaxhighlight-supported'    => 'Υποστηριζόμενες γλώσσες για συντακτικό μαρκάρισμα',
+	'syntaxhighlight-err-loading'  => '(λάθος στη φόρτωση της λίστας των υποστηριζόμενων γλωσσών)',
 	'syntaxhighlight-err-language' => 'Άκυρη γλώσσα.',
 );
 
