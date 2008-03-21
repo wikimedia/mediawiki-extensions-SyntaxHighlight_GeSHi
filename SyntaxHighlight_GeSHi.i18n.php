@@ -237,7 +237,7 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (Magyar)
- * @author Bdanee
+ * @author Dani
  */
 $messages['hu'] = array(
 	'syntaxhighlight-desc'         => 'Lehetőséget nyújt szintaxiskiemelésre a <tt><nowiki><source></nowiki></tt> tag-gel, a [http://qbnz.com/highlighter/ GeSHi Highlighter] használatával',
