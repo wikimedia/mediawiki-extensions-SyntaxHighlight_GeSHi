@@ -511,6 +511,18 @@ $messages['stq'] = array(
 	'geshi.css'                    => '/* CSS in disse MediaWiki-Systemättergjucht wäd ap ju GeSHi-Syntaxbetoonenge anwoand */',
 );
 
+/** Sundanese (Basa Sunda)
+ * @author Kandar
+ */
+$messages['su'] = array(
+	'syntaxhighlight-desc'         => 'Nyadiakeun sorotan rumpaka <tt><nowiki><source></nowiki></tt> migunakeun [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Anjeun kudu milih basa kawas kieu:',
+	'syntaxhighlight-supported'    => 'Basa nu dirojong ku sorotan rumpaka:',
+	'syntaxhighlight-err-loading'  => '(éror ngamuat daptar basa nu dirojong)',
+	'syntaxhighlight-err-language' => 'Basana teu sah.',
+	'geshi.css'                    => '/* CSS nu diperenahkeun di dieu bakal dilarapkeun ka sorotan rumpaka GeSHi */',
+);
+
 /** Swedish (Svenska)
  * @author Lejonel
  */
