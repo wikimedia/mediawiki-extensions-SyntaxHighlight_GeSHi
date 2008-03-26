@@ -11,12 +11,12 @@ $messages = array();
  * @author Brion Vibber
  */
 $messages['en'] = array(
-	'syntaxhighlight-desc' => 'Provides syntax highlighting <tt><nowiki><source></nowiki></tt> using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'syntaxhighlight-specify' => 'You need to specify a language like this:',
-	'syntaxhighlight-supported' => 'Supported languages for syntax highlighting:',
-	'syntaxhighlight-err-loading' => '(error loading supported language list)',
+	'syntaxhighlight-desc'         => 'Provides syntax highlighting <tt><nowiki><source></nowiki></tt> using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'You need to specify a language like this:',
+	'syntaxhighlight-supported'    => 'Supported languages for syntax highlighting:',
+	'syntaxhighlight-err-loading'  => '(error loading supported language list)',
 	'syntaxhighlight-err-language' => 'Invalid language.',
-	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
+	'geshi.css'                    => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
 /** Afrikaans (Afrikaans)
