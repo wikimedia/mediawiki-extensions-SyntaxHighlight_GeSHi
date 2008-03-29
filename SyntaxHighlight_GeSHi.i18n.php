@@ -336,6 +336,7 @@ $messages['km'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
+	'syntaxhighlight-desc'         => "Syntax-Ervirhiewung <tt><nowiki><source></nowiki></tt> mat Hellëf vu [http://qbnz.com/highlighter/ 'GeSHi Highlighter']",
 	'syntaxhighlight-specify'      => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
 	'syntaxhighlight-supported'    => "Ënnerstetzte Sproochen fir d'Syntax faarweg ze markéieren",
 	'syntaxhighlight-err-loading'  => '(Feeler beim Luede vun der Lëscht vun den ënnerstetzte Sproochen)',
@@ -364,6 +365,15 @@ $messages['lt'] = array(
 	'syntaxhighlight-supported'    => 'Palaikomos kalbos sintaksės paryškinimui:',
 	'syntaxhighlight-err-loading'  => '(klaida įkeliant palaikomų kalbų sąrašą)',
 	'syntaxhighlight-err-language' => 'Neleistina kalba.',
+);
+
+/** Malayalam (മലയാളം)
+ * @author Shijualex
+ */
+$messages['ml'] = array(
+	'syntaxhighlight-specify'      => 'താങ്കള്‍ ഇപ്രകാരം ഒരു ഭാഷ തിരഞ്ഞെടുക്കണം:',
+	'syntaxhighlight-err-loading'  => '(ഭാഷകളുടെ പട്ടിക ലോഡ് ചെയ്യുന്നതില്‍ പിശക്)',
+	'syntaxhighlight-err-language' => 'അസാധുവായ ഭാഷ.',
 );
 
 /** Marathi (मराठी)
