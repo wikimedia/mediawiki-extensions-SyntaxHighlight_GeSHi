@@ -586,30 +586,39 @@ $messages['vo'] = array(
 	'syntaxhighlight-err-language' => 'Pük no dabinöl.',
 );
 
-/* Cantonese (Shinjiman) */
+/** Cantonese
+ * @author Shinjiman
+ */
 $messages['yue'] = array(
-	'syntaxhighlight-specify' => '你需要指定一種語言，好似咁:',
-	'syntaxhighlight-supported' => '語法醒目標示所支援嘅語言:',
-	'syntaxhighlight-err-loading' => '(支援語言清單載入錯誤)',
+	'syntaxhighlight-desc'         => '用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<tt><nowiki><source></nowiki></tt>提供醒目提示',
+	'syntaxhighlight-specify'      => '你需要指定一種語言，好似咁:',
+	'syntaxhighlight-supported'    => '語法醒目標示所支援嘅語言:',
+	'syntaxhighlight-err-loading'  => '(支援語言清單載入錯誤)',
 	'syntaxhighlight-err-language' => '無效嘅語言。',
-	'geshi.css' => '/* 放響呢度嘅CSS會以GeSHi語法醒目提示方式顯示 */',
+	'geshi.css'                    => '/* 放響呢度嘅CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
-/* Chinese (Simplified) (Shinjiman) */
+/** Chinese Simplified
+ * @author Shinjiman
+ */
 $messages['zh-hans'] = array(
-	'syntaxhighlight-specify' => '您需要指定一种语言，像这样:',
-	'syntaxhighlight-supported' => '语法高亮所支持的语言:',
-	'syntaxhighlight-err-loading' => '(支持语言列表载入错误)',
+	'syntaxhighlight-desc'         => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<tt><nowiki><source></nowiki></tt>提供高亮',
+	'syntaxhighlight-specify'      => '您需要指定一种语言，像这样:',
+	'syntaxhighlight-supported'    => '语法高亮所支持的语言:',
+	'syntaxhighlight-err-loading'  => '(支持语言列表载入错误)',
 	'syntaxhighlight-err-language' => '无效的语言。',
-	'geshi.css' => '/* 放在这里的CSS会以GeSHi语法高亮方式显示 */',
+	'geshi.css'                    => '/* 放在这里的CSS会以GeSHi语法高亮方式显示 */',
 );
 
-/* Chinese (Traditional) (Shinjiman) */
+/** Chinese Traditional
+ * @author Shinjiman
+ */
 $messages['zh-hant'] = array(
-	'syntaxhighlight-specify' => '您需要指定一種語言，像這樣:',
-	'syntaxhighlight-supported' => '語法醒目標示所支援的語言:',
-	'syntaxhighlight-err-loading' => '(支援語言清單載入錯誤)',
+	'syntaxhighlight-desc'         => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<tt><nowiki><source></nowiki></tt>提供醒目提示',
+	'syntaxhighlight-specify'      => '您需要指定一種語言，像這樣:',
+	'syntaxhighlight-supported'    => '語法醒目標示所支援的語言:',
+	'syntaxhighlight-err-loading'  => '(支援語言清單載入錯誤)',
 	'syntaxhighlight-err-language' => '無效的語言。',
-	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
+	'geshi.css'                    => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
