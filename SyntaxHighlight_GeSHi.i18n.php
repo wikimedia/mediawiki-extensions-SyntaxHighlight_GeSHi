@@ -85,6 +85,14 @@ $messages['bn'] = array(
 	'geshi.css'                    => '/* এখানে স্থাপিত CSS কোড GeSHi সিনট্যাক্স হাইলাইটিং-এ ব্যবহার করা হবে */',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'syntaxhighlight-specify'      => "Ret eo deoc'h spisaat ur yezh evel-henn :",
+	'syntaxhighlight-err-language' => 'Yezh direizh.',
+);
+
 /** Catalan (Català)
  * @author SMP
  */
