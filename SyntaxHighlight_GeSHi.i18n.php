@@ -565,7 +565,7 @@ $messages['te'] = array(
 /** Tajik (Тоҷикӣ)
  * @author Ibrahim
  */
-$messages['tg'] = array(
+$messages['tg-cyrl'] = array(
 	'syntaxhighlight-desc'         => 'Имкони дастуроти рангин карданро <tt><nowiki><source></nowiki></tt> бо истифода аз [http://qbnz.com/highlighter/ GeSHi Highlighter]-ро фароҳам меоварад',
 	'syntaxhighlight-specify'      => 'Шумо бояд бо ин шакл забонеро мушаххас кунед:',
 	'syntaxhighlight-supported'    => 'Забонҳои пуштибонишуда барои рангин кардани дастуроти наҳвӣ:',
