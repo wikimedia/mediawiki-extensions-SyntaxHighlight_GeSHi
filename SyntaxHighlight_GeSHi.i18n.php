@@ -518,6 +518,14 @@ $messages['sk'] = array(
 	'geshi.css'                    => '/* Tu umiestnené CSS sa použije pre zvýrazňovanie syntaxe GeSHi */',
 );
 
+/** Serbian Cyrillic ekavian (ћирилица)
+ * @author Sasa Stefanovic
+ */
+$messages['sr-ec'] = array(
+	'syntaxhighlight-err-loading'  => '(грешка при учитавању подржаних језика)',
+	'syntaxhighlight-err-language' => 'Неподобан језик',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
