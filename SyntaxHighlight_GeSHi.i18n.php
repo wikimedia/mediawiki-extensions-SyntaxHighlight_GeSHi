@@ -228,6 +228,16 @@ $messages['he'] = array(
 	'geshi.css'                    => '/* סגנונות CSS שייכתבו כאן יפעלו על התגית source */',
 );
 
+/** Hindi (हिन्दी)
+ * @author Kaustubh
+ */
+$messages['hi'] = array(
+	'syntaxhighlight-specify'      => 'आपने इसप्रकार भाषा देना जरूरी हैं:',
+	'syntaxhighlight-supported'    => 'सिन्टॅक्स हायलायटींग निम्नलिखित भाषाओंके लिये उपलब्ध हैं:',
+	'syntaxhighlight-err-loading'  => '(सपोर्टेड भाषाओंकी सूची नहीं दर्शा पा रहें हैं)',
+	'syntaxhighlight-err-language' => 'अवैध भाषा।',
+);
+
 $messages['hr'] = array(
 	'syntaxhighlight-specify' => 'Molimo navedite jezik na slijedeći način:',
 	'syntaxhighlight-supported' => 'Jezici podržani za bojanje sintakse:',
