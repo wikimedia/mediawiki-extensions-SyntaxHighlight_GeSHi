@@ -130,11 +130,13 @@ $messages['de'] = array(
 
 /** Greek (Ελληνικά)
  * @author ZaDiak
+ * @author Badseed
  * @author Consta
+ * @author ZaDiak
  */
 $messages['el'] = array(
-	'syntaxhighlight-specify'      => 'Πρέπει να δηλώσεις μια γλώσσα σαν κι αυτήν:',
-	'syntaxhighlight-supported'    => 'Υποστηριζόμενες γλώσσες για συντακτικό μαρκάρισμα',
+	'syntaxhighlight-specify'      => 'Πρέπει να επιλέξετε μια γλώσσα σαν κι αυτήν:',
+	'syntaxhighlight-supported'    => 'Υποστηριζόμενες γλώσσες για επισημάνσεις συντακτικού',
 	'syntaxhighlight-err-loading'  => '(λάθος στη φόρτωση της λίστας των υποστηριζόμενων γλωσσών)',
 	'syntaxhighlight-err-language' => 'Άκυρη γλώσσα.',
 );
