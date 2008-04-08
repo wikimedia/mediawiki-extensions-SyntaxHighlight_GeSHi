@@ -317,6 +317,13 @@ $messages['jut'] = array(
 	'geshi.css'                    => '/* CSS platsk her hvil være appliærn til GeSHi syntaks highlighting */',
 );
 
+/** Javanese (Basa Jawa)
+ * @author Meursault2004
+ */
+$messages['jv'] = array(
+	'syntaxhighlight-err-language' => 'Basané ora absah.',
+);
+
 /* Kazakh Arabic (AlefZet) */
 $messages['kk-arab'] = array(
 	'syntaxhighlight-specify' => 'ٴتىلدى بىلايشا كورسەتۋىڭىز قاجەت:',
@@ -599,6 +606,18 @@ $messages['tg-cyrl'] = array(
  */
 $messages['tr'] = array(
 	'syntaxhighlight-err-language' => 'Geçersiz dil.',
+);
+
+/** Vèneto (Vèneto)
+ * @author Candalua
+ */
+$messages['vec'] = array(
+	'syntaxhighlight-desc'         => 'Evidensia la sintassi dei linguagi de programazion <tt><nowiki><source></nowiki></tt> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Te ghè da specificar un linguagio in sta maniera:',
+	'syntaxhighlight-supported'    => 'Linguagi de cui se pol evidensiar la sintassi coi colori:',
+	'syntaxhighlight-err-loading'  => "(eror nel caricamento de l'elenco dei linguagi suportà)",
+	'syntaxhighlight-err-language' => 'Linguagio mìa riconossiùo.',
+	'geshi.css'                    => "/* I stili CSS inserìi qua i se àplica a l'evidenziazion de sintassi con GeSHi */",
 );
 
 /** Vietnamese (Tiếng Việt)
