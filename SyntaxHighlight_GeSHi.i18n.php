@@ -399,6 +399,7 @@ $messages['lt'] = array(
  */
 $messages['ml'] = array(
 	'syntaxhighlight-specify'      => 'താങ്കള്‍ ഇപ്രകാരം ഒരു ഭാഷ തിരഞ്ഞെടുക്കണം:',
+	'syntaxhighlight-supported'    => 'സിറ്റാക്സ് ഹൈലൈറ്റിങ്ങ് അനുകൂലിക്കുന്ന ഭാഷകള്‍:',
 	'syntaxhighlight-err-loading'  => '(ഭാഷകളുടെ പട്ടിക ലോഡ് ചെയ്യുന്നതില്‍ പിശക്)',
 	'syntaxhighlight-err-language' => 'അസാധുവായ ഭാഷ.',
 );
