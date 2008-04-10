@@ -321,6 +321,7 @@ $messages['jut'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'syntaxhighlight-specify'      => 'Panjenengan kudu nentokaké sawijining basa kaya iki:',
 	'syntaxhighlight-err-language' => 'Basané ora absah.',
 );
 
@@ -357,6 +358,16 @@ $messages['kk-latn'] = array(
 $messages['km'] = array(
 	'syntaxhighlight-specify'      => 'អ្នកចាំបាច់ សំដៅ មួយភាសា ដូច នេះ ៖',
 	'syntaxhighlight-err-language' => 'ភាសា គ្មានសុពលភាព ។',
+);
+
+/** Korean (한국어)
+ * @author ToePeu
+ */
+$messages['ko'] = array(
+	'syntaxhighlight-specify'      => '오른쪽과 같이 언어를 설정해야 합니다:',
+	'syntaxhighlight-supported'    => '문법 강조가 지원되는 언어 목록',
+	'syntaxhighlight-err-language' => '잘못된 언어 설정입니다.',
+	'geshi.css'                    => '/* 이 문서에서 설정한 CSS는 GeSHi에 적용됩니다. */',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
