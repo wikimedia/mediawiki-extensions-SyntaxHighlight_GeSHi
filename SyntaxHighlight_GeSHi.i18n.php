@@ -364,6 +364,7 @@ $messages['km'] = array(
  * @author ToePeu
  */
 $messages['ko'] = array(
+	'syntaxhighlight-desc'         => '<tt><nowiki><source></nowiki></tt> 태그로 [http://qbnz.com/highlighter/ GeSHi Highlighter]를 이용해 문법 강조 기능을 지원합니다.',
 	'syntaxhighlight-specify'      => '오른쪽과 같이 언어를 설정해야 합니다:',
 	'syntaxhighlight-supported'    => '문법 강조가 지원되는 언어 목록',
 	'syntaxhighlight-err-language' => '잘못된 언어 설정입니다.',
