@@ -322,6 +322,8 @@ $messages['jut'] = array(
  */
 $messages['jv'] = array(
 	'syntaxhighlight-specify'      => 'Panjenengan kudu nentokaké sawijining basa kaya iki:',
+	'syntaxhighlight-supported'    => 'Basa-basa sing disengkuyung déning panandhan werna sintaksis:',
+	'syntaxhighlight-err-loading'  => '(ana kaluputan ngunggahaké daftar basa sing disengkuyung)',
 	'syntaxhighlight-err-language' => 'Basané ora absah.',
 );
 
