@@ -469,7 +469,7 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'syntaxhighlight-desc'         => 'Provesís la mesa en relèu de la sintaxi per la balisa <tt><nowiki><source></nowiki></tt> en utilizant [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi]',
-	'syntaxhighlight-specify'      => 'Devètz especificar un lengatge coma aquò :',
+	'syntaxhighlight-specify'      => 'Vos cal especificar un lengatge coma aquò :',
 	'syntaxhighlight-supported'    => 'Lengatges suportats per la coloracion sintaxica :',
 	'syntaxhighlight-err-loading'  => '(error en cargant la lista dels lengatges suportats)',
 	'syntaxhighlight-err-language' => 'Lengatge invalid.',
