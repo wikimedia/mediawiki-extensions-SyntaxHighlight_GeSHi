@@ -321,10 +321,12 @@ $messages['jut'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'syntaxhighlight-desc'         => 'Mènèhaké panyorotan sintaksis <tt><nowiki><source></nowiki></tt> nganggo [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify'      => 'Panjenengan kudu nentokaké sawijining basa kaya iki:',
 	'syntaxhighlight-supported'    => 'Basa-basa sing disengkuyung déning panandhan werna sintaksis:',
 	'syntaxhighlight-err-loading'  => '(ana kaluputan ngunggahaké daftar basa sing disengkuyung)',
 	'syntaxhighlight-err-language' => 'Basané ora absah.',
+	'geshi.css'                    => '/* CSS ing kéné bakal ditrapaké kanggo panyorotan sintaksis GeSHi */',
 );
 
 /* Kazakh Arabic (AlefZet) */
