@@ -181,6 +181,7 @@ $messages['fa'] = array(
  * @author Nike
  */
 $messages['fi'] = array(
+	'syntaxhighlight-desc'         => 'Mahdollistaa syntaksin korostuksen GeSHillä <nowiki><source></nowiki>-elementtiä käyttämällä.',
 	'syntaxhighlight-specify'      => 'Kieli pitää määritellä seuraavasti:',
 	'syntaxhighlight-supported'    => 'Syntaksinkorostus on mahdollista seuraaville kielille:',
 	'syntaxhighlight-err-loading'  => '(tuettujen kielten luettelon lataaminen epäonnistui)',
