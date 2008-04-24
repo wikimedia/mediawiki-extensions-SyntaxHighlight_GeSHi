@@ -233,12 +233,15 @@ $messages['he'] = array(
 
 /** Hindi (हिन्दी)
  * @author Kaustubh
+ * @author Shyam
  */
 $messages['hi'] = array(
+	'syntaxhighlight-desc'         => '[http://qbnz.com/highlighter/ GeSHi Highlighter] प्रयोग करके चिन्हांकित <tt><nowiki><source></nowiki></tt> वाक्य विश्लेषण उपलब्ध करता है',
 	'syntaxhighlight-specify'      => 'आपने इसप्रकार भाषा देना जरूरी हैं:',
 	'syntaxhighlight-supported'    => 'सिन्टॅक्स हायलायटींग निम्नलिखित भाषाओंके लिये उपलब्ध हैं:',
 	'syntaxhighlight-err-loading'  => '(सपोर्टेड भाषाओंकी सूची नहीं दर्शा पा रहें हैं)',
 	'syntaxhighlight-err-language' => 'अवैध भाषा।',
+	'geshi.css'                    => '/* यहाँ पर उपस्थित CSS GeSHi चिन्हांकित वाक्य विश्लेषण पर प्रयोग किए जायेंगे */',
 );
 
 $messages['hr'] = array(
