@@ -629,6 +629,13 @@ $messages['tr'] = array(
 	'syntaxhighlight-err-language' => 'Geçersiz dil.',
 );
 
+/** Ukrainian (Українська)
+ * @author Ahonc
+ */
+$messages['uk'] = array(
+	'syntaxhighlight-err-language' => 'Зазначена непідтримувана мова.',
+);
+
 /** Vèneto (Vèneto)
  * @author Candalua
  */
