@@ -43,7 +43,8 @@ if( !defined( 'MEDIAWIKI' ) )
 
 $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'name'           => 'SyntaxHighlight',
-	'version' => preg_replace('/^.* (\d\d\d\d-\d\d-\d\d) .*$/', '\1', '$LastChangedDate$'), #just the date of the last change
+	'svn-date' => '$LastChangedDate$',
+	'svn-revision' => '$LastChangedRevision$',
 	'author'         => array( 'Brion Vibber', 'Tim Starling', 'Rob Church' ),
 	'description'    => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'descriptionmsg' => 'syntaxhighlight-desc',
