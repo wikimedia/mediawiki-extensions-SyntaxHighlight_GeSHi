@@ -284,6 +284,13 @@ $messages['id'] = array(
 	'geshi.css' => '/* CSS di sini akan diterapkan untuk penyorotan sintaks GeSHi */',
 );
 
+/** Ido (Ido)
+ * @author Malafaya
+ */
+$messages['io'] = array(
+	'syntaxhighlight-err-language' => 'Ne-valida linguo.',
+);
+
 /** Italian (Italiano)
  * @author BrokenArrow
  */
