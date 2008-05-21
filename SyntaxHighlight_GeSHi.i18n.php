@@ -530,7 +530,7 @@ $messages['pt'] = array(
 );
 
 /** Russian (Русский)
- * @author .:Ajvol:.
+ * @author Александр Сигачёв
  */
 $messages['ru'] = array(
 	'syntaxhighlight-desc'         => 'Позволяет использовать тег <tt><nowiki><source></nowiki></tt> для подсветки синтаксиса с помощью [http://qbnz.com/highlighter/ GeSHi Highlighter]',
