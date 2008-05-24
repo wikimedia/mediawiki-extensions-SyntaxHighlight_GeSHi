@@ -386,6 +386,18 @@ $messages['ko'] = array(
 	'geshi.css'                    => '/* 이 문서에서 설정한 CSS는 GeSHi에 적용됩니다. */',
 );
 
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'syntaxhighlight-desc'         => 'Deijt — en <tt><nowiki><source></nowiki></tt>-Affschnedde — de Syntax fon beshtemmpte Computer-Shprooche makeere. Bruch dobei dä [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Mer moß en Shprooch aanjevve, esu en dä Aat wi hee:',
+	'syntaxhighlight-supported'    => 'Di Shprooche, dänne ier Syntax mer makeere könne, sin:',
+	'syntaxhighlight-err-loading'  => '(Enne Fääler es opjetrodde, wi mer de Leß met de Shprooch laade wollte)',
+	'syntaxhighlight-err-language' => 'Di Shprooch kenne mer nit.',
+	'geshi.css'                    => '/* Dat es dat CCS för de Afschnedde med däm GeSHi syntax highlighting */',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
