@@ -55,7 +55,11 @@ $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
 $wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
-$wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
+if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
+	$wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
+} else {
+	$wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
+}
 
 /**
  * Register parser hook
@@ -63,4 +67,5 @@ $wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
 function efSyntaxHighlight_GeSHiSetup() {
 	global $wgParser;
 	$wgParser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
+	return true;
 }
