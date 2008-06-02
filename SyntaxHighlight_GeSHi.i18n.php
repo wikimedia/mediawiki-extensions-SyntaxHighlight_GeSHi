@@ -149,6 +149,7 @@ $messages['eo'] = array(
 	'syntaxhighlight-supported'    => 'Subtenaj lingvoj por sintaksa emfazo',
 	'syntaxhighlight-err-loading'  => '(eraro ŝarĝante subtenitan lingvo-liston)',
 	'syntaxhighlight-err-language' => 'Nevalida lingvo.',
+	'geshi.css'                    => '/* CSS enigita ĉi tie estos sintakse emfazita de GeSHi */',
 );
 
 /* Estonian [[et:Kasutaja:M2s17]] */
