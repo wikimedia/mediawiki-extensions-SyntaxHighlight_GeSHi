@@ -145,6 +145,7 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'syntaxhighlight-desc'         => 'Provizas kolorigado de sintakso <tt><nowiki><source></nowiki></tt> per [http://qbnz.com/highlighter/ GeSHi Kolorigilo de Sintakso]',
 	'syntaxhighlight-specify'      => 'Vi nepre specifigu lingvon ĉi tiel:',
 	'syntaxhighlight-supported'    => 'Subtenaj lingvoj por sintaksa emfazo',
 	'syntaxhighlight-err-loading'  => '(eraro ŝarĝante subtenitan lingvo-liston)',
