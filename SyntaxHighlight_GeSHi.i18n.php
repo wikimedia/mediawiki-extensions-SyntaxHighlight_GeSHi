@@ -224,8 +224,11 @@ $messages['gl'] = array(
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 );
 
-/* Hebrew (Rotem Liss) */
+/** Hebrew (עברית)
+ * @author Rotem Liss
+ */
 $messages['he'] = array(
+	'syntaxhighlight-desc'         => 'אפשרות לסימון קוד מקור בצבעים עם התגית <tt><nowiki><source></nowiki></tt> באמצעות [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify'      => 'עליכם לציין שפה באופן הבא:',
 	'syntaxhighlight-supported'    => 'שפות נתמכות:',
 	'syntaxhighlight-err-loading'  => '(שגיאה בטעינת הרשימה של השפות הנתמכות)',
