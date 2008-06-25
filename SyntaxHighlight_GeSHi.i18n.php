@@ -216,12 +216,17 @@ $messages['frp'] = array(
 	'geshi.css'                    => '/* Lo CSS placiê ique serat aplicâ per GeSHi por la coloracion sintaxica. */',
 );
 
+/** Galician (Galego)
+ * @author Xosé
+ * @author Toliño
+ */
 $messages['gl'] = array(
-	'syntaxhighlight-specify' => 'Ten que especificar unha linguaxe así:',
-	'syntaxhighlight-supported' => 'Linguaxes coñecidas para resaltar a sintaxe:',
-	'syntaxhighlight-err-loading' => '(erro ao cargar a listaxe de linguaxes coñecidas)',
+	'syntaxhighlight-desc'         => 'Proporciona unha sintaxe resaltada <tt><nowiki><source></nowiki></tt> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Ten que especificar unha linguaxe así:',
+	'syntaxhighlight-supported'    => 'Linguaxes coñecidas para resaltar a sintaxe:',
+	'syntaxhighlight-err-loading'  => '(erro ao cargar a listaxe de linguaxes coñecidas)',
 	'syntaxhighlight-err-language' => 'Linguaxe non válida.',
-	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
+	'geshi.css'                    => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 );
 
 /** Hebrew (עברית)
@@ -461,10 +466,24 @@ $messages['mr'] = array(
 	'geshi.css'                    => '/* इथे लिहिलेले CSS GeSHi सिन्टॅक्स हायलायटींग साठी वापरले जाईल */',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Aviator
+ */
+$messages['ms'] = array(
+	'syntaxhighlight-desc'         => 'Menyediakan tag <tt><nowiki><source></nowiki></tt> untuk penonjolan sintaks menggunakan [http://qbnz.com/highlighter/ GeSHi]',
+	'syntaxhighlight-specify'      => 'Anda hendaklah menyatakan bahasa seperti ini:',
+	'syntaxhighlight-supported'    => 'Bahasa-bahasa yang disokong untuk penonjolan sintaks:',
+	'syntaxhighlight-err-loading'  => '(berlaku ralat ketika memuat senarai bahasa yang disokong)',
+	'syntaxhighlight-err-language' => 'Bahasa tidak sah.',
+	'geshi.css'                    => '/* CSS yang diletakkan di sini akan dikenakan kepada penonjolan sintaks GeSHi */',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
 $messages['nds'] = array(
+	'syntaxhighlight-specify'      => 'Du musst op disse Wies en Spraak angeven:',
+	'syntaxhighlight-supported'    => 'Ünnerstütt Spraken för dat Syntax-Rutheven:',
 	'syntaxhighlight-err-loading'  => '(Fehler bi dat Laden vun de Sprakenlist)',
 	'syntaxhighlight-err-language' => 'Spraak gellt nich.',
 	'geshi.css'                    => '/* CSS in disse MediaWiki-Systemnaricht warrt för dat GeSHi-Syntaxrutheven bruukt */',
