@@ -677,7 +677,12 @@ $messages['tr'] = array(
  * @author Ahonc
  */
 $messages['uk'] = array(
+	'syntaxhighlight-desc'         => 'Дозволяє використовувати тег <tt><nowiki><source></nowiki></tt> для підсвічування синтаксису за допомогою [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Ви повинні зазначити мову наступним чином:',
+	'syntaxhighlight-supported'    => 'Підтримувані мови:',
+	'syntaxhighlight-err-loading'  => '(неможливо завантажити список мов)',
 	'syntaxhighlight-err-language' => 'Зазначена непідтримувана мова.',
+	'geshi.css'                    => '/* CSS-код, розміщений тут, буде застосований для підсвічування синтаксису GeSHI */',
 );
 
 /** Vèneto (Vèneto)
