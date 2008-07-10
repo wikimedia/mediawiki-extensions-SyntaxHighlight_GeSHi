@@ -45,27 +45,11 @@ class SyntaxHighlight_GeSHi {
 			$enclose = GESHI_HEADER_DIV;
 			$geshi->enable_line_numbers( GESHI_FANCY_LINE_NUMBERS );
 		}
-		// Highlightning
+		// Highlighting specific lines
 		if( isset( $args['highlight'] ) ) {
-			$lines = array();
-			$values = array_map( 'trim', explode( ',', $args['highlight'] ) );
-			foreach ( $values as $value ) {
-				if ( ctype_digit($value) ) {
-					$lines[] = (int) $value;
-				} elseif ( strpos( $value, '-' ) !== false ) {
-					list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
-					if ( ctype_digit($start) && ctype_digit($end) && $start < $end ) {
-						for ($i = $start; $i <= $end; $i++ ) $lines[] = $i;
-					} else {
-						wfDebugLog( 'geshi', "Invalid range: $value\n" );
-					}
-				} else {
-					wfDebugLog( 'geshi', "Invalid line: $value\n" );
-				}
-			}
+			$lines = self::parseHighlightLines( $args['highlight'] );
 			if ( count($lines) ) $geshi->highlight_lines_extra( $lines );
 		}
-
 		// Starting line number
 		if( isset( $args['start'] ) )
 			$geshi->start_line_numbers_at( $args['start'] );
@@ -87,6 +71,55 @@ class SyntaxHighlight_GeSHi {
 			$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
 			return '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
 		}
+	}
+	
+	/**
+	 * Take an input specifying a list of lines to highlight, returning
+	 * a raw list of matching line numbers.
+	 *
+	 * Input is comma-separated list of lines or line ranges.
+	 *
+	 * @input string
+	 * @return array of ints
+	 */
+	protected static function parseHighlightLines( $arg ) {
+		$lines = array();
+		$values = array_map( 'trim', explode( ',', $arg ) );
+		foreach ( $values as $value ) {
+			if ( ctype_digit($value) ) {
+				$lines[] = (int) $value;
+			} elseif ( strpos( $value, '-' ) !== false ) {
+				list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
+				if ( self::validHighlightRange( $start, $end ) ) {
+					for ($i = intval( $start ); $i <= $end; $i++ ) {
+						$lines[] = $i;
+					}
+				} else {
+					wfDebugLog( 'geshi', "Invalid range: $value\n" );
+				}
+			} else {
+				wfDebugLog( 'geshi', "Invalid line: $value\n" );
+			}
+		}
+		return $lines;
+	}
+	
+	/**
+	 * Validate a provided input range
+	 */
+	protected function validHighlightRange( $start, $end ) {
+		// Since we're taking this tiny range and producing a an
+		// array of every integer between them, it would be trivial
+		// to DoS the system by asking for a huge range.
+		// Impose an arbitrary limit on the number of lines in a
+		// given range to reduce the impact.
+		$arbitrarilyLargeConstant = 10000;
+		return
+			ctype_digit($start) &&
+			ctype_digit($end) &&
+			$start > 0 &&
+			$start < $end &&
+			$end - $start < $arbitrarilyLargeConstant;
 	}
 
 	/**
