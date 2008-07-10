@@ -45,6 +45,27 @@ class SyntaxHighlight_GeSHi {
 			$enclose = GESHI_HEADER_DIV;
 			$geshi->enable_line_numbers( GESHI_FANCY_LINE_NUMBERS );
 		}
+		// Highlightning
+		if( isset( $args['highlight'] ) ) {
+			$lines = array();
+			$values = array_map( 'trim', explode( ',', $args['highlight'] ) );
+			foreach ( $values as $value ) {
+				if ( ctype_digit($value) ) {
+					$lines[] = (int) $value;
+				} elseif ( strpos( $value, '-' ) !== false ) {
+					list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
+					if ( ctype_digit($start) && ctype_digit($end) && $start < $end ) {
+						for ($i = $start; $i <= $end; $i++ ) $lines[] = $i;
+					} else {
+						wfDebugLog( 'geshi', "Invalid range: $value\n" );
+					}
+				} else {
+					wfDebugLog( 'geshi', "Invalid line: $value\n" );
+				}
+			}
+			if ( count($lines) ) $geshi->highlight_lines_extra( $lines );
+		}
+
 		// Starting line number
 		if( isset( $args['start'] ) )
 			$geshi->start_line_numbers_at( $args['start'] );
