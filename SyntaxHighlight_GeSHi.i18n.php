@@ -152,7 +152,7 @@ $messages['eo'] = array(
 	'geshi.css'                    => '/* CSS enigita ĉi tie estos sintakse emfazita de GeSHi */',
 );
 
-/** Estonian (Eesti) */
+/** Estonian (Eesti)
  * @author [[et:Kasutaja:M2s17]]
  */
 $messages['et'] = array(
