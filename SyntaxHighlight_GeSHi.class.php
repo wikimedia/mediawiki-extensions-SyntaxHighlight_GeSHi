@@ -22,7 +22,9 @@ class SyntaxHighlight_GeSHi {
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
 		self::initialise();
-		$text = trim( $text );
+		$text = rtrim( $text );
+		// Don't trim leading spaces away, just the linefeeds
+		$text = preg_replace( '/^\n+/', '', $text );
 		// Validate language
 		if( isset( $args['lang'] ) ) {
 			$lang = strtolower( $args['lang'] );
@@ -35,14 +37,20 @@ class SyntaxHighlight_GeSHi {
 		if( !$geshi instanceof GeSHi )
 			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
 		// "Enclose" parameter
-		$enclose = isset( $args['enclose'] ) && $args['enclose'] == 'div'
-			? GESHI_HEADER_DIV
-			: GESHI_HEADER_PRE;
-		// Line numbers?
-		if( isset( $args['line'] ) ) {
+		if ( isset( $args['enclose'] ) && $args['enclose'] == 'div' ) {
+			$enclose = GESHI_HEADER_DIV;
+		} elseif ( defined('GESHI_HEADER_PRE_VALID') ) {
+			// Since version 1.0.8 geshi can produce valid pre, but we need to check for it
+			$enclose = GESHI_HEADER_PRE_VALID;
+		} elseif( isset( $args['line'] ) ) {
 			// Force <div> mode to maintain valid XHTML, see
 			// http://sourceforge.net/tracker/index.php?func=detail&aid=1201963&group_id=114997&atid=670231
 			$enclose = GESHI_HEADER_DIV;
+		} else {
+			$enclose = GESHI_HEADER_PRE;
+		}
+		// Line numbers
+		if( isset( $args['line'] ) ) {
 			$geshi->enable_line_numbers( GESHI_FANCY_LINE_NUMBERS );
 		}
 		// Highlighting specific lines
@@ -107,7 +115,7 @@ class SyntaxHighlight_GeSHi {
 	/**
 	 * Validate a provided input range
 	 */
-	protected function validHighlightRange( $start, $end ) {
+	protected static function validHighlightRange( $start, $end ) {
 		// Since we're taking this tiny range and producing a an
 		// array of every integer between them, it would be trivial
 		// to DoS the system by asking for a huge range.
@@ -182,7 +190,9 @@ class SyntaxHighlight_GeSHi {
 		$lang = $geshi->language;
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
 		$css[] = ".source-$lang {line-height: normal;}";
-		$css[] = ".source-$lang li {line-height: normal;}";
+		$css[] = ".source-$lang li, .source-$lang pre {";
+		$css[] = "\tline-height: normal; border: 0px none white;";
+		$css[] = "}";
 		$css[] = $geshi->get_stylesheet( false );
 		$css[] = '/*]]>*/';
 		$css[] = '</style>';
