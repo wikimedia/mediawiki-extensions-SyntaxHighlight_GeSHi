@@ -259,8 +259,10 @@ $messages['hi'] = array(
 
 /** Croatian (Hrvatski)
  * @author SpeedyGonsales
+ * @author Dalibor Bosits
  */
 $messages['hr'] = array(
+	'syntaxhighlight-desc'         => 'Omogućava bojanje sintakse <tt><nowiki><source></nowiki></tt> korištenjem [http://qbnz.com/highlighter/ GeSHi Highlighter-a]',
 	'syntaxhighlight-specify'      => 'Molimo navedite jezik na slijedeći način:',
 	'syntaxhighlight-supported'    => 'Jezici podržani za bojanje sintakse:',
 	'syntaxhighlight-err-loading'  => '(greška pri učitavanju popisa podržanih jezika)',
@@ -623,10 +625,14 @@ $messages['sk'] = array(
 
 /** Serbian Cyrillic ekavian (ћирилица)
  * @author Sasa Stefanovic
+ * @author Millosh
  */
 $messages['sr-ec'] = array(
+	'syntaxhighlight-specify'      => 'Потребно је одредити језик као овај:',
+	'syntaxhighlight-supported'    => 'Подржани језици у визуелом означавању синтаксе:',
 	'syntaxhighlight-err-loading'  => '(грешка при учитавању подржаних језика)',
 	'syntaxhighlight-err-language' => 'Неподобан језик',
+	'geshi.css'                    => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
 /** Seeltersk (Seeltersk)
