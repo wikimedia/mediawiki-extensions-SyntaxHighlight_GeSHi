@@ -61,6 +61,18 @@ $messages['ast'] = array(
 	'geshi.css'                    => '/* El códigu CSS allugáu equí va ser aplicáu por GeSHi pa la sintaxis en colores */',
 );
 
+/** Southern Balochi (بلوچی مکرانی)
+ * @author Mostafadaneshvar
+ */
+$messages['bcc'] = array(
+	'syntaxhighlight-desc'         => 'ساختار پررنگی آریت <tt><nowiki><source></nowiki></tt> گون استفاده چه[http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'لازمنت شما یک زبانی په داب شی مشخض کنیت:',
+	'syntaxhighlight-supported'    => 'حمایتی زبانان په ساختار پررنگی:',
+	'syntaxhighlight-err-loading'  => '(حطا ته بار کتن لیست زبان داشتگین)',
+	'syntaxhighlight-err-language' => 'نامعتبرین زبان',
+	'geshi.css'                    => '/* CSS که ادان هستن ته ساختار جی شی پررنگ کتن کارمرز بین */',
+);
+
 /** Bulgarian (Български)
  * @author Borislav
  * @author DCLXVI
