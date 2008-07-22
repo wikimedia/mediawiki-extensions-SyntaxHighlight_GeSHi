@@ -306,6 +306,18 @@ $messages['hu'] = array(
 	'geshi.css'                    => '/* Az itt elhelyezett CSS-t fogja alkalmazni a GeSHi szintaxiskiemelő */',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'syntaxhighlight-desc'         => 'Forni le emphase visual syntactic in <tt><nowiki><source></nowiki></tt> per medio de [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify'      => 'Tu debe specificar un linguage in iste modo:',
+	'syntaxhighlight-supported'    => 'Linguages supportate pro le emphase visual syntactic:',
+	'syntaxhighlight-err-loading'  => '(error durante le cargamento del lista de linguages supportate)',
+	'syntaxhighlight-err-language' => 'Linguage invalide.',
+	'geshi.css'                    => '/* Omne CSS inserite hic se applicara al emphase visual syntactic con GeSHi */',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author IvanLanin
  */
