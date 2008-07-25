@@ -652,6 +652,7 @@ $messages['sk'] = array(
  * @author Millosh
  */
 $messages['sr-ec'] = array(
+	'syntaxhighlight-desc'         => 'Омогућава визуелно означавање синтаксе <tt><nowiki><source></nowiki></tt> коришћењем [http://qbnz.com/highlighter/ GeSHi хајлајтера].',
 	'syntaxhighlight-specify'      => 'Потребно је одредити језик као овај:',
 	'syntaxhighlight-supported'    => 'Подржани језици у визуелом означавању синтаксе:',
 	'syntaxhighlight-err-loading'  => '(грешка при учитавању подржаних језика)',
