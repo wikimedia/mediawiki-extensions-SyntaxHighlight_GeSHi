@@ -47,7 +47,7 @@ $messages['ar'] = array(
 	'syntaxhighlight-supported'    => 'اللغات المدعومة لتظليل الصياغة:',
 	'syntaxhighlight-err-loading'  => '(خطأ في تحميل قائمة اللغات المدعومة)',
 	'syntaxhighlight-err-language' => 'لغة غير صحيحة.',
-	'geshi.css'                    => '/* الأنماط المتراصة CSS المعروضة هنا ستطبق على GeSHi syntax highlighting */',
+	'geshi.css'                    => '/* الأنماط المتراصة CSS المعروضة هنا ستطبق على تظليل صياغة GeSHi */',
 );
 
 /** Asturian (Asturianu)
