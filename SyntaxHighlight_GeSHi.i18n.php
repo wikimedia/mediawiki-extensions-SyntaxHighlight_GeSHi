@@ -231,6 +231,13 @@ $messages['frp'] = array(
 	'geshi.css'                    => '/* Lo CSS placiê ique serat aplicâ per GeSHi por la coloracion sintaxica. */',
 );
 
+/** Friulian (Furlan)
+ * @author Klenje
+ */
+$messages['fur'] = array(
+	'syntaxhighlight-supported' => 'Lengaç par cui si pues colorâ la sintassi:',
+);
+
 /** Galician (Galego)
  * @author Xosé
  * @author Toliño
