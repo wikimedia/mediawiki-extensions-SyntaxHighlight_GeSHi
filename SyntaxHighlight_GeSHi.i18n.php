@@ -54,6 +54,7 @@ $messages['ar'] = array(
  * @author Esbardu
  */
 $messages['ast'] = array(
+	'syntaxhighlight-desc'         => 'Proporciona resaltáu de sintaxis <tt><nowiki><source></nowiki></tt> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify'      => 'Necesites conseñar una llingua como esta:',
 	'syntaxhighlight-supported'    => 'Llingües sofitaes pa la sintaxis en colores:',
 	'syntaxhighlight-err-loading'  => '(error al cargar la llista de llingües sofitaes)',
