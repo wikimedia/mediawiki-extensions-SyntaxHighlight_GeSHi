@@ -81,6 +81,13 @@ $messages['bcc'] = array(
 	'geshi.css' => '/* CSS که ادان هستن ته ساختار جی شی پررنگ کتن کارمرز بین */',
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ */
+$messages['be-tarask'] = array(
+	'syntaxhighlight-err-language' => 'Мова не падтрымліваецца.',
+);
+
 /** Bulgarian (Български)
  * @author Borislav
  * @author DCLXVI
