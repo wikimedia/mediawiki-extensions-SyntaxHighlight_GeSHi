@@ -553,6 +553,7 @@ $messages['nds'] = array(
 
 /** Dutch (Nederlands)
  * @author Siebrand
+ * @author Tvdm
  */
 $messages['nl'] = array(
 	'syntaxhighlight-desc' => 'Voorziet in het markeren van syntaxis voor <tt><nowiki><source></nowiki></tt> met [http://qbnz.com/highlighter/ GeSHi Highlighter]',
@@ -560,7 +561,7 @@ $messages['nl'] = array(
 	'syntaxhighlight-supported' => 'Ondersteunde talen voor syntaxismarkering:',
 	'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
 	'syntaxhighlight-err-language' => 'Onjuiste taal.',
-	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi syntax highlighting */',
+	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi Syntax Highlighting */',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
