@@ -58,13 +58,14 @@ $messages['ar'] = array(
 );
 
 /** Egyptian Spoken Arabic (مصرى)
+ * @author Meno25
  * @author Ramsis II
  */
 $messages['arz'] = array(
 	'syntaxhighlight-desc' => 'بيوفر تظليل السينتاكس <tt><nowiki><source></nowiki></tt> باستعمال [http://qbnz.com/highlighter/ GeSHi مظلل]',
-	'syntaxhighlight-specify' => 'انت لازم تحدد لغة زي كدا:',
+	'syntaxhighlight-specify' => 'انت لازم تحدد لغة زى كدا:',
 	'syntaxhighlight-supported' => 'اللغات المدعومة لتظليل السينتاكس:',
-	'syntaxhighlight-err-loading' => '(غلط في تحميل لستة اللغات المدعومة)',
+	'syntaxhighlight-err-loading' => '(غلط فى تحميل لستة اللغات المدعومة)',
 	'syntaxhighlight-err-language' => 'لغة مش صحيحة',
 	'geshi.css' => '/* CSS المحطوطة هنا ح تتطبق على تظليل سينتاكس الGeSHi */',
 );
