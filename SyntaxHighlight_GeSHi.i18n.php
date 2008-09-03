@@ -192,6 +192,13 @@ $messages['eo'] = array(
 	'geshi.css' => '/* CSS enigita ĉi tie estos sintakse emfazita de GeSHi */',
 );
 
+/** Spanish (Español)
+ * @author Muro de Aguas
+ */
+$messages['es'] = array(
+	'syntaxhighlight-desc' => 'Permite resaltar el código fuente usando la etiqueta <tt><nowiki><source></nowiki></tt>. Esta extensión usa [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+);
+
 /** Estonian (Eesti)
  * @author [[et:Kasutaja:M2s17]]
  */
