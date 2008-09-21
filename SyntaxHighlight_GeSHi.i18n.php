@@ -194,9 +194,12 @@ $messages['eo'] = array(
 
 /** Spanish (Español)
  * @author Muro de Aguas
+ * @author Remember the dot
  */
 $messages['es'] = array(
 	'syntaxhighlight-desc' => 'Permite resaltar el código fuente usando la etiqueta <tt><nowiki><source></nowiki></tt>. Esta extensión usa [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Necesita especificar un idioma como esto:',
+	'syntaxhighlight-err-language' => 'Idioma no válido.',
 );
 
 /** Estonian (Eesti)
