@@ -34,8 +34,8 @@
  * If you forget, or give an unsupported value, the extension spits out
  * some help text and a list of all supported languages.
  *
- * The extension has been tested with GeSHi 1.0.7 and MediaWiki 1.5 CVS
- * as of 2005-06-22.
+ * The extension has been tested with GeSHi 1.0.8 and MediaWiki 1.14a
+ * as of 2008-09-28.
  */
 
 if( !defined( 'MEDIAWIKI' ) )

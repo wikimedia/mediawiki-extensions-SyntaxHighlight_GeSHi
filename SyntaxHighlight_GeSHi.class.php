@@ -36,19 +36,9 @@ class SyntaxHighlight_GeSHi {
 		$geshi = self::prepare( $text, $lang );
 		if( !$geshi instanceof GeSHi )
 			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
-		// "Enclose" parameter
-		if ( isset( $args['enclose'] ) && $args['enclose'] == 'div' ) {
-			$enclose = GESHI_HEADER_DIV;
-		} elseif ( defined('GESHI_HEADER_PRE_VALID') ) {
-			// Since version 1.0.8 geshi can produce valid pre, but we need to check for it
-			$enclose = GESHI_HEADER_PRE_VALID;
-		} elseif( isset( $args['line'] ) ) {
-			// Force <div> mode to maintain valid XHTML, see
-			// http://sourceforge.net/tracker/index.php?func=detail&aid=1201963&group_id=114997&atid=670231
-			$enclose = GESHI_HEADER_DIV;
-		} else {
-			$enclose = GESHI_HEADER_PRE;
-		}
+
+		$enclose = self::getEncloseType( $args );
+
 		// Line numbers
 		if( isset( $args['line'] ) ) {
 			$geshi->enable_line_numbers( GESHI_FANCY_LINE_NUMBERS );
@@ -73,11 +63,15 @@ class SyntaxHighlight_GeSHi {
 			return self::formatError( $err );
 		} else {
 			// Armour for Parser::doBlockLevels()
-			if( $enclose == GESHI_HEADER_DIV )
+			if( $enclose === GESHI_HEADER_DIV )
 				$out = str_replace( "\n", '', $out );
 			// Register CSS
 			$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
-			return '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
+			if ( $enclose === GESHI_HEADER_NONE ) {
+				return '<span class="'.$lang.' source-'.$lang.'"> '.$out . '</span>';
+			} else {
+				return '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
+			}
 		}
 	}
 	
@@ -128,6 +122,33 @@ class SyntaxHighlight_GeSHi {
 			$start > 0 &&
 			$start < $end &&
 			$end - $start < $arbitrarilyLargeConstant;
+	}
+
+	static function getEncloseType( $args ) {
+		// Since version 1.0.8 geshi can produce valid pre, but we need to check for it
+		if ( defined('GESHI_HEADER_PRE_VALID') ) {
+			$pre = GESHI_HEADER_PRE_VALID;
+		} else {
+			$pre = GESHI_HEADER_PRE;
+		}
+
+		// "Enclose" parameter
+		$enclose = $pre;
+		if ( isset( $args['enclose'] ) ) {
+			if ( $args['enclose'] === 'div' ) {
+				$enclose = GESHI_HEADER_DIV;
+			} elseif ( $args['enclose'] === 'none' ) {
+				$enclose = GESHI_HEADER_NONE;
+			}
+		}
+
+		if( isset( $args['line'] ) && $pre === GESHI_HEADER_PRE ) {
+			// Force <div> mode to maintain valid XHTML, see
+			// http://sourceforge.net/tracker/index.php?func=detail&aid=1201963&group_id=114997&atid=670231
+			$enclose = GESHI_HEADER_DIV;
+		}
+
+		return $enclose;
 	}
 
 	/**
