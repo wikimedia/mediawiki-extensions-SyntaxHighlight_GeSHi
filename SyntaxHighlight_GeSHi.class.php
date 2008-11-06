@@ -171,7 +171,7 @@ class SyntaxHighlight_GeSHi {
 			if( !$geshi->error() ) {
 				// Done
 				$output->addHeadItem( "source-$lang", self::buildHeadItem( $geshi ) );
-				$output->addHtml( "<div dir=\"ltr\">{$out}</div>" );
+				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
 				return false;
 			}
 		}
