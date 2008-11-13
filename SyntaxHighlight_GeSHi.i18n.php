@@ -587,6 +587,18 @@ $messages['nl'] = array(
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi Syntax Highlighting */',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Frokor
+ */
+$messages['nn'] = array(
+	'syntaxhighlight-desc' => 'Gjev syntaks som framhevar <tt><nowiki><source></nowiki></tt> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Du må gje eit språk slik:',
+	'syntaxhighlight-supported' => 'Støtta språk for syntaksutheving:',
+	'syntaxhighlight-err-loading' => '(feil under lasting av liste over støtta språk)',
+	'syntaxhighlight-err-language' => 'Ugyldig språk.',
+	'geshi.css' => '/* CSS plassert her gjeld GeSHi syntaksutheving */',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
