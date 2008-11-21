@@ -239,7 +239,7 @@ class SyntaxHighlight_GeSHi {
 		if( $error )
 			$html .= "<p>{$error}</p>";
 		$html .= '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-specify' ) )
-			. ' <samp>&lt;source lang=&quot;html&quot;&gt;...&lt;/source&gt;</samp></p>'
+			. ' <samp>&lt;source lang=&quot;html4strict&quot;&gt;...&lt;/source&gt;</samp></p>'
 			. '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-supported' ) ) . '</p>'
 			. self::formatLanguages();
 		return "<div style=\"border: solid red 1px; padding: .5em;\">{$html}</div>";
