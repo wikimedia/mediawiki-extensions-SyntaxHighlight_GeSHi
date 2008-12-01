@@ -133,6 +133,13 @@ $messages['br'] = array(
 	'syntaxhighlight-err-language' => 'Yezh direizh.',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'syntaxhighlight-err-language' => 'Pogrešan jezik.',
+);
+
 /** Catalan (Català)
  * @author SMP
  */
