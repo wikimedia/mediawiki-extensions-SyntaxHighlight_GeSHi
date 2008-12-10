@@ -281,6 +281,13 @@ $messages['fur'] = array(
 	'syntaxhighlight-supported' => 'Lengaç par cui si pues colorâ la sintassi:',
 );
 
+/** Irish (Gaeilge)
+ * @author Alison
+ */
+$messages['ga'] = array(
+	'syntaxhighlight-err-language' => 'Teanga neamhbhailí.',
+);
+
 /** Galician (Galego)
  * @author Toliño
  * @author Xosé
