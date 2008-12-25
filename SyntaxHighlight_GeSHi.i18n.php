@@ -688,6 +688,18 @@ $messages['pt'] = array(
 	'geshi.css' => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Heldergeovane
+ */
+$messages['pt-br'] = array(
+	'syntaxhighlight-desc' => 'Providencia realce de sintaxe <tt><nowiki><source></nowiki></tt> através do [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Você precisa especificar uma linguagem, tal como:',
+	'syntaxhighlight-supported' => 'Linguagens suportadas no realce de sintaxe:',
+	'syntaxhighlight-err-loading' => '(erro ao carregar a lista de linguagens suportadas)',
+	'syntaxhighlight-err-language' => 'Linguagem inválida.',
+	'geshi.css' => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
+);
+
 /** Russian (Русский)
  * @author Александр Сигачёв
  */
