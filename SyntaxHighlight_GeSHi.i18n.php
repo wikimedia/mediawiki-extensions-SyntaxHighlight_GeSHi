@@ -99,12 +99,12 @@ $messages['bcc'] = array(
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
-	'syntaxhighlight-desc' => 'Дазваляе карыстацца тэгам  <tt><nowiki><source></nowiki></tt> для праверкі сынтаксысу з дапамогай [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Дазваляе выкарыстоўваць тэг  <tt><nowiki><source></nowiki></tt> для падсьветкі сынтаксісу з дапамогай [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Вам неабходна пазначыць мову наступным чынам:',
-	'syntaxhighlight-supported' => 'Падтрымліваемыя мовы для праверкі сынтаксысу:',
+	'syntaxhighlight-supported' => 'Мовы, якія падтрымліваюцца для праверкі сынтаксісу:',
 	'syntaxhighlight-err-loading' => '(памылка загрузкі сьпісу моваў)',
 	'syntaxhighlight-err-language' => 'Мова не падтрымліваецца.',
-	'geshi.css' => '/* CSS разьмешчаны тут, будзе выкарыстаны для падсьветкі сінтаксысу GeSHi */',
+	'geshi.css' => '/* CSS, разьмешчаны тут, будзе выкарыстоўвацца для падсьветкі сынтаксісу GeSHi */',
 );
 
 /** Bulgarian (Български)
