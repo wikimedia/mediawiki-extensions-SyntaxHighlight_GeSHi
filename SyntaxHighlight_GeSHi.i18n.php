@@ -96,9 +96,15 @@ $messages['bcc'] = array(
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
+ * @author Jim-by
  */
 $messages['be-tarask'] = array(
+	'syntaxhighlight-desc' => 'Дазваляе карыстацца тэгам  <tt><nowiki><source></nowiki></tt> для праверкі сынтаксысу з дапамогай [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Вам неабходна пазначыць мову наступным чынам:',
+	'syntaxhighlight-supported' => 'Падтрымліваемыя мовы для праверкі сынтаксысу:',
+	'syntaxhighlight-err-loading' => '(памылка загрузкі сьпісу моваў)',
 	'syntaxhighlight-err-language' => 'Мова не падтрымліваецца.',
+	'geshi.css' => '/* CSS разьмешчаны тут, будзе выкарыстаны для падсьветкі сінтаксысу GeSHi */',
 );
 
 /** Bulgarian (Български)
@@ -698,6 +704,14 @@ $messages['pt-br'] = array(
 	'syntaxhighlight-err-loading' => '(erro ao carregar a lista de linguagens suportadas)',
 	'syntaxhighlight-err-language' => 'Linguagem inválida.',
 	'geshi.css' => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
+);
+
+/** Romanian (Română)
+ * @author KlaudiuMihaila
+ */
+$messages['ro'] = array(
+	'syntaxhighlight-specify' => 'Trebuie să specificaţi o limbă în acest mod:',
+	'syntaxhighlight-err-language' => 'Limbă incorectă.',
 );
 
 /** Russian (Русский)
