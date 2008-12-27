@@ -590,6 +590,13 @@ $messages['ms'] = array(
 	'geshi.css' => '/* CSS yang diletakkan di sini akan dikenakan kepada penonjolan sintaks GeSHi */',
 );
 
+/** Nahuatl (Nāhuatl)
+ * @author Fluence
+ */
+$messages['nah'] = array(
+	'syntaxhighlight-err-language' => 'Ahcualli tlahtōlli',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
