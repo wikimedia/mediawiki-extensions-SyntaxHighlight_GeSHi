@@ -186,6 +186,18 @@ $messages['de'] = array(
 	'geshi.css' => '/* CSS in dieser MediaWiki-Systemnachricht wird auf die GeSHi-Syntaxhervorhebung angewendet */',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'syntaxhighlight-desc' => 'Zmóžnja syntaksowe wuzwignjenje <tt><nowiki><source></nowiki></tt> z pomocu [http://qbnz.com/highlighter/ rěda GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Musyš rěc kaž slědujo pódaś:',
+	'syntaxhighlight-supported' => 'Pódpěrane rěcy za syntaksowe wuzwignjenje:',
+	'syntaxhighlight-err-loading' => '(zmólka pśi zacytowanju lisćiny pódpěranych rěcow)',
+	'syntaxhighlight-err-language' => 'Njepłaśiwa rěc.',
+	'geshi.css' => '/* How pódaty CSS nałožujo se na syntaksowe wuzwignjenje GeSHi */',
+);
+
 /** Greek (Ελληνικά)
  * @author Badseed
  * @author Consta
