@@ -838,6 +838,18 @@ $messages['tg-cyrl'] = array(
 	'geshi.css' => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
 );
 
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'syntaxhighlight-desc' => "Nagbibigay ng pagbibigay ng liwanag sa palaugnayan <tt><nowiki><pinagmulan></nowiki></tt> na ginagamitan ng [http://qbnz.com/highlighter/ pambigay ng liwanag (''highlighter'') ng GeSHi]",
+	'syntaxhighlight-specify' => 'Kinakailangan mong tumukoy ng isang wikang katulad nito:',
+	'syntaxhighlight-supported' => 'Sinusuportahang mga wika para sa pagbibigay ng liwanag/pagtatampok ng palaugnayan:',
+	'syntaxhighlight-err-loading' => '(kamalian sa pagkarga ng sinusuportahang talaan ng wika)',
+	'syntaxhighlight-err-language' => 'Hindi tanggap na wika.',
+	'geshi.css' => '/* Ang inilagay na CSS dito ay gagamitin para sa pang-GeSHi na pagbibigay ng liwanag sa/pagtatampok ng palaugnayan */',
+);
+
 /** Turkish (Türkçe)
  * @author Erkan Yilmaz
  */
