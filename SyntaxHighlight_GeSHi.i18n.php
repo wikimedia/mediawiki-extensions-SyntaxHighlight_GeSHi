@@ -613,6 +613,7 @@ $messages['nah'] = array(
  * @author Slomox
  */
 $messages['nds'] = array(
+	'syntaxhighlight-desc' => 'Syntax-Rutheven <tt><nowiki><source></nowiki></tt> mit Help vun’n [http://qbnz.com/highlighter/ GeSHi-Highlighter]',
 	'syntaxhighlight-specify' => 'Du musst op disse Wies en Spraak angeven:',
 	'syntaxhighlight-supported' => 'Ünnerstütt Spraken för dat Syntax-Rutheven:',
 	'syntaxhighlight-err-loading' => '(Fehler bi dat Laden vun de Sprakenlist)',
