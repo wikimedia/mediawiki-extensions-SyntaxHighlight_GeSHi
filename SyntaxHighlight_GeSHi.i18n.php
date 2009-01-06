@@ -223,13 +223,18 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Crazymadlover
  * @author Muro de Aguas
  * @author Remember the dot
+ * @author Sanbec
  */
 $messages['es'] = array(
 	'syntaxhighlight-desc' => 'Permite resaltar el código fuente usando la etiqueta <tt><nowiki><source></nowiki></tt>. Esta extensión usa [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Necesita especificar un idioma como esto:',
+	'syntaxhighlight-supported' => 'lenguajes soportados para sintaxis remarcada:',
+	'syntaxhighlight-err-loading' => '(error cargando lista de lenguajes soportados)',
 	'syntaxhighlight-err-language' => 'Idioma no válido.',
+	'geshi.css' => '/* El código CSS situado aquí afectará al resaltado de sintaxis de GeSHi */',
 );
 
 /** Estonian (Eesti)
