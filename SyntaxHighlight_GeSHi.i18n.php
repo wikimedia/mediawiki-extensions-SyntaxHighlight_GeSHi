@@ -329,6 +329,18 @@ $messages['gl'] = array(
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'syntaxhighlight-desc' => 'Syntax firihebe <tt><nowiki><source></nowiki></tt> mit Hilf vum [http://qbnz.com/highlighter/ GeSHi-Highlighter]',
+	'syntaxhighlight-specify' => 'Di gwinscht Sproch muess eso definiert wäre:',
+	'syntaxhighlight-supported' => 'Unterstitzti Sproche fir s Fiirihebe vu dr Syntax:',
+	'syntaxhighlight-err-loading' => '(Fehler bim Lade vu dr Sprochelischt)',
+	'syntaxhighlight-err-language' => 'Nit giltigi Sproch.',
+	'geshi.css' => '/* CSS in däre MediaWiki-Syschtemnochricht wird uf s GeSHi-Syntax-Firihebe aagwändet */',
+);
+
 /** Hebrew (עברית)
  * @author Rotem Liss
  */
