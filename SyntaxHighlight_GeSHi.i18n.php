@@ -870,9 +870,15 @@ $messages['tl'] = array(
 
 /** Turkish (Türkçe)
  * @author Erkan Yilmaz
+ * @author Joseph
  */
 $messages['tr'] = array(
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] kullanarak <tt><nowiki><source></nowiki></tt> sözdizimi vurgulamasını sağlar',
+	'syntaxhighlight-specify' => 'Bu gibi bir dil belirtmelisiniz:',
+	'syntaxhighlight-supported' => 'Sözdizimi vurgulaması için desteklenen diller:',
+	'syntaxhighlight-err-loading' => '(desteklenen diller listesi yüklenirken hata)',
 	'syntaxhighlight-err-language' => 'Geçersiz dil.',
+	'geshi.css' => '/* Buraya yerleştirilen CSS, GeSHi sözdizimi vurgulamasına uygulanacaktır */',
 );
 
 /** Ukrainian (Українська)
