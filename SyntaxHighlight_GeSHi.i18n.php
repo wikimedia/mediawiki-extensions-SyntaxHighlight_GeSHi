@@ -588,6 +588,7 @@ $messages['lt'] = array(
  * @author Jagwar
  */
 $messages['mg'] = array(
+	'syntaxhighlight-err-loading' => "(nisy zavadiso tamin'ilay fampiasan'ny fiteny voazaha)",
 	'syntaxhighlight-err-language' => 'Diso fiteny',
 );
 
