@@ -584,6 +584,13 @@ $messages['lt'] = array(
 	'syntaxhighlight-err-language' => 'Neleistina kalba.',
 );
 
+/** Malagasy (Malagasy)
+ * @author Jagwar
+ */
+$messages['mg'] = array(
+	'syntaxhighlight-err-language' => 'Diso fiteny',
+);
+
 /** Malayalam (മലയാളം)
  * @author Shijualex
  */
