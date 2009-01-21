@@ -812,6 +812,7 @@ $messages['sr-ec'] = array(
  * @author Pyt
  */
 $messages['stq'] = array(
+	'syntaxhighlight-desc' => 'Syntax-Apljuchtenge <tt><nowiki><source></nowiki></tt> mäd Hälpe fon dän [http://qbnz.com/highlighter/ GeSHi-Apljuchter]',
 	'syntaxhighlight-specify' => 'Ju wonskede Sproake mout as foulget definierd wäide:',
 	'syntaxhighlight-supported' => 'Unnerstöände Sproaken foar ju Syntax-Betoonenge:',
 	'syntaxhighlight-err-loading' => '(Failer bie dät Leeden fon ju Sproakenlieste)',
@@ -934,6 +935,13 @@ $messages['vo'] = array(
 	'syntaxhighlight-supported' => 'Püks lonöföl pro süntag pekölöl:',
 	'syntaxhighlight-err-loading' => '(pöl pö lodam lised pükas lonöföl)',
 	'syntaxhighlight-err-language' => 'Pük no dabinöl.',
+);
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'syntaxhighlight-err-language' => 'אומגילטיקע שפראַך.',
 );
 
 /** Yue (粵語)
