@@ -155,6 +155,7 @@ $messages['bs'] = array(
  * @author SMP
  */
 $messages['ca'] = array(
+	'syntaxhighlight-desc' => "Proveeix de ressaltat sintàctic amb l'etiqueta <tt><nowiki><source></nowiki></tt> usant el programa [http://qbnz.com/highlighter/ GeSHi]",
 	'syntaxhighlight-specify' => "Heu d'especificar un dels llenguatges:",
 	'syntaxhighlight-supported' => 'Llenguatges admesos per al ressaltament sintàctic:',
 	'syntaxhighlight-err-loading' => '(error en carregar la llista de llenguatges)',
