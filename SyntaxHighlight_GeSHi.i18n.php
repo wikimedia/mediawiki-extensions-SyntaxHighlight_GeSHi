@@ -202,13 +202,16 @@ $messages['dsb'] = array(
 /** Greek (Ελληνικά)
  * @author Badseed
  * @author Consta
+ * @author Dead3y3
  * @author ZaDiak
  */
 $messages['el'] = array(
+	'syntaxhighlight-desc' => 'Παρέχει έμφαση σύνταξης <tt><nowiki><source></nowiki></tt> χρησιμοποιώντας το [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Πρέπει να επιλέξετε μια γλώσσα σαν κι αυτήν:',
 	'syntaxhighlight-supported' => 'Υποστηριζόμενες γλώσσες για επισημάνσεις συντακτικού',
 	'syntaxhighlight-err-loading' => '(λάθος στη φόρτωση της λίστας των υποστηριζόμενων γλωσσών)',
 	'syntaxhighlight-err-language' => 'Άκυρη γλώσσα.',
+	'geshi.css' => '/* Το CSS τοποθετημένο εδώ θα εφαρμοστεί στo GeSHi syntax highlighting */',
 );
 
 /** Esperanto (Esperanto)
@@ -328,6 +331,13 @@ $messages['gl'] = array(
 	'syntaxhighlight-err-loading' => '(erro ao cargar a listaxe de linguaxes coñecidas)',
 	'syntaxhighlight-err-language' => 'Linguaxe non válida.',
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
+);
+
+/** Ancient Greek (Ἀρχαία ἑλληνικὴ)
+ * @author Omnipaedista
+ */
+$messages['grc'] = array(
+	'syntaxhighlight-err-language' => 'Ἄκυρος γλῶττα.',
 );
 
 /** Swiss German (Alemannisch)
