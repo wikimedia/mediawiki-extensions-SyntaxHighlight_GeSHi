@@ -284,6 +284,7 @@ $messages['fi'] = array(
 /** French (Français)
  * @author Grondin
  * @author Sherbrooke
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'syntaxhighlight-desc' => 'Fournit la mise en relief de la syntaxe par la balise <tt><nowiki><source></nowiki></tt> en utilisant [http://qbnz.com/highlighter/ la coloration syntaxique GeSHi]',
@@ -291,7 +292,7 @@ $messages['fr'] = array(
 	'syntaxhighlight-supported' => 'Langages supportés pour la coloration syntaxique :',
 	'syntaxhighlight-err-loading' => '(erreur en chargeant la liste des langages supportés)',
 	'syntaxhighlight-err-language' => 'Langage invalide',
-	'geshi.css' => '/* Le code CSS inséré ici sera appliqué par GeSHi pour la coloration syntaxique. */',
+	'geshi.css' => '/* Le code CSS inséré ici sera appliqué à la coloration syntaxique GeSHi. */',
 );
 
 /** Franco-Provençal (Arpetan)
