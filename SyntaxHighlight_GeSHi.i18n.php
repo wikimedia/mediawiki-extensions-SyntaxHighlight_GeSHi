@@ -329,7 +329,7 @@ $messages['gl'] = array(
 	'syntaxhighlight-desc' => 'Proporciona unha sintaxe resaltada <tt><nowiki><source></nowiki></tt> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Ten que especificar unha linguaxe así:',
 	'syntaxhighlight-supported' => 'Linguaxes coñecidas para resaltar a sintaxe:',
-	'syntaxhighlight-err-loading' => '(erro ao cargar a listaxe de linguaxes coñecidas)',
+	'syntaxhighlight-err-loading' => '(erro ao cargar a lista de linguaxes coñecidas)',
 	'syntaxhighlight-err-language' => 'Linguaxe non válida.',
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 );
