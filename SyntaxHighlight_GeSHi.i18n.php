@@ -708,6 +708,13 @@ $messages['oc'] = array(
 	'geshi.css' => '/* Lo còde CSS inserit aicí serà aplicat per GeSHi per la coloracion sintaxica. */',
 );
 
+/** Ossetic (Иронау)
+ * @author Amikeco
+ */
+$messages['os'] = array(
+	'syntaxhighlight-err-language' => 'Раст æвзаг нæу.',
+);
+
 /** Polish (Polski)
  * @author Derbeth
  * @author Sp5uhe
@@ -806,6 +813,15 @@ $messages['sk'] = array(
 	'syntaxhighlight-err-loading' => '(chyba pri načítaní zoznamu podporovaných jazykov)',
 	'syntaxhighlight-err-language' => 'Neplatný jazyk.',
 	'geshi.css' => '/* Tu umiestnené CSS sa použije pre zvýrazňovanie syntaxe GeSHi */',
+);
+
+/** Slovenian (Slovenščina)
+ * @author Yerpo
+ */
+$messages['sl'] = array(
+	'syntaxhighlight-supported' => 'Jeziki, ki jih podpira funkcija za označevanje sintakse:',
+	'syntaxhighlight-err-loading' => '(napaka pri nalaganju podprtih jezikov)',
+	'syntaxhighlight-err-language' => 'Neveljaven jezik.',
 );
 
 /** Serbian Cyrillic ekavian (ћирилица)
