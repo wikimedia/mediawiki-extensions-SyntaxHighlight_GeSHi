@@ -771,6 +771,13 @@ $messages['pt-br'] = array(
 	'geshi.css' => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
 );
 
+/** Quechua (Runa Simi)
+ * @author AlimanRuna
+ */
+$messages['qu'] = array(
+	'syntaxhighlight-err-language' => 'Nisqayki rimayqa manam kanchu.',
+);
+
 /** Romanian (Română)
  * @author KlaudiuMihaila
  */
