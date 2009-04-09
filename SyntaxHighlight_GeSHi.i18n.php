@@ -659,6 +659,13 @@ $messages['nds'] = array(
 	'geshi.css' => '/* CSS in disse MediaWiki-Systemnaricht warrt för dat GeSHi-Syntaxrutheven bruukt */',
 );
 
+/** Nedersaksisch (Nedersaksisch)
+ * @author Servien
+ */
+$messages['nds-nl'] = array(
+	'syntaxhighlight-err-language' => 'Neet de juuste taal.',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  * @author Tvdm
