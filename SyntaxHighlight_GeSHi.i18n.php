@@ -793,6 +793,13 @@ $messages['ro'] = array(
 	'syntaxhighlight-err-language' => 'Limbă incorectă.',
 );
 
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'syntaxhighlight-err-language' => 'Lénghe invalide.',
+);
+
 /** Russian (Русский)
  * @author Александр Сигачёв
  */
