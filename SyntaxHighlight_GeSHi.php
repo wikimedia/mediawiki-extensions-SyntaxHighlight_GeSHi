@@ -42,6 +42,7 @@ if( !defined( 'MEDIAWIKI' ) )
 	die();
 
 $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
+	'path'           => __FILE__,
 	'name'           => 'SyntaxHighlight',
 	'author'         => array( 'Brion Vibber', 'Tim Starling', 'Rob Church', 'Niklas Laxström' ),
 	'description'    => 'Provides syntax highlighting using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
