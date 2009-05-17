@@ -67,5 +67,6 @@ if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
 function efSyntaxHighlight_GeSHiSetup() {
 	global $wgParser;
 	$wgParser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
+	$wgParser->setHook( 'syntaxhighlight', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
 	return true;
 }
