@@ -28,15 +28,16 @@ class SyntaxHighlight_GeSHi {
 		$text = preg_replace( '/^\n+/', '', $text );
 		// Validate language
 		if( isset( $args['lang'] ) ) {
-			$lang = strtolower( $args['lang'] );
+			$lang = $args['lang'];
 		} else {
 			// language is not specified. Check if default exists, if yes, use it.
-            if ( !is_null($wgSyntaxHighlightDefaultLang) ) {
-                $lang = strtolower($wgSyntaxHighlightDefaultLang);
-            } else {
-                return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
-            }
+			if ( !is_null( $wgSyntaxHighlightDefaultLang ) ) {
+				$lang = $wgSyntaxHighlightDefaultLang;
+			} else {
+				return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+			}
 		}
+		$lang = strtolower( $lang );
 		if( !preg_match( '/^[a-z_0-9-]*$/', $lang ) )
 			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
 		$geshi = self::prepare( $text, $lang );
