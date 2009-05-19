@@ -153,6 +153,7 @@ $messages['bs'] = array(
 
 /** Catalan (Català)
  * @author SMP
+ * @author Solde
  */
 $messages['ca'] = array(
 	'syntaxhighlight-desc' => "Proveeix de ressaltat sintàctic amb l'etiqueta <tt><nowiki><source></nowiki></tt> usant el programa [http://qbnz.com/highlighter/ GeSHi]",
@@ -160,6 +161,7 @@ $messages['ca'] = array(
 	'syntaxhighlight-supported' => 'Llenguatges admesos per al ressaltament sintàctic:',
 	'syntaxhighlight-err-loading' => '(error en carregar la llista de llenguatges)',
 	'syntaxhighlight-err-language' => 'Llenguatge invàlid.',
+	'geshi.css' => '/* El CSS ubicat aquí serà aplicat al ressaltat de la sintaxis de GeSHi */',
 );
 
 /** Czech (Česky)
@@ -351,6 +353,15 @@ $messages['gsw'] = array(
 	'syntaxhighlight-err-loading' => '(Fehler bim Lade vu dr Sprochelischt)',
 	'syntaxhighlight-err-language' => 'Nit giltigi Sproch.',
 	'geshi.css' => '/* CSS in däre MediaWiki-Syschtemnochricht wird uf s GeSHi-Syntax-Firihebe aagwändet */',
+);
+
+/** Gujarati (ગુજરાતી)
+ * @author Ashok modhvadia
+ */
+$messages['gu'] = array(
+	'syntaxhighlight-supported' => 'વાક્યરચના સ્પષ્ટીકરણ માટે સહાયક ભાષાઓ:',
+	'syntaxhighlight-err-loading' => '(સહાયક ભાષા યાદી લાદણમાં ત્રુટિ)',
+	'syntaxhighlight-err-language' => 'અમાન્ય ભાષા.',
 );
 
 /** Hebrew (עברית)
