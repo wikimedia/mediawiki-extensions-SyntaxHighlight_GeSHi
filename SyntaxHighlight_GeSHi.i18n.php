@@ -301,7 +301,7 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'syntaxhighlight-desc' => 'Fornét la misa en èvidence de la sintaxa per la balisa <tt><nowiki><source></nowiki></tt> en utilisent [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi].',
+	'syntaxhighlight-desc' => 'Balye la misa en èvidence de la sintaxa per la balisa <tt><nowiki><source></nowiki></tt> en utilisent [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi].',
 	'syntaxhighlight-specify' => 'Vos dête spècefiar un lengâjo d’ense :',
 	'syntaxhighlight-supported' => 'Lengâjos recognus por la coloracion sintaxica :',
 	'syntaxhighlight-err-loading' => '(èrror en chargient la lista des lengâjos recognus)',
