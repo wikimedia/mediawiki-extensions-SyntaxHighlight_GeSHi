@@ -306,7 +306,7 @@ $messages['frp'] = array(
 	'syntaxhighlight-supported' => 'Lengâjos recognus por la coloracion sintaxica :',
 	'syntaxhighlight-err-loading' => '(èrror en chargient la lista des lengâjos recognus)',
 	'syntaxhighlight-err-language' => 'Lengâjo envalido.',
-	'geshi.css' => '/* Lo code CSS placiê ique serat aplicâ a la coloracion sintaxica GeSHi. */',
+	'geshi.css' => '/* Lo code CSS betâ ique serat aplicâ a la coloracion sintaxica GeSHi. */',
 );
 
 /** Friulian (Furlan)
