@@ -808,6 +808,7 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'syntaxhighlight-specify' => "Tu, abbesogne de 'na lènga specifiche cumme a queste:",
 	'syntaxhighlight-err-language' => 'Lénghe invalide.',
 );
 
