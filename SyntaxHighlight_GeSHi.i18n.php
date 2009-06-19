@@ -161,7 +161,7 @@ $messages['ca'] = array(
 	'syntaxhighlight-supported' => 'Llenguatges admesos per al ressaltament sintàctic:',
 	'syntaxhighlight-err-loading' => '(error en carregar la llista de llenguatges)',
 	'syntaxhighlight-err-language' => 'Llenguatge invàlid.',
-	'geshi.css' => '/* El CSS ubicat aquí serà aplicat al ressaltat de la sintaxis de GeSHi */',
+	'geshi.css' => '/* El CSS ubicat aquí serà aplicat al ressaltat de sintaxi de GeSHi */',
 );
 
 /** Czech (Česky)
