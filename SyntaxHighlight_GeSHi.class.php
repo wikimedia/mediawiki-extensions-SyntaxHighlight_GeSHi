@@ -22,6 +22,7 @@ class SyntaxHighlight_GeSHi {
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
 		global $wgSyntaxHighlightDefaultLang;
+		wfProfileIn( __METHOD__ );
 		self::initialise();
 		$text = rtrim( $text );
 		// Don't trim leading spaces away, just the linefeeds
@@ -34,15 +35,23 @@ class SyntaxHighlight_GeSHi {
 			if ( !is_null( $wgSyntaxHighlightDefaultLang ) ) {
 				$lang = $wgSyntaxHighlightDefaultLang;
 			} else {
-				return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+				$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+				wfProfileOut( __METHOD__ );
+				return $error;
 			}
 		}
 		$lang = strtolower( $lang );
-		if( !preg_match( '/^[a-z_0-9-]*$/', $lang ) )
-			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+		if( !preg_match( '/^[a-z_0-9-]*$/', $lang ) ) {
+			$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+			wfProfileOut( __METHOD__ );
+			return $error;
+		}
 		$geshi = self::prepare( $text, $lang );
-		if( !$geshi instanceof GeSHi )
-			return self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+		if( !$geshi instanceof GeSHi ) {
+			$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+			wfProfileOut( __METHOD__ );
+			return $error;
+		}
 
 		$enclose = self::getEncloseType( $args );
 
@@ -67,19 +76,22 @@ class SyntaxHighlight_GeSHi {
 		$err = $geshi->error();
 		if( $err ) {
 			// Error!
-			return self::formatError( $err );
-		} else {
-			// Armour for Parser::doBlockLevels()
-			if( $enclose === GESHI_HEADER_DIV )
-				$out = str_replace( "\n", '', $out );
-			// Register CSS
-			$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
-			if ( $enclose === GESHI_HEADER_NONE ) {
-				return '<span class="'.$lang.' source-'.$lang.'"> '.$out . '</span>';
-			} else {
-				return '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
-			}
+			$error = self::formatError( $err );
+			wfProfileOut( __METHOD__ );
+			return $error;
 		}
+		// Armour for Parser::doBlockLevels()
+		if( $enclose === GESHI_HEADER_DIV )
+			$out = str_replace( "\n", '', $out );
+		// Register CSS
+		$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
+		if ( $enclose === GESHI_HEADER_NONE ) {
+			$out = '<span class="'.$lang.' source-'.$lang.'"> '.$out . '</span>';
+		} else {
+			$out = '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
+		}
+		wfProfileOut( __METHOD__ );
+		return $out;
 	}
 	
 	/**
