@@ -86,9 +86,9 @@ class SyntaxHighlight_GeSHi {
 		// Register CSS
 		$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
 		if ( $enclose === GESHI_HEADER_NONE ) {
-			$out = '<span class="'.$lang.' source-'.$lang.'"> '.$out . '</span>';
+			$out = '<span class="mw-geshi '.$lang.' source-'.$lang.'"> '.$out . '</span>';
 		} else {
-			$out = '<div dir="ltr" style="text-align: left;">' . $out . '</div>';
+			$out = '<div dir="ltr" class="mw-geshi" style="text-align: left;">' . $out . '</div>';
 		}
 		wfProfileOut( __METHOD__ );
 		return $out;
