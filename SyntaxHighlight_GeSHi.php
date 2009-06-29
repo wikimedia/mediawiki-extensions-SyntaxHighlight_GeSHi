@@ -61,11 +61,6 @@ if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
 	$wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
 }
 
-if ( file_exists( $dir . 'geshi/geshi.php' ) ) {
-	require_once( 'geshi/geshi.php' );
-	$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;
-}
-
 /**
  * Register parser hook
  */
