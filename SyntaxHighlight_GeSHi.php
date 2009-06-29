@@ -62,7 +62,7 @@ if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
 }
 
 if ( file_exists( $dir . 'geshi/geshi.php' ) ) {
-	require( 'geshi/geshi.php' );
+	require_once( 'geshi/geshi.php' );
 	$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;
 }
 
