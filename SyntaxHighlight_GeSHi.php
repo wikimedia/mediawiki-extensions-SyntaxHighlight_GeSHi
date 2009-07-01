@@ -55,6 +55,7 @@ $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
 $wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
+$wgHooks['SpecialVersionExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
 if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
 	$wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
 } else {

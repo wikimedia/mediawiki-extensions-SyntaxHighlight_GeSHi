@@ -311,4 +311,14 @@ class SyntaxHighlight_GeSHi {
 		}
 		return true;
 	}
+
+	/**
+	 * Get the GeSHI's version information while Special:Version is read
+	 */
+	public static function hSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
+		global $wgExtensionCredits;
+		require_once( 'geshi/geshi.php' );
+		$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;
+		return true;
+	}
 }
