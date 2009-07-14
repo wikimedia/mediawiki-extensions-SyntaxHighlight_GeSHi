@@ -508,6 +508,18 @@ $messages['jv'] = array(
 	'geshi.css' => '/* CSS ing kéné bakal ditrapaké kanggo panyorotan sintaksis GeSHi */',
 );
 
+/** Georgian (ქართული)
+ * @author გიორგიმელა
+ */
+$messages['ka'] = array(
+	'syntaxhighlight-desc' => 'გაძლევთ ნებართვას ფამოიყენოთ თეგი <tt><nowiki><source></nowiki></tt> სინტაქსის გასანათებლად[http://qbnz.com/highlighter/ GeSHi Highlighter-ის] მეშვეობით',
+	'syntaxhighlight-specify' => 'თქვენ უნდა წარადგინოთ სახელი შემდეგი სახით:',
+	'syntaxhighlight-supported' => 'მხარდამჭერი ახელები',
+	'syntaxhighlight-err-loading' => '(შეუძებელია მხარდამჭერი ენების სიის ატვირთვა)',
+	'syntaxhighlight-err-language' => 'მოთხოვნილია მხარდაჭერის არმქონე ენა',
+	'geshi.css' => '/* აქ წარმოდგენილი CSS-კოდი, გამოიყენება GeSHI სნტაქსის გასანათებლად*/',
+);
+
 /** Kazakh (Arabic script) (‫قازاقشا (تٴوتە)‬)
  * @author AlefZet
  */
