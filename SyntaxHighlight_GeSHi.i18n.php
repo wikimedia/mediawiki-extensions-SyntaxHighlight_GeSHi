@@ -615,10 +615,12 @@ $messages['li'] = array(
  * @author Matasg
  */
 $messages['lt'] = array(
+	'syntaxhighlight-desc' => 'Teikia sintaksės paryškinimus <tt><nowiki><source></nowiki></tt> naudojant [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Jums reikia nurodyti kalbą kaip čia:',
 	'syntaxhighlight-supported' => 'Palaikomos kalbos sintaksės paryškinimui:',
 	'syntaxhighlight-err-loading' => '(klaida įkeliant palaikomų kalbų sąrašą)',
 	'syntaxhighlight-err-language' => 'Neleistina kalba.',
+	'geshi.css' => '/* CSS, nurodytas čia, bus taikomas GeSHi sintaksės paryškinimams */',
 );
 
 /** Malagasy (Malagasy)
@@ -761,8 +763,10 @@ $messages['pl'] = array(
 
 /** Piedmontese (Piemontèis)
  * @author Bèrto 'd Sèra
+ * @author Dragonòt
  */
 $messages['pms'] = array(
+	'syntaxhighlight-desc' => 'A evidensia la sintassi <tt><nowiki><source></nowiki></tt>an dovrand [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'A venta specifiché na lenga coma:',
 	'syntaxhighlight-supported' => "Lenghe dont as peul fé l'evidensiassion dla sintassi:",
 	'syntaxhighlight-err-loading' => '(eror ën cariand la lista dle lenghe dont sintassi as peul evidensié)',
