@@ -587,13 +587,14 @@ $messages['ksh'] = array(
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author Les Meloures
  * @author Robby
  */
 $messages['lb'] = array(
 	'syntaxhighlight-desc' => "Syntax-Ervirhiewung <tt><nowiki><source></nowiki></tt> mat Hellëf vu [http://qbnz.com/highlighter/ 'GeSHi Highlighter']",
 	'syntaxhighlight-specify' => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
-	'syntaxhighlight-supported' => "Ënnerstetzte Sproochen fir d'Syntax faarweg ze markéieren",
-	'syntaxhighlight-err-loading' => '(Feeler beim Luede vun der Lëscht vun den ënnerstetzte Sproochen)',
+	'syntaxhighlight-supported' => "Ënnerstëtzte Sprooche fir d'Syntax faarweg ze markéieren",
+	'syntaxhighlight-err-loading' => '(Feeler beim Luede vun der Lëscht vun den ënnerstëtzte Sproochen)',
 	'syntaxhighlight-err-language' => 'Ongëlteg Sprooch',
 	'geshi.css' => "/* Den CSS deen hei steet gëtt benotzt fir d'GeSHi Syntax faarweg ze markéieren. /*",
 );
