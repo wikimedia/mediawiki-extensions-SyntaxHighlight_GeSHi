@@ -244,9 +244,11 @@ $messages['es'] = array(
 );
 
 /** Estonian (Eesti)
+ * @author Pikne
  * @author [[et:Kasutaja:M2s17]]
  */
 $messages['et'] = array(
+	'syntaxhighlight-desc' => 'Võimaldab [http://qbnz.com/highlighter/ GeSHi] abil <tt><nowiki><source></nowiki></tt>-märgendit kasutades süntaksit esile tõsta.',
 	'syntaxhighlight-specify' => 'Sa pead täpsustama keelt nõnda:',
 	'syntaxhighlight-supported' => 'Süntaksi esiletoomise on toetatud järgnevates keeltes:',
 	'syntaxhighlight-err-loading' => '(toetatud keelte loetelu laadimisel esines viga)',
