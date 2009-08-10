@@ -890,6 +890,18 @@ $messages['sr-ec'] = array(
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
+/** latinica (latinica)
+ * @author Michaello
+ */
+$messages['sr-el'] = array(
+	'syntaxhighlight-desc' => 'Omogućava vizuelno označavanje sintakse <tt><nowiki><source></nowiki></tt> korišćenjem [<a href="http://qbnz.com/highlighter/">http://qbnz.com/highlighter/</a> GeSHi hajlajtera].',
+	'syntaxhighlight-specify' => 'Potrebno je odrediti jezik kao ovaj:',
+	'syntaxhighlight-supported' => 'Podržani jezici u vizuelom označavanju sintakse:',
+	'syntaxhighlight-err-loading' => '(greška pri učitavanju podržanih jezika)',
+	'syntaxhighlight-err-language' => 'Nepodoban jezik',
+	'geshi.css' => '/* CSS postavljen ovde biće primenjen na vizuelno označavanje sintkse GeSHi */',
+);
+
 /** Seeltersk (Seeltersk)
  * @author Pyt
  */
