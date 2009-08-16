@@ -480,7 +480,7 @@ $messages['ja'] = array(
 	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi 構文ハイライト機能] を利用したタグ <tt><nowiki><source></nowiki></tt> を提供する',
 	'syntaxhighlight-specify' => '以下のように言語を指定する必要があります:',
 	'syntaxhighlight-supported' => '構文ハイライト機能に対応している言語は以下の通りです:',
-	'syntaxhighlight-err-loading' => '(対応言語一覧の読み込み時にエラーが発生しました)',
+	'syntaxhighlight-err-loading' => '（対応言語一覧の読み込み時にエラーが発生しました）',
 	'syntaxhighlight-err-language' => '不正な言語名です。',
 	'geshi.css' => '/* ここへ、GeShi 構文ハイライト機能に適用する CSS を記述してください */',
 );
@@ -1057,7 +1057,7 @@ $messages['zh-hans'] = array(
 	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<tt><nowiki><source></nowiki></tt>提供高亮',
 	'syntaxhighlight-specify' => '您需要指定一种语言，像这样:',
 	'syntaxhighlight-supported' => '语法高亮所支持的语言:',
-	'syntaxhighlight-err-loading' => '(支持语言列表载入错误)',
+	'syntaxhighlight-err-loading' => '（支持语言列表载入错误）',
 	'syntaxhighlight-err-language' => '无效的语言。',
 	'geshi.css' => '/* 放在这里的CSS会以GeSHi语法高亮方式显示 */',
 );
@@ -1069,7 +1069,7 @@ $messages['zh-hant'] = array(
 	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<tt><nowiki><source></nowiki></tt>提供醒目提示',
 	'syntaxhighlight-specify' => '您需要指定一種語言，像這樣:',
 	'syntaxhighlight-supported' => '語法醒目標示所支援的語言:',
-	'syntaxhighlight-err-loading' => '(支援語言清單載入錯誤)',
+	'syntaxhighlight-err-loading' => '（支援語言清單載入錯誤）',
 	'syntaxhighlight-err-language' => '無效的語言。',
 	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
 );
