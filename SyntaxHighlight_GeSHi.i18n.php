@@ -877,7 +877,7 @@ $messages['sl'] = array(
 	'syntaxhighlight-err-language' => 'Neveljaven jezik.',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Millosh
  * @author Sasa Stefanovic
  */
@@ -890,7 +890,7 @@ $messages['sr-ec'] = array(
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(
