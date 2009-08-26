@@ -615,6 +615,7 @@ $messages['li'] = array(
 
 /** Lithuanian (Lietuvių)
  * @author Garas
+ * @author Homo
  * @author Matasg
  */
 $messages['lt'] = array(
@@ -623,7 +624,7 @@ $messages['lt'] = array(
 	'syntaxhighlight-supported' => 'Palaikomos kalbos sintaksės paryškinimui:',
 	'syntaxhighlight-err-loading' => '(klaida įkeliant palaikomų kalbų sąrašą)',
 	'syntaxhighlight-err-language' => 'Neleistina kalba.',
-	'geshi.css' => '/* CSS, nurodytas čia, bus taikomas GeSHi sintaksės paryškinimams */',
+	'geshi.css' => '/* Čia pateiktas CSS bus taikomas GeSHi sintaksės paryškinimams */',
 );
 
 /** Malagasy (Malagasy)
