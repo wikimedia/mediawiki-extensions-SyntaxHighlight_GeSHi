@@ -59,15 +59,20 @@ $wgHooks['SpecialVersionExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVer
 if ( defined( 'MW_SUPPORTS_PARSERFIRSTCALLINIT' ) ) {
 	$wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
 } else {
-	$wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup';
+	$wgExtensionFunctions[] = 'efSyntaxHighlight_GeSHiSetup_legacy';
 }
 
 /**
  * Register parser hook
  */
-function efSyntaxHighlight_GeSHiSetup() {
-	global $wgParser;
-	$wgParser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
-	$wgParser->setHook( 'syntaxhighlight', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
+function efSyntaxHighlight_GeSHiSetup( &$parser ) {
+	$parser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
+	$parser->setHook( 'syntaxhighlight', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
 	return true;
+}
+
+/* Provided for pre-1.12 MediaWiki compatibility. */
+function efSyntaxHighlight_GeSHiSetup_legacy() {
+	global $wgParser;
+	return efSyntaxHighlight_GeSHiSetup( $wgParser );
 }
