@@ -135,8 +135,12 @@ $messages['bn'] = array(
  * @author Fulup
  */
 $messages['br'] = array(
+	'syntaxhighlight-desc' => 'Talvezout a ra da lakaat an ereadur war wel dre ar valizenn <tt><nowiki><source></nowiki></tt> en ur ober gant [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => "Ret eo deoc'h spisaat ur yezh evel-henn :",
+	'syntaxhighlight-supported' => 'Yezhoù skoret evit al livadur ereadurel :',
+	'syntaxhighlight-err-loading' => '(fazi en ur gargañ roll ar yezhoù skoret)',
 	'syntaxhighlight-err-language' => 'Yezh direizh.',
+	'geshi.css' => "/* Talvezout a raio ar c'hod CSS lakaet amañ d'al livadur ereadurel GeSHi */",
 );
 
 /** Bosnian (Bosanski)
