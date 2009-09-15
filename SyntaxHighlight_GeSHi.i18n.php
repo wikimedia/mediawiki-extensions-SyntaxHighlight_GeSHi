@@ -1013,6 +1013,13 @@ $messages['vec'] = array(
 	'geshi.css' => "/* I stili CSS inserìi qua i se àplica a l'evidenziazion de sintassi con GeSHi */",
 );
 
+/** Veps (Vepsan kel')
+ * @author Игорь Бродский
+ */
+$messages['vep'] = array(
+	'syntaxhighlight-err-language' => "Vär kel'",
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
