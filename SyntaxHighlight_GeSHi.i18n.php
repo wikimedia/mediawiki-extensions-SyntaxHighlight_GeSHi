@@ -193,6 +193,18 @@ $messages['de'] = array(
 	'geshi.css' => '/* CSS in dieser MediaWiki-Systemnachricht wird auf die GeSHi-Syntaxhervorhebung angewendet */',
 );
 
+/** Zazaki (Zazaki)
+ * @author Aspar
+ */
+$messages['diq'] = array(
+	'syntaxhighlight-desc' => 'pê şuxulnayişê [http://qbnz.com/highlighter/ GeSHi Highlighter] i rêza <tt><nowiki><source></nowiki></tt> i işaret beno',
+	'syntaxhighlight-specify' => 'zey ıni yew zıwan bıvıcinê:',
+	'syntaxhighlight-supported' => 'zıwanê ke rêzvateyê eyi destek beni',
+	'syntaxhighlight-err-loading' => '(zıwanê ke destek geni, wexata bar biyene xeta da)',
+	'syntaxhighlight-err-language' => 'zıwano nemeqbul',
+	'geshi.css' => 'CSS o ke tiya /* de yo, işaretê rêzvateyê GeSHi tetbiq beno */',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
