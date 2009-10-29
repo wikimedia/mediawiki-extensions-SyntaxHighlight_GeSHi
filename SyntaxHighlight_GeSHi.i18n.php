@@ -652,9 +652,11 @@ $messages['mg'] = array(
 );
 
 /** Malayalam (മലയാളം)
+ * @author Praveenp
  * @author Shijualex
  */
 $messages['ml'] = array(
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi പ്രമുഖമാക്കൽ ഉപകരണമുപയോഗിച്ച്] <tt><nowiki><source></nowiki></tt> വിന്യാസം പ്രമുഖമാക്കിക്കാട്ടാൻ സഹായിക്കുന്നു',
 	'syntaxhighlight-specify' => 'താങ്കള്‍ ഇപ്രകാരം ഒരു ഭാഷ തിരഞ്ഞെടുക്കണം:',
 	'syntaxhighlight-supported' => 'സിറ്റാക്സ് ഹൈലൈറ്റിങ്ങ് അനുകൂലിക്കുന്ന ഭാഷകള്‍:',
 	'syntaxhighlight-err-loading' => '(ഭാഷകളുടെ പട്ടിക ലോഡ് ചെയ്യുന്നതില്‍ പിശക്)',
