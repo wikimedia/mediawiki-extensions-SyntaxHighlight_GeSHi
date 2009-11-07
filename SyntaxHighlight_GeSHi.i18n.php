@@ -448,12 +448,12 @@ $messages['hu'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
-	'syntaxhighlight-desc' => 'Forni le emphase visual syntactic in <tt><nowiki><source></nowiki></tt> per medio de [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Forni le coloration syntactic in <tt><nowiki><source></nowiki></tt> per medio de [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Tu debe specificar un linguage in iste modo:',
-	'syntaxhighlight-supported' => 'Linguages supportate pro le emphase visual syntactic:',
+	'syntaxhighlight-supported' => 'Linguages supportate pro le coloration syntactic:',
 	'syntaxhighlight-err-loading' => '(error durante le cargamento del lista de linguages supportate)',
 	'syntaxhighlight-err-language' => 'Linguage invalide.',
-	'geshi.css' => '/* Omne CSS inserite hic se applicara al emphase visual syntactic con GeSHi */',
+	'geshi.css' => '/* Omne CSS inserite hic se applicara al coloration syntactic con GeSHi */',
 );
 
 /** Indonesian (Bahasa Indonesia)
