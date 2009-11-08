@@ -233,11 +233,12 @@ $messages['el'] = array(
 );
 
 /** Esperanto (Esperanto)
+ * @author Michawiki
  * @author Yekrats
  */
 $messages['eo'] = array(
 	'syntaxhighlight-desc' => 'Provizas kolorigado de sintakso <tt><nowiki><source></nowiki></tt> per [http://qbnz.com/highlighter/ GeSHi Kolorigilo de Sintakso]',
-	'syntaxhighlight-specify' => 'Vi nepre specifigu lingvon ĉi tiel:',
+	'syntaxhighlight-specify' => 'Vi nepre specifu lingvon kiel ĉi tiu:',
 	'syntaxhighlight-supported' => 'Subtenaj lingvoj por sintaksa emfazo',
 	'syntaxhighlight-err-loading' => '(eraro ŝarĝante subtenitan lingvo-liston)',
 	'syntaxhighlight-err-language' => 'Nevalida lingvo.',
@@ -768,6 +769,13 @@ $messages['oc'] = array(
  */
 $messages['os'] = array(
 	'syntaxhighlight-err-language' => 'Раст æвзаг нæу.',
+);
+
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'syntaxhighlight-err-language' => 'Falsch Schprooch',
 );
 
 /** Polish (Polski)
