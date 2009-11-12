@@ -662,6 +662,7 @@ $messages['ml'] = array(
 	'syntaxhighlight-supported' => 'സിറ്റാക്സ് ഹൈലൈറ്റിങ്ങ് അനുകൂലിക്കുന്ന ഭാഷകള്‍:',
 	'syntaxhighlight-err-loading' => '(ഭാഷകളുടെ പട്ടിക ലോഡ് ചെയ്യുന്നതില്‍ പിശക്)',
 	'syntaxhighlight-err-language' => 'അസാധുവായ ഭാഷ.',
+	'geshi.css' => '/* ഇവിടെ നൽകുന്ന സി.എസ്.എസ്.  GeSHi വിന്യാസം പ്രമുഖമാക്കിക്കാട്ടലിനു ബാധകമായിത്തീരും */',
 );
 
 /** Marathi (मराठी)
@@ -855,8 +856,12 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'syntaxhighlight-desc' => "Dè 'na sindasse evidenziate <tt><nowiki><source></nowiki></tt> ausanne [http://qbnz.com/highlighter/ GeSHi l'Evidenziatore]",
 	'syntaxhighlight-specify' => "Tu, abbesogne de 'na lènga specifiche cumme a queste:",
+	'syntaxhighlight-supported' => 'Linguagge supportate pa sindasse evidenziate:',
+	'syntaxhighlight-err-loading' => "(errore carecanne 'a liste de linguagge supportate)",
 	'syntaxhighlight-err-language' => 'Lénghe invalide.',
+	'geshi.css' => "/* CSS mise aqquà avène applicate 'a sindasse GeSHi evidenziate */",
 );
 
 /** Russian (Русский)
