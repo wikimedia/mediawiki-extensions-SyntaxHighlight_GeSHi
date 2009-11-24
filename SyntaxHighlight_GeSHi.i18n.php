@@ -652,6 +652,18 @@ $messages['mg'] = array(
 	'syntaxhighlight-err-language' => 'Diso fiteny',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'syntaxhighlight-desc' => 'Овозможува потцртување на синтакса <tt><nowiki><source></nowiki></tt> со помош на [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Треба да назначите јазик на следниов начин:',
+	'syntaxhighlight-supported' => 'Поддржани јазици за синтаксно потцртување:',
+	'syntaxhighlight-err-loading' => '(грешка при вчитувањето на листата на поддржани јазици)',
+	'syntaxhighlight-err-language' => 'Неважечки јазик.',
+	'geshi.css' => '/* Тука поставениот CSS-код ќе биде применет во GeSHi потцртување на синтаксата */',
+);
+
 /** Malayalam (മലയാളം)
  * @author Praveenp
  * @author Shijualex
