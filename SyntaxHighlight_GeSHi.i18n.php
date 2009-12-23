@@ -273,8 +273,11 @@ $messages['et'] = array(
 	'geshi.css' => '/* CSS mis on asetatud siia, määrab GeSHi süntaksi esiletoomise stiili */',
 );
 
-/** Basque (Euskara) */
+/** Basque (Euskara)
+ * @author An13sa
+ */
 $messages['eu'] = array(
+	'syntaxhighlight-specify' => 'Hizkuntza bat zehaztu behar duzu honela:',
 	'syntaxhighlight-err-language' => 'Baliogabeko hizkuntza.',
 );
 
@@ -1002,6 +1005,13 @@ $messages['tg-cyrl'] = array(
 	'syntaxhighlight-err-loading' => '(хато дар богузории забонҳои пуштибонишуда)',
 	'syntaxhighlight-err-language' => 'Забони ғайри миҷоз.',
 	'geshi.css' => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
+);
+
+/** Turkmen (Türkmençe)
+ * @author Hanberke
+ */
+$messages['tk'] = array(
+	'syntaxhighlight-err-language' => 'Nädogry dil.',
 );
 
 /** Tagalog (Tagalog)
