@@ -862,9 +862,12 @@ $messages['qu'] = array(
 
 /** Romanian (Română)
  * @author KlaudiuMihaila
+ * @author Stelistcristi
  */
 $messages['ro'] = array(
 	'syntaxhighlight-specify' => 'Trebuie să specificaţi o limbă în acest mod:',
+	'syntaxhighlight-supported' => 'Limbile suportate pentru evidenţierea sintaxei:',
+	'syntaxhighlight-err-loading' => '(eroare la încărcarea listei cu limbile suportate)',
 	'syntaxhighlight-err-language' => 'Limbă incorectă.',
 );
 
@@ -1011,7 +1014,12 @@ $messages['tg-cyrl'] = array(
  * @author Hanberke
  */
 $messages['tk'] = array(
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] ulanyp <tt><nowiki><source></nowiki></tt> sintaksis nygtamasyny üpjün edýär',
+	'syntaxhighlight-specify' => 'Şunuň ýaly bir dil görkezmeli:',
+	'syntaxhighlight-supported' => 'Sintaksis nygtamasy üçin goldanylýan diller:',
+	'syntaxhighlight-err-loading' => '(goldanylýan diller sanawyny ýükleme säwligi)',
 	'syntaxhighlight-err-language' => 'Nädogry dil.',
+	'geshi.css' => '/* Bu ýere ýerleşdirilen CSS, GeSHi sintaksis nygtamasyna berjaý ediljekdir */',
 );
 
 /** Tagalog (Tagalog)
