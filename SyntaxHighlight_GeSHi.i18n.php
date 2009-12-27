@@ -994,6 +994,7 @@ $messages['sv'] = array(
  */
 $messages['te'] = array(
 	'syntaxhighlight-specify' => 'భాషని ఈ విధంగా ఇవ్వాలి:',
+	'syntaxhighlight-supported' => 'ఛందస్సు ఉద్దీపనకి తోడ్పాటు ఉన్న భాషలు:',
 	'syntaxhighlight-err-loading' => '(తోడ్పాటున్న భాషల జాబితా లోడింగులో పొరపాటు జరిగింది)',
 	'syntaxhighlight-err-language' => 'తప్పుడు భాష.',
 );
@@ -1008,6 +1009,18 @@ $messages['tg-cyrl'] = array(
 	'syntaxhighlight-err-loading' => '(хато дар богузории забонҳои пуштибонишуда)',
 	'syntaxhighlight-err-language' => 'Забони ғайри миҷоз.',
 	'geshi.css' => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
+);
+
+/** Tajik (Latin) (Тоҷикӣ (Latin))
+ * @author Liangent
+ */
+$messages['tg-latn'] = array(
+	'syntaxhighlight-desc' => 'Imkoni dasturoti rangin kardanro <tt><nowiki><source></nowiki></tt> bo istifoda az [http://qbnz.com/highlighter/ GeSHi Highlighter]-ro faroham meovarad',
+	'syntaxhighlight-specify' => 'Şumo bojad bo in şakl zabonero muşaxxas kuned:',
+	'syntaxhighlight-supported' => 'Zabonhoi puştibonişuda baroi rangin kardani dasturoti nahvī:',
+	'syntaxhighlight-err-loading' => '(xato dar boguzoriji zabonhoi puştibonişuda)',
+	'syntaxhighlight-err-language' => 'Zaboni ƣajri miçoz.',
+	'geshi.css' => '/* CSS inço guzoştaşuda ba dasturoti ranginkuniji GeSHi ba kor burda meşavad */',
 );
 
 /** Turkmen (Türkmençe)
