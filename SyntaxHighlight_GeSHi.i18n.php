@@ -27,9 +27,12 @@ $messages['qqq'] = array(
 );
 
 /** Afrikaans (Afrikaans)
+ * @author Naudefj
  * @author SPQRobin
  */
 $messages['af'] = array(
+	'syntaxhighlight-specify' => "U moet 'n taal as volg spesifiseer:",
+	'syntaxhighlight-err-loading' => '(fout met die laai van die lys van ondersteunde tale)',
 	'syntaxhighlight-err-language' => 'Ongeldige taal.',
 );
 
