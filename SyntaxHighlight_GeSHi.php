@@ -33,9 +33,6 @@
  * A language is specified like: <source lang="c">void main() {}</source>
  * If you forget, or give an unsupported value, the extension spits out
  * some help text and a list of all supported languages.
- *
- * The extension has been tested with GeSHi 1.0.8.3 and MediaWiki 1.15.1
- * as of 2009-08-05
  */
 
 if( !defined( 'MEDIAWIKI' ) )
