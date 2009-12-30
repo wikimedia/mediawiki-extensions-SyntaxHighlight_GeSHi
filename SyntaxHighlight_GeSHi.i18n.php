@@ -113,8 +113,10 @@ $messages['be-tarask'] = array(
 /** Bulgarian (Български)
  * @author Borislav
  * @author DCLXVI
+ * @author Turin
  */
 $messages['bg'] = array(
+	'syntaxhighlight-desc' => 'Осигурява синтактично осветяване на <tt><nowiki><source></nowiki></tt> чрез [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Нужно е да укажете език по следния начин:',
 	'syntaxhighlight-supported' => 'Поддържани езици за синтактично открояване:',
 	'syntaxhighlight-err-loading' => '(грешка при зареждането на списъка на поддържаните езици)',
