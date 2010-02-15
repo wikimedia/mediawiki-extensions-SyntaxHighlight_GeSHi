@@ -618,7 +618,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
-	'syntaxhighlight-desc' => "Syntax-Ervirhiewung <tt><nowiki><source></nowiki></tt> mat Hellëf vu [http://qbnz.com/highlighter/ 'GeSHi Highlighter']",
+	'syntaxhighlight-desc' => "Syntax-Ervirhiewung <tt><nowiki><source></nowiki></tt> mat Hëllef vu [http://qbnz.com/highlighter/ 'GeSHi Highlighter']",
 	'syntaxhighlight-specify' => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
 	'syntaxhighlight-supported' => "Ënnerstëtzte Sprooche fir d'Syntax faarweg ze markéieren",
 	'syntaxhighlight-err-loading' => '(Feeler beim Luede vun der Lëscht vun den ënnerstëtzte Sproochen)',
