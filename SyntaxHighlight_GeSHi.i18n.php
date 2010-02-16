@@ -912,6 +912,14 @@ $messages['sah'] = array(
 	'geshi.css' => '/* манна баар CSS-куод GeSHI синтаксииһын сырдатарга туттуллуо */',
 );
 
+/** Sinhala (සිංහල)
+ * @author Calcey
+ */
+$messages['si'] = array(
+	'syntaxhighlight-supported' => 'වාග් රීති උද්දීපනය කිරීම සඳහා සහාය දක්වන භාෂා:',
+	'syntaxhighlight-err-language' => 'අවලංගු භාෂාව.',
+);
+
 /** Slovak (Slovenčina)
  * @author Helix84
  */
