@@ -1131,6 +1131,7 @@ $messages['vo'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'syntaxhighlight-specify' => 'איר דארפֿט ספעציפֿירן א שפראַך אזוי:',
 	'syntaxhighlight-err-language' => 'אומגילטיקע שפראַך.',
 );
 
