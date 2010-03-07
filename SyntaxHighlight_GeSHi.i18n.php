@@ -186,6 +186,13 @@ $messages['cs'] = array(
 	'geshi.css' => '/* Zde uvedené CSS bude ovlivňovat zvýrazňování syntaxe GeSHi */',
 );
 
+/** Danish (Dansk)
+ * @author Sarrus
+ */
+$messages['da'] = array(
+	'syntaxhighlight-err-language' => 'Ugyldigt sprog.',
+);
+
 /** German (Deutsch)
  * @author Raimond Spekking
  */
