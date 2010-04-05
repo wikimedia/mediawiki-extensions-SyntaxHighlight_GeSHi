@@ -940,12 +940,16 @@ $messages['sk'] = array(
 );
 
 /** Slovenian (Slovenščina)
+ * @author Dbc334
  * @author Yerpo
  */
 $messages['sl'] = array(
+	'syntaxhighlight-desc' => 'Nudi označevanje skladnje <tt><nowiki><source></nowiki></tt> z uporabo [http://qbnz.com/highlighter/ označevalnika GeSHi]',
+	'syntaxhighlight-specify' => 'Morate navesti jezik tako:',
 	'syntaxhighlight-supported' => 'Jeziki, ki jih podpira funkcija za označevanje sintakse:',
 	'syntaxhighlight-err-loading' => '(napaka pri nalaganju podprtih jezikov)',
 	'syntaxhighlight-err-language' => 'Neveljaven jezik.',
+	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
