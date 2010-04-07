@@ -253,7 +253,7 @@ $messages['eo'] = array(
 	'syntaxhighlight-specify' => 'Vi nepre specifu lingvon kiel ĉi tiu:',
 	'syntaxhighlight-supported' => 'Subtenaj lingvoj por sintaksa emfazo',
 	'syntaxhighlight-err-loading' => '(eraro ŝarĝante subtenitan lingvo-liston)',
-	'syntaxhighlight-err-language' => 'Nevalida lingvo.',
+	'syntaxhighlight-err-language' => 'Malvalida lingvo.',
 	'geshi.css' => '/* CSS enigita ĉi tie estos sintakse emfazita de GeSHi */',
 );
 
@@ -685,9 +685,9 @@ $messages['mk'] = array(
  */
 $messages['ml'] = array(
 	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi പ്രമുഖമാക്കൽ ഉപകരണമുപയോഗിച്ച്] <tt><nowiki><source></nowiki></tt> വിന്യാസം പ്രമുഖമാക്കിക്കാട്ടാൻ സഹായിക്കുന്നു',
-	'syntaxhighlight-specify' => 'താങ്കള്‍ ഇപ്രകാരം ഒരു ഭാഷ തിരഞ്ഞെടുക്കണം:',
-	'syntaxhighlight-supported' => 'സിറ്റാക്സ് ഹൈലൈറ്റിങ്ങ് അനുകൂലിക്കുന്ന ഭാഷകള്‍:',
-	'syntaxhighlight-err-loading' => '(പിന്തുണയുള്ള ഭാഷകളുടെ പട്ടിക ശേഖരിക്കുന്നതില്‍ പിഴവ്)',
+	'syntaxhighlight-specify' => 'താങ്കൾ ഇപ്രകാരം ഒരു ഭാഷ തിരഞ്ഞെടുക്കണം:',
+	'syntaxhighlight-supported' => 'സിറ്റാക്സ് ഹൈലൈറ്റിങ്ങ് അനുകൂലിക്കുന്ന ഭാഷകൾ:',
+	'syntaxhighlight-err-loading' => '(പിന്തുണയുള്ള ഭാഷകളുടെ പട്ടിക ശേഖരിക്കുന്നതിൽ പിഴവ്)',
 	'syntaxhighlight-err-language' => 'അസാധുവായ ഭാഷ.',
 	'geshi.css' => '/* ഇവിടെ നൽകുന്ന സി.എസ്.എസ്.  GeSHi വിന്യാസം പ്രമുഖമാക്കിക്കാട്ടലിനു ബാധകമായിത്തീരും */',
 );
