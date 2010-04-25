@@ -608,7 +608,7 @@ $messages['ko'] = array(
 	'geshi.css' => '/* 이 문서에서 설정한 CSS는 GeSHi에 적용됩니다. */',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(
@@ -1146,7 +1146,7 @@ $messages['yi'] = array(
 	'syntaxhighlight-err-language' => 'אומגילטיקע שפראַך.',
 );
 
-/** Yue (粵語)
+/** Cantonese (粵語)
  * @author Shinjiman
  */
 $messages['yue'] = array(
