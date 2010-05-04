@@ -845,7 +845,7 @@ $messages['ps'] = array(
  * @author Malafaya
  */
 $messages['pt'] = array(
-	'syntaxhighlight-desc' => 'Permite o realce sintáctico de código fonte, através da marca <tt><nowiki><source></nowiki></tt>, usando o [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Permite o realce sintáctico de código fonte, através do elemento <tt><nowiki><source></nowiki></tt>, usando o [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Precisa de especificar uma linguagem assim:',
 	'syntaxhighlight-supported' => 'Linguagens suportadas no realce de sintaxe:',
 	'syntaxhighlight-err-loading' => '(erro ao carregar a lista de linguagens suportadas)',
