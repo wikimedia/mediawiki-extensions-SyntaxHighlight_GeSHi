@@ -877,8 +877,8 @@ $messages['qu'] = array(
  * @author Stelistcristi
  */
 $messages['ro'] = array(
-	'syntaxhighlight-specify' => 'Trebuie să specificaţi o limbă în acest mod:',
-	'syntaxhighlight-supported' => 'Limbile suportate pentru evidenţierea sintaxei:',
+	'syntaxhighlight-specify' => 'Trebuie să specificați o limbă în acest mod:',
+	'syntaxhighlight-supported' => 'Limbile suportate pentru evidențierea sintaxei:',
 	'syntaxhighlight-err-loading' => '(eroare la încărcarea listei cu limbile suportate)',
 	'syntaxhighlight-err-language' => 'Limbă incorectă.',
 );
