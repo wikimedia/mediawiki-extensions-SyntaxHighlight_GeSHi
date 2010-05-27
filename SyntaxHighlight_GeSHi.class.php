@@ -304,6 +304,7 @@ class SyntaxHighlight_GeSHi {
 	 */
 	private static function initialise() {
 		if( !self::$initialised ) {
+			wfLoadExtensionMessages( 'SyntaxHighlight_GeSHi' );
 			if( !class_exists( 'GeSHi' ) )
 				require( 'geshi/geshi.php' );
 			self::$initialised = true;
