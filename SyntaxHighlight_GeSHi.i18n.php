@@ -173,6 +173,13 @@ $messages['ca'] = array(
 	'geshi.css' => '/* El CSS ubicat aquí serà aplicat al ressaltat de sintaxi de GeSHi */',
 );
 
+/** Chechen (Нохчийн)
+ * @author Sasan700
+ */
+$messages['ce'] = array(
+	'geshi.css' => '/* CSS-ишар, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */',
+);
+
 /** Czech (Česky)
  * @author Li-sung
  * @author Matěj Grabovský
@@ -589,9 +596,11 @@ $messages['kk-latn'] = array(
 
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
+ * @author គីមស៊្រុន
  */
 $messages['km'] = array(
 	'syntaxhighlight-specify' => 'អ្នកចាំបាច់ សំដៅ មួយភាសា ដូច នេះ ៖',
+	'syntaxhighlight-err-loading' => '(បញ្ហាក្នុងការរៀបចំបញ្ជីភាសាដែលប្រើបាន)',
 	'syntaxhighlight-err-language' => 'ភាសា គ្មានសុពលភាព ។',
 );
 
