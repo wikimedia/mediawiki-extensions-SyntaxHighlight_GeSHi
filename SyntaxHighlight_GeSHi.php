@@ -21,7 +21,8 @@
  */
 
 /**
- * @addtogroup Extensions
+ * @file
+ * @ingroup Extensions
  * @author Brion Vibber
  *
  * This extension wraps the GeSHi highlighter: http://qbnz.com/highlighter/
