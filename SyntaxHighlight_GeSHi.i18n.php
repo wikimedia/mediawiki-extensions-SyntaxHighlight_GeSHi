@@ -44,9 +44,9 @@ $messages['an'] = array(
 	'syntaxhighlight-desc' => 'Premite o resalte sintactico <code>&lt;source&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => "Ha d'endicar un lenguache asinas:",
 	'syntaxhighlight-supported' => 'Lenguaches suportatos ta o resalte sintactico:',
-	'syntaxhighlight-err-loading' => '(error cargando a lista de lenguaches suportatos)',
-	'syntaxhighlight-err-language' => 'Lenguache incorreuto.',
-	'geshi.css' => "/* Iste codigo CSS s'aplicará ta destacar a sintacsis GeSHi*/",
+	'syntaxhighlight-err-loading' => '(error en cargar a lista de luengaches suportatos)',
+	'syntaxhighlight-err-language' => 'Luengache invalido.',
+	'geshi.css' => "/* Iste codigo CSS s'aplicará ta destacar a sintaxi GeSHi*/",
 );
 
 /** Arabic (العربية)
