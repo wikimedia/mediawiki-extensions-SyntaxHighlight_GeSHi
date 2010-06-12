@@ -317,7 +317,7 @@ class SyntaxHighlight_GeSHi {
 	 */
 	public static function hSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
 		global $wgExtensionCredits;
-		require_once( 'geshi/geshi.php' );
+		self::initialise();
 		$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;
 		return true;
 	}
