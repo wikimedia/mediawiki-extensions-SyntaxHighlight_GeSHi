@@ -12,7 +12,7 @@ $messages = array();
  * @author Brion Vibber
  */
 $messages['en'] = array(
-	'syntaxhighlight-desc'         => 'Provides syntax highlighting <code>&lt;source&gt;</code> using [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc'         => 'Provides syntax highlighting <code>&lt;syntaxhighlight&gt;</code> using [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]',
 	'syntaxhighlight-specify'      => 'You need to specify a language like this:',
 	'syntaxhighlight-supported'    => 'Supported languages for syntax highlighting:',
 	'syntaxhighlight-err-loading'  => '(error loading supported language list)',
@@ -41,7 +41,7 @@ $messages['af'] = array(
  * @author Juanpabl
  */
 $messages['an'] = array(
-	'syntaxhighlight-desc' => 'Premite o resalte sintactico <code>&lt;source&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Premite o resalte sintactico <code>&lt;syntaxhighlight&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => "Ha d'endicar un lenguache asinas:",
 	'syntaxhighlight-supported' => 'Lenguaches suportatos ta o resalte sintactico:',
 	'syntaxhighlight-err-loading' => '(error en cargar a lista de luengaches suportatos)',
@@ -53,7 +53,7 @@ $messages['an'] = array(
  * @author Meno25
  */
 $messages['ar'] = array(
-	'syntaxhighlight-desc' => 'يوفر تعليم النص <code>&lt;source&gt;</code> باستخدام [http://qbnz.com/highlighter/ معلم GeSHi]',
+	'syntaxhighlight-desc' => 'يوفر تعليم النص <code>&lt;syntaxhighlight&gt;</code> باستخدام [http://qbnz.com/highlighter/ معلم GeSHi]',
 	'syntaxhighlight-specify' => 'يجب عليك تحديد لغة مثل هذه:',
 	'syntaxhighlight-supported' => 'اللغات المدعومة لتظليل الصياغة:',
 	'syntaxhighlight-err-loading' => '(خطأ في تحميل قائمة اللغات المدعومة)',
@@ -66,7 +66,7 @@ $messages['ar'] = array(
  * @author Ramsis II
  */
 $messages['arz'] = array(
-	'syntaxhighlight-desc' => 'بيوفر تظليل السينتاكس <code>&lt;source&gt;</code> باستعمال [http://qbnz.com/highlighter/ GeSHi مظلل]',
+	'syntaxhighlight-desc' => 'بيوفر تظليل السينتاكس <code>&lt;syntaxhighlight&gt;</code> باستعمال [http://qbnz.com/highlighter/ GeSHi مظلل]',
 	'syntaxhighlight-specify' => 'انت لازم تحدد لغة زى كدا:',
 	'syntaxhighlight-supported' => 'اللغات المدعومة لتظليل السينتاكس:',
 	'syntaxhighlight-err-loading' => '(غلط فى تحميل لستة اللغات المدعومة)',
@@ -78,7 +78,7 @@ $messages['arz'] = array(
  * @author Esbardu
  */
 $messages['ast'] = array(
-	'syntaxhighlight-desc' => 'Proporciona resaltáu de sintaxis <code>&lt;source&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Proporciona resaltáu de sintaxis <code>&lt;syntaxhighlight&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Necesites conseñar una llingua como esta:',
 	'syntaxhighlight-supported' => 'Llingües sofitaes pa la sintaxis en colores:',
 	'syntaxhighlight-err-loading' => '(error al cargar la llista de llingües sofitaes)',
@@ -90,7 +90,7 @@ $messages['ast'] = array(
  * @author Mostafadaneshvar
  */
 $messages['bcc'] = array(
-	'syntaxhighlight-desc' => 'ساختار پررنگی آریت <code>&lt;source&gt;</code> گون استفاده چه[http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'ساختار پررنگی آریت <code>&lt;syntaxhighlight&gt;</code> گون استفاده چه[http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'لازمنت شما یک زبانی په داب شی مشخض کنیت:',
 	'syntaxhighlight-supported' => 'حمایتی زبانان په ساختار پررنگی:',
 	'syntaxhighlight-err-loading' => '(حطا ته بار کتن لیست زبان داشتگین)',
@@ -103,7 +103,7 @@ $messages['bcc'] = array(
  * @author Jim-by
  */
 $messages['be-tarask'] = array(
-	'syntaxhighlight-desc' => 'Дазваляе выкарыстоўваць тэг  <code>&lt;source&gt;</code> для падсьветкі сынтаксісу з дапамогай [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Дазваляе выкарыстоўваць тэг  <code>&lt;syntaxhighlight&gt;</code> для падсьветкі сынтаксісу з дапамогай [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Вам неабходна пазначыць мову наступным чынам:',
 	'syntaxhighlight-supported' => 'Мовы, якія падтрымліваюцца для праверкі сынтаксісу:',
 	'syntaxhighlight-err-loading' => '(памылка загрузкі сьпісу моваў)',
@@ -117,7 +117,7 @@ $messages['be-tarask'] = array(
  * @author Turin
  */
 $messages['bg'] = array(
-	'syntaxhighlight-desc' => 'Осигурява синтактично осветяване на <code>&lt;source&gt;</code> чрез [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Осигурява синтактично осветяване на <code>&lt;syntaxhighlight&gt;</code> чрез [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Нужно е да укажете език по следния начин:',
 	'syntaxhighlight-supported' => 'Поддържани езици за синтактично открояване:',
 	'syntaxhighlight-err-loading' => '(грешка при зареждането на списъка на поддържаните езици)',
@@ -129,7 +129,7 @@ $messages['bg'] = array(
  * @author Zaheen
  */
 $messages['bn'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi হাইলাইটার] ব্যবহার করে <code>&lt;source&gt;</code> সিনট্যাক্স হাইলাইটিং-এর ক্ষমতা দেয়',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi হাইলাইটার] ব্যবহার করে <code>&lt;syntaxhighlight&gt;</code> সিনট্যাক্স হাইলাইটিং-এর ক্ষমতা দেয়',
 	'syntaxhighlight-specify' => 'আপনাকে এভাবে একটি ভাষা নির্দিষ্ট করতে হবে:',
 	'syntaxhighlight-supported' => 'যেসব ভাষার জন্য সিনট্যাক্স হাইলাইটিং সমর্থিত:',
 	'syntaxhighlight-err-loading' => '(সমর্থিত ভাষার তালিকা আনতে ত্রুটি)',
@@ -141,7 +141,7 @@ $messages['bn'] = array(
  * @author Fulup
  */
 $messages['br'] = array(
-	'syntaxhighlight-desc' => 'Talvezout a ra da lakaat an ereadur war wel dre ar valizenn <code>&lt;source&gt;</code> en ur ober gant [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Talvezout a ra da lakaat an ereadur war wel dre ar valizenn <code>&lt;syntaxhighlight&gt;</code> en ur ober gant [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => "Ret eo deoc'h spisaat ur yezh evel-henn :",
 	'syntaxhighlight-supported' => 'Yezhoù skoret evit al livadur ereadurel :',
 	'syntaxhighlight-err-loading' => '(fazi en ur gargañ roll ar yezhoù skoret)',
@@ -153,7 +153,7 @@ $messages['br'] = array(
  * @author CERminator
  */
 $messages['bs'] = array(
-	'syntaxhighlight-desc' => 'Omogućava isticanje sintakse <code>&lt;source&gt;</code> uz pomoć [http://qbnz.com/highlighter/ GeSHi Highlightera]',
+	'syntaxhighlight-desc' => 'Omogućava isticanje sintakse <code>&lt;syntaxhighlight&gt;</code> uz pomoć [http://qbnz.com/highlighter/ GeSHi Highlightera]',
 	'syntaxhighlight-specify' => 'Potrebno je da specificirate jezik ovako:',
 	'syntaxhighlight-supported' => 'Podržani jezici za isticanje sintakse:',
 	'syntaxhighlight-err-loading' => '(greška pri korištenju spiska podržanih jezika)',
@@ -166,7 +166,7 @@ $messages['bs'] = array(
  * @author Solde
  */
 $messages['ca'] = array(
-	'syntaxhighlight-desc' => "Proveeix de ressaltat sintàctic amb l'etiqueta <code>&lt;source&gt;</code> usant el programa [http://qbnz.com/highlighter/ GeSHi]",
+	'syntaxhighlight-desc' => "Proveeix de ressaltat sintàctic amb l'etiqueta <code>&lt;syntaxhighlight&gt;</code> usant el programa [http://qbnz.com/highlighter/ GeSHi]",
 	'syntaxhighlight-specify' => "Heu d'especificar un dels llenguatges:",
 	'syntaxhighlight-supported' => 'Llenguatges admesos per al ressaltament sintàctic:',
 	'syntaxhighlight-err-loading' => '(error en carregar la llista de llenguatges)',
@@ -186,7 +186,7 @@ $messages['ce'] = array(
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
-	'syntaxhighlight-desc' => 'Poskytuje zvýrazňování syntaxe <code>&lt;source&gt;</code> pomocí [http://qnbz.com/higlighter zvýrazňovače GeSHi]',
+	'syntaxhighlight-desc' => 'Poskytuje zvýrazňování syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocí [http://qnbz.com/higlighter zvýrazňovače GeSHi]',
 	'syntaxhighlight-specify' => 'Musíte určit jazyk tímto způsobem:',
 	'syntaxhighlight-supported' => 'Seznam jazyků, u kterých je podporováno zvýrazňování syntaxe:',
 	'syntaxhighlight-err-loading' => '(chyba při načítání seznamu podporovaných jazyků)',
@@ -205,7 +205,7 @@ $messages['da'] = array(
  * @author Raimond Spekking
  */
 $messages['de'] = array(
-	'syntaxhighlight-desc' => 'Syntax-Hervorhebung <code>&lt;source&gt;</code> mit Hilfe des [http://qbnz.com/highlighter/ GeSHi-Highlighters]',
+	'syntaxhighlight-desc' => 'Syntax-Hervorhebung <code>&lt;syntaxhighlight&gt;</code> mit Hilfe des [http://qbnz.com/highlighter/ GeSHi-Highlighters]',
 	'syntaxhighlight-specify' => 'Die gewünschte Sprache muss wie folgt definiert werden:',
 	'syntaxhighlight-supported' => 'Unterstützte Sprachen für die Syntax-Hervorhebung:',
 	'syntaxhighlight-err-loading' => '(Fehler beim Laden der Sprachenliste)',
@@ -217,7 +217,7 @@ $messages['de'] = array(
  * @author Aspar
  */
 $messages['diq'] = array(
-	'syntaxhighlight-desc' => 'pê şuxulnayişê [http://qbnz.com/highlighter/ GeSHi Highlighter] i rêza <code>&lt;source&gt;</code> i işaret beno',
+	'syntaxhighlight-desc' => 'pê şuxulnayişê [http://qbnz.com/highlighter/ GeSHi Highlighter] i rêza <code>&lt;syntaxhighlight&gt;</code> i işaret beno',
 	'syntaxhighlight-specify' => 'zey ıni yew zıwan bıvıcinê:',
 	'syntaxhighlight-supported' => 'zıwanê ke rêzvateyê eyi destek beni',
 	'syntaxhighlight-err-loading' => '(zıwanê ke destek geni, wexata bar biyene xeta da)',
@@ -229,7 +229,7 @@ $messages['diq'] = array(
  * @author Michawiki
  */
 $messages['dsb'] = array(
-	'syntaxhighlight-desc' => 'Zmóžnja syntaksowe wuzwignjenje <code>&lt;source&gt;</code> z pomocu [http://qbnz.com/highlighter/ rěda GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Zmóžnja syntaksowe wuzwignjenje <code>&lt;syntaxhighlight&gt;</code> z pomocu [http://qbnz.com/highlighter/ rěda GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Musyš rěc kaž slědujo pódaś:',
 	'syntaxhighlight-supported' => 'Pódpěrane rěcy za syntaksowe wuzwignjenje:',
 	'syntaxhighlight-err-loading' => '(zmólka pśi zacytowanju lisćiny pódpěranych rěcow)',
@@ -244,7 +244,7 @@ $messages['dsb'] = array(
  * @author ZaDiak
  */
 $messages['el'] = array(
-	'syntaxhighlight-desc' => 'Παρέχει έμφαση σύνταξης <code>&lt;source&gt;</code> χρησιμοποιώντας το [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Παρέχει έμφαση σύνταξης <code>&lt;syntaxhighlight&gt;</code> χρησιμοποιώντας το [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Πρέπει να επιλέξετε μια γλώσσα σαν κι αυτήν:',
 	'syntaxhighlight-supported' => 'Υποστηριζόμενες γλώσσες για επισημάνσεις συντακτικού',
 	'syntaxhighlight-err-loading' => '(λάθος στη φόρτωση της λίστας των υποστηριζόμενων γλωσσών)',
@@ -257,7 +257,7 @@ $messages['el'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
-	'syntaxhighlight-desc' => 'Provizas kolorigado de sintakso <code>&lt;source&gt;</code> per [http://qbnz.com/highlighter/ GeSHi Kolorigilo de Sintakso]',
+	'syntaxhighlight-desc' => 'Provizas kolorigado de sintakso <code>&lt;syntaxhighlight&gt;</code> per [http://qbnz.com/highlighter/ GeSHi Kolorigilo de Sintakso]',
 	'syntaxhighlight-specify' => 'Vi nepre specifu lingvon kiel ĉi tiu:',
 	'syntaxhighlight-supported' => 'Subtenaj lingvoj por sintaksa emfazo',
 	'syntaxhighlight-err-loading' => '(eraro ŝarĝante subtenitan lingvo-liston)',
@@ -272,7 +272,7 @@ $messages['eo'] = array(
  * @author Sanbec
  */
 $messages['es'] = array(
-	'syntaxhighlight-desc' => 'Permite resaltar el código fuente usando la etiqueta <code>&lt;source&gt;</code>. Esta extensión usa [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Necesita especificar un idioma como esto:',
 	'syntaxhighlight-supported' => 'lenguajes soportados para sintaxis remarcada:',
 	'syntaxhighlight-err-loading' => '(error cargando lista de lenguajes soportados)',
@@ -285,7 +285,7 @@ $messages['es'] = array(
  * @author [[et:Kasutaja:M2s17]]
  */
 $messages['et'] = array(
-	'syntaxhighlight-desc' => 'Võimaldab [http://qbnz.com/highlighter/ GeSHi] abil <code>&lt;source&gt;</code>-märgendit kasutades süntaksit esile tõsta.',
+	'syntaxhighlight-desc' => 'Võimaldab [http://qbnz.com/highlighter/ GeSHi] abil <code>&lt;syntaxhighlight&gt;</code>-märgendit kasutades süntaksit esile tõsta.',
 	'syntaxhighlight-specify' => 'Sa pead täpsustama keelt nõnda:',
 	'syntaxhighlight-supported' => 'Süntaksi esiletoomise on toetatud järgnevates keeltes:',
 	'syntaxhighlight-err-loading' => '(toetatud keelte loetelu laadimisel esines viga)',
@@ -305,7 +305,7 @@ $messages['eu'] = array(
  * @author Huji
  */
 $messages['fa'] = array(
-	'syntaxhighlight-desc' => 'امکان رنگین کردن دستورات <code>&lt;source&gt;</code> با استفاده از [http://qbnz.com/highlighter/ GeSHi Highlighter] را فراهم می‌آورد',
+	'syntaxhighlight-desc' => 'امکان رنگین کردن دستورات <code>&lt;syntaxhighlight&gt;</code> با استفاده از [http://qbnz.com/highlighter/ GeSHi Highlighter] را فراهم می‌آورد',
 	'syntaxhighlight-specify' => 'شما باید به این شکل زبانی را مشخص کنید:',
 	'syntaxhighlight-supported' => 'زبان‌های پشتیبانی‌شده برای رنگین‌کردن دستورات:',
 	'syntaxhighlight-err-loading' => '(خطا در بارگذاری فهرست زبان‌های پشتیبانی‌شده)',
@@ -331,7 +331,7 @@ $messages['fi'] = array(
  * @author Verdy p
  */
 $messages['fr'] = array(
-	'syntaxhighlight-desc' => 'Fournit la mise en relief de la syntaxe par la balise <code>&lt;source&gt;</code> en utilisant [http://qbnz.com/highlighter/ la coloration syntaxique GeSHi]',
+	'syntaxhighlight-desc' => 'Fournit la mise en relief de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [http://qbnz.com/highlighter/ la coloration syntaxique GeSHi]',
 	'syntaxhighlight-specify' => 'Vous devez spécifier un langage comme ceci :',
 	'syntaxhighlight-supported' => 'Langages supportés pour la coloration syntaxique :',
 	'syntaxhighlight-err-loading' => '(erreur en chargeant la liste des langages supportés)',
@@ -343,7 +343,7 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'syntaxhighlight-desc' => 'Balye la misa en èvidence de la sintaxa per la balisa <code>&lt;source&gt;</code> en utilisent [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi].',
+	'syntaxhighlight-desc' => 'Balye la misa en èvidence de la sintaxa per la balisa <code>&lt;syntaxhighlight&gt;</code> en utilisent [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi].',
 	'syntaxhighlight-specify' => 'Vos dête spècefiar un lengâjo d’ense :',
 	'syntaxhighlight-supported' => 'Lengâjos recognus por la coloracion sintaxica :',
 	'syntaxhighlight-err-loading' => '(èrror en chargient la lista des lengâjos recognus)',
@@ -370,7 +370,7 @@ $messages['ga'] = array(
  * @author Xosé
  */
 $messages['gl'] = array(
-	'syntaxhighlight-desc' => 'Proporciona unha sintaxe resaltada <code>&lt;source&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Proporciona unha sintaxe resaltada <code>&lt;syntaxhighlight&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Ten que especificar unha linguaxe así:',
 	'syntaxhighlight-supported' => 'Linguaxes coñecidas para resaltar a sintaxe:',
 	'syntaxhighlight-err-loading' => '(erro ao cargar a lista de linguaxes coñecidas)',
@@ -389,7 +389,7 @@ $messages['grc'] = array(
  * @author Als-Holder
  */
 $messages['gsw'] = array(
-	'syntaxhighlight-desc' => 'Syntax firihebe <code>&lt;source&gt;</code> mit Hilf vum [http://qbnz.com/highlighter/ GeSHi-Highlighter]',
+	'syntaxhighlight-desc' => 'Syntax firihebe <code>&lt;syntaxhighlight&gt;</code> mit Hilf vum [http://qbnz.com/highlighter/ GeSHi-Highlighter]',
 	'syntaxhighlight-specify' => 'Di gwinscht Sproch muess eso definiert wäre:',
 	'syntaxhighlight-supported' => 'Unterstitzti Sproche fir s Fiirihebe vu dr Syntax:',
 	'syntaxhighlight-err-loading' => '(Fehler bim Lade vu dr Sprochelischt)',
@@ -410,7 +410,7 @@ $messages['gu'] = array(
  * @author Rotem Liss
  */
 $messages['he'] = array(
-	'syntaxhighlight-desc' => 'אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;source&gt;</code> באמצעות [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'עליכם לציין שפה באופן הבא:',
 	'syntaxhighlight-supported' => 'שפות נתמכות:',
 	'syntaxhighlight-err-loading' => '(שגיאה בטעינת הרשימה של השפות הנתמכות)',
@@ -423,7 +423,7 @@ $messages['he'] = array(
  * @author Shyam
  */
 $messages['hi'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] प्रयोग करके चिन्हांकित <code>&lt;source&gt;</code> वाक्य विश्लेषण उपलब्ध करता है',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] प्रयोग करके चिन्हांकित <code>&lt;syntaxhighlight&gt;</code> वाक्य विश्लेषण उपलब्ध करता है',
 	'syntaxhighlight-specify' => 'आपने इसप्रकार भाषा देना जरूरी हैं:',
 	'syntaxhighlight-supported' => 'सिन्टॅक्स हायलायटींग निम्नलिखित भाषाओंके लिये उपलब्ध हैं:',
 	'syntaxhighlight-err-loading' => '(सपोर्टेड भाषाओंकी सूची नहीं दर्शा पा रहें हैं)',
@@ -436,7 +436,7 @@ $messages['hi'] = array(
  * @author SpeedyGonsales
  */
 $messages['hr'] = array(
-	'syntaxhighlight-desc' => 'Omogućava bojanje sintakse <code>&lt;source&gt;</code> korištenjem [http://qbnz.com/highlighter/ GeSHi Highlighter-a]',
+	'syntaxhighlight-desc' => 'Omogućava bojanje sintakse <code>&lt;syntaxhighlight&gt;</code> korištenjem [http://qbnz.com/highlighter/ GeSHi Highlighter-a]',
 	'syntaxhighlight-specify' => 'Molimo navedite jezik na slijedeći način:',
 	'syntaxhighlight-supported' => 'Jezici podržani za bojanje sintakse:',
 	'syntaxhighlight-err-loading' => '(greška pri učitavanju popisa podržanih jezika)',
@@ -448,7 +448,7 @@ $messages['hr'] = array(
  * @author Michawiki
  */
 $messages['hsb'] = array(
-	'syntaxhighlight-desc' => 'Syntaksowe wuzběhnjenje <code>&lt;source&gt;</code> z pomocu rozšěrjenja [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Syntaksowe wuzběhnjenje <code>&lt;syntaxhighlight&gt;</code> z pomocu rozšěrjenja [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Dyrbiš rěč takle definować:',
 	'syntaxhighlight-supported' => 'Podpěrowane rěče za syntaksowe wuzběhnjenje:',
 	'syntaxhighlight-err-loading' => '(Zmylk při začitanju lisćiny rěčow)',
@@ -460,7 +460,7 @@ $messages['hsb'] = array(
  * @author Dani
  */
 $messages['hu'] = array(
-	'syntaxhighlight-desc' => 'Lehetőséget nyújt szintaxiskiemelésre a <code>&lt;source&gt;</code> tag-gel, a [http://qbnz.com/highlighter/ GeSHi Highlighter] használatával',
+	'syntaxhighlight-desc' => 'Lehetőséget nyújt szintaxiskiemelésre a <code>&lt;syntaxhighlight&gt;</code> tag-gel, a [http://qbnz.com/highlighter/ GeSHi Highlighter] használatával',
 	'syntaxhighlight-specify' => 'Meg kell adnod egy nyelvet az alábbi módon:',
 	'syntaxhighlight-supported' => 'Támogatott programozási nyelvek:',
 	'syntaxhighlight-err-loading' => '(hiba történt a támogatott nyelvek listájának betöltése közben)',
@@ -472,7 +472,7 @@ $messages['hu'] = array(
  * @author McDutchie
  */
 $messages['ia'] = array(
-	'syntaxhighlight-desc' => 'Forni le coloration syntactic in <code>&lt;source&gt;</code> per medio de [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Forni le coloration syntactic in <code>&lt;syntaxhighlight&gt;</code> per medio de [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Tu debe specificar un linguage in iste modo:',
 	'syntaxhighlight-supported' => 'Linguages supportate pro le coloration syntactic:',
 	'syntaxhighlight-err-loading' => '(error durante le cargamento del lista de linguages supportate)',
@@ -484,7 +484,7 @@ $messages['ia'] = array(
  * @author IvanLanin
  */
 $messages['id'] = array(
-	'syntaxhighlight-desc' => 'Memberikan penyorotan sintaks <code>&lt;source&gt;</code> menggunakan [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Memberikan penyorotan sintaks <code>&lt;syntaxhighlight&gt;</code> menggunakan [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Anda harus menentukan suatu bahasa seperti ini:',
 	'syntaxhighlight-supported' => 'Bahasa-bahasa yang didukung oleh pewarnaan sintaks:',
 	'syntaxhighlight-err-loading' => '(kesalahan pemuatan daftar bahasa yang didukung)',
@@ -503,7 +503,7 @@ $messages['io'] = array(
  * @author BrokenArrow
  */
 $messages['it'] = array(
-	'syntaxhighlight-desc' => 'Evidenzia la sintassi dei linguaggi di programmazione <code>&lt;source&gt;</code> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Evidenzia la sintassi dei linguaggi di programmazione <code>&lt;syntaxhighlight&gt;</code> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'È necessario specificare un linguaggio in questo modo:',
 	'syntaxhighlight-supported' => 'Linguaggi di cui è possibile evidenziare la sintassi in colore:',
 	'syntaxhighlight-err-loading' => "(errore nel caricamento dell'elenco dei linguaggi supportati)",
@@ -517,7 +517,7 @@ $messages['it'] = array(
  * @author JtFuruhata
  */
 $messages['ja'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi 構文ハイライト機能] を利用したタグ <code>&lt;source&gt;</code> を提供する',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi 構文ハイライト機能] を利用したタグ <code>&lt;syntaxhighlight&gt;</code> を提供する',
 	'syntaxhighlight-specify' => '以下のように言語を指定する必要があります:',
 	'syntaxhighlight-supported' => '構文ハイライト機能に対応している言語は以下の通りです:',
 	'syntaxhighlight-err-loading' => '(対応言語一覧の読み込み時にエラーが発生しました)',
@@ -530,7 +530,7 @@ $messages['ja'] = array(
  * @author Ælsån
  */
 $messages['jut'] = array(
-	'syntaxhighlight-desc' => 'Gäv syntaks highlighting <code>&lt;source&gt;</code> via [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Gäv syntaks highlighting <code>&lt;syntaxhighlight&gt;</code> via [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Du nødst til spæsifiær en språg als dette:',
 	'syntaxhighlight-supported' => 'Understønde språg før syntaks highlighting:',
 	'syntaxhighlight-err-loading' => '(fejl lægende understønde språg liste)',
@@ -542,7 +542,7 @@ $messages['jut'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
-	'syntaxhighlight-desc' => 'Mènèhaké panyorotan sintaksis <code>&lt;source&gt;</code> nganggo [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Mènèhaké panyorotan sintaksis <code>&lt;syntaxhighlight&gt;</code> nganggo [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Panjenengan kudu nentokaké sawijining basa kaya iki:',
 	'syntaxhighlight-supported' => 'Basa-basa sing disengkuyung déning panandhan werna sintaksis:',
 	'syntaxhighlight-err-loading' => '(ana kaluputan ngunggahaké daftar basa sing disengkuyung)',
@@ -554,7 +554,7 @@ $messages['jv'] = array(
  * @author გიორგიმელა
  */
 $messages['ka'] = array(
-	'syntaxhighlight-desc' => 'გაძლევთ ნებართვას ფამოიყენოთ თეგი <code>&lt;source&gt;</code> სინტაქსის გასანათებლად[http://qbnz.com/highlighter/ GeSHi Highlighter-ის] მეშვეობით',
+	'syntaxhighlight-desc' => 'გაძლევთ ნებართვას ფამოიყენოთ თეგი <code>&lt;syntaxhighlight&gt;</code> სინტაქსის გასანათებლად[http://qbnz.com/highlighter/ GeSHi Highlighter-ის] მეშვეობით',
 	'syntaxhighlight-specify' => 'თქვენ უნდა წარადგინოთ სახელი შემდეგი სახით:',
 	'syntaxhighlight-supported' => 'მხარდამჭერი ახელები',
 	'syntaxhighlight-err-loading' => '(შეუძებელია მხარდამჭერი ენების სიის ატვირთვა)',
@@ -610,7 +610,7 @@ $messages['km'] = array(
  * @author ToePeu
  */
 $messages['ko'] = array(
-	'syntaxhighlight-desc' => '<code>&lt;source&gt;</code> 태그로 [http://qbnz.com/highlighter/ GeSHi Highlighter]를 이용해 문법 강조 기능을 지원합니다.',
+	'syntaxhighlight-desc' => '<code>&lt;syntaxhighlight&gt;</code> 태그로 [http://qbnz.com/highlighter/ GeSHi Highlighter]를 이용해 문법 강조 기능을 지원합니다.',
 	'syntaxhighlight-specify' => '오른쪽과 같이 언어를 설정해야 합니다:',
 	'syntaxhighlight-supported' => '문법 강조가 지원되는 언어 목록',
 	'syntaxhighlight-err-loading' => '(지원하는 언어 목록을 불러오는 중 오류 발생)',
@@ -622,7 +622,7 @@ $messages['ko'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'syntaxhighlight-desc' => 'Deijt — en <code>&lt;source&gt;</code>-Affschnedde — de Syntax fon beshtemmpte Computer-Shprooche makeere. Bruch dobei dä [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Deijt — en <code>&lt;syntaxhighlight&gt;</code>-Affschnedde — de Syntax fon beshtemmpte Computer-Shprooche makeere. Bruch dobei dä [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Mer moß en Shprooch aanjevve, esu en dä Aat wi hee:',
 	'syntaxhighlight-supported' => 'Di Shprooche, dänne ier Syntax mer makeere könne, sin:',
 	'syntaxhighlight-err-loading' => '(Enne Fääler es opjetrodde, wi mer de Leß met de Shprooch laade wollte)',
@@ -635,7 +635,7 @@ $messages['ksh'] = array(
  * @author Robby
  */
 $messages['lb'] = array(
-	'syntaxhighlight-desc' => "Syntax-Ervirhiewung <code>&lt;source&gt;</code> mat Hëllef vu [http://qbnz.com/highlighter/ 'GeSHi Highlighter']",
+	'syntaxhighlight-desc' => "Syntax-Ervirhiewung <code>&lt;syntaxhighlight&gt;</code> mat Hëllef vu [http://qbnz.com/highlighter/ 'GeSHi Highlighter']",
 	'syntaxhighlight-specify' => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
 	'syntaxhighlight-supported' => "Ënnerstëtzte Sprooche fir d'Syntax faarweg ze markéieren",
 	'syntaxhighlight-err-loading' => '(Feeler beim Luede vun der Lëscht vun den ënnerstëtzte Sproochen)',
@@ -647,7 +647,7 @@ $messages['lb'] = array(
  * @author Ooswesthoesbes
  */
 $messages['li'] = array(
-	'syntaxhighlight-desc' => 'Guf syntaxismarkering <code>&lt;source&gt;</code> gebroekende [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Guf syntaxismarkering <code>&lt;syntaxhighlight&gt;</code> gebroekende [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => "Gaef 'ne taal es volg op:",
 	'syntaxhighlight-supported' => 'Óngersteunde täöl veur syntaxismarkering:',
 	'syntaxhighlight-err-loading' => "(fout bie 't laje vanne lies mit óngersteunde täöl)",
@@ -661,7 +661,7 @@ $messages['li'] = array(
  * @author Matasg
  */
 $messages['lt'] = array(
-	'syntaxhighlight-desc' => 'Teikia sintaksės paryškinimus <code>&lt;source&gt;</code> naudojant [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Teikia sintaksės paryškinimus <code>&lt;syntaxhighlight&gt;</code> naudojant [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Jums reikia nurodyti kalbą kaip čia:',
 	'syntaxhighlight-supported' => 'Palaikomos kalbos sintaksės paryškinimui:',
 	'syntaxhighlight-err-loading' => '(klaida įkeliant palaikomų kalbų sąrašą)',
@@ -681,7 +681,7 @@ $messages['mg'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'syntaxhighlight-desc' => 'Овозможува потцртување на синтакса <code>&lt;source&gt;</code> со помош на [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Треба да назначите јазик на следниов начин:',
 	'syntaxhighlight-supported' => 'Поддржани јазици за синтаксно потцртување:',
 	'syntaxhighlight-err-loading' => '(грешка при вчитувањето на списокот на поддржани јазици)',
@@ -694,7 +694,7 @@ $messages['mk'] = array(
  * @author Shijualex
  */
 $messages['ml'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi പ്രമുഖമാക്കൽ ഉപകരണമുപയോഗിച്ച്] <code>&lt;source&gt;</code> വിന്യാസം പ്രമുഖമാക്കിക്കാട്ടാൻ സഹായിക്കുന്നു',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi പ്രമുഖമാക്കൽ ഉപകരണമുപയോഗിച്ച്] <code>&lt;syntaxhighlight&gt;</code> വിന്യാസം പ്രമുഖമാക്കിക്കാട്ടാൻ സഹായിക്കുന്നു',
 	'syntaxhighlight-specify' => 'താങ്കൾ ഇപ്രകാരം ഒരു ഭാഷ തിരഞ്ഞെടുക്കണം:',
 	'syntaxhighlight-supported' => 'സിറ്റാക്സ് ഹൈലൈറ്റിങ്ങ് അനുകൂലിക്കുന്ന ഭാഷകൾ:',
 	'syntaxhighlight-err-loading' => '(പിന്തുണയുള്ള ഭാഷകളുടെ പട്ടിക ശേഖരിക്കുന്നതിൽ പിഴവ്)',
@@ -707,7 +707,7 @@ $messages['ml'] = array(
  * @author Mahitgar
  */
 $messages['mr'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi हायलायटर] वापरून सिन्टॅक्स हायलाईट करा <code>&lt;source&gt;</code>',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi हायलायटर] वापरून सिन्टॅक्स हायलाईट करा <code>&lt;syntaxhighlight&gt;</code>',
 	'syntaxhighlight-specify' => 'तुम्ही याप्रमाणे भाषा देणे गरजेचे आहे:',
 	'syntaxhighlight-supported' => 'सिन्टॅक्स हायलायटींग खालील भाषांवर वापरता येते:',
 	'syntaxhighlight-err-loading' => '(सहाय्य देणार्‍या भाषांची यादी दाखविण्यास असमर्थ)',
@@ -719,7 +719,7 @@ $messages['mr'] = array(
  * @author Aviator
  */
 $messages['ms'] = array(
-	'syntaxhighlight-desc' => 'Menyediakan tag <code>&lt;source&gt;</code> untuk penonjolan sintaks menggunakan [http://qbnz.com/highlighter/ GeSHi]',
+	'syntaxhighlight-desc' => 'Menyediakan tag <code>&lt;syntaxhighlight&gt;</code> untuk penonjolan sintaks menggunakan [http://qbnz.com/highlighter/ GeSHi]',
 	'syntaxhighlight-specify' => 'Anda hendaklah menyatakan bahasa seperti ini:',
 	'syntaxhighlight-supported' => 'Bahasa-bahasa yang disokong untuk penonjolan sintaks:',
 	'syntaxhighlight-err-loading' => '(berlaku ralat ketika memuat senarai bahasa yang disokong)',
@@ -738,7 +738,7 @@ $messages['nah'] = array(
  * @author Slomox
  */
 $messages['nds'] = array(
-	'syntaxhighlight-desc' => 'Syntax-Rutheven <code>&lt;source&gt;</code> mit Help vun’n [http://qbnz.com/highlighter/ GeSHi-Highlighter]',
+	'syntaxhighlight-desc' => 'Syntax-Rutheven <code>&lt;syntaxhighlight&gt;</code> mit Help vun’n [http://qbnz.com/highlighter/ GeSHi-Highlighter]',
 	'syntaxhighlight-specify' => 'Du musst op disse Wies en Spraak angeven:',
 	'syntaxhighlight-supported' => 'Ünnerstütt Spraken för dat Syntax-Rutheven:',
 	'syntaxhighlight-err-loading' => '(Fehler bi dat Laden vun de Sprakenlist)',
@@ -758,7 +758,7 @@ $messages['nds-nl'] = array(
  * @author Tvdm
  */
 $messages['nl'] = array(
-	'syntaxhighlight-desc' => 'Voorziet in het markeren van syntaxis voor <code>&lt;source&gt;</code> met [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Voorziet in het markeren van syntaxis voor <code>&lt;syntaxhighlight&gt;</code> met [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Geef een taal als volgt op:',
 	'syntaxhighlight-supported' => 'Ondersteunde talen voor syntaxismarkering:',
 	'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
@@ -770,7 +770,7 @@ $messages['nl'] = array(
  * @author Frokor
  */
 $messages['nn'] = array(
-	'syntaxhighlight-desc' => 'Gjev syntaks som framhevar <code>&lt;source&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Gjev syntaks som framhevar <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Du må gje eit språk slik:',
 	'syntaxhighlight-supported' => 'Støtta språk for syntaksutheving:',
 	'syntaxhighlight-err-loading' => '(feil under lasting av liste over støtta språk)',
@@ -782,7 +782,7 @@ $messages['nn'] = array(
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
-	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;source&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Du må angi et språk slik:',
 	'syntaxhighlight-supported' => 'Støttede språk for syntaksutheving:',
 	'syntaxhighlight-err-loading' => '(feil under last av liste over støttede språk)',
@@ -794,7 +794,7 @@ $messages['no'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
-	'syntaxhighlight-desc' => 'Provesís la mesa en relèu de la sintaxi per la balisa <code>&lt;source&gt;</code> en utilizant [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi]',
+	'syntaxhighlight-desc' => 'Provesís la mesa en relèu de la sintaxi per la balisa <code>&lt;syntaxhighlight&gt;</code> en utilizant [http://qbnz.com/highlighter/ la coloracion sintaxica GeSHi]',
 	'syntaxhighlight-specify' => 'Vos cal especificar un lengatge coma aquò :',
 	'syntaxhighlight-supported' => 'Lengatges suportats per la coloracion sintaxica :',
 	'syntaxhighlight-err-loading' => '(error en cargant la lista dels lengatges suportats)',
@@ -821,7 +821,7 @@ $messages['pdc'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'syntaxhighlight-desc' => 'Zapewnia kolorowanie składni dla znacznika <code>&lt;source&gt;</code> wykorzystując [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Zapewnia kolorowanie składni dla znacznika <code>&lt;syntaxhighlight&gt;</code> wykorzystując [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Musisz wybrać język w następujący sposób:',
 	'syntaxhighlight-supported' => 'Języki obsługiwane w podświetlaniu składni:',
 	'syntaxhighlight-err-loading' => '(błąd przy wczytywaniu listy obsługiwanych języków)',
@@ -834,7 +834,7 @@ $messages['pl'] = array(
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'syntaxhighlight-desc' => 'A evidensia la sintassi <code>&lt;source&gt;</code>an dovrand [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'A evidensia la sintassi <code>&lt;syntaxhighlight&gt;</code>an dovrand [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'A venta specifiché na lenga coma:',
 	'syntaxhighlight-supported' => "Lenghe dont as peul fé l'evidensiassion dla sintassi:",
 	'syntaxhighlight-err-loading' => '(eror ën cariand la lista dle lenghe dont sintassi as peul evidensié)',
@@ -855,7 +855,7 @@ $messages['ps'] = array(
  * @author Malafaya
  */
 $messages['pt'] = array(
-	'syntaxhighlight-desc' => 'Permite o realce sintáctico de código fonte, através do elemento <code>&lt;source&gt;</code>, usando o [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Permite o realce sintáctico de código fonte, através do elemento <code>&lt;syntaxhighlight&gt;</code>, usando o [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Precisa de especificar uma linguagem assim:',
 	'syntaxhighlight-supported' => 'Linguagens suportadas no realce de sintaxe:',
 	'syntaxhighlight-err-loading' => '(erro ao carregar a lista de linguagens suportadas)',
@@ -867,7 +867,7 @@ $messages['pt'] = array(
  * @author Heldergeovane
  */
 $messages['pt-br'] = array(
-	'syntaxhighlight-desc' => 'Providencia realce de sintaxe <code>&lt;source&gt;</code> através do [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Providencia realce de sintaxe <code>&lt;syntaxhighlight&gt;</code> através do [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Você precisa especificar uma linguagem, tal como:',
 	'syntaxhighlight-supported' => 'Linguagens suportadas no realce de sintaxe:',
 	'syntaxhighlight-err-loading' => '(erro ao carregar a lista de linguagens suportadas)',
@@ -897,7 +897,7 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
-	'syntaxhighlight-desc' => "Dè 'na sindasse evidenziate <code>&lt;source&gt;</code> ausanne [http://qbnz.com/highlighter/ GeSHi l'Evidenziatore]",
+	'syntaxhighlight-desc' => "Dè 'na sindasse evidenziate <code>&lt;syntaxhighlight&gt;</code> ausanne [http://qbnz.com/highlighter/ GeSHi l'Evidenziatore]",
 	'syntaxhighlight-specify' => "Tu, abbesogne de 'na lènga specifiche cumme a queste:",
 	'syntaxhighlight-supported' => 'Linguagge supportate pa sindasse evidenziate:',
 	'syntaxhighlight-err-loading' => "(errore carecanne 'a liste de linguagge supportate)",
@@ -909,7 +909,7 @@ $messages['roa-tara'] = array(
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
-	'syntaxhighlight-desc' => 'Позволяет использовать тег <code>&lt;source&gt;</code> для подсветки синтаксиса с помощью [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Позволяет использовать тег <code>&lt;syntaxhighlight&gt;</code> для подсветки синтаксиса с помощью [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Вы должны указать язык следующим образом:',
 	'syntaxhighlight-supported' => 'Поддерживаемые языки:',
 	'syntaxhighlight-err-loading' => '(невозможно загрузить список языков)',
@@ -921,7 +921,7 @@ $messages['ru'] = array(
  * @author HalanTul
  */
 $messages['sah'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] көмөтүнэн синтаксис подсветкатын холбуурга <code>&lt;source&gt;</code> тиэги туһанар кыах биэрэр.',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] көмөтүнэн синтаксис подсветкатын холбуурга <code>&lt;syntaxhighlight&gt;</code> тиэги туһанар кыах биэрэр.',
 	'syntaxhighlight-specify' => 'Омугун тылын маннык ыйыахтааххын:',
 	'syntaxhighlight-supported' => 'Өйөнүллэр тыллара:',
 	'syntaxhighlight-err-loading' => '(тылларын испииһэгэ кыайан көрдөрүллүбэтэ)',
@@ -941,7 +941,7 @@ $messages['si'] = array(
  * @author Helix84
  */
 $messages['sk'] = array(
-	'syntaxhighlight-desc' => 'Poskytuje zvýazňovanie syntaxe <code>&lt;source&gt;</code> pomocou [http://qbnz.com/highlighter/ zvýrazňovača GeSHi]',
+	'syntaxhighlight-desc' => 'Poskytuje zvýazňovanie syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocou [http://qbnz.com/highlighter/ zvýrazňovača GeSHi]',
 	'syntaxhighlight-specify' => 'Musíte uviesť jazyk takto:',
 	'syntaxhighlight-supported' => 'Jazyky, pre ktoré je zvýrazňovanie syntaxe podporované:',
 	'syntaxhighlight-err-loading' => '(chyba pri načítaní zoznamu podporovaných jazykov)',
@@ -954,7 +954,7 @@ $messages['sk'] = array(
  * @author Yerpo
  */
 $messages['sl'] = array(
-	'syntaxhighlight-desc' => 'Nudi označevanje skladnje <code>&lt;source&gt;</code> z uporabo [http://qbnz.com/highlighter/ označevalnika GeSHi]',
+	'syntaxhighlight-desc' => 'Nudi označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://qbnz.com/highlighter/ označevalnika GeSHi]',
 	'syntaxhighlight-specify' => 'Morate navesti jezik tako:',
 	'syntaxhighlight-supported' => 'Jeziki, ki jih podpira funkcija za označevanje sintakse:',
 	'syntaxhighlight-err-loading' => '(napaka pri nalaganju podprtih jezikov)',
@@ -967,7 +967,7 @@ $messages['sl'] = array(
  * @author Sasa Stefanovic
  */
 $messages['sr-ec'] = array(
-	'syntaxhighlight-desc' => 'Омогућава визуелно означавање синтаксе <code>&lt;source&gt;</code> коришћењем [http://qbnz.com/highlighter/ GeSHi хајлајтера].',
+	'syntaxhighlight-desc' => 'Омогућава визуелно означавање синтаксе <code>&lt;syntaxhighlight&gt;</code> коришћењем [http://qbnz.com/highlighter/ GeSHi хајлајтера].',
 	'syntaxhighlight-specify' => 'Потребно је одредити језик као овај:',
 	'syntaxhighlight-supported' => 'Подржани језици у визуелом означавању синтаксе:',
 	'syntaxhighlight-err-loading' => '(грешка при учитавању подржаних језика)',
@@ -979,7 +979,7 @@ $messages['sr-ec'] = array(
  * @author Michaello
  */
 $messages['sr-el'] = array(
-	'syntaxhighlight-desc' => 'Omogućava vizuelno označavanje sintakse <code>&lt;source&gt;</code> korišćenjem [<a href="http://qbnz.com/highlighter/">http://qbnz.com/highlighter/</a> GeSHi hajlajtera].',
+	'syntaxhighlight-desc' => 'Omogućava vizuelno označavanje sintakse <code>&lt;syntaxhighlight&gt;</code> korišćenjem [<a href="http://qbnz.com/highlighter/">http://qbnz.com/highlighter/</a> GeSHi hajlajtera].',
 	'syntaxhighlight-specify' => 'Potrebno je odrediti jezik kao ovaj:',
 	'syntaxhighlight-supported' => 'Podržani jezici u vizuelom označavanju sintakse:',
 	'syntaxhighlight-err-loading' => '(greška pri učitavanju podržanih jezika)',
@@ -991,7 +991,7 @@ $messages['sr-el'] = array(
  * @author Pyt
  */
 $messages['stq'] = array(
-	'syntaxhighlight-desc' => 'Syntax-Apljuchtenge <code>&lt;source&gt;</code> mäd Hälpe fon dän [http://qbnz.com/highlighter/ GeSHi-Apljuchter]',
+	'syntaxhighlight-desc' => 'Syntax-Apljuchtenge <code>&lt;syntaxhighlight&gt;</code> mäd Hälpe fon dän [http://qbnz.com/highlighter/ GeSHi-Apljuchter]',
 	'syntaxhighlight-specify' => 'Ju wonskede Sproake mout as foulget definierd wäide:',
 	'syntaxhighlight-supported' => 'Unnerstöände Sproaken foar ju Syntax-Betoonenge:',
 	'syntaxhighlight-err-loading' => '(Failer bie dät Leeden fon ju Sproakenlieste)',
@@ -1003,7 +1003,7 @@ $messages['stq'] = array(
  * @author Kandar
  */
 $messages['su'] = array(
-	'syntaxhighlight-desc' => 'Nyadiakeun sorotan rumpaka <code>&lt;source&gt;</code> migunakeun [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Nyadiakeun sorotan rumpaka <code>&lt;syntaxhighlight&gt;</code> migunakeun [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Anjeun kudu milih basa kawas kieu:',
 	'syntaxhighlight-supported' => 'Basa nu dirojong ku sorotan rumpaka:',
 	'syntaxhighlight-err-loading' => '(éror ngamuat daptar basa nu dirojong)',
@@ -1015,7 +1015,7 @@ $messages['su'] = array(
  * @author Lejonel
  */
 $messages['sv'] = array(
-	'syntaxhighlight-desc' => 'Ger syntaxmarkering med [http://qbnz.com/highlighter/ GeSHi Highlighter] inuti <code>&lt;source&gt;</code>-taggar',
+	'syntaxhighlight-desc' => 'Ger syntaxmarkering med [http://qbnz.com/highlighter/ GeSHi Highlighter] inuti <code>&lt;syntaxhighlight&gt;</code>-taggar',
 	'syntaxhighlight-specify' => 'Du måste ange vilket språk som används, så här:',
 	'syntaxhighlight-supported' => 'Det finns stöd för följande språk:',
 	'syntaxhighlight-err-loading' => '(fel vid laddning av listan över stödda språk)',
@@ -1037,7 +1037,7 @@ $messages['te'] = array(
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
-	'syntaxhighlight-desc' => 'Имкони дастуроти рангин карданро <code>&lt;source&gt;</code> бо истифода аз [http://qbnz.com/highlighter/ GeSHi Highlighter]-ро фароҳам меоварад',
+	'syntaxhighlight-desc' => 'Имкони дастуроти рангин карданро <code>&lt;syntaxhighlight&gt;</code> бо истифода аз [http://qbnz.com/highlighter/ GeSHi Highlighter]-ро фароҳам меоварад',
 	'syntaxhighlight-specify' => 'Шумо бояд бо ин шакл забонеро мушаххас кунед:',
 	'syntaxhighlight-supported' => 'Забонҳои пуштибонишуда барои рангин кардани дастуроти наҳвӣ:',
 	'syntaxhighlight-err-loading' => '(хато дар богузории забонҳои пуштибонишуда)',
@@ -1049,7 +1049,7 @@ $messages['tg-cyrl'] = array(
  * @author Liangent
  */
 $messages['tg-latn'] = array(
-	'syntaxhighlight-desc' => 'Imkoni dasturoti rangin kardanro <code>&lt;source&gt;</code> bo istifoda az [http://qbnz.com/highlighter/ GeSHi Highlighter]-ro faroham meovarad',
+	'syntaxhighlight-desc' => 'Imkoni dasturoti rangin kardanro <code>&lt;syntaxhighlight&gt;</code> bo istifoda az [http://qbnz.com/highlighter/ GeSHi Highlighter]-ro faroham meovarad',
 	'syntaxhighlight-specify' => 'Şumo bojad bo in şakl zabonero muşaxxas kuned:',
 	'syntaxhighlight-supported' => 'Zabonhoi puştibonişuda baroi rangin kardani dasturoti nahvī:',
 	'syntaxhighlight-err-loading' => '(xato dar boguzoriji zabonhoi puştibonişuda)',
@@ -1061,7 +1061,7 @@ $messages['tg-latn'] = array(
  * @author Hanberke
  */
 $messages['tk'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] ulanyp <code>&lt;source&gt;</code> sintaksis nygtamasyny üpjün edýär',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] ulanyp <code>&lt;syntaxhighlight&gt;</code> sintaksis nygtamasyny üpjün edýär',
 	'syntaxhighlight-specify' => 'Şunuň ýaly bir dil görkezmeli:',
 	'syntaxhighlight-supported' => 'Sintaksis nygtamasy üçin goldanylýan diller:',
 	'syntaxhighlight-err-loading' => '(goldanylýan diller sanawyny ýükleme säwligi)',
@@ -1073,7 +1073,7 @@ $messages['tk'] = array(
  * @author AnakngAraw
  */
 $messages['tl'] = array(
-	'syntaxhighlight-desc' => "Nagbibigay ng pagbibigay ng liwanag sa palaugnayan <code>&lt;source&gt;</code> na ginagamitan ng [http://qbnz.com/highlighter/ pambigay ng liwanag (''highlighter'') ng GeSHi]",
+	'syntaxhighlight-desc' => "Nagbibigay ng pagbibigay ng liwanag sa palaugnayan <code>&lt;syntaxhighlight&gt;</code> na ginagamitan ng [http://qbnz.com/highlighter/ pambigay ng liwanag (''highlighter'') ng GeSHi]",
 	'syntaxhighlight-specify' => 'Kinakailangan mong tumukoy ng isang wikang katulad nito:',
 	'syntaxhighlight-supported' => 'Sinusuportahang mga wika para sa pagbibigay ng liwanag/pagtatampok ng palaugnayan:',
 	'syntaxhighlight-err-loading' => '(kamalian sa pagkarga ng sinusuportahang talaan ng wika)',
@@ -1086,7 +1086,7 @@ $messages['tl'] = array(
  * @author Joseph
  */
 $messages['tr'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] kullanarak <code>&lt;source&gt;</code> sözdizimi vurgulamasını sağlar',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] kullanarak <code>&lt;syntaxhighlight&gt;</code> sözdizimi vurgulamasını sağlar',
 	'syntaxhighlight-specify' => 'Bu gibi bir dil belirtmelisiniz:',
 	'syntaxhighlight-supported' => 'Sözdizimi vurgulaması için desteklenen diller:',
 	'syntaxhighlight-err-loading' => '(desteklenen diller listesi yüklenirken hata)',
@@ -1098,7 +1098,7 @@ $messages['tr'] = array(
  * @author Ahonc
  */
 $messages['uk'] = array(
-	'syntaxhighlight-desc' => 'Дозволяє використовувати тег <code>&lt;source&gt;</code> для підсвічування синтаксису за допомогою [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Дозволяє використовувати тег <code>&lt;syntaxhighlight&gt;</code> для підсвічування синтаксису за допомогою [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Ви повинні зазначити мову наступним чином:',
 	'syntaxhighlight-supported' => 'Підтримувані мови:',
 	'syntaxhighlight-err-loading' => '(неможливо завантажити список мов)',
@@ -1110,7 +1110,7 @@ $messages['uk'] = array(
  * @author Candalua
  */
 $messages['vec'] = array(
-	'syntaxhighlight-desc' => 'Evidensia la sintassi dei linguagi de programazion <code>&lt;source&gt;</code> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Evidensia la sintassi dei linguagi de programazion <code>&lt;syntaxhighlight&gt;</code> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Te ghè da specificar un linguagio in sta maniera:',
 	'syntaxhighlight-supported' => 'Linguagi de cui se pol evidensiar la sintassi coi colori:',
 	'syntaxhighlight-err-loading' => "(eror nel caricamento de l'elenco dei linguagi suportà)",
@@ -1129,7 +1129,7 @@ $messages['vep'] = array(
  * @author Minh Nguyen
  */
 $messages['vi'] = array(
-	'syntaxhighlight-desc' => 'Tô màu cú pháp trong thẻ <code>&lt;source&gt;</code> dùng [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-desc' => 'Tô màu cú pháp trong thẻ <code>&lt;syntaxhighlight&gt;</code> dùng [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Bạn cần phải định rõ một ngôn ngữ như vầy:',
 	'syntaxhighlight-supported' => 'Các ngôn ngữ được tô màu cú pháp:',
 	'syntaxhighlight-err-loading' => '(gặp lỗi khi nạp danh sách các ngôn ngữ được hỗ trợ)',
@@ -1160,7 +1160,7 @@ $messages['yi'] = array(
  * @author Shinjiman
  */
 $messages['yue'] = array(
-	'syntaxhighlight-desc' => '用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;source&gt;</code>提供醒目提示',
+	'syntaxhighlight-desc' => '用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;syntaxhighlight&gt;</code>提供醒目提示',
 	'syntaxhighlight-specify' => '你需要指定一種語言，好似咁:',
 	'syntaxhighlight-supported' => '語法醒目標示所支援嘅語言:',
 	'syntaxhighlight-err-loading' => '(支援語言清單載入錯誤)',
@@ -1172,7 +1172,7 @@ $messages['yue'] = array(
  * @author Shinjiman
  */
 $messages['zh-hans'] = array(
-	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;source&gt;</code>提供高亮',
+	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;syntaxhighlight&gt;</code>提供高亮',
 	'syntaxhighlight-specify' => '您需要指定一种语言，像这样:',
 	'syntaxhighlight-supported' => '语法高亮所支持的语言:',
 	'syntaxhighlight-err-loading' => '（支持语言列表载入错误）',
@@ -1184,7 +1184,7 @@ $messages['zh-hans'] = array(
  * @author Shinjiman
  */
 $messages['zh-hant'] = array(
-	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;source&gt;</code>提供醒目提示',
+	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;syntaxhighlight&gt;</code>提供醒目提示',
 	'syntaxhighlight-specify' => '您需要指定一種語言，像這樣:',
 	'syntaxhighlight-supported' => '語法醒目標示所支援的語言:',
 	'syntaxhighlight-err-loading' => '（支援語言清單載入錯誤）',
