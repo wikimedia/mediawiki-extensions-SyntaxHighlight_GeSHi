@@ -883,14 +883,17 @@ $messages['qu'] = array(
 );
 
 /** Romanian (Română)
+ * @author AdiJapan
  * @author KlaudiuMihaila
  * @author Stelistcristi
  */
 $messages['ro'] = array(
+	'syntaxhighlight-desc' => 'Produce evidențierea sintaxei prin baliza <code>&lt;syntaxhighlight&gt;</code> folosind [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]',
 	'syntaxhighlight-specify' => 'Trebuie să specificați o limbă în acest mod:',
 	'syntaxhighlight-supported' => 'Limbile suportate pentru evidențierea sintaxei:',
 	'syntaxhighlight-err-loading' => '(eroare la încărcarea listei cu limbile suportate)',
 	'syntaxhighlight-err-language' => 'Limbă incorectă.',
+	'geshi.css' => '/* Codul CSS inserat aici se va aplica la evidențierea sintaxei prin GeSHi. */',
 );
 
 /** Tarandíne (Tarandíne)
