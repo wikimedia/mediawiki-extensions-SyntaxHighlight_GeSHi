@@ -492,6 +492,13 @@ $messages['id'] = array(
 	'geshi.css' => '/* CSS di sini akan diterapkan untuk penyorotan sintaks GeSHi */',
 );
 
+/** Igbo (Igbo)
+ * @author Ukabia
+ */
+$messages['ig'] = array(
+	'syntaxhighlight-err-language' => 'Asụsụ ámághị.',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */
