@@ -36,8 +36,9 @@
  * some help text and a list of all supported languages.
  */
 
-if( !defined( 'MEDIAWIKI' ) )
+if( !defined( 'MEDIAWIKI' ) ) {
 	die();
+}
 
 $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'path'           => __FILE__,
@@ -57,8 +58,7 @@ $wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
 if ( version_compare( $wgVersion, '1.17alpha', '>=' ) ) {
 	// For MediaWiki 1.17 alpha and later.
 	$wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
-}
-else {
+} else {
 	// For pre-MediaWiki 1.17 alpha.
 	$wgHooks['SpecialVersionExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hOldSpecialVersion_GeSHi';
 }
