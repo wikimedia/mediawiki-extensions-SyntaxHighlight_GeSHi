@@ -313,12 +313,20 @@ class SyntaxHighlight_GeSHi {
 	}
 
 	/**
-	 * Get the GeSHI's version information while Special:Version is read
+	 * Get the GeSHI's version information while Special:Version is read.
 	 */
-	public static function hSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
+	public static function hSpecialVersion_GeSHi( &$extensionTypes ) {
 		global $wgExtensionCredits;
 		self::initialise();
 		$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;
 		return true;
 	}
+	
+	/**
+	 * @see SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi
+	 */
+	public static function hOldSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
+		return self::hSpecialVersion_GeSHi( $extensionTypes );
+	}	
+	
 }
