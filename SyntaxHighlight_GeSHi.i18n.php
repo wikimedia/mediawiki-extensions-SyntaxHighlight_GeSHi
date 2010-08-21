@@ -22,9 +22,10 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Meno25
+ * @author The Evil IP address
  */
 $messages['qqq'] = array(
-	'syntaxhighlight-desc' => 'Short description of the SyntaxHighlight extension, shown on [[Special:Version]]. Do not translate or change links.',
+	'syntaxhighlight-desc' => '{{desc}}',
 );
 
 /** Afrikaans (Afrikaans)
