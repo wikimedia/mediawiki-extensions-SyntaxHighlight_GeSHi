@@ -203,10 +203,11 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Raimond Spekking
  */
 $messages['de'] = array(
-	'syntaxhighlight-desc' => 'Syntax-Hervorhebung <code>&lt;syntaxhighlight&gt;</code> mit Hilfe des [http://qbnz.com/highlighter/ GeSHi-Highlighters]',
+	'syntaxhighlight-desc' => 'Ermöglicht die Syntax-Hervorhebung mit dem <code>&lt;syntaxhighlight&gt;</code>-Tag durch Nutzung des [http://qbnz.com/highlighter/ Generic Syntax Highlighter (GeSHi)]',
 	'syntaxhighlight-specify' => 'Die gewünschte Sprache muss wie folgt definiert werden:',
 	'syntaxhighlight-supported' => 'Unterstützte Sprachen für die Syntax-Hervorhebung:',
 	'syntaxhighlight-err-loading' => '(Fehler beim Laden der Sprachenliste)',
