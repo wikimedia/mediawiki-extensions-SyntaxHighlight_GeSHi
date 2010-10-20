@@ -929,6 +929,13 @@ $messages['ru'] = array(
 	'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 );
 
+/** Rusyn (Русиньскый)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'syntaxhighlight-err-language' => 'Неправилный язык.',
+);
+
 /** Yakut (Саха тыла)
  * @author HalanTul
  */
