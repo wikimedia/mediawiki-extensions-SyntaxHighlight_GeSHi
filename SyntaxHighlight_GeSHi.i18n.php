@@ -678,6 +678,13 @@ $messages['lt'] = array(
 	'geshi.css' => '/* Čia pateiktas CSS bus taikomas GeSHi sintaksės paryškinimams */',
 );
 
+/** Latvian (Latviešu)
+ * @author Papuass
+ */
+$messages['lv'] = array(
+	'syntaxhighlight-err-language' => 'Nederīga valoda.',
+);
+
 /** Malagasy (Malagasy)
  * @author Jagwar
  */
