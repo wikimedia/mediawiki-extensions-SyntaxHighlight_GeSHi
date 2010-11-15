@@ -304,6 +304,7 @@ $messages['eu'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Ebraminio
  * @author Huji
  */
 $messages['fa'] = array(
@@ -312,7 +313,7 @@ $messages['fa'] = array(
 	'syntaxhighlight-supported' => 'زبان‌های پشتیبانی‌شده برای رنگین‌کردن دستورات:',
 	'syntaxhighlight-err-loading' => '(خطا در بارگذاری فهرست زبان‌های پشتیبانی‌شده)',
 	'syntaxhighlight-err-language' => 'زبان غیرمجاز.',
-	'geshi.css' => '/* دستورات CSS این‌جا توسط سامانه رنگین‌کردن دستورات GeSHi به کار گرفته می‌شوند */',
+	'geshi.css' => '/* دستورات CSS اینجا توسط سامانه رنگین‌کردن دستورات GeSHi به کار گرفته می‌شوند */',
 );
 
 /** Finnish (Suomi)
