@@ -87,6 +87,18 @@ $messages['ast'] = array(
 	'geshi.css' => '/* El códigu CSS allugáu equí va ser aplicáu por GeSHi pa la sintaxis en colores */',
 );
 
+/** Bashkir (Башҡорт)
+ * @author Assele
+ */
+$messages['ba'] = array(
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] ярҙамында синтаксисты айырып күрһәтеү өсөн <code>&lt;syntaxhighlight&gt;</code> билдәһен ҡулланыу мөмкинлеген бирә',
+	'syntaxhighlight-specify' => 'Һеҙ телде түбәндәгесә күрһәтергә тейешһегеҙ:',
+	'syntaxhighlight-supported' => 'Синтаксисты айырып күрһәтеү мөмкин булған телдәр:',
+	'syntaxhighlight-err-loading' => '(телдәр исемлеген сығарыу хатаһы)',
+	'syntaxhighlight-err-language' => 'Тел дөрөҫ түгел.',
+	'geshi.css' => '/* Бында ҡуйылған CSS-код систанксисты GeSHi ярҙамында айырып күрһәтеү өсөн ҡулланыласаҡ */',
+);
+
 /** Southern Balochi (بلوچی مکرانی)
  * @author Mostafadaneshvar
  */
