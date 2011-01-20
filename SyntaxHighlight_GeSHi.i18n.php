@@ -1220,14 +1220,15 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
  * @author Shinjiman
  */
 $messages['zh-hant'] = array(
-	'syntaxhighlight-desc' => '使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;syntaxhighlight&gt;</code>提供醒目提示',
-	'syntaxhighlight-specify' => '您需要指定一種語言，像這樣:',
-	'syntaxhighlight-supported' => '語法醒目標示所支援的語言:',
+	'syntaxhighlight-desc' => '使用 [http://qbnz.com/highlighter/ GeSHi Highlighter] 以 <code>&lt;syntaxhighlight&gt;</code> 提供醒目提示',
+	'syntaxhighlight-specify' => '您需要指定一種語言，像這樣：',
+	'syntaxhighlight-supported' => '語法醒目標示所支援的語言：',
 	'syntaxhighlight-err-loading' => '（支援語言清單載入錯誤）',
 	'syntaxhighlight-err-language' => '無效的語言。',
-	'geshi.css' => '/* 放在這裏的CSS會以GeSHi語法醒目提示方式顯示 */',
+	'geshi.css' => '/* 放在這裡的 CSS 會以 GeSHi 語法醒目提示方式顯示 */',
 );
 
