@@ -87,7 +87,7 @@ $messages['ast'] = array(
 	'geshi.css' => '/* El códigu CSS allugáu equí va ser aplicáu por GeSHi pa la sintaxis en colores */',
 );
 
-/** Bashkir (Башҡорт)
+/** Bashkir (Башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -111,7 +111,7 @@ $messages['bcc'] = array(
 	'geshi.css' => '/* CSS که ادان هستن ته ساختار جی شی پررنگ کتن کارمرز بین */',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -893,6 +893,7 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (Português do Brasil)
+ * @author Helder.wiki
  * @author Heldergeovane
  */
 $messages['pt-br'] = array(
@@ -1001,7 +1002,7 @@ $messages['sl'] = array(
 	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Millosh
  * @author Sasa Stefanovic
  */
@@ -1014,7 +1015,7 @@ $messages['sr-ec'] = array(
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
