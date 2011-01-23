@@ -185,6 +185,7 @@ class SyntaxHighlight_GeSHi {
 	 */
 	public static function viewHook( $text, $title, $output ) {
 		// Determine the language
+		$matches = array();
 		preg_match( '!\.(css|js)$!u', $title->getText(), $matches );
 		$lang = $matches[1] == 'css' ? 'css' : 'javascript';
 		// Attempt to format
@@ -233,6 +234,7 @@ class SyntaxHighlight_GeSHi {
 	private static function buildHeadItem( $geshi ) {
 		global $wgUseSiteCss, $wgSquidMaxage;
 		$lang = $geshi->language;
+		$css = array();
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
 		$css[] = ".source-$lang {line-height: normal;}";
 		$css[] = ".source-$lang li, .source-$lang pre {";
