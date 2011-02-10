@@ -89,13 +89,33 @@ class SyntaxHighlight_GeSHi {
 			$out = str_replace( "\n", '', $out );
 		// Register CSS
 		$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
+
+		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
+		$attribs = Sanitizer::validateTagAttributes( $args, $encloseTag );
+
+		//lang is valid in HTML context, but also used on GeSHi
+		unset( $attribs['lang'] );
+
 		if ( $enclose === GESHI_HEADER_NONE ) {
-			$out = '<span class="mw-geshi '.$lang.' source-'.$lang.'">' . $out . '</span>';
+			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi ' . $lang . ' source-' . $lang );
 		} else {
-			$out = '<div dir="ltr" class="mw-geshi" style="text-align: left;">' . $out . '</div>';
+			$attribs = self::addAttribute( $attribs, 'dir', 'ltr' );
+			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi' );
+			$attribs = self::addAttribute( $attribs, 'style', 'text-align: left;' );
 		}
+		$out = Xml::tags( $encloseTag, $attribs, $out );
+
 		wfProfileOut( __METHOD__ );
 		return $out;
+	}
+
+	private static function addAttribute( $attribs, $name, $value ) {
+		if( isset( $attribs[$name] ) ) {
+			$attribs[$name] = $value . ' ' . $attribs[$name];
+		} else {
+			$attribs[$name] = $value;
+		}
+		return $attribs;
 	}
 
 	/**
