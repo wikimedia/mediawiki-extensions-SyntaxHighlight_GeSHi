@@ -99,7 +99,10 @@ class SyntaxHighlight_GeSHi {
 		if ( $enclose === GESHI_HEADER_NONE ) {
 			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi ' . $lang . ' source-' . $lang );
 		} else {
-			$attribs = self::addAttribute( $attribs, 'dir', 'ltr' );
+			if ( !isset( $attribs['dir'] ) ) {
+				$attribs = self::addAttribute( $attribs, 'dir', 'ltr' );
+			}
+
 			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi' );
 			$attribs = self::addAttribute( $attribs, 'style', 'text-align: left;' );
 		}
