@@ -6,8 +6,8 @@ for updated informations:
 
 == Requirements ==
 
-This version of the extension has been tested with GeSHi 1.0.8.9 and MediaWiki 1.17
-as of 2010-10-07. It may or may not work with earlier versions of the aforementioned
+This version of the extension has been tested with GeSHi 1.0.8.10 and MediaWiki 1.18
+as of 2011-02-19. It may or may not work with earlier versions of the aforementioned
 software. To get releases of this extension compatible with earlier versions of
 MediaWiki, visit: 
 
@@ -50,7 +50,7 @@ On the wiki page, you can now use "source" elements:
     v = "string";    // sample initialization
 ?>
 html text
-<?
+<?php
     echo v;         // end of php code
 ?>
 </source>
