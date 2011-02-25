@@ -307,7 +307,7 @@ class SyntaxHighlight_GeSHi {
 			foreach( $langs as $lang ) {
 				$list[] = '<samp>' . htmlspecialchars( $lang ) . '</samp>';
 			}
-			return '<p style="padding: 0em 1em;">' . implode( ', ', $list ) . '</p>';
+			return '<p class="mw-collapsible mw-collapsed" style="padding: 0em 1em;">' . implode( ', ', $list ) . '</p><br style="clear: all"/>';
 		} else {
 			return '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-loading' ) ) . '</p>';
 		}
