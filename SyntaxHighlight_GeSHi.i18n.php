@@ -711,7 +711,7 @@ $messages['mg'] = array(
  */
 $messages['mk'] = array(
 	'syntaxhighlight-desc' => 'Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'syntaxhighlight-specify' => 'Треба да назначите јазик на следниов начин:',
+	'syntaxhighlight-specify' => 'Треба да наведете јазик на следниов начин:',
 	'syntaxhighlight-supported' => 'Поддржани јазици за синтаксно потцртување:',
 	'syntaxhighlight-err-loading' => '(грешка при вчитувањето на списокот на поддржани јазици)',
 	'syntaxhighlight-err-language' => 'Неважечки јазик.',
