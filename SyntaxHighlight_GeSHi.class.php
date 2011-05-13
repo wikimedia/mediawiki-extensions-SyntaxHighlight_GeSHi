@@ -35,20 +35,20 @@ class SyntaxHighlight_GeSHi {
 			if ( !is_null( $wgSyntaxHighlightDefaultLang ) ) {
 				$lang = $wgSyntaxHighlightDefaultLang;
 			} else {
-				$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+				$error = self::formatLanguageError( $text );
 				wfProfileOut( __METHOD__ );
 				return $error;
 			}
 		}
 		$lang = strtolower( $lang );
 		if( !preg_match( '/^[a-z_0-9-]*$/', $lang ) ) {
-			$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+			$error = self::formatLanguageError( $text );
 			wfProfileOut( __METHOD__ );
 			return $error;
 		}
 		$geshi = self::prepare( $text, $lang );
 		if( !$geshi instanceof GeSHi ) {
-			$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ) );
+			$error = self::formatLanguageError( $text );
 			wfProfileOut( __METHOD__ );
 			return $error;
 		}
@@ -77,9 +77,15 @@ class SyntaxHighlight_GeSHi {
 		}
 		// Format
 		$out = $geshi->parse_code();
+		if ( $geshi->error == GESHI_ERROR_NO_SUCH_LANG ) {
+			// Common error :D
+			$error = self::formatLanguageError( $text );
+			wfProfileOut( __METHOD__ );
+			return $error;
+		}
 		$err = $geshi->error();
 		if( $err ) {
-			// Error!
+			// Other unknown error!
 			$error = self::formatError( $err );
 			wfProfileOut( __METHOD__ );
 			return $error;
@@ -275,6 +281,18 @@ class SyntaxHighlight_GeSHi {
 			$css[] = '</style>';
 		}
 		return implode( "\n", $css );
+	}
+
+	/**
+	 * Format an 'unknown language' error message and append formatted
+	 * plain text to it.
+	 *
+	 * @param string $text
+	 * @return string HTML fragment
+	 */
+	private static function formatLanguageError( $text ) {
+		$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ), $text );
+		return $error . '<pre>' . htmlspecialchars( $text ) . '</pre>';
 	}
 
 	/**
