@@ -65,6 +65,8 @@ if ( version_compare( $wgVersion, '1.17alpha', '>=' ) ) {
 
 /**
  * Register parser hook
+ *
+ * @param $parser Parser
  */
 function efSyntaxHighlight_GeSHiSetup( &$parser ) {
 	$parser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
