@@ -758,9 +758,10 @@ $messages['ms'] = array(
 
 /** Nahuatl (Nāhuatl)
  * @author Fluence
+ * @author Teòtlalili
  */
 $messages['nah'] = array(
-	'syntaxhighlight-err-language' => 'Ahcualli tlahtōlli',
+	'syntaxhighlight-err-language' => 'Âmò kualli tlâtòlli',
 );
 
 /** Low German (Plattdüütsch)
