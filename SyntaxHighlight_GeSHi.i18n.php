@@ -329,10 +329,11 @@ $messages['fa'] = array(
 );
 
 /** Finnish (Suomi)
+ * @author Crt
  * @author Nike
  */
 $messages['fi'] = array(
-	'syntaxhighlight-desc' => 'Mahdollistaa syntaksin korostuksen GeSHillä <nowiki><source></nowiki>-elementtiä käyttämällä.',
+	'syntaxhighlight-desc' => 'Mahdollistaa syntaksin korostuksen [http://qbnz.com/highlighter/ GeSHillä] <code>&lt;syntaxhighlight&gt;</code>-elementtiä käyttämällä.',
 	'syntaxhighlight-specify' => 'Kieli pitää määritellä seuraavasti:',
 	'syntaxhighlight-supported' => 'Syntaksinkorostus on mahdollista seuraaville kielille:',
 	'syntaxhighlight-err-loading' => '(tuettujen kielten luettelon lataaminen epäonnistui)',
@@ -780,7 +781,7 @@ $messages['nds'] = array(
  * @author Servien
  */
 $messages['nds-nl'] = array(
-	'syntaxhighlight-err-language' => 'Neet de juuste taal.',
+	'syntaxhighlight-err-language' => 'Niet de juuste taal.',
 );
 
 /** Dutch (Nederlands)
