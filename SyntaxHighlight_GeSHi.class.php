@@ -240,7 +240,7 @@ class SyntaxHighlight_GeSHi {
 	 * @param string $lang
 	 * @return GeSHi
 	 */
-	private static function prepare( $text, $lang ) {
+	public static function prepare( $text, $lang ) {
 		self::initialise();
 		$geshi = new GeSHi( $text, $lang );
 		if( $geshi->error() == GESHI_ERROR_NO_SUCH_LANG ) {
@@ -260,7 +260,7 @@ class SyntaxHighlight_GeSHi {
 	 * @param GeSHi $geshi
 	 * @return string
 	 */
-	private static function buildHeadItem( $geshi ) {
+	public static function buildHeadItem( $geshi ) {
 		global $wgUseSiteCss, $wgSquidMaxage;
 		$lang = $geshi->language;
 		$css = array();
