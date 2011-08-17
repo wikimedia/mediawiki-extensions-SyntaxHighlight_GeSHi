@@ -833,7 +833,7 @@ $messages['oc'] = array(
 	'geshi.css' => '/* Lo còde CSS inserit aicí serà aplicat per GeSHi per la coloracion sintaxica. */',
 );
 
-/** Ossetic (Иронау)
+/** Ossetic (Ирон)
  * @author Amikeco
  */
 $messages['os'] = array(
@@ -959,7 +959,7 @@ $messages['rue'] = array(
 	'syntaxhighlight-err-language' => 'Неправилный язык.',
 );
 
-/** Yakut (Саха тыла)
+/** Sakha (Саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
