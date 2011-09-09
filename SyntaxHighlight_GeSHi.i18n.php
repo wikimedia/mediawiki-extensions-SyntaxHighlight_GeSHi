@@ -956,7 +956,12 @@ $messages['ru'] = array(
  * @author Gazeb
  */
 $messages['rue'] = array(
+	'syntaxhighlight-desc' => 'Додавать звыразнїна сінтаксіс <code>&lt;syntaxhighlight&gt;</code> за помочі [http://qnbz.com/higlighter звыразнёвача GeSHi]',
+	'syntaxhighlight-specify' => 'Мусите становити язык тым способом:',
+	'syntaxhighlight-supported' => 'Список языків, у котрый є підпороване звыразнёваня сінтаксіс:',
+	'syntaxhighlight-err-loading' => '(хыба при начітаню списка підпорованых языків)',
 	'syntaxhighlight-err-language' => 'Неправилный язык.',
+	'geshi.css' => '/* Гев зазначене CSS буде овпливнёвати звыразнёваня сінтаксісу GeSHi */',
 );
 
 /** Sakha (Саха тыла)
