@@ -21,12 +21,19 @@ class SyntaxHighlight_GeSHi {
 	 * @return string
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
-		global $wgSyntaxHighlightDefaultLang;
+		global $wgSyntaxHighlightDefaultLang, $wgUseTidy;
 		wfProfileIn( __METHOD__ );
 		self::initialise();
 		$text = rtrim( $text );
 		// Don't trim leading spaces away, just the linefeeds
 		$text = preg_replace( '/^\n+/', '', $text );
+
+		if( $wgUseTidy ) {
+			// HTML Tidy will convert tabs to spaces incorrectly (bug 30930).
+			// Preemptively replace the spaces in a more controlled fashion.
+			$text = self::tabsToSpaces( $text );
+		}
+
 		// Validate language
 		if( isset( $args['lang'] ) && $args['lang'] ) {
 			$lang = $args['lang'];
@@ -377,5 +384,34 @@ class SyntaxHighlight_GeSHi {
 	public static function hOldSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
 		return self::hSpecialVersion_GeSHi( $extensionTypes );
 	}
-	
+
+	/**
+	 * Convert tabs to spaces
+	 *
+	 * @param string $text
+	 * @return string
+	 */
+	private static function tabsToSpaces( $text ) {
+		$lines = explode( "\n", $text );
+		$lines = array_map( array( __CLASS__, 'tabsToSpacesLine' ), $lines );
+		return implode( "\n", $lines );
+	}
+
+	/**
+	 * Convert tabs to spaces for a single line
+	 *
+	 * @param string $text
+	 * @return string
+	 */
+	private static function tabsToSpacesLine( $line ) {
+		$parts = explode( "\t", $line );
+		$width = 8; // To match tidy's config & typical browser defaults
+		$out = $parts[0];
+		foreach( array_slice( $parts, 1 ) as $chunk ) {
+			$spaces = $width - (strlen( $out ) % $width);
+			$out .= str_repeat( ' ', $spaces );
+			$out .= $chunk;
+		}
+		return $out;
+	}
 }
