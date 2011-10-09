@@ -1009,8 +1009,9 @@ $messages['sl'] = array(
 	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
  * @author Millosh
+ * @author Rancher
  * @author Sasa Stefanovic
  */
 $messages['sr-ec'] = array(
@@ -1018,7 +1019,7 @@ $messages['sr-ec'] = array(
 	'syntaxhighlight-specify' => 'Потребно је одредити језик као овај:',
 	'syntaxhighlight-supported' => 'Подржани језици у визуелом означавању синтаксе:',
 	'syntaxhighlight-err-loading' => '(грешка при учитавању подржаних језика)',
-	'syntaxhighlight-err-language' => 'Неподобан језик',
+	'syntaxhighlight-err-language' => 'Неисправан језик.',
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
