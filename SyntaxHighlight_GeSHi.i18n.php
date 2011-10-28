@@ -387,10 +387,10 @@ $messages['ga'] = array(
  */
 $messages['gl'] = array(
 	'syntaxhighlight-desc' => 'Proporciona unha sintaxe resaltada <code>&lt;syntaxhighlight&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'syntaxhighlight-specify' => 'Ten que especificar unha linguaxe así:',
-	'syntaxhighlight-supported' => 'Linguaxes coñecidas para resaltar a sintaxe:',
-	'syntaxhighlight-err-loading' => '(erro ao cargar a lista de linguaxes coñecidas)',
-	'syntaxhighlight-err-language' => 'Linguaxe non válida.',
+	'syntaxhighlight-specify' => 'Ten que especificar unha lingua, así:',
+	'syntaxhighlight-supported' => 'Linguas soportadas para resaltar a sintaxe:',
+	'syntaxhighlight-err-loading' => '(erro ao cargar a lista de linguas soportadas)',
+	'syntaxhighlight-err-language' => 'A lingua non é válida.',
 	'geshi.css' => '/* O CSS colocado aquí será aplicado ao resalte da sintaxe de GeSHi */',
 );
 
