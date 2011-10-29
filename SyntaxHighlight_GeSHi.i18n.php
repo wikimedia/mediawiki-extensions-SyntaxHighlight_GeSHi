@@ -793,7 +793,7 @@ $messages['nl'] = array(
 	'syntaxhighlight-specify' => 'Geef een taal als volgt op:',
 	'syntaxhighlight-supported' => 'Ondersteunde talen voor syntaxismarkering:',
 	'syntaxhighlight-err-loading' => '(fout bij het laden van de lijst met ondersteunde talen)',
-	'syntaxhighlight-err-language' => 'Onjuiste taal.',
+	'syntaxhighlight-err-language' => 'Ongeldige taal.',
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi Syntax Highlighting */',
 );
 
