@@ -662,7 +662,7 @@ $messages['lb'] = array(
 	'syntaxhighlight-specify' => 'Déi gewënschte Sprooch muss esou definéiert ginn:',
 	'syntaxhighlight-supported' => "Ënnerstëtzte Sprooche fir d'Syntax faarweg ze markéieren",
 	'syntaxhighlight-err-loading' => '(Feeler beim Luede vun der Lëscht vun den ënnerstëtzte Sproochen)',
-	'syntaxhighlight-err-language' => 'Ongëlteg Sprooch',
+	'syntaxhighlight-err-language' => 'Net valabel Sprooch.',
 	'geshi.css' => "/* Den CSS deen hei steet gëtt benotzt fir d'GeSHi Syntax faarweg ze markéieren. /*",
 );
 
