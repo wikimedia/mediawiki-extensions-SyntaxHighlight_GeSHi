@@ -21,7 +21,7 @@ class SyntaxHighlight_GeSHi {
 	 * @return string
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
-		global $wgSyntaxHighlightDefaultLang, $wgUseTidy;
+		global $wgSyntaxHighlightDefaultLang, $wgUseSiteCss, $wgUseTidy;
 		wfProfileIn( __METHOD__ );
 		self::initialise();
 		$text = rtrim( $text );
@@ -102,6 +102,10 @@ class SyntaxHighlight_GeSHi {
 			$out = str_replace( "\n", '', $out );
 		// Register CSS
 		$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
+
+		if( $wgUseSiteCss ) {
+			$parser->mOutput->addModuleStyles( 'ext.geshi.local' );
+		}
 
 		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
 		$attribs = Sanitizer::validateTagAttributes( $args, $encloseTag );
@@ -220,6 +224,7 @@ class SyntaxHighlight_GeSHi {
 	 * @return bool
 	 */
 	public static function viewHook( $text, $title, $output ) {
+		global $wgUseSiteCss;
 		// Determine the language
 		$matches = array();
 		preg_match( '!\.(css|js)$!u', $title->getText(), $matches );
@@ -232,6 +237,9 @@ class SyntaxHighlight_GeSHi {
 				// Done
 				$output->addHeadItem( "source-$lang", self::buildHeadItem( $geshi ) );
 				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
+				if( $wgUseSiteCss ) {
+					$output->addModuleStyles( 'ext.geshi.local' );
+				}
 				return false;
 			}
 		}
@@ -279,14 +287,6 @@ class SyntaxHighlight_GeSHi {
 		$css[] = $geshi->get_stylesheet( false );
 		$css[] = '/*]]>*/';
 		$css[] = '</style>';
-		if( $wgUseSiteCss ) {
-			$title = Title::makeTitle( NS_MEDIAWIKI, 'Geshi.css' );
-			$q = "usemsgcache=yes&action=raw&ctype=text/css&smaxage={$wgSquidMaxage}";
-			$css[] = '<style type="text/css">/*<![CDATA[*/';
-			$css[] = '@import "' . $title->getLocalUrl( $q ) . '";';
-			$css[] = '/*]]>*/';
-			$css[] = '</style>';
-		}
 		return implode( "\n", $css );
 	}
 

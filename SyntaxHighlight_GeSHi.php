@@ -54,14 +54,10 @@ $wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeS
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
 $wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
 $wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
+$wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
 
-if ( version_compare( $wgVersion, '1.17alpha', '>=' ) ) {
-	// For MediaWiki 1.17 alpha and later.
-	$wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
-} else {
-	// For pre-MediaWiki 1.17 alpha.
-	$wgHooks['SpecialVersionExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hOldSpecialVersion_GeSHi';
-}
+$wgAutoloadClasses['HighlightGeSHilocal'] = $dir . 'SyntaxHighlight_GeSHi.local.php';
+$wgResourceModules['ext.geshi.local'] = array( 'class' => 'HighlightGeSHilocal' );
 
 /**
  * Register parser hook
