@@ -596,7 +596,7 @@ $messages['kk-arab'] = array(
 	'geshi.css' => '/* مىنداعى CSS امىرلەرى GeSHi سىينتاكسىيستى كومەسكى جارىقتاۋعا قولدانىلادى */',
 );
 
-/** Kazakh (Cyrillic) (Қазақша (Cyrillic))
+/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬)
  * @author AlefZet
  */
 $messages['kk-cyrl'] = array(
@@ -607,7 +607,7 @@ $messages['kk-cyrl'] = array(
 	'geshi.css' => '/* Мындағы CSS әмірлері GeSHi синтаксисті көмескі жарықтауға қолданылады */',
 );
 
-/** Kazakh (Latin) (Қазақша (Latin))
+/** Kazakh (Latin script) (‪Qazaqşa (latın)‬)
  * @author AlefZet
  */
 $messages['kk-latn'] = array(
@@ -1023,7 +1023,7 @@ $messages['sr-ec'] = array(
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
-/** Serbian Latin ekavian (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -1081,7 +1081,7 @@ $messages['te'] = array(
 	'syntaxhighlight-err-language' => 'తప్పుడు భాష.',
 );
 
-/** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
+/** Tajik (Cyrillic script) (Тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -1093,7 +1093,7 @@ $messages['tg-cyrl'] = array(
 	'geshi.css' => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
 );
 
-/** Tajik (Latin) (Тоҷикӣ (Latin))
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
