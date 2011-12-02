@@ -69,7 +69,7 @@ class SyntaxHighlight_GeSHi {
 		// Highlighting specific lines
 		if( isset( $args['highlight'] ) ) {
 			$lines = self::parseHighlightLines( $args['highlight'] );
-			if ( count($lines) ) {
+			if ( count( $lines ) ) {
 				$geshi->highlight_lines_extra( $lines );
 			}
 		}
@@ -98,8 +98,9 @@ class SyntaxHighlight_GeSHi {
 			return $error;
 		}
 		// Armour for Parser::doBlockLevels()
-		if( $enclose === GESHI_HEADER_DIV )
+		if( $enclose === GESHI_HEADER_DIV ) {
 			$out = str_replace( "\n", '', $out );
+		}
 		// Register CSS
 		$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
 
@@ -129,6 +130,12 @@ class SyntaxHighlight_GeSHi {
 		return $out;
 	}
 
+	/**
+	 * @param $attribs array
+	 * @param $name string
+	 * @param $value string
+	 * @return array
+	 */
 	private static function addAttribute( $attribs, $name, $value ) {
 		if( isset( $attribs[$name] ) ) {
 			$attribs[$name] = $value . ' ' . $attribs[$name];
@@ -144,7 +151,7 @@ class SyntaxHighlight_GeSHi {
 	 *
 	 * Input is comma-separated list of lines or line ranges.
 	 *
-	 * @input string
+	 * @param $arg string
 	 * @return array of ints
 	 */
 	protected static function parseHighlightLines( $arg ) {
@@ -171,6 +178,9 @@ class SyntaxHighlight_GeSHi {
 
 	/**
 	 * Validate a provided input range
+	 * @param $start
+	 * @param $end
+	 * @return bool
 	 */
 	protected static function validHighlightRange( $start, $end ) {
 		// Since we're taking this tiny range and producing a an
@@ -187,6 +197,10 @@ class SyntaxHighlight_GeSHi {
 			$end - $start < $arbitrarilyLargeConstant;
 	}
 
+	/**
+	 * @param $args array
+	 * @return int
+	 */
 	static function getEncloseType( $args ) {
 		// Since version 1.0.8 geshi can produce valid pre, but we need to check for it
 		if ( defined('GESHI_HEADER_PRE_VALID') ) {
@@ -357,6 +371,7 @@ class SyntaxHighlight_GeSHi {
 
 	/**
 	 * Initialise messages and ensure the GeSHi class is loaded
+	 * @return bool
 	 */
 	private static function initialise() {
 		if( !self::$initialised ) {
@@ -370,6 +385,8 @@ class SyntaxHighlight_GeSHi {
 
 	/**
 	 * Get the GeSHI's version information while Special:Version is read.
+	 * @param $extensionTypes
+	 * @return bool
 	 */
 	public static function hSpecialVersion_GeSHi( &$extensionTypes ) {
 		global $wgExtensionCredits;
@@ -380,6 +397,9 @@ class SyntaxHighlight_GeSHi {
 
 	/**
 	 * @see SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi
+	 * @param $sp
+	 * @param $extensionTypes
+	 * @return bool
 	 */
 	public static function hOldSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
 		return self::hSpecialVersion_GeSHi( $extensionTypes );
@@ -400,7 +420,8 @@ class SyntaxHighlight_GeSHi {
 	/**
 	 * Convert tabs to spaces for a single line
 	 *
-	 * @param string $text
+	 * @param $line
+	 * @internal param string $text
 	 * @return string
 	 */
 	private static function tabsToSpacesLine( $line ) {
