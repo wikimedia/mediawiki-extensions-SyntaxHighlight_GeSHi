@@ -45,7 +45,7 @@ $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'name'           => 'SyntaxHighlight',
 	'author'         => array( 'Brion Vibber', 'Tim Starling', 'Rob Church', 'Niklas Laxström' ),
 	'descriptionmsg' => 'syntaxhighlight-desc',
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
+	'url'            => 'https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
 );
 
 $wgSyntaxHighlightDefaultLang = null; //Change this in LocalSettings.php
