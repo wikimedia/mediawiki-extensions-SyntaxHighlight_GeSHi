@@ -102,10 +102,10 @@ class SyntaxHighlight_GeSHi {
 			$out = str_replace( "\n", '', $out );
 		}
 		// Register CSS
-		$parser->mOutput->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
+		$parser->getOutput()->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
 
 		if( $wgUseSiteCss ) {
-			$parser->mOutput->addModuleStyles( 'ext.geshi.local' );
+			$parser->getOutput()->addModuleStyles( 'ext.geshi.local' );
 		}
 
 		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
