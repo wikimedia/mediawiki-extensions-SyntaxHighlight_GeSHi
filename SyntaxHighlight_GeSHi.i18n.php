@@ -812,7 +812,7 @@ $messages['nn'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Du må angi et språk slik:',
 	'syntaxhighlight-supported' => 'Støttede språk for syntaksutheving:',
