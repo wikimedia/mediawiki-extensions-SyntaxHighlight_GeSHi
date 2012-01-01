@@ -765,6 +765,18 @@ $messages['nah'] = array(
 	'syntaxhighlight-err-language' => 'Âmò kualli tlâtòlli',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
+	'syntaxhighlight-specify' => 'Du må angi et språk slik:',
+	'syntaxhighlight-supported' => 'Støttede språk for syntaksutheving:',
+	'syntaxhighlight-err-loading' => '(feil under last av liste over støttede språk)',
+	'syntaxhighlight-err-language' => 'Ugyldig språk.',
+	'geshi.css' => '/* CSS plassert her gjelder GeSHi syntaksutheving */',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -807,18 +819,6 @@ $messages['nn'] = array(
 	'syntaxhighlight-err-loading' => '(feil under lasting av liste over støtta språk)',
 	'syntaxhighlight-err-language' => 'Ugyldig språk.',
 	'geshi.css' => '/* CSS plassert her gjeld GeSHi syntaksutheving */',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'syntaxhighlight-specify' => 'Du må angi et språk slik:',
-	'syntaxhighlight-supported' => 'Støttede språk for syntaksutheving:',
-	'syntaxhighlight-err-loading' => '(feil under last av liste over støttede språk)',
-	'syntaxhighlight-err-language' => 'Ugyldig språk.',
-	'geshi.css' => '/* CSS plassert her gjelder GeSHi syntaksutheving */',
 );
 
 /** Occitan (Occitan)
@@ -978,9 +978,12 @@ $messages['sah'] = array(
 
 /** Sinhala (සිංහල)
  * @author Calcey
+ * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'syntaxhighlight-specify' => 'ඔබට මෙවැනි භාෂාවක් විශේෂණය කල යුතු වේ:',
 	'syntaxhighlight-supported' => 'වාග් රීති උද්දීපනය කිරීම සඳහා සහාය දක්වන භාෂා:',
+	'syntaxhighlight-err-loading' => '(සහය දක්වන භාෂා ලැයිස්තුව පූරණය වීමේ දෝෂය)',
 	'syntaxhighlight-err-language' => 'අවලංගු භාෂාව.',
 );
 
