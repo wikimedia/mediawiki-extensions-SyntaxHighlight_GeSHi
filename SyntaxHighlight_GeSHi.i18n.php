@@ -508,6 +508,16 @@ $messages['id'] = array(
 	'geshi.css' => '/* CSS di sini akan diterapkan untuk penyorotan sintaks GeSHi */',
 );
 
+/** Interlingue (Interlingue)
+ * @author Renan
+ */
+$messages['ie'] = array(
+	'syntaxhighlight-desc' => 'Provide superation de sintaxe de li code fonte, che li element <code>&lt;syntaxhighlight&gt;</code>, usant li [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]',
+	'syntaxhighlight-specify' => 'Vu besona specificar li lingue quam ti:',
+	'syntaxhighlight-supported' => 'Lingues suportat por superation de sintaxe:',
+	'syntaxhighlight-err-language' => 'Lingue ínvalid.',
+);
+
 /** Igbo (Igbo)
  * @author Ukabia
  */
@@ -985,6 +995,7 @@ $messages['si'] = array(
 	'syntaxhighlight-supported' => 'වාග් රීති උද්දීපනය කිරීම සඳහා සහාය දක්වන භාෂා:',
 	'syntaxhighlight-err-loading' => '(සහය දක්වන භාෂා ලැයිස්තුව පූරණය වීමේ දෝෂය)',
 	'syntaxhighlight-err-language' => 'අවලංගු භාෂාව.',
+	'geshi.css' => '/* මෙහි යොදන CSS GeSHi කාරකරීති තීව‍්‍රාලෝකය සඳහා යෙදේ */',
 );
 
 /** Slovak (Slovenčina)
