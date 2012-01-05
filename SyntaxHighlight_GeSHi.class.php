@@ -117,12 +117,9 @@ class SyntaxHighlight_GeSHi {
 		if ( $enclose === GESHI_HEADER_NONE ) {
 			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi ' . $lang . ' source-' . $lang );
 		} else {
-			if ( !isset( $attribs['dir'] ) ) {
-				$attribs = self::addAttribute( $attribs, 'dir', 'ltr' );
-			}
-
-			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi' );
-			$attribs = self::addAttribute( $attribs, 'style', 'text-align: left;' );
+			// Default dir="ltr" (but allow dir="rtl", although unsure if needed)
+			$attribs['dir'] = isset( $attribs['dir'] ) && $attribs['dir'] === 'rtl' ? 'rtl' : 'ltr';
+			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi mw-content-' . $attribs['dir'] );
 		}
 		$out = Xml::tags( $encloseTag, $attribs, $out );
 
