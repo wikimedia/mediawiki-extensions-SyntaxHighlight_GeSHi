@@ -108,7 +108,7 @@ class SyntaxHighlight_GeSHi {
 			$parser->getOutput()->addModuleStyles( 'ext.geshi.local' );
 		}
 
-		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
+		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'code' : 'pre';
 		$attribs = Sanitizer::validateTagAttributes( $args, $encloseTag );
 
 		//lang is valid in HTML context, but also used on GeSHi
