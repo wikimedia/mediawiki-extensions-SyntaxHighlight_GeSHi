@@ -9,6 +9,7 @@ class SyntaxHighlight_GeSHi {
 
 	/**
 	 * List of languages available to GeSHi
+	 * @var array
 	 */
 	private static $languages = null;
 
@@ -287,7 +288,6 @@ class SyntaxHighlight_GeSHi {
 	 * @return string
 	 */
 	public static function buildHeadItem( $geshi ) {
-		global $wgUseSiteCss, $wgSquidMaxage;
 		$lang = $geshi->language;
 		$css = array();
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
