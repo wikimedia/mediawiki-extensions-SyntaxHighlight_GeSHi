@@ -105,24 +105,24 @@ class SyntaxHighlight_GeSHi {
 		// Register CSS
 		$parser->getOutput()->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
 
-		if( $wgUseSiteCss ) {
+		if ( $wgUseSiteCss ) {
 			$parser->getOutput()->addModuleStyles( 'ext.geshi.local' );
 		}
 
-		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'code' : 'pre';
+		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
 		$attribs = Sanitizer::validateTagAttributes( $args, $encloseTag );
 
 		//lang is valid in HTML context, but also used on GeSHi
 		unset( $attribs['lang'] );
 
 		if ( $enclose === GESHI_HEADER_NONE ) {
-			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi ' . $lang . ' source-' . $lang );
+			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi mw-code-inline ' . $lang . ' source-' . $lang );
 		} else {
 			// Default dir="ltr" (but allow dir="rtl", although unsure if needed)
 			$attribs['dir'] = isset( $attribs['dir'] ) && $attribs['dir'] === 'rtl' ? 'rtl' : 'ltr';
-			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi mw-content-' . $attribs['dir'] );
+			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi mw-code mw-content-' . $attribs['dir'] );
 		}
-		$out = Xml::tags( $encloseTag, $attribs, $out );
+		$out = Html::rawElement( $encloseTag, $attribs, $out );
 
 		wfProfileOut( __METHOD__ );
 		return $out;
