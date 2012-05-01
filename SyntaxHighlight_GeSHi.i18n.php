@@ -1040,10 +1040,11 @@ $messages['sr-ec'] = array(
 );
 
 /** Serbian (Latin script) (‪Srpski (latinica)‬)
+ * @author MaxSem
  * @author Michaello
  */
 $messages['sr-el'] = array(
-	'syntaxhighlight-desc' => 'Omogućava vizuelno označavanje sintakse <code>&lt;syntaxhighlight&gt;</code> korišćenjem [<a href="http://qbnz.com/highlighter/">http://qbnz.com/highlighter/</a> GeSHi hajlajtera].',
+	'syntaxhighlight-desc' => 'Omogućava vizuelno označavanje sintakse <code>&lt;syntaxhighlight&gt;</code> korišćenjem [http://qbnz.com/highlighter/ GeSHi hajlajtera].',
 	'syntaxhighlight-specify' => 'Potrebno je odrediti jezik kao ovaj:',
 	'syntaxhighlight-supported' => 'Podržani jezici u vizuelom označavanju sintakse:',
 	'syntaxhighlight-err-loading' => '(greška pri učitavanju podržanih jezika)',
