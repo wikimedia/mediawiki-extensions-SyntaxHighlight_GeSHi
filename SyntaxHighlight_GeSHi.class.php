@@ -116,7 +116,7 @@ class SyntaxHighlight_GeSHi {
 		unset( $attribs['lang'] );
 
 		if ( $enclose === GESHI_HEADER_NONE ) {
-			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi mw-code-inline ' . $lang . ' source-' . $lang );
+			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi ' . $lang . ' source-' . $lang );
 		} else {
 			// Default dir="ltr" (but allow dir="rtl", although unsure if needed)
 			$attribs['dir'] = isset( $attribs['dir'] ) && $attribs['dir'] === 'rtl' ? 'rtl' : 'ltr';
