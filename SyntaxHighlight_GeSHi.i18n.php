@@ -859,6 +859,14 @@ $messages['pdc'] = array(
 	'syntaxhighlight-err-language' => 'Falsch Schprooch',
 );
 
+/** Pälzisch (Pälzisch)
+ * @author Manuae
+ */
+$messages['pfl'] = array(
+	'syntaxhighlight-specify' => 'Do mugschd ä Schbrooch feschdleesche:',
+	'syntaxhighlight-err-language' => 'Ugildischi Schbrooch',
+);
+
 /** Polish (Polski)
  * @author Derbeth
  * @author Sp5uhe
@@ -1110,7 +1118,7 @@ $messages['tg-cyrl'] = array(
 	'geshi.css' => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
 );
 
-/** Tajik (Latin script) (tojikī)
+/** Tajik (Latin script) (Tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -1183,7 +1191,7 @@ $messages['vec'] = array(
 	'geshi.css' => "/* I stili CSS inserìi qua i se àplica a l'evidenziazion de sintassi con GeSHi */",
 );
 
-/** Veps (Vepsan kel')
+/** Veps (Vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
