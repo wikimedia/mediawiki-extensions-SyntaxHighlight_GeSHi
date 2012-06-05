@@ -58,7 +58,7 @@ $language_data = array (
     'ESCAPE_CHAR' => '',
     'KEYWORDS' => array(
         2 => array(
-            'a', 'abbr', 'address', 'article', 'aside', 'audio'.
+            'a', 'abbr', 'address', 'article', 'aside', 'audio',
 
             'base', 'bdo', 'blockquote', 'body', 'br', 'button', 'b',
 
