@@ -77,7 +77,7 @@ $messages['arz'] = array(
 	'geshi.css' => '/* CSS المحطوطة هنا ح تتطبق على تظليل سينتاكس الGeSHi */',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Esbardu
  */
 $messages['ast'] = array(
@@ -126,7 +126,7 @@ $messages['be-tarask'] = array(
 	'geshi.css' => '/* CSS, разьмешчаны тут, будзе выкарыстоўвацца для падсьветкі сынтаксісу GeSHi */',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author Borislav
  * @author DCLXVI
  * @author Turin
@@ -152,7 +152,7 @@ $messages['bn'] = array(
 	'geshi.css' => '/* এখানে স্থাপিত CSS কোড GeSHi সিনট্যাক্স হাইলাইটিং-এ ব্যবহার করা হবে */',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -164,7 +164,7 @@ $messages['br'] = array(
 	'geshi.css' => "/* Talvezout a raio ar c'hod CSS lakaet amañ d'al livadur ereadurel GeSHi */",
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -176,7 +176,7 @@ $messages['bs'] = array(
 	'geshi.css' => '/* CSS koji se ovdje postavi će biti korišten za isticanje GeSHi sintakse */',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author SMP
  * @author Solde
  */
@@ -196,7 +196,7 @@ $messages['ce'] = array(
 	'geshi.css' => '/* CSS-ишар, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Li-sung
  * @author Matěj Grabovský
  */
@@ -209,7 +209,7 @@ $messages['cs'] = array(
 	'geshi.css' => '/* Zde uvedené CSS bude ovlivňovat zvýrazňování syntaxe GeSHi */',
 );
 
-/** Danish (Dansk)
+/** Danish (dansk)
  * @author Sarrus
  */
 $messages['da'] = array(
@@ -281,7 +281,7 @@ $messages['eo'] = array(
 	'geshi.css' => '/* CSS enigita ĉi tie estos sintakse emfazita de GeSHi */',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Muro de Aguas
  * @author Remember the dot
@@ -296,7 +296,7 @@ $messages['es'] = array(
 	'geshi.css' => '/* El código CSS situado aquí afectará al resaltado de sintaxis de GeSHi */',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Pikne
  * @author [[et:Kasutaja:M2s17]]
  */
@@ -309,7 +309,7 @@ $messages['et'] = array(
 	'geshi.css' => '/* CSS mis on asetatud siia, määrab GeSHi süntaksi esiletoomise stiili */',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author An13sa
  */
 $messages['eu'] = array(
@@ -330,7 +330,7 @@ $messages['fa'] = array(
 	'geshi.css' => '/* دستورات CSS اینجا توسط سامانه رنگین‌کردن دستورات GeSHi به کار گرفته می‌شوند */',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Crt
  * @author Nike
  */
@@ -343,7 +343,7 @@ $messages['fi'] = array(
 	'geshi.css' => '/* Tänne lisätty CSS vaikuttaa GeSHi-syntaksinkorostukseen */',
 );
 
-/** French (Français)
+/** French (français)
  * @author Grondin
  * @author Sherbrooke
  * @author Verdy p
@@ -357,7 +357,7 @@ $messages['fr'] = array(
 	'geshi.css' => '/* Le code CSS inséré ici sera appliqué à la coloration syntaxique GeSHi. */',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -369,7 +369,7 @@ $messages['frp'] = array(
 	'geshi.css' => '/* Lo code CSS betâ ique serat aplicâ a la coloracion sintaxica GeSHi. */',
 );
 
-/** Friulian (Furlan)
+/** Friulian (furlan)
  * @author Klenje
  */
 $messages['fur'] = array(
@@ -449,7 +449,7 @@ $messages['hi'] = array(
 	'geshi.css' => '/* यहाँ पर उपस्थित CSS GeSHi चिन्हांकित वाक्य विश्लेषण पर प्रयोग किए जायेंगे */',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Dalibor Bosits
  * @author SpeedyGonsales
  */
@@ -474,7 +474,7 @@ $messages['hsb'] = array(
 	'geshi.css' => '/* CSS w tutej zdźělence so na syntaksowe wuzběhnjenje GeSHi nałoži */',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  */
 $messages['hu'] = array(
@@ -486,7 +486,7 @@ $messages['hu'] = array(
 	'geshi.css' => '/* Az itt elhelyezett CSS-t fogja alkalmazni a GeSHi szintaxiskiemelő */',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -534,7 +534,7 @@ $messages['io'] = array(
 	'syntaxhighlight-err-language' => 'Ne-valida linguo.',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author BrokenArrow
  */
 $messages['it'] = array(
@@ -560,7 +560,7 @@ $messages['ja'] = array(
 	'geshi.css' => '/* ここへ、GeShi 構文ハイライト機能に適用する CSS を記述してください */',
 );
 
-/** Jutish (Jysk)
+/** Jutish (jysk)
  * @author Huslåke
  * @author Ælsån
  */
@@ -690,7 +690,7 @@ $messages['li'] = array(
 	'geshi.css' => '/* Hiej geplaatste CBBS wuuertj toegepas op GeSHo syntax markering */',
 );
 
-/** Lithuanian (Lietuvių)
+/** Lithuanian (lietuvių)
  * @author Garas
  * @author Homo
  * @author Matasg
@@ -704,7 +704,7 @@ $messages['lt'] = array(
 	'geshi.css' => '/* Čia pateiktas CSS bus taikomas GeSHi sintaksės paryškinimams */',
 );
 
-/** Latvian (Latviešu)
+/** Latvian (latviešu)
  * @author Papuass
  */
 $messages['lv'] = array(
@@ -719,7 +719,7 @@ $messages['mg'] = array(
 	'syntaxhighlight-err-language' => 'Diso fiteny',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -822,7 +822,7 @@ $messages['nl'] = array(
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi Syntax Highlighting */',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Frokor
  */
 $messages['nn'] = array(
@@ -834,7 +834,7 @@ $messages['nn'] = array(
 	'geshi.css' => '/* CSS plassert her gjeld GeSHi syntaksutheving */',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -868,7 +868,7 @@ $messages['pfl'] = array(
 	'syntaxhighlight-err-language' => 'Ugildischi Schbrooch',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Derbeth
  * @author Sp5uhe
  */
@@ -902,7 +902,7 @@ $messages['ps'] = array(
 	'syntaxhighlight-err-language' => 'ناسمه ژبه.',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Malafaya
  */
@@ -915,7 +915,7 @@ $messages['pt'] = array(
 	'geshi.css' => '/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Helder.wiki
  * @author Heldergeovane
  */
@@ -935,7 +935,7 @@ $messages['qu'] = array(
 	'syntaxhighlight-err-language' => 'Nisqayki rimayqa manam kanchu.',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author AdiJapan
  * @author KlaudiuMihaila
  * @author Stelistcristi
@@ -949,7 +949,7 @@ $messages['ro'] = array(
 	'geshi.css' => '/* Codul CSS inserat aici se va aplica la evidențierea sintaxei prin GeSHi. */',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -961,7 +961,7 @@ $messages['roa-tara'] = array(
 	'geshi.css' => "/* CSS mise aqquà avène applicate 'a sindasse GeSHi evidenziate */",
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
@@ -985,7 +985,7 @@ $messages['rue'] = array(
 	'geshi.css' => '/* Гев зазначене CSS буде овпливнёвати звыразнёваня сінтаксісу GeSHi */',
 );
 
-/** Sakha (Саха тыла)
+/** Sakha (саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
@@ -1009,7 +1009,7 @@ $messages['si'] = array(
 	'geshi.css' => '/* මෙහි යොදන CSS GeSHi කාරකරීති තීව‍්‍රාලෝකය සඳහා යෙදේ */',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -1021,7 +1021,7 @@ $messages['sk'] = array(
 	'geshi.css' => '/* Tu umiestnené CSS sa použije pre zvýrazňovanie syntaxe GeSHi */',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  * @author Yerpo
  */
@@ -1034,7 +1034,7 @@ $messages['sl'] = array(
 	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Millosh
  * @author Rancher
  * @author Sasa Stefanovic
@@ -1048,7 +1048,7 @@ $messages['sr-ec'] = array(
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author MaxSem
  * @author Michaello
  */
@@ -1085,7 +1085,7 @@ $messages['su'] = array(
 	'geshi.css' => '/* CSS nu diperenahkeun di dieu bakal dilarapkeun ka sorotan rumpaka GeSHi */',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Lejonel
  */
 $messages['sv'] = array(
@@ -1107,7 +1107,7 @@ $messages['te'] = array(
 	'syntaxhighlight-err-language' => 'తప్పుడు భాష.',
 );
 
-/** Tajik (Cyrillic script) (Тоҷикӣ)
+/** Tajik (Cyrillic script) (тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -1119,7 +1119,7 @@ $messages['tg-cyrl'] = array(
 	'geshi.css' => '/* CSS инҷо гузошташуда ба дастуроти рангинкунии GeSHi ба кор бурда мешавад */',
 );
 
-/** Tajik (Latin script) (Tojikī)
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -1168,7 +1168,7 @@ $messages['tr'] = array(
 	'geshi.css' => '/* Buraya yerleştirilen CSS, GeSHi sözdizimi vurgulamasına uygulanacaktır */',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Ahonc
  */
 $messages['uk'] = array(
@@ -1180,7 +1180,7 @@ $messages['uk'] = array(
 	'geshi.css' => '/* CSS-код, розміщений тут, буде застосований для підсвічування синтаксису GeSHI */',
 );
 
-/** Vèneto (Vèneto)
+/** vèneto (vèneto)
  * @author Candalua
  */
 $messages['vec'] = array(
@@ -1242,7 +1242,7 @@ $messages['yue'] = array(
 	'geshi.css' => '/* 放響呢度嘅CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Shinjiman
  */
 $messages['zh-hans'] = array(
@@ -1254,7 +1254,7 @@ $messages['zh-hans'] = array(
 	'geshi.css' => '/* 放在这里的CSS会以GeSHi语法高亮方式显示 */',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Mark85296341
  * @author Shinjiman
  */
