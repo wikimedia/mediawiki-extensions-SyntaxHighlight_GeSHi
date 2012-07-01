@@ -40,7 +40,7 @@ $messages['af'] = array(
 	'syntaxhighlight-err-language' => 'Ongeldige taal.',
 );
 
-/** Aragonese (Aragonés)
+/** Aragonese (aragonés)
  * @author Juanpabl
  */
 $messages['an'] = array(
@@ -113,7 +113,7 @@ $messages['bcc'] = array(
 	'geshi.css' => '/* CSS که ادان هستن ته ساختار جی شی پررنگ کتن کارمرز بین */',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -241,7 +241,7 @@ $messages['diq'] = array(
 	'geshi.css' => 'CSS o ke tiya /* de yo, işaretê rêzvateyê GeSHi tetbiq beno */',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -383,7 +383,7 @@ $messages['ga'] = array(
 	'syntaxhighlight-err-language' => 'Teanga neamhbhailí.',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  * @author Xosé
  */
@@ -462,7 +462,7 @@ $messages['hr'] = array(
 	'geshi.css' => '/* CSS kod napisan ovdje će biti primijenjen na GeSHi bojanje sintakse */',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -975,7 +975,7 @@ $messages['ru'] = array(
 	'geshi.css' => '/* CSS-код, размещённый здесь, будет применён для подсветки синтаксиса GeSHI */',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
