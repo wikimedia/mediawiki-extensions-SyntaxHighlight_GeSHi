@@ -240,7 +240,7 @@ class SyntaxHighlight_GeSHi {
 		// Determine the language
 		$matches = array();
 		preg_match( '!\.(css|js)$!u', $title->getText(), $matches );
-		$lang = $matches[1] == 'css' ? 'css' : 'javascript';
+		$lang = isset( $matches[1] ) && $matches[1] == 'css' ? 'css' : 'javascript';
 		// Attempt to format
 		$geshi = self::prepare( $text, $lang );
 		if( $geshi instanceof GeSHi ) {
