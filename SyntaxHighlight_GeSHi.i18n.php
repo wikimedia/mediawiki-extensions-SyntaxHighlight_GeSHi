@@ -77,6 +77,13 @@ $messages['arz'] = array(
 	'geshi.css' => '/* CSS المحطوطة هنا ح تتطبق على تظليل سينتاكس الGeSHi */',
 );
 
+/** Assamese (অসমীয়া)
+ * @author Bishnu Saikia
+ */
+$messages['as'] = array(
+	'syntaxhighlight-err-language' => 'অবৈধ ভাষা।',
+);
+
 /** Asturian (asturianu)
  * @author Esbardu
  */
