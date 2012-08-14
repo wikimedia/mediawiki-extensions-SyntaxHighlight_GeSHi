@@ -1104,6 +1104,13 @@ $messages['sv'] = array(
 	'geshi.css' => '/* CSS som skrivs här används för syntax highlighting med GeSHI */',
 );
 
+/** Tamil (தமிழ்)
+ * @author மதனாஹரன்
+ */
+$messages['ta'] = array(
+	'syntaxhighlight-err-language' => 'செல்லாத மொழி.',
+);
+
 /** Telugu (తెలుగు)
  * @author Veeven
  */
