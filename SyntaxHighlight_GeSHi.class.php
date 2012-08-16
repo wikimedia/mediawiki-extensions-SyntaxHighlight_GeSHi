@@ -1,7 +1,6 @@
 <?php
 
 class SyntaxHighlight_GeSHi {
-
 	/**
 	 * Has GeSHi been initialised this session?
 	 */
@@ -309,7 +308,8 @@ class SyntaxHighlight_GeSHi {
 	 * @return string HTML fragment
 	 */
 	private static function formatLanguageError( $text ) {
-		$error = self::formatError( htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-language' ) ), $text );
+		$msg = wfMessage( 'syntaxhighlight-err-language' )->inContentLanguage()->escaped();
+		$error = self::formatError( $msg, $text );
 		return $error . '<pre>' . htmlspecialchars( $text ) . '</pre>';
 	}
 
@@ -324,10 +324,10 @@ class SyntaxHighlight_GeSHi {
 		if( $error ) {
 			$html .= "<p>{$error}</p>";
 		}
-		$html .= '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-specify' ) )
+		$html .= '<p>' . wfMessage( 'syntaxhighlight-specify')->inContentLanguage()->escaped()
 			. ' <samp>&lt;source lang=&quot;html4strict&quot;&gt;...&lt;/source&gt;</samp></p>'
-			. '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-supported' ) ) . '</p>'
-			. self::formatLanguages();
+			. '<p>' . wfMessage( 'syntaxhighlight-supported' )->inContentLanguage()->escaped()
+			. '</p>' . self::formatLanguages();
 		return "<div style=\"border: solid red 1px; padding: .5em;\">{$html}</div>";
 	}
 
@@ -345,7 +345,7 @@ class SyntaxHighlight_GeSHi {
 			}
 			return '<p class="mw-collapsible mw-collapsed" style="padding: 0em 1em;">' . implode( ', ', $list ) . '</p><br style="clear: all"/>';
 		} else {
-			return '<p>' . htmlspecialchars( wfMsgForContent( 'syntaxhighlight-err-loading' ) ) . '</p>';
+			return '<p>' . wfMessage( 'syntaxhighlight-err-loading' )->inContentLanguage()->escaped() . '</p>';
 		}
 	}
 

@@ -3,7 +3,6 @@
  * Custom ResourceLoader module that loads a Geshi.css per-wiki.
  */
 class HighlightGeSHilocal extends ResourceLoaderWikiModule {
-
 	/**
 	 * @param $context ResourceLoaderContext
 	 * @return array
