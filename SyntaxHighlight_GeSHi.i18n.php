@@ -1194,6 +1194,13 @@ $messages['uk'] = array(
 	'geshi.css' => '/* CSS-код, розміщений тут, буде застосований для підсвічування синтаксису GeSHI */',
 );
 
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ur'] = array(
+	'syntaxhighlight-err-language' => 'باطل زبان ہے.',
+);
+
 /** vèneto (vèneto)
  * @author Candalua
  */
