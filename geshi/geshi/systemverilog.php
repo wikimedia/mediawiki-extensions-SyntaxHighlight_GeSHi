@@ -4,7 +4,7 @@
  * -------
  * Author: Sean O'Boyle
  * Copyright: (C) 2008 IntelligentDV
- * Release Version: 1.0.8.10
+ * Release Version: 1.0.8.11
  * Date Started: 2008/06/25
  *
  * SystemVerilog IEEE 1800-2009(draft8) language file for GeSHi.
@@ -53,8 +53,8 @@
  *
  * File: systemverilog.php
  * $LastChangedBy: benbe $
- * $LastChangedDate: 2011-02-11 20:29:30 +0000 (Fri, 11 Feb 2011) $
- * $LastChangedRevision: 2431 $
+ * $LastChangedDate: 2012-08-18 05:19:15 +0200 (Sat, 18 Aug 2012) $
+ * $LastChangedRevision: 2543 $
  *
  ************************************************************************/
 
