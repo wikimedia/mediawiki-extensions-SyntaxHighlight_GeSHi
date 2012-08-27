@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAARX//zuk\u003d",
+        "filename": "geshi/geshi.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 598,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-27T08:06:41Z",
+      "side": 1,
+      "message": "Coherence issue. I don\u0027t really like to use two different ways to check if a string is empty at a 3 lines distance, this makes the code harder to read. Could we consider to use $language !\u003d\u003d \u0027\u0027 too?\n\nUpstream. This change breaks again the GeSHi upstream and extension equivalence, at the moment we were able to sync our codebase again (they published a new release solving the HTML5 issues). By the way, an upstream bug should be created (cf. bugzilla).",
+      "revId": "669c9ca8050ce2953428069e2a6c08d507613d60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
