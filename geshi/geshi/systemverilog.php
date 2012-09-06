@@ -53,8 +53,8 @@
  *
  * File: systemverilog.php
  * $LastChangedBy: benbe $
- * $LastChangedDate: 2012-08-18 05:19:15 +0200 (Sat, 18 Aug 2012) $
- * $LastChangedRevision: 2543 $
+ * $LastChangedDate: 2012-08-18 01:56:20 +0200 (Sa, 18. Aug 2012) $
+ * $LastChangedRevision: 2542 $
  *
  ************************************************************************/
 

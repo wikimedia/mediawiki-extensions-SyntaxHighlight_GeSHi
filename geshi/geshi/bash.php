@@ -157,8 +157,8 @@ $language_data = array (
 
             'ed', 'egrep', 'env', 'expr',
 
-            'false', 'fbset', 'ffmpeg', 'fgconsole','fgrep', 'file', 'find',
-            'flex', 'flex++', 'fmt', 'free', 'ftp', 'funzip', 'fuser',
+            'false', 'fbset', 'fdisk', 'ffmpeg', 'fgconsole','fgrep', 'file',
+            'find', 'flex', 'flex++', 'fmt', 'free', 'ftp', 'funzip', 'fuser',
 
             'g++', 'gawk', 'gc','gcc', 'gdb', 'getent', 'getkeycodes',
             'getopt', 'gettext', 'gettextize', 'gimp', 'gimp-remote',
