@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn///s4\u003d",
+        "filename": "geshi/geshi/blitzbasic.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2012-09-06T07:37:37Z",
+      "side": 1,
+      "message": "Oops not Unicode, should we report it upstream?",
+      "revId": "da9b414aa72d7333fc3bbfad980fc659f12ab56b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
