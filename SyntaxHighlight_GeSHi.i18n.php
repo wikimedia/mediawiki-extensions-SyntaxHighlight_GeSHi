@@ -905,7 +905,7 @@ $messages['pms'] = array(
  * @author Ahmed-Najib-Biabani-Ibrahimkhel
  */
 $messages['ps'] = array(
-	'syntaxhighlight-specify' => 'تاسو ته پکار ده چې يوه ژبه په دې توګه ځانګړې کړی:',
+	'syntaxhighlight-specify' => 'بايد تاسې يوه ژبه په دې توګه ځانګړې کړی:',
 	'syntaxhighlight-err-language' => 'ناسمه ژبه.',
 );
 
