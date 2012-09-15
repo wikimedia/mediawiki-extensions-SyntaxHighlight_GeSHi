@@ -458,13 +458,14 @@ $messages['hi'] = array(
 
 /** Croatian (hrvatski)
  * @author Dalibor Bosits
+ * @author Roberta F.
  * @author SpeedyGonsales
  */
 $messages['hr'] = array(
 	'syntaxhighlight-desc' => 'Omogućava bojanje sintakse <code>&lt;syntaxhighlight&gt;</code> korištenjem [http://qbnz.com/highlighter/ GeSHi Highlighter-a]',
 	'syntaxhighlight-specify' => 'Molimo navedite jezik na slijedeći način:',
 	'syntaxhighlight-supported' => 'Jezici podržani za bojanje sintakse:',
-	'syntaxhighlight-err-loading' => '(greška pri učitavanju popisa podržanih jezika)',
+	'syntaxhighlight-err-loading' => '(pogrješka pri učitavanju popisa podržanih jezika)',
 	'syntaxhighlight-err-language' => 'Nevaljani jezik.',
 	'geshi.css' => '/* CSS kod napisan ovdje će biti primijenjen na GeSHi bojanje sintakse */',
 );
