@@ -120,7 +120,7 @@ $messages['bcc'] = array(
 	'geshi.css' => '/* CSS که ادان هستن ته ساختار جی شی پررنگ کتن کارمرز بین */',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -606,7 +606,7 @@ $messages['ka'] = array(
 	'geshi.css' => '/* აქ წარმოდგენილი CSS-კოდი, გამოიყენება GeSHI სნტაქსის გასანათებლად*/',
 );
 
-/** Kazakh (Arabic script) (‫قازاقشا (تٴوتە)‬)
+/** Kazakh (Arabic script) (قازاقشا (تٴوتە)‏)
  * @author AlefZet
  */
 $messages['kk-arab'] = array(
@@ -617,7 +617,7 @@ $messages['kk-arab'] = array(
 	'geshi.css' => '/* مىنداعى CSS امىرلەرى GeSHi سىينتاكسىيستى كومەسكى جارىقتاۋعا قولدانىلادى */',
 );
 
-/** Kazakh (Cyrillic script) (‪қазақша (кирил)‬)
+/** Kazakh (Cyrillic script) (қазақша (кирил)‎)
  * @author AlefZet
  */
 $messages['kk-cyrl'] = array(
@@ -628,7 +628,7 @@ $messages['kk-cyrl'] = array(
 	'geshi.css' => '/* Мындағы CSS әмірлері GeSHi синтаксисті көмескі жарықтауға қолданылады */',
 );
 
-/** Kazakh (Latin script) (‪qazaqşa (latın)‬)
+/** Kazakh (Latin script) (qazaqşa (latın)‎)
  * @author AlefZet
  */
 $messages['kk-latn'] = array(
@@ -788,7 +788,7 @@ $messages['nah'] = array(
 	'syntaxhighlight-err-language' => 'Âmò kualli tlâtòlli',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬) */
+/** Norwegian Bokmål (norsk (bokmål)‎) */
 $messages['nb'] = array(
 	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Du må angi et språk slik:',
@@ -830,7 +830,7 @@ $messages['nl'] = array(
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi Syntax Highlighting */',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Frokor
  */
 $messages['nn'] = array(
@@ -1042,7 +1042,7 @@ $messages['sl'] = array(
 	'geshi.css' => '/* CSS placed here will be applied to GeSHi syntax highlighting */',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Millosh
  * @author Rancher
  * @author Sasa Stefanovic
@@ -1056,7 +1056,7 @@ $messages['sr-ec'] = array(
 	'geshi.css' => '/* CSS постављен овде биће примењен на визуелно означавање синтксе GeSHi */',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author MaxSem
  * @author Michaello
  */
@@ -1264,7 +1264,7 @@ $messages['yue'] = array(
 	'geshi.css' => '/* 放響呢度嘅CSS會以GeSHi語法醒目提示方式顯示 */',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Shinjiman
  */
 $messages['zh-hans'] = array(
@@ -1276,7 +1276,7 @@ $messages['zh-hans'] = array(
 	'geshi.css' => '/* 放在这里的CSS会以GeSHi语法高亮方式显示 */',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Mark85296341
  * @author Shinjiman
  */
