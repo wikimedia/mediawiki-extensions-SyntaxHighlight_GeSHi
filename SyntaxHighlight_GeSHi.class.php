@@ -227,7 +227,9 @@ class SyntaxHighlight_GeSHi {
 
 	/**
 	 * Hook into Article::view() to provide syntax highlighting for
-	 * custom CSS and JavaScript pages
+	 * custom CSS and JavaScript pages.
+	 *
+	 * B/C for MW 1.20 and before. 1.21 and later use renderHook() instead.
 	 *
 	 * @param string $text
 	 * @param Title $title
@@ -259,8 +261,66 @@ class SyntaxHighlight_GeSHi {
 	}
 
 	/**
+	 * Hook into Content::getParserOutput to provide syntax highlighting for
+	 * script content.
+	 *
+	 * @return bool
+	 * @since MW 1.21
+	 */
+	public static function renderHook( Content $content, Title $title,
+			ParserOptions $options, $generateHtml, ParserOutput &$output
+	) {
+
+		global $wgSyntaxHighlightModels, $wgUseSiteCss;
+
+		// Determine the language
+		$model = $content->getModel();
+		if ( !isset( $wgSyntaxHighlightModels[$model] ) ) {
+			// We don't care about this model, carry on.
+			return true;
+		}
+
+		if ( !$generateHtml ) {
+			// Nothing to do.
+			return false;
+		}
+
+		// Hope that $wgSyntaxHighlightModels does not contain silly types.
+		$text = Contenthandler::getContentText( $content );
+
+		if ( $text === null || $text === false ) {
+			// Oops! Non-text content?
+			return false;
+		}
+
+		$lang = $wgSyntaxHighlightModels[$model];
+
+		// Attempt to format
+		$geshi = self::prepare( $text, $lang );
+		if( $geshi instanceof GeSHi ) {
+
+			$out = $geshi->parse_code();
+			if( !$geshi->error() ) {
+				// Done
+				$output->addHeadItem( self::buildHeadItem( $geshi ), "source-$lang" );
+				$output->setText( "<div dir=\"ltr\">{$out}</div>" );
+
+				if( $wgUseSiteCss ) {
+					$output->addModuleStyles( 'ext.geshi.local' );
+				}
+				return false;
+			}
+		}
+
+		// Bottle out
+		return true;
+	}
+
+	/**
 	 * Initialise a GeSHi object to format some code, performing
 	 * common setup for all our uses of it
+	 *
+	 * @note Used only until MW 1.20
 	 *
 	 * @param string $text
 	 * @param string $lang

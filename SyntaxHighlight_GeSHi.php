@@ -52,12 +52,29 @@ $wgSyntaxHighlightDefaultLang = null; //Change this in LocalSettings.php
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
-$wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
 $wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
 $wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
 
+if ( defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
+	// since MW 1.21
+	$wgHooks['ContentGetParserOutput'][] = 'SyntaxHighlight_GeSHi::renderHook';
+} else {
+	// B/C until 1.20
+	$wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
+}
+
+
 $wgAutoloadClasses['HighlightGeSHilocal'] = $dir . 'SyntaxHighlight_GeSHi.local.php';
 $wgResourceModules['ext.geshi.local'] = array( 'class' => 'HighlightGeSHilocal' );
+
+/**
+ * Map content models to the corresponding language names to be used with the highlighter.
+ * Pages with one of the given content models will automatically be highlighted.
+ */
+$wgSyntaxHighlightModels = array(
+	CONTENT_MODEL_CSS => 'css',
+	CONTENT_MODEL_JAVASCRIPT => 'javascript',
+);
 
 /**
  * Register parser hook
