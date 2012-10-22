@@ -788,7 +788,8 @@ $messages['nah'] = array(
 	'syntaxhighlight-err-language' => 'Âmò kualli tlâtòlli',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎) */
+/** Norwegian Bokmål (norsk (bokmål)‎)
+ */
 $messages['nb'] = array(
 	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
 	'syntaxhighlight-specify' => 'Du må angi et språk slik:',
@@ -1288,4 +1289,3 @@ $messages['zh-hant'] = array(
 	'syntaxhighlight-err-language' => '無效的語言。',
 	'geshi.css' => '/* 放在這裡的 CSS 會以 GeSHi 語法醒目提示方式顯示 */',
 );
-
