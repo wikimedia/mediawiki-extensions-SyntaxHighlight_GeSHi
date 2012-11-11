@@ -22,10 +22,11 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Meno25
+ * @author Shirayuki
  * @author The Evil IP address
  */
 $messages['qqq'] = array(
-	'syntaxhighlight-desc' => '{{desc}}',
+	'syntaxhighlight-desc' => '{{desc|name=Syntax Highlight GeSHi|url=http://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi}}',
 );
 
 /** Afrikaans (Afrikaans)
