@@ -567,7 +567,7 @@ $messages['ja'] = array(
 	'syntaxhighlight-supported' => '構文ハイライト機能に対応している言語は以下の通りです:',
 	'syntaxhighlight-err-loading' => '(対応言語一覧の読み込み時にエラーが発生しました)',
 	'syntaxhighlight-err-language' => '無効な言語です。',
-	'geshi.css' => '/* ここへ、GeShi 構文ハイライト機能に適用する CSS を記述してください */',
+	'geshi.css' => '/* ここに記述したCSSはGeSHi構文ハイライト機能に適用されます */',
 );
 
 /** Jutish (jysk)
