@@ -672,7 +672,7 @@ $messages['ksh'] = array(
 	'syntaxhighlight-specify' => 'Mer moß en Shprooch aanjevve, esu en dä Aat wi hee:',
 	'syntaxhighlight-supported' => 'Di Shprooche, dänne ier Syntax mer makeere könne, sin:',
 	'syntaxhighlight-err-loading' => '(Enne Fääler es opjetrodde, wi mer de Leß met de Shprooch laade wollte)',
-	'syntaxhighlight-err-language' => 'Di Shprooch kenne mer nit.',
+	'syntaxhighlight-err-language' => 'Di Schprooch kenne mer nit.',
 	'geshi.css' => '/* Dat es dat CCS för de Afschnedde med däm GeSHi syntax highlighting */',
 );
 
