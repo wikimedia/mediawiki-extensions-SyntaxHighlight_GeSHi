@@ -660,7 +660,7 @@ $messages['ko'] = array(
 	'syntaxhighlight-specify' => '오른쪽과 같이 언어를 설정해야 합니다:',
 	'syntaxhighlight-supported' => '문법 강조가 지원되는 언어 목록',
 	'syntaxhighlight-err-loading' => '(지원 언어 목록을 불러오는 중 오류 발생)',
-	'syntaxhighlight-err-language' => '잘못된 언어 설정입니다.',
+	'syntaxhighlight-err-language' => '잘못된 언어입니다.',
 	'geshi.css' => '/* 이 문서에서 설정한 CSS는 GeSHi에 적용됩니다. */',
 );
 
