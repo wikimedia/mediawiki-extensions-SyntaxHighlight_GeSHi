@@ -812,7 +812,7 @@ $messages['nds'] = array(
 	'geshi.css' => '/* CSS in disse MediaWiki-Systemnaricht warrt för dat GeSHi-Syntaxrutheven bruukt */',
 );
 
-/** Nedersaksisch (Nedersaksisch)
+/** Nedersaksies (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
