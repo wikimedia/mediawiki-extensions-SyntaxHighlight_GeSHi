@@ -69,6 +69,24 @@
       "revId": "3137b906b72bbdad67ab8506b01b44b1a0b9f1a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DlRx2wTw",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-02-13T21:41:33Z",
+      "side": 1,
+      "message": "Personally I\u0027d use /* ... */ for a regular comment, but whatever. :)",
+      "parentUuid": "DlbyETQ8",
+      "revId": "3137b906b72bbdad67ab8506b01b44b1a0b9f1a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
