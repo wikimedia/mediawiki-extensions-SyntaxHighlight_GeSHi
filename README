@@ -64,3 +64,10 @@ for detailed information to use some of the parameters.
 * line;		Corresponds to enable_line_numbers method on GeSHi
 * start;	Corresponds to start_line_numbers_at method on GeSHi
 * strict;	Corresponds to enable_strict_mode method on GeSHi
+
+== Note ==
+
+GeSHi is generous about creating HTML elements: highlighting large blocks of
+code can easily generate enough of them to crash a browser. As a guard, symbol
+highlighting is turned off for code fragments larger than 100 kB. For fragments
+larger than 200 kB, string highlighting is turned off as well.

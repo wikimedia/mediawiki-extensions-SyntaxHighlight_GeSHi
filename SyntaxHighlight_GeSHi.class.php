@@ -276,6 +276,17 @@ class SyntaxHighlight_GeSHi {
 		$geshi->enable_classes();
 		$geshi->set_overall_class( "source-$lang" );
 		$geshi->enable_keyword_links( false );
+
+		// If the source code is over 100 kB, disable higlighting of symbols.
+		// If over 200 kB, disable highlighting of strings too.
+		$bytes = strlen( $text );
+		if ( $bytes > 102400 ) {
+			$geshi->set_symbols_highlighting( false );
+			if ( $bytes > 204800 ) {
+				$geshi->set_strings_highlighting( false );
+			}
+		}
+
 		return $geshi;
 	}
 
