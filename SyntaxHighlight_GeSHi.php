@@ -55,13 +55,13 @@ $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.clas
 $wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
 $wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
 
-if ( defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
+//if ( defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
 	// since MW 1.21
-	$wgHooks['ContentGetParserOutput'][] = 'SyntaxHighlight_GeSHi::renderHook';
-} else {
+//	$wgHooks['ContentGetParserOutput'][] = 'SyntaxHighlight_GeSHi::renderHook';
+//} else {
 	// B/C until 1.20
 	$wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
-}
+//}
 
 
 $wgAutoloadClasses['HighlightGeSHilocal'] = $dir . 'SyntaxHighlight_GeSHi.local.php';
