@@ -239,12 +239,13 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Aspar
+ * @author Mirzali
  */
 $messages['diq'] = array(
 	'syntaxhighlight-desc' => 'pê şuxulnayişê [http://qbnz.com/highlighter/ GeSHi Highlighter] i rêza <code>&lt;syntaxhighlight&gt;</code> i işaret beno',
 	'syntaxhighlight-specify' => 'zey ıni yew zıwan bıvıcinê:',
-	'syntaxhighlight-supported' => 'zıwanê ke rêzvateyê eyi destek beni',
-	'syntaxhighlight-err-loading' => '(zıwanê ke destek geni, wexata bar biyene xeta da)',
+	'syntaxhighlight-supported' => 'Zıwanê ke rêzerêzê desteg benê:',
+	'syntaxhighlight-err-loading' => '(lista zıwananê ke xetaya barkerdışi desteg gêna)',
 	'syntaxhighlight-err-language' => 'zıwano nemeqbul',
 	'geshi.css' => 'CSS o ke tiya /* de yo, işaretê rêzvateyê GeSHi tetbiq beno */',
 );
