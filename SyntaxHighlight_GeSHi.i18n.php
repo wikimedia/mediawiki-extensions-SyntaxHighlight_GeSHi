@@ -78,7 +78,7 @@ $messages['arz'] = array(
 	'geshi.css' => '/* CSS المحطوطة هنا ح تتطبق على تظليل سينتاكس الGeSHi */',
 );
 
-/** Assamese (অসমীয়া)
+/** Assamese (অসমীয়া)
  * @author Bishnu Saikia
  */
 $messages['as'] = array(
@@ -790,7 +790,7 @@ $messages['nah'] = array(
 	'syntaxhighlight-err-language' => 'Âmò kualli tlâtòlli',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  */
 $messages['nb'] = array(
 	'syntaxhighlight-desc' => 'Gir syntaks som framhever <code>&lt;syntaxhighlight&gt;</code> ved hjelp av [http://qbnz.com/highlighter/ GeSHi Highlighter]',
@@ -813,7 +813,7 @@ $messages['nds'] = array(
 	'geshi.css' => '/* CSS in disse MediaWiki-Systemnaricht warrt för dat GeSHi-Syntaxrutheven bruukt */',
 );
 
-/** Nedersaksies (Nedersaksies)
+/** Low Saxon (Netherlands) (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
@@ -833,7 +833,7 @@ $messages['nl'] = array(
 	'geshi.css' => '/* Hier geplaatste CSS wordt toegepast op GeSHi Syntax Highlighting */',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Frokor
  */
 $messages['nn'] = array(
