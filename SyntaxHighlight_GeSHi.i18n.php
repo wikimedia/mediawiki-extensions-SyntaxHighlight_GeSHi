@@ -199,9 +199,11 @@ $messages['ca'] = array(
 
 /** Chechen (нохчийн)
  * @author Sasan700
+ * @author Умар
  */
 $messages['ce'] = array(
-	'geshi.css' => '/* CSS-ишар, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */',
+	'syntaxhighlight-supported' => 'Ловш долу меттанаш:',
+	'geshi.css' => '/* CSS-код, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */',
 );
 
 /** Czech (česky)
