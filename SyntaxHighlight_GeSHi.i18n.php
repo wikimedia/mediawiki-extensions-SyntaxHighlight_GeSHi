@@ -316,7 +316,7 @@ $messages['et'] = array(
 	'syntaxhighlight-specify' => 'Sa pead täpsustama keelt nõnda:',
 	'syntaxhighlight-supported' => 'Süntaksi esiletoomise on toetatud järgnevates keeltes:',
 	'syntaxhighlight-err-loading' => '(toetatud keelte loetelu laadimisel esines viga)',
-	'syntaxhighlight-err-language' => 'antud keel on mittekehtiv',
+	'syntaxhighlight-err-language' => 'Vigane keel.',
 	'geshi.css' => '/* CSS mis on asetatud siia, määrab GeSHi süntaksi esiletoomise stiili */',
 );
 
