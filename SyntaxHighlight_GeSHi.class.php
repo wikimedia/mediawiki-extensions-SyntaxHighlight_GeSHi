@@ -327,6 +327,9 @@ class SyntaxHighlight_GeSHi {
 	 * @return GeSHi
 	 */
 	public static function prepare( $text, $lang ) {
+
+		global $wgSyntaxHighlightKeywordLinks;
+
 		self::initialise();
 		$geshi = new GeSHi( $text, $lang );
 		if( $geshi->error() == GESHI_ERROR_NO_SUCH_LANG ) {
@@ -335,7 +338,7 @@ class SyntaxHighlight_GeSHi {
 		$geshi->set_encoding( 'UTF-8' );
 		$geshi->enable_classes();
 		$geshi->set_overall_class( "source-$lang" );
-		$geshi->enable_keyword_links( false );
+		$geshi->enable_keyword_links( $wgSyntaxHighlightKeywordLinks );
 
 		// If the source code is over 100 kB, disable higlighting of symbols.
 		// If over 200 kB, disable highlighting of strings too.
