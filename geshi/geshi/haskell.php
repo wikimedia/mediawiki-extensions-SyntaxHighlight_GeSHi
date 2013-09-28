@@ -11,6 +11,17 @@
  *
  * Haskell language file for GeSHi.
  *
+ * CHANGES
+ * -------
+ * 2013/09/28
+ *   -  Single quotes dropped from QUOTEMARKS to resolve <https://bugzilla.wikimedia.org/52509>.
+ *      Change is local to SyntaxHighlight_GeSHi, made by Ori Livneh (ori@wikimedia.org), based
+ *      on a proposed upstream patch.
+ *      Upstream bug report:
+ *        <http://sourceforge.net/p/geshi/bugs/217/>
+ *      Upstream patch (stalled since 2012):
+ *        <http://sourceforge.net/p/geshi/bugs/219/>
+ *
  *************************************************************************************
  *
  *   This file is part of GeSHi.
@@ -40,7 +51,7 @@ $language_data = array (
         3 => "/{-(?:(?R)|.)-}/s", //Nested Comments
         ),
     'CASE_KEYWORDS' => 0,
-    'QUOTEMARKS' => array('"',"'"),
+    'QUOTEMARKS' => array('"'),  // SyntaxHighlight_GeSHi modification; see CHANGES above.
     'ESCAPE_CHAR' => '\\',
     'KEYWORDS' => array(
         /* main haskell keywords */
