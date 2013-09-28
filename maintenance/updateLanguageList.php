@@ -41,7 +41,10 @@ class UpdateLanguageList extends Maintenance {
 		$langs = array_values( array_filter( $geshi->get_supported_languages( false ), 'ctype_alnum' ) );
 		sort( $langs );
 		$replace = array( '[' => "array(\n\t", ']' => "\n);\n", '",' => "\",\n\t" );
-		$code = "<?php\n" . $header . '$wgGeSHiSupportedLanguages = ' . strtr( json_encode( $langs ), $replace );
+		$code = "<?php\n" .
+			$header .
+			"global \$wgGeSHiSupportedLanguages;\n" .
+			'$wgGeSHiSupportedLanguages = ' . strtr( json_encode( $langs ), $replace );
 		file_put_contents( __DIR__ . '/../SyntaxHighlight_GeSHi.langs.php', $code );
 		$this->output( "Updated language list written to SyntaxHighlight_GeSHi.langs.php\n" );
 	}
