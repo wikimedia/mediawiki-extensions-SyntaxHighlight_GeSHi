@@ -220,10 +220,16 @@ $messages['cs'] = array(
 );
 
 /** Danish (dansk)
+ * @author Christian List
  * @author Sarrus
  */
 $messages['da'] = array(
+	'syntaxhighlight-desc' => 'Giver syntaksfremhævning <code>&lt;syntaxhighlight&gt;</code> ved brug af [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]',
+	'syntaxhighlight-specify' => 'Du skal angive et sprog, sådan her:',
+	'syntaxhighlight-supported' => 'Understøttede sprog for syntaksfremhævning:',
+	'syntaxhighlight-err-loading' => '(fejl ved indlæsning af listen af understøttede sprog)',
 	'syntaxhighlight-err-language' => 'Ugyldigt sprog.',
+	'geshi.css' => '/* CSS placeret her vil blive anvendt til GeSHi syntaksfremhævning */',
 );
 
 /** German (Deutsch)
