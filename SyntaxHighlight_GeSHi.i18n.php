@@ -343,7 +343,7 @@ $messages['fa'] = array(
 	'syntaxhighlight-specify' => 'شما باید به این شکل زبانی را مشخص کنید:',
 	'syntaxhighlight-supported' => 'زبان‌های پشتیبانی‌شده برای رنگین‌کردن دستورات:',
 	'syntaxhighlight-err-loading' => '(خطا در بارگذاری فهرست زبان‌های پشتیبانی‌شده)',
-	'syntaxhighlight-err-language' => 'زبان غیرمجاز.',
+	'syntaxhighlight-err-language' => 'زبان نامجاز.',
 	'geshi.css' => '/* دستورات CSS اینجا توسط سامانه رنگین‌کردن دستورات GeSHi به کار گرفته می‌شوند */',
 );
 
