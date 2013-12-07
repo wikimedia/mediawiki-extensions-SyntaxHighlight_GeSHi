@@ -206,7 +206,7 @@ $messages['ce'] = array(
 	'geshi.css' => '/* CSS-код, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Li-sung
  * @author Matěj Grabovský
  */
