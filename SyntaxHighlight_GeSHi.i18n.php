@@ -442,11 +442,12 @@ $messages['gu'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Guycn2
  * @author Rotem Liss
  */
 $messages['he'] = array(
 	'syntaxhighlight-desc' => 'אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://qbnz.com/highlighter/ GeSHi Highlighter]',
-	'syntaxhighlight-specify' => 'עליכם לציין שפה באופן הבא:',
+	'syntaxhighlight-specify' => 'יש לציין שפה באופן הבא:',
 	'syntaxhighlight-supported' => 'שפות נתמכות:',
 	'syntaxhighlight-err-loading' => '(שגיאה בטעינת הרשימה של השפות הנתמכות)',
 	'syntaxhighlight-err-language' => 'שפה שגויה.',
