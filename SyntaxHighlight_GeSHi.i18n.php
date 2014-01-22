@@ -938,7 +938,6 @@ $messages['pt'] = array(
 
 /** Brazilian Portuguese (português do Brasil)
  * @author Helder.wiki
- * @author Heldergeovane
  */
 $messages['pt-br'] = array(
 	'syntaxhighlight-desc' => 'Providencia realce de sintaxe <code>&lt;syntaxhighlight&gt;</code> através do [http://qbnz.com/highlighter/ GeSHi Highlighter]',
