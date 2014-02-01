@@ -202,6 +202,7 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
+	'syntaxhighlight-desc' => 'Таро хуьлуьйту тег <code>&lt;syntaxhighlight&gt;</code> лело [http://qbnz.com/highlighter/ GeSHi Highlighter] гӀоьнца синтаксисан бос хилийта',
 	'syntaxhighlight-supported' => 'Ловш долу меттанаш:',
 	'geshi.css' => '/* CSS-код, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */',
 );
