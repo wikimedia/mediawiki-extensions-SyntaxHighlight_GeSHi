@@ -547,6 +547,18 @@ $messages['ig'] = array(
 	'syntaxhighlight-err-language' => 'Asụsụ ámághị.',
 );
 
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'syntaxhighlight-desc' => 'Mangited ti panangimaris ti eskritu <code>&lt;syntaxhighlight&gt;</code> nga agus-usar iti [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]',
+	'syntaxhighlight-specify' => 'Nasken nga inaganan ti pagsasao a kasla daytoy:',
+	'syntaxhighlight-supported' => 'Dagiti nasuportaran a pagsasao para iti panangimaris ti eskritu:',
+	'syntaxhighlight-err-loading' => '(biddut ti panangikarga ti listaan ti nasuportaran a pagsasao)',
+	'syntaxhighlight-err-language' => 'Imbalido a pagsasao.',
+	'geshi.css' => '/* Ti CSS a maikabil ditoy ket maipakatto iti panangimaris ti eskritu ti GeSHi */',
+);
+
 /** Ido (Ido)
  * @author Malafaya
  */
