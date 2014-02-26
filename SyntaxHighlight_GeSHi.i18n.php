@@ -1138,12 +1138,13 @@ $messages['ta'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Chaduvari
  * @author Veeven
  */
 $messages['te'] = array(
 	'syntaxhighlight-specify' => 'భాషని ఈ విధంగా ఇవ్వాలి:',
 	'syntaxhighlight-supported' => 'ఛందస్సు ఉద్దీపనకి తోడ్పాటు ఉన్న భాషలు:',
-	'syntaxhighlight-err-loading' => '(తోడ్పాటున్న భాషల జాబితా లోడింగులో పొరపాటు జరిగింది)',
+	'syntaxhighlight-err-loading' => '(తోడ్పాటున్న భాషల జాబితా లోడింగులో లోపం జరిగింది)',
 	'syntaxhighlight-err-language' => 'చెల్లని భాష.',
 );
 
