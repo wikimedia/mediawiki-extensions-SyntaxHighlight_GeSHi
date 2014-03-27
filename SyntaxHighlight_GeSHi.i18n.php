@@ -1275,6 +1275,7 @@ $messages['vo'] = array(
  */
 $messages['yi'] = array(
 	'syntaxhighlight-specify' => 'איר דארפֿט ספעציפֿירן א שפראַך אזוי:',
+	'syntaxhighlight-supported' => ' געשטיצטע שפראכן:',
 	'syntaxhighlight-err-language' => 'אומגילטיקע שפראַך.',
 );
 
