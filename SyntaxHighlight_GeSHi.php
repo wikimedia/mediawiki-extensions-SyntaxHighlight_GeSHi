@@ -52,7 +52,8 @@ $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 $wgSyntaxHighlightDefaultLang = null;
 $wgSyntaxHighlightKeywordLinks = false;
 
-$dir = dirname(__FILE__) . '/';
+$dir = __DIR__ . '/';
+$wgMessagesDirs['SyntaxHighlight_GeSHi'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
 $wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
