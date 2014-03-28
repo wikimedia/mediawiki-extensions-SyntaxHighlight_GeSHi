@@ -458,14 +458,15 @@ $messages['he'] = array(
 /** Hindi (हिन्दी)
  * @author Kaustubh
  * @author Shyam
+ * @author Siddhartha Ghai
  */
 $messages['hi'] = array(
-	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi Highlighter] प्रयोग करके चिन्हांकित <code>&lt;syntaxhighlight&gt;</code> वाक्य विश्लेषण उपलब्ध करता है',
-	'syntaxhighlight-specify' => 'आपने इसप्रकार भाषा देना जरूरी हैं:',
-	'syntaxhighlight-supported' => 'सिन्टॅक्स हायलायटींग निम्नलिखित भाषाओंके लिये उपलब्ध हैं:',
-	'syntaxhighlight-err-loading' => '(सपोर्टेड भाषाओंकी सूची नहीं दर्शा पा रहें हैं)',
-	'syntaxhighlight-err-language' => 'अवैध भाषा।',
-	'geshi.css' => '/* यहाँ पर उपस्थित CSS GeSHi चिन्हांकित वाक्य विश्लेषण पर प्रयोग किए जायेंगे */',
+	'syntaxhighlight-desc' => '[http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter] प्रयोग द्वारा <code>&lt;syntaxhighlight&gt;</code> सिंटेक्स हाइलाइट करने का स्वरूपण प्रदान करता है',
+	'syntaxhighlight-specify' => 'इस प्रकार भाषा निर्दिष्ट करना आवश्यक है:',
+	'syntaxhighlight-supported' => 'सिंटेक्स हायलायटिंग निम्नलिखित भाषाओं के लिये उपलब्ध है:',
+	'syntaxhighlight-err-loading' => '(समर्थित भाषाओं की सूची लोड करने में त्रुटि)',
+	'syntaxhighlight-err-language' => 'अमान्य भाषा।',
+	'geshi.css' => '/* यहाँ पर उपस्थित सी॰एस॰एस GeSHi सिंटेक्स स्वरूपण पर लागू होगी */',
 );
 
 /** Croatian (hrvatski)
