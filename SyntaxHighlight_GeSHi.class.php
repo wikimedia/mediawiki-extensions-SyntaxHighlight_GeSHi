@@ -102,7 +102,7 @@ class SyntaxHighlight_GeSHi {
 			$out = str_replace( "\t", '&#9;', $out );
 		}
 		// Register CSS
-		$parser->getOutput()->addHeadItem( self::buildHeadItem( $geshi ), "source-{$lang}" );
+		$parser->getOutput()->addModuleStyles( "ext.geshi.language.$lang" );
 
 		if ( $wgUseSiteCss ) {
 			$parser->getOutput()->addModuleStyles( 'ext.geshi.local' );
@@ -302,7 +302,7 @@ class SyntaxHighlight_GeSHi {
 			$out = $geshi->parse_code();
 			if( !$geshi->error() ) {
 				// Done
-				$output->addHeadItem( self::buildHeadItem( $geshi ), "source-$lang" );
+				$output->addModuleStyles( "ext.geshi.language.$lang" );
 				$output->setText( "<div dir=\"ltr\">{$out}</div>" );
 
 				if( $wgUseSiteCss ) {
@@ -319,8 +319,6 @@ class SyntaxHighlight_GeSHi {
 	/**
 	 * Initialise a GeSHi object to format some code, performing
 	 * common setup for all our uses of it
-	 *
-	 * @note Used only until MW 1.20
 	 *
 	 * @param string $text
 	 * @param string $lang
@@ -350,17 +348,6 @@ class SyntaxHighlight_GeSHi {
 			}
 		}
 
-		return $geshi;
-	}
-
-	/**
-	 * Prepare a CSS snippet suitable for use as a ParserOutput/OutputPage
-	 * head item
-	 *
-	 * @param GeSHi $geshi
-	 * @return string
-	 */
-	public static function buildHeadItem( $geshi ) {
 		/**
 		 * Geshi comes by default with a font-family set to monospace which
 		 * ends ultimately ends up causing the font-size to be smaller than
@@ -374,16 +361,40 @@ class SyntaxHighlight_GeSHi {
 		$geshi->set_code_style( 'font-family: monospace, monospace;',
 			/** preserve defaults */ true );
 
-		$lang = $geshi->language;
+		return $geshi;
+	}
+
+	/**
+	 * Prepare a CSS snippet suitable for use as a ParserOutput/OutputPage
+	 * head item.
+	 *
+	 * @deprecated
+	 * @param GeSHi $geshi
+	 * @return string
+	 */
+	public static function buildHeadItem( $geshi ) {
 		$css = array();
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
+		$css[] = self::getCSS( $geshi );
+		$css[] = '/*]]>*/';
+		$css[] = '</style>';
+		return implode( "\n", $css );
+	}
+
+	/**
+	 * Get the complete CSS code necessary to display styles for given GeSHi instance.
+	 *
+	 * @param GeSHi $geshi
+	 * @return string
+	 */
+	public static function getCSS( $geshi ) {
+		$lang = $geshi->language;
+		$css = array();
 		$css[] = ".source-$lang {line-height: normal;}";
 		$css[] = ".source-$lang li, .source-$lang pre {";
 		$css[] = "\tline-height: normal; border: 0px none white;";
 		$css[] = "}";
-		$css[] = $geshi->get_stylesheet( false );
-		$css[] = '/*]]>*/';
-		$css[] = '</style>';
+		$css[] = $geshi->get_stylesheet( /*$economy_mode*/ false );
 		return implode( "\n", $css );
 	}
 
@@ -487,5 +498,26 @@ class SyntaxHighlight_GeSHi {
 	 */
 	public static function hOldSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
 		return self::hSpecialVersion_GeSHi( $extensionTypes );
+	}
+
+	/**
+	 * Register a ResourceLoader module providing styles for each supported language.
+	 *
+	 * @param ResourceLoader $resourceLoader
+	 * @return bool true
+	 */
+	public static function resourceLoaderRegisterModules( &$resourceLoader ) {
+		$modules = array();
+
+		foreach ( self::getSupportedLanguages() as $lang ) {
+			$modules["ext.geshi.language.$lang" ] = array(
+				'class' => 'ResourceLoaderGeSHiModule',
+				'lang' => $lang,
+			);
+		}
+
+		$resourceLoader->register( $modules );
+
+		return true;
 	}
 }

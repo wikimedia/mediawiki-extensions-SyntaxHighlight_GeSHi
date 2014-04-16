@@ -55,9 +55,14 @@ $wgSyntaxHighlightKeywordLinks = false;
 $dir = __DIR__ . '/';
 $wgMessagesDirs['SyntaxHighlight_GeSHi'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
+
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
+$wgAutoloadClasses['ResourceLoaderGeSHiModule'] = $dir . 'ResourceLoaderGeSHiModule.php';
+$wgAutoloadClasses['HighlightGeSHilocal'] = $dir . 'SyntaxHighlight_GeSHi.local.php';
+
 $wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
 $wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
+$wgHooks['ResourceLoaderRegisterModules'][] = 'SyntaxHighlight_GeSHi::resourceLoaderRegisterModules';
 
 //if ( defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
 	// since MW 1.21
@@ -68,8 +73,10 @@ $wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
 //}
 
 
-$wgAutoloadClasses['HighlightGeSHilocal'] = $dir . 'SyntaxHighlight_GeSHi.local.php';
+// Module to load MediaWiki:Geshi.css.
 $wgResourceModules['ext.geshi.local'] = array( 'class' => 'HighlightGeSHilocal' );
+// More modules are defined by SyntaxHighlight_GeSHi::resourceLoaderRegisterModules,
+// one for each supported language. The general name template is 'ext.geshi.language.<lang>'.
 
 /**
  * Map content models to the corresponding language names to be used with the highlighter.
