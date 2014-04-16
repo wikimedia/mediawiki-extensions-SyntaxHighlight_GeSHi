@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ahmed-Najib-Biabani-Ibrahimkhel"
-        ]
-    },
-    "syntaxhighlight-specify": "بايد تاسې يوه ژبه په دې توگه ځانگړې کړۍ:",
-    "syntaxhighlight-err-language": "ناسمه ژبه."
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"syntaxhighlight-specify": "بايد تاسې يوه ژبه په دې توگه ځانگړې کړۍ:",
+	"syntaxhighlight-err-language": "ناسمه ژبه."
 }
