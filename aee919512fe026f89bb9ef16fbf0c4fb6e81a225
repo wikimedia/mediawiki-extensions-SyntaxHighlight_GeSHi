@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_909be267",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-04-17T04:21:54Z",
+      "side": 1,
+      "message": "Serialising is pointless. This function is given a context because the hash is always considered as being variable based on context, and the cache key is fragmented by the hash itself, not by module name alone.\n\nIf two different contexts come up with the same hash (e.g. if the geshi object is not influenced by skin or user language) then there is no point in explicitly making it invalidate the cache just because we haven\u0027t seen this context before.\n\nThe nice thing about using a hash this way is that we have a perfect balance between fragmenting cache and sharing cache. It invalidates or bumps the timestamp only when we see something we haven\u0027t seen before.\n\nI know you changed away from this since in a later patch set, but just FYI.",
+      "revId": "aee919512fe026f89bb9ef16fbf0c4fb6e81a225",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
