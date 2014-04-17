@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_ea233d52",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-04-17T19:39:29Z",
+      "side": 1,
+      "message": "I\u0027m wondering if it wouldn\u0027t be better to just introduce a class constant here we\u0027d bump whenever we do something that should invalidate caches. This looks really fragile to me.",
+      "revId": "88ed4f17469b22f1426c2651eab516984ea0ba0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
