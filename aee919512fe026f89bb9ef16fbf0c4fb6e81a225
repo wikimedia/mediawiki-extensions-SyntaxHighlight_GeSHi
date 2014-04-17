@@ -16,6 +16,24 @@
       "revId": "aee919512fe026f89bb9ef16fbf0c4fb6e81a225",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_30b40ecf",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-04-17T04:22:21Z",
+      "side": 1,
+      "message": "I meant: \"Serialising *context* is pointless.\"",
+      "parentUuid": "8e23439c_909be267",
+      "revId": "aee919512fe026f89bb9ef16fbf0c4fb6e81a225",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
