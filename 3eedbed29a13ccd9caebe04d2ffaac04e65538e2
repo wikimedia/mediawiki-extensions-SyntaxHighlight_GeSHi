@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_f0ad7681",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-04-17T04:24:29Z",
+      "side": 1,
+      "message": "This is not the kind of hashing this method is designed for.\n\nFor data like this, override getDefinitionSummary instead and use getDefinitionMtime in getModifiedTime (instead of getHashTime().",
+      "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_f0969641",
         "filename": "SyntaxHighlight_GeSHi.class.php",
         "patchSetId": 2
