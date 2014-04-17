@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_eaf8dde3",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-04-17T19:37:20Z",
+      "side": 1,
+      "message": "Ah, yeah, it\u0027s only used there now. It was used in getModifiedHash() earlier before I decided that\u0027s a bad idea.",
+      "parentUuid": "8e23439c_d0995a72",
+      "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_b0813eff",
         "filename": "ResourceLoaderGeSHiModule.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-04-17T04:16:18Z",
       "side": 1,
       "message": "Why? Loading this via load.php?debug\u003dtrue\u0026modules\u003d(one module)\u0026only\u003dstyles should work fine, no?",
+      "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_2a35b5a3",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-04-17T19:37:20Z",
+      "side": 1,
+      "message": "Admittedly I copied this from somewhere, but it seemed to me like this module doesn\u0027t \"support URL loading\" (it only provides the styles via load.php requests).\n\nI removed this and it still works, so I guess you\u0027re right. The documentation for this method wasn\u0027t very helpful in explaining what it does :)",
+      "parentUuid": "8e23439c_b0813eff",
       "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_4ae7d13b",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-04-17T19:37:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e23439c_907c021d",
+      "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_f0ad7681",
         "filename": "ResourceLoaderGeSHiModule.php",
         "patchSetId": 2
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_aa6f858e",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-04-17T19:37:20Z",
+      "side": 1,
+      "message": "Thanks, this makes sense.",
+      "parentUuid": "8e23439c_f0ad7681",
+      "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_f0969641",
         "filename": "SyntaxHighlight_GeSHi.class.php",
         "patchSetId": 2
@@ -81,6 +153,24 @@
       "writtenOn": "2014-04-17T04:16:18Z",
       "side": 1,
       "message": "getSupportedLanguages already calls initialise(), so shouldn\u0027t be neccecary to call explicitly here, right?",
+      "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8a960996",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-04-17T19:37:20Z",
+      "side": 1,
+      "message": "Yeah, I think at some point when I was writing this patch it was actually necessary. It isn\u0027t now.",
+      "parentUuid": "8e23439c_f0969641",
       "revId": "3eedbed29a13ccd9caebe04d2ffaac04e65538e2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
