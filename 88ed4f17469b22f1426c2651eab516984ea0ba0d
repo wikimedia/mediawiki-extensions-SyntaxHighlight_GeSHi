@@ -16,6 +16,24 @@
       "revId": "88ed4f17469b22f1426c2651eab516984ea0ba0d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_75b5c22e",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2014-04-21T07:20:46Z",
+      "side": 1,
+      "message": "Yeah, i think a constant might be just as useful in this case.",
+      "parentUuid": "8e23439c_ea233d52",
+      "revId": "88ed4f17469b22f1426c2651eab516984ea0ba0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
