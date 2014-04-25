@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8e23439c_c1acaa9f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-04-25T06:44:54Z",
+      "side": 1,
+      "message": "is \"module\" supposed to be \"moving\"?",
+      "revId": "88ed4f17469b22f1426c2651eab516984ea0ba0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_ea233d52",
         "filename": "ResourceLoaderGeSHiModule.php",
         "patchSetId": 3
