@@ -336,17 +336,27 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		/**
-		 * Geshi comes by default with a font-family set to monospace which
-		 * ends ultimately ends up causing the font-size to be smaller than
-		 * one would expect (causing bug 26204).
-		 * We append to the default geshi style a CSS hack which is to specify
-		 * monospace twice which "reset" the browser font-size specified for monospace.
+		 * GeSHi comes by default with a font-family set to monospace, which
+		 * causes the font-size to be smaller than one would expect.
+		 * We append a CSS hack to the default GeSHi styles: specifying 'monospace'
+		 * twice "resets" the browser font-size specified for monospace.
 		 *
 		 * The hack is documented in MediaWiki core under
 		 * docs/uidesign/monospace.html and in bug 33496.
 		 */
-		$geshi->set_code_style( 'font-family: monospace, monospace;',
-			/** preserve defaults */ true );
+		// Preserve default since we don't want to override the other style
+		// properties set by geshi (padding, font-size, vertical-align etc.)
+		$geshi->set_code_style(
+			'font-family: monospace, monospace;',
+			/* preserve defaults = */ true
+		);
+
+		// No need to preserve default (which is just "font-family: monospace;")
+		// outputting both is unnecessary
+		$geshi->set_overall_style(
+			'font-family: monospace, monospace;',
+			/* preserve defaults = */ false
+		);
 
 		return $geshi;
 	}
