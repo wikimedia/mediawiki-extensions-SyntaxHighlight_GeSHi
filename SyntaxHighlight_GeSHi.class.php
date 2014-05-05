@@ -199,27 +199,14 @@ class SyntaxHighlight_GeSHi {
 	 * @return int
 	 */
 	static function getEncloseType( $args ) {
-		// Since version 1.0.8 geshi can produce valid pre, but we need to check for it
-		if ( defined('GESHI_HEADER_PRE_VALID') ) {
-			$pre = GESHI_HEADER_PRE_VALID;
-		} else {
-			$pre = GESHI_HEADER_PRE;
-		}
-
 		// "Enclose" parameter
-		$enclose = $pre;
+		$enclose = GESHI_HEADER_PRE_VALID;
 		if ( isset( $args['enclose'] ) ) {
 			if ( $args['enclose'] === 'div' ) {
 				$enclose = GESHI_HEADER_DIV;
 			} elseif ( $args['enclose'] === 'none' ) {
 				$enclose = GESHI_HEADER_NONE;
 			}
-		}
-
-		if( isset( $args['line'] ) && $pre === GESHI_HEADER_PRE ) {
-			// Force <div> mode to maintain valid XHTML, see
-			// http://sourceforge.net/tracker/index.php?func=detail&aid=1201963&group_id=114997&atid=670231
-			$enclose = GESHI_HEADER_DIV;
 		}
 
 		return $enclose;
@@ -488,16 +475,6 @@ class SyntaxHighlight_GeSHi {
 		self::initialise();
 		$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;
 		return true;
-	}
-
-	/**
-	 * @see SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi
-	 * @param $sp
-	 * @param $extensionTypes
-	 * @return bool
-	 */
-	public static function hOldSpecialVersion_GeSHi( &$sp, &$extensionTypes ) {
-		return self::hSpecialVersion_GeSHi( $extensionTypes );
 	}
 
 	/**
