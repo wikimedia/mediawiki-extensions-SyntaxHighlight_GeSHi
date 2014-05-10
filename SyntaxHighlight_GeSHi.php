@@ -58,14 +58,7 @@ $wgAutoloadClasses['ResourceLoaderGeSHiLocalModule'] = $dir . 'ResourceLoaderGeS
 
 $wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::extensionTypes';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'SyntaxHighlight_GeSHi::resourceLoaderRegisterModules';
-
-//if ( defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
-	// since MW 1.21
-//	$wgHooks['ContentGetParserOutput'][] = 'SyntaxHighlight_GeSHi::renderHook';
-//} else {
-	// B/C until 1.20
-	$wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
-//}
+$wgHooks['ContentGetParserOutput'][] = 'SyntaxHighlight_GeSHi::renderHook';
 
 // Module to load MediaWiki:Geshi.css.
 $wgResourceModules['ext.geshi.local'] = array( 'class' => 'ResourceLoaderGeSHiLocalModule' );

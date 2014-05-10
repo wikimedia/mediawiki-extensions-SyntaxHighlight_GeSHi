@@ -230,41 +230,6 @@ class SyntaxHighlight_GeSHi {
 	}
 
 	/**
-	 * Hook into Article::view() to provide syntax highlighting for
-	 * custom CSS and JavaScript pages.
-	 *
-	 * B/C for MW 1.20 and before. 1.21 and later use renderHook() instead.
-	 *
-	 * @param string $text
-	 * @param Title $title
-	 * @param OutputPage $output
-	 * @return bool
-	 */
-	public static function viewHook( $text, $title, $output ) {
-		global $wgUseSiteCss;
-		// Determine the language
-		$matches = array();
-		preg_match( '!\.(css|js)$!u', $title->getText(), $matches );
-		$lang = isset( $matches[1] ) && $matches[1] == 'css' ? 'css' : 'javascript';
-		// Attempt to format
-		$geshi = self::prepare( $text, $lang );
-		if( $geshi instanceof GeSHi ) {
-			$out = $geshi->parse_code();
-			if( !$geshi->error() ) {
-				// Done
-				$output->addHeadItem( "source-$lang", self::buildHeadItem( $geshi ) );
-				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
-				if( $wgUseSiteCss ) {
-					$output->addModuleStyles( 'ext.geshi.local' );
-				}
-				return false;
-			}
-		}
-		// Bottle out
-		return true;
-	}
-
-	/**
 	 * Hook into Content::getParserOutput to provide syntax highlighting for
 	 * script content.
 	 *
@@ -272,7 +237,7 @@ class SyntaxHighlight_GeSHi {
 	 * @since MW 1.21
 	 */
 	public static function renderHook( Content $content, Title $title,
-			ParserOptions $options, $generateHtml, ParserOutput &$output
+			$revId, ParserOptions $options, $generateHtml, ParserOutput &$output
 	) {
 
 		global $wgSyntaxHighlightModels, $wgUseSiteCss;
@@ -382,11 +347,14 @@ class SyntaxHighlight_GeSHi {
 	 * Prepare a CSS snippet suitable for use as a ParserOutput/OutputPage
 	 * head item.
 	 *
+	 * Not used anymore, kept for backwards-compatibility with other extensions.
+	 *
 	 * @deprecated
 	 * @param GeSHi $geshi
 	 * @return string
 	 */
 	public static function buildHeadItem( $geshi ) {
+		wfDeprecated( __METHOD__ );
 		$css = array();
 		$css[] = '<style type="text/css">/*<![CDATA[*/';
 		$css[] = self::getCSS( $geshi );
