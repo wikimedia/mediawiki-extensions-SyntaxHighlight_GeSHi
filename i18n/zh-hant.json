@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Mark85296341",
-			"Shinjiman"
+			"Shinjiman",
+			"Cwlin0416"
 		]
 	},
-	"syntaxhighlight-desc": "使用 [http://qbnz.com/highlighter/ GeSHi Highlighter] 以 <code>&lt;syntaxhighlight&gt;</code> 提供醒目提示",
-	"syntaxhighlight-specify": "您需要指定一種語言，像這樣：",
-	"syntaxhighlight-supported": "語法醒目標示所支援的語言：",
-	"syntaxhighlight-err-loading": "（支援語言清單載入錯誤）",
+	"syntaxhighlight-desc": "使用 [http://qbnz.com/highlighter/ GeSHi Highlighter] 提供可強調語法顯示的 <code>&lt;syntaxhighlight&gt;</code> 標籤。",
+	"syntaxhighlight-specify": "您需要指定一種語言，如：",
+	"syntaxhighlight-supported": "支援強調語法顯示的語言：",
+	"syntaxhighlight-err-loading": "(讀取支援的語言清單錯誤)",
 	"syntaxhighlight-err-language": "無效的語言。",
-	"geshi.css": "/* 放在這裡的 CSS 會以 GeSHi 語法醒目提示方式顯示 */"
+	"geshi.css": "/* 置於此處的 CSS 會套用至 GeSHi 的強調語法顯示 */"
 }
