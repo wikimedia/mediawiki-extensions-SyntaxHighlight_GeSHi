@@ -480,7 +480,7 @@ class SyntaxHighlight_GeSHi {
 	 * @param $extensionTypes
 	 * @return bool
 	 */
-	public static function hSpecialVersion_GeSHi( &$extensionTypes ) {
+	public static function extensionTypes( &$extensionTypes ) {
 		global $wgExtensionCredits;
 		self::initialise();
 		$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi']['version'] = GESHI_VERSION;

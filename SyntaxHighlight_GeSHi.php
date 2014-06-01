@@ -60,8 +60,7 @@ $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.clas
 $wgAutoloadClasses['ResourceLoaderGeSHiModule'] = $dir . 'ResourceLoaderGeSHiModule.php';
 $wgAutoloadClasses['ResourceLoaderGeSHiLocalModule'] = $dir . 'ResourceLoaderGeSHiLocalModule.php';
 
-$wgHooks['ParserFirstCallInit'][] = 'efSyntaxHighlight_GeSHiSetup';
-$wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::hSpecialVersion_GeSHi';
+$wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::extensionTypes';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'SyntaxHighlight_GeSHi::resourceLoaderRegisterModules';
 
 //if ( defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
@@ -71,7 +70,6 @@ $wgHooks['ResourceLoaderRegisterModules'][] = 'SyntaxHighlight_GeSHi::resourceLo
 	// B/C until 1.20
 	$wgHooks['ShowRawCssJs'][] = 'SyntaxHighlight_GeSHi::viewHook';
 //}
-
 
 // Module to load MediaWiki:Geshi.css.
 $wgResourceModules['ext.geshi.local'] = array( 'class' => 'HighlightGeSHilocal' );
@@ -91,9 +89,10 @@ $wgSyntaxHighlightModels = array(
  * Register parser hook
  *
  * @param $parser Parser
+ * @return bool
  */
-function efSyntaxHighlight_GeSHiSetup( &$parser ) {
+$wgHooks['ParserFirstCallInit'][] = function ( &$parser ) {
 	$parser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
 	$parser->setHook( 'syntaxhighlight', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
 	return true;
-}
+};
