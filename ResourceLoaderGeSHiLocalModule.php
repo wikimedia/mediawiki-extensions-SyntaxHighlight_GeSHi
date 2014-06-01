@@ -2,7 +2,7 @@
 /**
  * Custom ResourceLoader module that loads a Geshi.css per-wiki.
  */
-class HighlightGeSHilocal extends ResourceLoaderWikiModule {
+class ResourceLoaderGeSHiLocalModule extends ResourceLoaderWikiModule {
 	/**
 	 * @param $context ResourceLoaderContext
 	 * @return array
