@@ -1,6 +1,6 @@
 <?php
 /**
- * Syntax highlighting extension for MediaWiki 1.5 using GeSHi
+ * Syntax highlighting extension for MediaWiki using GeSHi
  * Copyright (C) 2005 Brion Vibber <brion@pobox.com>
  * http://www.mediawiki.org/
  *
@@ -26,10 +26,6 @@
  * @author Brion Vibber
  *
  * This extension wraps the GeSHi highlighter: http://qbnz.com/highlighter/
- *
- * Unlike the older GeSHi MediaWiki extension floating around, this makes
- * use of the new extension parameter support in MediaWiki 1.5 so it only
- * has to register one tag, <source>.
  *
  * A language is specified like: <source lang="c">void main() {}</source>
  * If you forget, or give an unsupported value, the extension spits out
