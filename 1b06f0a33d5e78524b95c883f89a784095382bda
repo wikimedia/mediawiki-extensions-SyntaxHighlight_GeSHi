@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_6b4c05a0",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2014-06-02T07:39:10Z",
+      "side": 1,
+      "message": "MW_SUPPORTS_CONTENTHANDLER is there since 1.21, but ContentGetParserOutput only made it into 1.24. would need a separate feature switch.",
+      "revId": "1b06f0a33d5e78524b95c883f89a784095382bda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
