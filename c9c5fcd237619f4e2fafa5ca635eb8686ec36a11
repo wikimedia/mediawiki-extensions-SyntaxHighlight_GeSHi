@@ -16,6 +16,24 @@
       "revId": "c9c5fcd237619f4e2fafa5ca635eb8686ec36a11",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_969c2414",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2014-06-02T10:29:00Z",
+      "side": 1,
+      "message": "I\u0027d rather just document that we\u0027re breaking backwards-compatibility. I mentioned it in the commit message.",
+      "parentUuid": "4e1dcb5b_2b5e0d49",
+      "revId": "c9c5fcd237619f4e2fafa5ca635eb8686ec36a11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
