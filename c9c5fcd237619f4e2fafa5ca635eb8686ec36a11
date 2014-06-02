@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_2b5e0d49",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2014-06-02T07:47:18Z",
+      "side": 1,
+      "message": "Only works since 1.24. Does this need aq B/C switch?",
+      "revId": "c9c5fcd237619f4e2fafa5ca635eb8686ec36a11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
