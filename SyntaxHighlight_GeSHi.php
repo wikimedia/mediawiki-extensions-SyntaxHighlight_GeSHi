@@ -68,7 +68,7 @@ $wgHooks['ResourceLoaderRegisterModules'][] = 'SyntaxHighlight_GeSHi::resourceLo
 //}
 
 // Module to load MediaWiki:Geshi.css.
-$wgResourceModules['ext.geshi.local'] = array( 'class' => 'HighlightGeSHilocal' );
+$wgResourceModules['ext.geshi.local'] = array( 'class' => 'ResourceLoaderGeSHiLocalModule' );
 // More modules are defined by SyntaxHighlight_GeSHi::resourceLoaderRegisterModules,
 // one for each supported language. The general name template is 'ext.geshi.language.<lang>'.
 
