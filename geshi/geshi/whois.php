@@ -174,7 +174,5 @@ $language_data = array (
             'METHODS' => GESHI_NEVER,
             'SCRIPT' => GESHI_NEVER
             )
-        ),
+        )
 );
-
-?>
