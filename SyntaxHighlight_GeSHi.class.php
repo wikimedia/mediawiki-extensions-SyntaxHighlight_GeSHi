@@ -240,7 +240,8 @@ class SyntaxHighlight_GeSHi {
 			$revId, ParserOptions $options, $generateHtml, ParserOutput &$output
 	) {
 
-		global $wgSyntaxHighlightModels, $wgUseSiteCss;
+		global $wgSyntaxHighlightModels, $wgUseSiteCss,
+			$wgParser, $wgTextModelsToParse;
 
 		// Determine the language
 		$model = $content->getModel();
@@ -250,16 +251,22 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		if ( !$generateHtml ) {
-			// Nothing to do.
-			return false;
+			// Nothing special for us to do, let MediaWiki handle this.
+			return true;
 		}
 
 		// Hope that $wgSyntaxHighlightModels does not contain silly types.
 		$text = Contenthandler::getContentText( $content );
 
 		if ( $text === null || $text === false ) {
-			// Oops! Non-text content?
-			return false;
+			// Oops! Non-text content? Let MediaWiki handle this.
+			return true;
+		}
+
+		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
+		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
+		if ( $content instanceof TextContent && in_array( $model, $wgTextModelsToParse ) ) {
+			$output = $wgParser->parse( $text, $title, $options, true, true, $revId );
 		}
 
 		$lang = $wgSyntaxHighlightModels[$model];
@@ -277,6 +284,8 @@ class SyntaxHighlight_GeSHi {
 				if( $wgUseSiteCss ) {
 					$output->addModuleStyles( 'ext.geshi.local' );
 				}
+
+				// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
 				return false;
 			}
 		}
