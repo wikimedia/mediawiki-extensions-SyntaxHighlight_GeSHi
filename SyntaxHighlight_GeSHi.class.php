@@ -256,7 +256,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		// Hope that $wgSyntaxHighlightModels does not contain silly types.
-		$text = Contenthandler::getContentText( $content );
+		$text = ContentHandler::getContentText( $content );
 
 		if ( $text === null || $text === false ) {
 			// Oops! Non-text content? Let MediaWiki handle this.
