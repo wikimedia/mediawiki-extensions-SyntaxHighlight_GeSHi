@@ -295,6 +295,53 @@ class SyntaxHighlight_GeSHi {
 	}
 
 	/**
+	 * Hook to provide syntax highlighting for API pretty-printed output
+	 *
+	 * @param IContextSource $context
+	 * @param string $text
+	 * @param string $mime
+	 * @param string $format
+	 * @since MW 1.24
+	 */
+	public static function apiFormatHighlight( IContextSource $context, $text, $mime, $format ) {
+		global $wgUseSiteCss;
+
+		switch ( $mime ) {
+			case 'text/javascript':
+			case 'application/json':
+				$lang = 'javascript';
+				break;
+
+			case 'text/xml':
+				$lang = 'xml';
+				break;
+
+			default:
+				// Don't know how to handle this
+				return true;
+		}
+
+		$geshi = self::prepare( $text, $lang );
+		if( $geshi instanceof GeSHi ) {
+			$out = $geshi->parse_code();
+			if( !$geshi->error() ) {
+				$output = $context->getOutput();
+				$output->addModuleStyles( "ext.geshi.language.$lang" );
+				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
+				if( $wgUseSiteCss ) {
+					$output->addModuleStyles( 'ext.geshi.local' );
+				}
+
+				// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
+				return false;
+			}
+		}
+
+		// Bottle out
+		return true;
+	}
+
+	/**
 	 * Initialise a GeSHi object to format some code, performing
 	 * common setup for all our uses of it
 	 *

@@ -59,6 +59,7 @@ $wgAutoloadClasses['ResourceLoaderGeSHiLocalModule'] = $dir . 'ResourceLoaderGeS
 $wgHooks['ExtensionTypes'][] = 'SyntaxHighlight_GeSHi::extensionTypes';
 $wgHooks['ResourceLoaderRegisterModules'][] = 'SyntaxHighlight_GeSHi::resourceLoaderRegisterModules';
 $wgHooks['ContentGetParserOutput'][] = 'SyntaxHighlight_GeSHi::renderHook';
+$wgHooks['ApiFormatHighlight'][] = 'SyntaxHighlight_GeSHi::apiFormatHighlight';
 
 // Module to load MediaWiki:Geshi.css.
 $wgResourceModules['ext.geshi.local'] = array( 'class' => 'ResourceLoaderGeSHiLocalModule' );
