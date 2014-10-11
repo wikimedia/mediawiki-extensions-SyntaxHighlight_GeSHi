@@ -38,7 +38,7 @@ if( !defined( 'MEDIAWIKI' ) ) {
 
 require_once __DIR__ . '/geshi/geshi.php';
 
-$wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
+$wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'SyntaxHighlight',
 	'author'         => array( 'Brion Vibber', 'Tim Starling', 'Rob Church', 'Niklas Laxström' ),
