@@ -38,7 +38,7 @@ class SyntaxHighlight_GeSHi {
 	 * @return string
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
-		global $wgSyntaxHighlightDefaultLang, $wgUseSiteCss, $wgUseTidy;
+		global $wgSyntaxHighlightDefaultLang, $wgUseTidy;
 		wfProfileIn( __METHOD__ );
 		self::initialise();
 		$text = rtrim( $text );
@@ -119,11 +119,7 @@ class SyntaxHighlight_GeSHi {
 			$out = str_replace( "\t", '&#9;', $out );
 		}
 		// Register CSS
-		$parser->getOutput()->addModuleStyles( "ext.geshi.language.$lang" );
-
-		if ( $wgUseSiteCss ) {
-			$parser->getOutput()->addModuleStyles( 'ext.geshi.local' );
-		}
+		$parser->getOutput()->addModuleStyles( array( "ext.geshi.language.$lang", 'ext.geshi.local' ) );
 
 		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
 		$attribs = Sanitizer::validateTagAttributes( $args, $encloseTag );
@@ -304,8 +300,6 @@ class SyntaxHighlight_GeSHi {
 	 * @since MW 1.24
 	 */
 	public static function apiFormatHighlight( IContextSource $context, $text, $mime, $format ) {
-		global $wgUseSiteCss;
-
 		switch ( $mime ) {
 			case 'text/javascript':
 			case 'application/json':
@@ -326,11 +320,8 @@ class SyntaxHighlight_GeSHi {
 			$out = $geshi->parse_code();
 			if( !$geshi->error() ) {
 				$output = $context->getOutput();
-				$output->addModuleStyles( "ext.geshi.language.$lang" );
+				$output->addModuleStyles( array( "ext.geshi.language.$lang", 'ext.geshi.local' ) );
 				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
-				if( $wgUseSiteCss ) {
-					$output->addModuleStyles( 'ext.geshi.local' );
-				}
 
 				// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
 				return false;
