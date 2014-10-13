@@ -33,6 +33,24 @@
       "revId": "ebb7d03ff8479cf9d82a9f6e15025d4a04b3c8c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_32d7aac6",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-10-13T23:22:47Z",
+      "side": 1,
+      "message": "The first is probably a matter for a different patch.\n\nAs for the getConfig, it seems more sensible to me to not have the extension partially using getConfig and mostly not.",
+      "parentUuid": "8e96e304_92631e3b",
+      "revId": "ebb7d03ff8479cf9d82a9f6e15025d4a04b3c8c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
