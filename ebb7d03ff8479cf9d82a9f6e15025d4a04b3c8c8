@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_725e927d",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-10-13T23:09:21Z",
+      "side": 1,
+      "message": "type hint for context",
+      "revId": "ebb7d03ff8479cf9d82a9f6e15025d4a04b3c8c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_92631e3b",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-10-13T23:09:21Z",
+      "side": 1,
+      "message": "This is wrong, and it should be checked inside the module itself rather than when choosing to add the module or not (the module should always be outputted).\n\nAlso it should have been using $context-\u003egetConfig().",
+      "revId": "ebb7d03ff8479cf9d82a9f6e15025d4a04b3c8c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
