@@ -36,6 +36,11 @@ if( !defined( 'MEDIAWIKI' ) ) {
 	die();
 }
 
+if ( version_compare( $wgVersion, '1.24', '<' ) ) {
+	die( "This version of SyntaxHighlight GeSHi requires MediaWiki 1.24" );
+}
+
+
 $wgExtensionCredits['parserhook']['SyntaxHighlight_GeSHi'] = array(
 	'path'           => __FILE__,
 	'name'           => 'SyntaxHighlight',
@@ -70,10 +75,8 @@ $wgResourceModules['ext.geshi.local'] = array( 'class' => 'ResourceLoaderGeSHiLo
  * Map content models to the corresponding language names to be used with the highlighter.
  * Pages with one of the given content models will automatically be highlighted.
  */
-$wgSyntaxHighlightModels = array(
-	CONTENT_MODEL_CSS => 'css',
-	CONTENT_MODEL_JAVASCRIPT => 'javascript',
-);
+$wgSyntaxHighlightModels[CONTENT_MODEL_CSS] = 'css';
+$wgSyntaxHighlightModels[CONTENT_MODEL_JAVASCRIPT] = 'javascript';
 
 /**
  * Register parser hook
