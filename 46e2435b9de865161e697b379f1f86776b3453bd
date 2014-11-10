@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_ddccd067",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-11-10T22:59:05Z",
+      "side": 0,
+      "message": "There should probably be a check to see if the variable exists in the global scope. Won\u0027t PHP whine if your logging level is high enough and you start treating an undefined variable as an array?",
+      "revId": "46e2435b9de865161e697b379f1f86776b3453bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
