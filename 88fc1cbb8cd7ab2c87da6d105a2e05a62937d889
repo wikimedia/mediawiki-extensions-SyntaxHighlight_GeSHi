@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_7a501937",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 515,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2014-11-12T08:38:23Z",
+      "side": 0,
+      "message": "Can\u0027t the complete function be killed, can it?",
+      "revId": "88fc1cbb8cd7ab2c87da6d105a2e05a62937d889",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_da7feda4",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2014-11-12T08:38:23Z",
+      "side": 0,
+      "message": "the default for parserhook extensions in all other extension is\n\n$wgExtensionCredits[\u0027parserhook\u0027][]",
+      "revId": "88fc1cbb8cd7ab2c87da6d105a2e05a62937d889",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
