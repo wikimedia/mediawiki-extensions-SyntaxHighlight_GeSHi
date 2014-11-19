@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_6b65720c",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 485,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-11-19T00:50:59Z",
+      "side": 1,
+      "message": "Different name than used in script",
+      "revId": "5d920bd9d638b15f5aee9f8b3c246834a0ad38fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_8b60fefc",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-11-19T00:50:59Z",
+      "side": 1,
+      "message": "Missing /",
+      "revId": "5d920bd9d638b15f5aee9f8b3c246834a0ad38fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
