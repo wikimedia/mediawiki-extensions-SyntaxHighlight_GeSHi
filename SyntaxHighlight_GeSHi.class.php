@@ -483,6 +483,7 @@ class SyntaxHighlight_GeSHi {
 	 */
 	private static function getSupportedLanguages() {
 		global $wgGeSHiSupportedLanguages;
+		self::initialise();
 		return $wgGeSHiSupportedLanguages;
 	}
 
