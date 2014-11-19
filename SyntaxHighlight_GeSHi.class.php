@@ -482,15 +482,8 @@ class SyntaxHighlight_GeSHi {
 	 * @return array
 	 */
 	private static function getSupportedLanguages() {
-		if( !is_array( self::$languages ) ) {
-			self::initialise();
-			self::$languages = array();
-			foreach( glob( GESHI_LANG_ROOT . "/*.php" ) as $file ) {
-				self::$languages[] = basename( $file, '.php' );
-			}
-			sort( self::$languages );
-		}
-		return self::$languages;
+		global $wgGeSHiSupportedLanguages;
+		return $wgGeSHiSupportedLanguages;
 	}
 
 	/**
