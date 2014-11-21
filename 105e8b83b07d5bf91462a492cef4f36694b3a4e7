@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e936f18_eb1e4b10",
+        "filename": "geshi/geshi.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-11-21T16:01:23Z",
+      "side": 1,
+      "message": "This comment is inaccurate an going to be confusing in the future to other maintainers. GeSHi doesn\u0027t really have anything to do with the API. And the few places where the API and Geshi do link (e.g. version information) this works just fine because the class is loaded by MediaWiki and the constant is present. This has always works and still works.\n\nThe bug is (from what it sounds like) that some third party tool is scraping raw PHP files and expecting a version number. So, if anything, the bug is in SyntaxHighlight_GeSHi.php, not geshi.php. Commenting this out doesn\u0027t \"make it show up in the api\".\n\nCommenting this out allows us to define it in SyntaxHighlight_GeSHi.php so that WikiApiery can scrape that file. I don\u0027t think it\u0027s related to the API.",
+      "revId": "105e8b83b07d5bf91462a492cef4f36694b3a4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_207e9214",
         "filename": "geshi/geshi.php",
         "patchSetId": 11
