@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_6bc6bb1b",
+        "filename": "geshi/geshi.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2014-11-21T16:41:41Z",
+      "side": 1,
+      "message": "Ok I will do what Jsahleen has said to do by adding this\n\nIf ( !defined( \u0027GESHI_VERSION\u0027 ) {\n     define( \u0027GESHI_VERSION\u0027, \u00271.0.8.12\u0027 );\n}",
+      "parentUuid": "6e936f18_eb1e4b10",
+      "revId": "105e8b83b07d5bf91462a492cef4f36694b3a4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_207e9214",
         "filename": "geshi/geshi.php",
         "patchSetId": 11
@@ -30,6 +48,24 @@
       "writtenOn": "2014-11-21T12:27:13Z",
       "side": 1,
       "message": "You could wrap this in:\n\nIf ( !defined( \u0027GESHI_VERSION\u0027 ) {\n     define( \u0027GESHI_VERSION\u0027, \u00271.0.8.12\u0027 );\n}\n\nThat would avoid the double definition. However, should we be modifying things in this file? What happens when GeSHi is updated? Won\u0027t this break again?",
+      "revId": "105e8b83b07d5bf91462a492cef4f36694b3a4e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_2bcc3337",
+        "filename": "geshi/geshi.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2014-11-21T16:41:41Z",
+      "side": 1,
+      "message": "We could add a notice saying that is should stay this way because of this bug.",
+      "parentUuid": "6e936f18_207e9214",
       "revId": "105e8b83b07d5bf91462a492cef4f36694b3a4e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
