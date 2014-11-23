@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4ea06b5a_c5a5709c",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-11-23T00:04:20Z",
+      "side": 1,
+      "message": "geshi.php doesn\u0027t provide a return value and also doesn\u0027t defined variables. It declares global constants, classes and functions. Those cannot be declared twice, so this should be an include_once to avoid other code paths from including it again.\n\nAnd since we depend on these below (GESHI_VERSION), it should probably be require_once instead of include_once.",
+      "revId": "02ed08fef870b0b39e784f0b572e151d012bfd85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea06b5a_8590c847",
         "filename": "geshi/geshi.php",
         "patchSetId": 14
