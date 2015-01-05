@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_f002280c",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 28
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-01-05T12:41:40Z",
+      "side": 1,
+      "message": "Sloppy indentation (4 spaces too many).",
+      "revId": "8f6e3b71aef50330aa7785e046078865c23eabcc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
