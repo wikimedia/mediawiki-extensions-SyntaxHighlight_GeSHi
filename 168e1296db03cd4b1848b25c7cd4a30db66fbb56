@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_50119455",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-01-05T12:41:33Z",
+      "side": 1,
+      "message": "Should this be require_once? The global was and continues to be unconditionally used by the extension. Fixed in I836e0df942a066.",
+      "revId": "168e1296db03cd4b1848b25c7cd4a30db66fbb56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
