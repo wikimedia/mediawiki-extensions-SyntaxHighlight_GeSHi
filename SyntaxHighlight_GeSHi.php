@@ -50,6 +50,7 @@ $wgExtensionCredits['parserhook'][] = array(
 	'descriptionmsg' => 'syntaxhighlight-desc',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi',
 	'version'        => GESHI_VERSION,
+	'license-name'   => 'GPL-2.0+',
 );
 
 // Change these in LocalSettings.php
