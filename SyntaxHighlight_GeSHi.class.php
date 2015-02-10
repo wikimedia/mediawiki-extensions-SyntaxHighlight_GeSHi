@@ -39,7 +39,6 @@ class SyntaxHighlight_GeSHi {
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
 		global $wgSyntaxHighlightDefaultLang, $wgUseTidy;
-		wfProfileIn( __METHOD__ );
 		self::initialise();
 		$text = rtrim( $text );
 		// Don't trim leading spaces away, just the linefeeds
@@ -54,20 +53,17 @@ class SyntaxHighlight_GeSHi {
 				$lang = $wgSyntaxHighlightDefaultLang;
 			} else {
 				$error = self::formatLanguageError( $text );
-				wfProfileOut( __METHOD__ );
 				return $error;
 			}
 		}
 		$lang = strtolower( $lang );
 		if( !preg_match( '/^[a-z_0-9-]*$/', $lang ) ) {
 			$error = self::formatLanguageError( $text );
-			wfProfileOut( __METHOD__ );
 			return $error;
 		}
 		$geshi = self::prepare( $text, $lang );
 		if( !$geshi instanceof GeSHi ) {
 			$error = self::formatLanguageError( $text );
-			wfProfileOut( __METHOD__ );
 			return $error;
 		}
 
@@ -98,14 +94,12 @@ class SyntaxHighlight_GeSHi {
 		if ( $geshi->error == GESHI_ERROR_NO_SUCH_LANG ) {
 			// Common error :D
 			$error = self::formatLanguageError( $text );
-			wfProfileOut( __METHOD__ );
 			return $error;
 		}
 		$err = $geshi->error();
 		if( $err ) {
 			// Other unknown error!
 			$error = self::formatError( $err );
-			wfProfileOut( __METHOD__ );
 			return $error;
 		}
 		// Armour for Parser::doBlockLevels()
@@ -136,7 +130,6 @@ class SyntaxHighlight_GeSHi {
 		}
 		$out = Html::rawElement( $encloseTag, $attribs, $out );
 
-		wfProfileOut( __METHOD__ );
 		return $out;
 	}
 
