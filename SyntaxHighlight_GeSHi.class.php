@@ -312,6 +312,12 @@ class SyntaxHighlight_GeSHi {
 		if( $geshi instanceof GeSHi ) {
 			$out = $geshi->parse_code();
 			if( !$geshi->error() ) {
+				if ( preg_match( '/^<pre([^>]*)>/i', $out, $m ) ) {
+					$attrs = Sanitizer::decodeTagAttributes( $m[1] );
+					$attrs['class'] .= ' api-pretty-content';
+					$out = '<pre' . Sanitizer::safeEncodeTagAttributes( $attrs ) . '>' .
+						substr( $out, strlen( $m[0] ) );
+				}
 				$output = $context->getOutput();
 				$output->addModuleStyles( array( "ext.geshi.language.$lang", 'ext.geshi.local' ) );
 				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
