@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_3e749ff7",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-03-29T15:47:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_7bbeaaac",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_3b2b5230",
         "filename": "SyntaxHighlight_GeSHi.php",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "langs.php is technically a configuration setting, so it ideally should go into extension.json. It should be much easier to automatically generate a JSON file than PHP...",
       "parentUuid": "6e7c4fa4_3b2b5230",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_de66cb4d",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-03-29T15:47:03Z",
+      "side": 1,
+      "message": "I\u0027ve sort of worked around this, it seems converting to JSON would be a separate task",
+      "parentUuid": "6e7c4fa4_3bdcb21b",
       "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
