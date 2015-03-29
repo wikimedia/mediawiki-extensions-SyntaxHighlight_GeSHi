@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_7bbeaaac",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-03-29T04:09:02Z",
+      "side": 1,
+      "message": "This can be a callback \"https://www.mediawiki.org/wiki/Manual:Extension_registration#Customizing_registration\"\n\nSame with autoloading geshi below",
+      "parentUuid": "6e7c4fa4_9bf866be",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_3b2b5230",
         "filename": "SyntaxHighlight_GeSHi.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_3bdcb21b",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-03-29T04:09:02Z",
+      "side": 1,
+      "message": "langs.php is technically a configuration setting, so it ideally should go into extension.json. It should be much easier to automatically generate a JSON file than PHP...",
+      "parentUuid": "6e7c4fa4_3b2b5230",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_5b2e4e3f",
         "filename": "SyntaxHighlight_GeSHi.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2015-03-29T00:15:22Z",
       "side": 1,
       "message": "long term. what are we doing with all these comments ?",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5bdf2e10",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-03-29T04:09:02Z",
+      "side": 1,
+      "message": "They should either go into a README file or on-wiki. Under \"config\", any key that starts with a @ will be ignored, so that can also be used for documentation purposes.",
+      "parentUuid": "6e7c4fa4_5b2e4e3f",
       "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
