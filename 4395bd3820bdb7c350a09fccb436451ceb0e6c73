@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9bf866be",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-03-29T00:15:22Z",
+      "side": 1,
+      "message": "i\u0027m guessing move this into an extension hook ?",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3b2b5230",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-03-29T00:15:22Z",
+      "side": 1,
+      "message": "but where do these 2 go ?",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5b2e4e3f",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-03-29T00:15:22Z",
+      "side": 1,
+      "message": "long term. what are we doing with all these comments ?",
+      "revId": "4395bd3820bdb7c350a09fccb436451ceb0e6c73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
