@@ -54,8 +54,6 @@ class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 		return max( array(
 			$this->getDefinitionMtime( $context ),
 			self::safeFilemtime( __FILE__ ),
-			self::safeFilemtime( __DIR__ . '/SyntaxHighlight_GeSHi.class.php' ),
-			self::safeFilemtime( __DIR__ . '/geshi/geshi.php' ),
 			self::safeFilemtime( GESHI_LANG_ROOT . "/{$this->lang}.php" ),
 		) );
 	}
@@ -68,6 +66,7 @@ class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 		return array(
 			'class' => get_class( $this ),
 			'lang' => $this->lang,
+			'geshi' => GESHI_VERSION,
 		);
 	}
 }
