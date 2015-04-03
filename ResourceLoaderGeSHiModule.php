@@ -51,9 +51,16 @@ class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 	 * @return int
 	 */
 	public function getModifiedTime( ResourceLoaderContext $context ) {
+		static $selfmtime = null;
+		if ( $selfmtime === null ) {
+			// Cache this since there are 100s of instances of this module
+			// See also T93025, T85794.
+			$selfmtime = self::safeFilemtime( __FILE__ );
+		}
+
 		return max( array(
 			$this->getDefinitionMtime( $context ),
-			self::safeFilemtime( __FILE__ ),
+			$selfmtime,
 			self::safeFilemtime( GESHI_LANG_ROOT . "/{$this->lang}.php" ),
 		) );
 	}
