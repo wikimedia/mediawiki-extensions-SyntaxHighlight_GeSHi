@@ -26,12 +26,12 @@ class ResourceLoaderGeSHiLocalModule extends ResourceLoaderWikiModule {
 	 */
 	protected function getPages( ResourceLoaderContext $context ) {
 		global $wgUseSiteCss;
-		if ( $wgUseSiteCss ) {
-			return array(
-				'MediaWiki:Geshi.css' => array( 'type' => 'style' ),
-			);
-		} else {
+		if ( !$wgUseSiteCss ) {
 			return array();
 		}
+
+		return array(
+			'MediaWiki:Geshi.css' => array( 'type' => 'style' ),
+		);
 	}
 }
