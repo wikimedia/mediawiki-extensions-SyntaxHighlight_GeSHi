@@ -70,7 +70,7 @@ class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 	 * @return array
 	 */
 	public function getDefinitionSummary( ResourceLoaderContext $context ) {
-		$summary = parent::getDefinitionSummary();
+		$summary = parent::getDefinitionSummary( $context );
 		$summary[] = array(
 			'lang' => $this->lang,
 			'geshi' => GESHI_VERSION,
