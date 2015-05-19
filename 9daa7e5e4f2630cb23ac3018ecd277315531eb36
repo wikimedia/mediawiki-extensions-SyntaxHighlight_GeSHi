@@ -50,6 +50,24 @@
       "revId": "9daa7e5e4f2630cb23ac3018ecd277315531eb36",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_161f350e",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-19T15:30:03Z",
+      "side": 1,
+      "message": "Something like [\"css\": \"css\"]",
+      "parentUuid": "0ed113e2_b6a50902",
+      "revId": "9daa7e5e4f2630cb23ac3018ecd277315531eb36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
