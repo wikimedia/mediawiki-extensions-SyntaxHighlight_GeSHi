@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_56529d16",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-05-19T15:14:43Z",
+      "side": 1,
+      "message": "Use __DIR__",
+      "revId": "9daa7e5e4f2630cb23ac3018ecd277315531eb36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_360d9939",
         "filename": "SyntaxHighlight_GeSHi.langs.php",
         "patchSetId": 10
@@ -13,6 +30,23 @@
       "writtenOn": "2015-05-19T15:11:00Z",
       "side": 1,
       "message": "Need to update maintenance/updateLanguageList.php and run it again to update the timestamp here",
+      "revId": "9daa7e5e4f2630cb23ac3018ecd277315531eb36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_b6a50902",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-05-19T15:14:43Z",
+      "side": 1,
+      "message": "This should probably be an attribute...",
       "revId": "9daa7e5e4f2630cb23ac3018ecd277315531eb36",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
