@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_360d9939",
+        "filename": "SyntaxHighlight_GeSHi.langs.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-19T15:11:00Z",
+      "side": 1,
+      "message": "Need to update maintenance/updateLanguageList.php and run it again to update the timestamp here",
+      "revId": "9daa7e5e4f2630cb23ac3018ecd277315531eb36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
