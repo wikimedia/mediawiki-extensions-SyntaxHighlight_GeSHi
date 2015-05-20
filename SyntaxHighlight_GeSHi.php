@@ -59,7 +59,6 @@ $wgSyntaxHighlightKeywordLinks = false;
 
 $dir = __DIR__ . '/';
 $wgMessagesDirs['SyntaxHighlight_GeSHi'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.i18n.php';
 
 $wgAutoloadClasses['SyntaxHighlight_GeSHi'] = $dir . 'SyntaxHighlight_GeSHi.class.php';
 $wgAutoloadClasses['ResourceLoaderGeSHiModule'] = $dir . 'ResourceLoaderGeSHiModule.php';
