@@ -38,7 +38,12 @@ class SyntaxHighlight_GeSHi {
 			die( 'This version of SyntaxHighlight GeSHi requires MediaWiki 1.25' );
 		}
 
-		require_once __DIR__ . '/SyntaxHighlight_GeSHi.langs.php';
+		global $wgGeSHiSupportedLanguages;
+		if ( !$wgGeSHiSupportedLanguages ) {
+			// If not set already, load it (@see ExtensionRegistry::exportExtractedData)
+			require_once __DIR__ . '/SyntaxHighlight_GeSHi.langs.php';
+		}
+		// @fixme we shouldn't be loading this on ever request
 		require_once __DIR__ . '/geshi/geshi.php';
 	}
 
