@@ -10,5 +10,5 @@
 	"syntaxhighlight-supported": "Süntaksi esiletõstu toetavad keeled:",
 	"syntaxhighlight-err-loading": "(toetatud keelte loetelu laadimisel esines viga)",
 	"syntaxhighlight-err-language": "Vigane keel.",
-	"geshi.css": "/* CSS mis on asetatud siia, määrab GeSHi süntaksi esiletoomise stiili */"
+	"geshi.css": "/* Siin asuvat kaskaadilaadistikku rakendatakse süntaksi GeSHi-esiletõstu juures. */"
 }
