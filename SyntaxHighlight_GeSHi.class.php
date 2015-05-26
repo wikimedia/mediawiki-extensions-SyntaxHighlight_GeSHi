@@ -550,6 +550,7 @@ class SyntaxHighlight_GeSHi {
 
 		foreach ( self::getSupportedLanguages() as $lang ) {
 			$modules["ext.geshi.language.$lang" ] = array(
+				'position' => 'top',
 				'class' => 'ResourceLoaderGeSHiModule',
 				'lang' => $lang,
 			);

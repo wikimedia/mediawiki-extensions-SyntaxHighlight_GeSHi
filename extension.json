@@ -24,6 +24,7 @@
 	},
 	"ResourceModules": {
 		"ext.geshi.local": {
+			"position": "top",
 			"class": "ResourceLoaderGeSHiLocalModule"
 		}
 	},

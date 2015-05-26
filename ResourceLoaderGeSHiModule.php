@@ -19,16 +19,28 @@
 
 class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 
+	/** @var string Position on the page to load this module at */
+	protected $position = 'bottom';
+
 	/**
 	 * @var string
 	 */
 	protected $lang;
 
 	/**
-	 * @param array $info Module definition.
+	 * @param array $options Module definition.
 	 */
-	function __construct( $info ) {
-		$this->lang = $info['lang'];
+	function __construct( $options ) {
+		foreach ( $options as $member => $option ) {
+			switch ( $member ) {
+				case 'position':
+					$this->isPositionDefined = true;
+					// Don't break, we want to set the property as well
+				case 'lang':
+					$this->{$member} = (string)$option;
+					break;
+			}
+		}
 	}
 
 	/**
@@ -76,5 +88,9 @@ class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 			'geshi' => GESHI_VERSION,
 		);
 		return $summary;
+	}
+
+	public function getPosition() {
+		return $this->position;
 	}
 }
