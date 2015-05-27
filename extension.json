@@ -6,7 +6,8 @@
 		"Tim Starling",
 		"Rob Church",
 		"Niklas Laxström",
-		"Ori Livneh"
+		"Ori Livneh",
+		"Ed Sanders"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi",
 	"descriptionmsg": "syntaxhighlight-desc",
@@ -19,7 +20,8 @@
 	},
 	"AutoloadClasses": {
 		"SyntaxHighlight_GeSHi": "SyntaxHighlight_GeSHi.class.php",
-		"GeSHi": "SyntaxHighlight_GeSHi.compat.php"
+		"GeSHi": "SyntaxHighlight_GeSHi.compat.php",
+		"ResourceLoaderGeSHiDataModule": "ResourceLoaderGeSHiDataModule.php"
 	},
 	"ExtensionFunctions": [
 		"SyntaxHighlight_GeSHi::onSetup"
@@ -39,6 +41,30 @@
 				"pygments.wrapper.css",
 				"pygments.generated.css"
 			]
+		},
+		"ext.geshi.visualEditor": {
+			"scripts": [
+				"VisualEditor/ve.dm.MWSyntaxHighlightNode.js",
+				"VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
+				"VisualEditor/ve.ui.MWSyntaxHighlightInspector.js",
+				"VisualEditor/ve.ui.MWSyntaxHighlightInspectorTool.js"
+			],
+			"styles": [
+				"VisualEditor/ve.ui.MWSyntaxHighlightInspector.css"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore",
+				"ext.geshi.data"
+			],
+			"messages": [
+				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code",
+				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language",
+				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title"
+			],
+			"targets": [ "desktop", "mobile" ]
+		},
+		"ext.geshi.data": {
+			"class": "ResourceLoaderGeSHiDataModule"
 		}
 	},
 	"Hooks": {
@@ -59,6 +85,9 @@
 		"css": "css",
 		"javascript": "javascript"
 	},
+	"VisualEditorPluginModules": [
+		"ext.geshi.visualEditor"
+	],
 	"config": {
 		"PygmentizePath": false
 	},

@@ -8,5 +8,8 @@
 			"Umherirrender"
 		]
 	},
-	"syntaxhighlight-desc": "{{desc|name=Syntax Highlight GeSHi|url=https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi}}"
+	"syntaxhighlight-desc": "{{desc|name=Syntax Highlight GeSHi|url=https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi}}",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Label for the code input field",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Label for the language field",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Title for the VisualEditor syntax highlighter inspector, above the text area for the code"
 }
