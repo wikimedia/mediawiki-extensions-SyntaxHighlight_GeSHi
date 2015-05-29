@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_71e0c093",
+        "filename": "ResourceLoaderGeSHiModule.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-05-29T03:44:25Z",
+      "side": 1,
+      "message": "Probably deserves a comment that the lack of a break is intentional here.",
+      "revId": "63c23c999fa366cbe531a783e58a9b3c838a3fa4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
