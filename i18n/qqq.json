@@ -9,6 +9,9 @@
 		]
 	},
 	"syntaxhighlight-desc": "{{desc|name=Syntax Highlight GeSHi|url=https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi}}",
+	"syntaxhighlight-specify": "Error message shown to the user above an example of how to set a language.",
+	"syntaxhighlight-supported": "Error message shown to the user above a list of supported languages.",
+	"syntaxhighlight-err-loading": "Error message shown to the user if loading the list of supported languages fails.",
 	"syntaxhighlight-err-language": "Error message shown if the user inputs an invalid or unsupported language.",
 	"geshi.css": "CSS comment"
 }

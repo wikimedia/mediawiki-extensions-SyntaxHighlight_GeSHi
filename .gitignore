@@ -3,3 +3,4 @@
 *.kate-swp
 .*.swp
 .idea
+node_modules
