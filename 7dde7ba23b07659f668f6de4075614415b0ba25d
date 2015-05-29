@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_d7e079f9",
+        "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-29T17:52:42Z",
+      "side": 1,
+      "message": "docs",
+      "revId": "7dde7ba23b07659f668f6de4075614415b0ba25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_97eaf1d5",
+        "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-29T17:52:42Z",
+      "side": 1,
+      "message": "docs",
+      "revId": "7dde7ba23b07659f668f6de4075614415b0ba25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_f7bc9dd7",
+        "filename": "modules/VisualEditor/ve.ui.MWSyntaxHighlightInspector.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-29T17:52:42Z",
+      "side": 1,
+      "message": "MWLiveExtensionInspector",
+      "revId": "7dde7ba23b07659f668f6de4075614415b0ba25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
