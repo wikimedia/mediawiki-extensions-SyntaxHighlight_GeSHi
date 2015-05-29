@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_68c8ca77",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-05-29T22:20:40Z",
+      "side": 1,
+      "message": "According to error log the above which is \"ext.visualEditor.mwcore\", does not exist this should be either removed or added.",
+      "revId": "7dde7ba23b07659f668f6de4075614415b0ba25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_d7e079f9",
         "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
         "patchSetId": 7
