@@ -20,21 +20,6 @@
  * Custom ResourceLoader module that loads a Geshi.css per-wiki.
  */
 class ResourceLoaderGeSHiLocalModule extends ResourceLoaderWikiModule {
-
-	/** @var string Position on the page to load this module at */
-	protected $position = 'bottom';
-
-	public function __construct( $options ) {
-		foreach ( $options as $member => $option ) {
-			switch ( $member ) {
-				case 'position':
-					$this->isPositionDefined = true;
-					$this->{$member} = (string)$option;
-					break;
-			}
-		}
-	}
-
 	/**
 	 * @param $context ResourceLoaderContext
 	 * @return array
@@ -48,9 +33,5 @@ class ResourceLoaderGeSHiLocalModule extends ResourceLoaderWikiModule {
 		return array(
 			'MediaWiki:Geshi.css' => array( 'type' => 'style' ),
 		);
-	}
-
-	public function getPosition() {
-		return $this->position;
 	}
 }
