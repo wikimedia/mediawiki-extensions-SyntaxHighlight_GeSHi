@@ -48,6 +48,7 @@
 	"config": {
 		"SyntaxHighlightDefaultLang": null,
 		"SyntaxHighlightKeywordLinks": false,
-		"GeSHiSupportedLanguages" : null
-	}
+		"GeSHiSupportedLanguages": null
+	},
+	"manifest_version": 1
 }
