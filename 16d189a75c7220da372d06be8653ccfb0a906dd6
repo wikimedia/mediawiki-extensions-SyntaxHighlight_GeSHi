@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_f999f671",
+        "filename": "SyntaxHighlight_GeSHi.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-05-29T15:00:23Z",
+      "side": 1,
+      "message": "This is what extension.json is for.",
+      "revId": "16d189a75c7220da372d06be8653ccfb0a906dd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
