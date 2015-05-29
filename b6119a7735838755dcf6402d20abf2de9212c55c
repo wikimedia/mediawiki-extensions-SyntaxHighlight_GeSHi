@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_79d3c605",
+        "filename": "extension.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-05-29T15:07:28Z",
+      "side": 1,
+      "message": "TBF I\u0027m not actually sure this works…",
+      "revId": "b6119a7735838755dcf6402d20abf2de9212c55c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
