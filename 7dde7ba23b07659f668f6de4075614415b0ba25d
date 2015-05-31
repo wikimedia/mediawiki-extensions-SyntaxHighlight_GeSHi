@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_799e5b0c",
+        "filename": "i18n/en.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-05-31T19:48:23Z",
+      "side": 1,
+      "message": "Let\u0027s call this \"Code block\"",
+      "revId": "7dde7ba23b07659f668f6de4075614415b0ba25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_d7e079f9",
         "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
         "patchSetId": 7
