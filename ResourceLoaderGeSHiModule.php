@@ -71,7 +71,6 @@ class ResourceLoaderGeSHiModule extends ResourceLoaderModule {
 		}
 
 		return max( array(
-			$this->getDefinitionMtime( $context ),
 			$selfmtime,
 			self::safeFilemtime( GESHI_LANG_ROOT . "/{$this->lang}.php" ),
 		) );
