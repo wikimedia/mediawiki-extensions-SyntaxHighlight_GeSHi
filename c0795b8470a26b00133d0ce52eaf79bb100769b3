@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_a4323d04",
+        "filename": "ResourceLoaderGeSHiDataModule.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-03T14:15:18Z",
+      "side": 1,
+      "message": "These two methods have been deprecated. ResourceLoader now supports tracking arrays and hashes thereof directly without needing to convert to a timestamp.\n\nImplement getDefinitionSummary() and append an array with the value of wgGeSHiSupportedLanguages. Example:\n\nhttps://github.com/wikimedia/mediawiki-extensions-EventLogging/blob/7ef9d76e9da2fd77e5599a7b15a2780f7d2f5f47/includes/ResourceLoaderSchemaModule.php#L93-L99\n\nWe\u0027re still converting existing code, but new code should use this.",
+      "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_c42d01a5",
+        "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-03T14:15:18Z",
+      "side": 1,
+      "message": "Should the parent class somehow wait for this to load? Perhaps using the loader.using() promise.",
+      "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
