@@ -33,6 +33,23 @@
       "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aedf27f1_624d7b9b",
+        "filename": "modules/VisualEditor/ve.dm.MWSyntaxHighlightNode.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-05T18:06:51Z",
+      "side": 1,
+      "message": "Should probably account for \"\u003csource\u003e\" as well, which is significantly more in use than \u003csyntaxhighlight\u003e – which was only added relatively recently. \n\nWe can either fix it from the PHP and/or Parsoid side to normalise that  to syntaxhighlight (preferable) or we can turn this into an array (and/or override getMatchRdfaTypes to check for both).",
+      "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
