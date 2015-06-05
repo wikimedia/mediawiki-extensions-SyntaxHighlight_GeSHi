@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_37e9fa7b",
+        "filename": "ResourceLoaderGeSHiDataModule.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-06-05T21:44:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_a4323d04",
+      "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_c42d01a5",
         "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
         "patchSetId": 9
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_d757565b",
+        "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-06-05T21:44:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_c42d01a5",
+      "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aedf27f1_624d7b9b",
         "filename": "modules/VisualEditor/ve.dm.MWSyntaxHighlightNode.js",
         "patchSetId": 9
@@ -47,6 +83,24 @@
       "writtenOn": "2015-06-05T18:06:51Z",
       "side": 1,
       "message": "Should probably account for \"\u003csource\u003e\" as well, which is significantly more in use than \u003csyntaxhighlight\u003e – which was only added relatively recently. \n\nWe can either fix it from the PHP and/or Parsoid side to normalise that  to syntaxhighlight (preferable) or we can turn this into an array (and/or override getMatchRdfaTypes to check for both).",
+      "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_17e4fea2",
+        "filename": "modules/VisualEditor/ve.dm.MWSyntaxHighlightNode.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2015-06-05T21:44:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aedf27f1_624d7b9b",
       "revId": "c0795b8470a26b00133d0ce52eaf79bb100769b3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
