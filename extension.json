@@ -51,6 +51,7 @@
 				"VisualEditor/ve.ui.MWSyntaxHighlightInspectorTool.js"
 			],
 			"styles": [
+				"VisualEditor/ve.ce.MWSyntaxHighlightNode.css",
 				"VisualEditor/ve.ui.MWSyntaxHighlightInspector.css"
 			],
 			"dependencies": [
@@ -59,6 +60,7 @@
 			"messages": [
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code",
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language",
+				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines",
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title"
 			],
 			"targets": [ "desktop", "mobile" ]
