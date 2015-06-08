@@ -384,7 +384,7 @@ class SyntaxHighlight_GeSHi {
 
 		self::initialise();
 		$geshi = new GeSHi( $text, $lang );
-		if ( $geshi->error() == GESHI_ERROR_NO_SUCH_LANG ) {
+		if ( $geshi->error == GESHI_ERROR_NO_SUCH_LANG ) {
 			return null;
 		}
 		$geshi->set_encoding( 'UTF-8' );
