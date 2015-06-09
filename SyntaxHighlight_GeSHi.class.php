@@ -102,7 +102,7 @@ class SyntaxHighlight_GeSHi {
 
 		// Line numbers
 		if ( isset( $args['line'] ) ) {
-			$geshi->enable_line_numbers( GESHI_FANCY_LINE_NUMBERS );
+			$geshi->enable_line_numbers( GESHI_NORMAL_LINE_NUMBERS );
 		}
 		// Highlighting specific lines
 		if ( isset( $args['highlight'] ) ) {
