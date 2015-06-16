@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,35 +16,50 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+use KzykHys\Pygments\Pygments;
+
 class SyntaxHighlight_GeSHi {
-	/**
-	 * Has GeSHi been initialised this session?
-	 */
-	private static $initialised = false;
+
+	/** @var const The maximum number of lines that may be selected for highlighting. **/
+	const HIGHLIGHT_MAX_LINES = 1000;
+
+	/** @var const Maximum input size for the highlighter (100 kB). **/
+	const HIGHLIGHT_MAX_BYTES = 102400;
+
+	/** @var const CSS class for syntax-highlighted code. **/
+	const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
+
+	/** @var array Mapping of MIME-types to lexer names. **/
+	private static $mimeLexers = array(
+		'text/javascript'  => 'javascript',
+		'application/json' => 'javascript',
+		'text/xml'         => 'xml',
+	);
 
 	/**
-	 * List of languages available to GeSHi
-	 * @var array
+	 * Get the Pygments lexer name for a particular language.
+	 *
+	 * @param string $lang Language name.
+	 * @return string|null Lexer name, or null if no matching lexer.
 	 */
-	private static $languages = null;
+	private static function getLexer( $lang ) {
+		static $lexers = null;
 
-	/**
-	 * Executed after processing extension.json
-	 * @todo we should figure out how to make this a real config setting.
-	 */
-	public static function registerExtension() {
-		global $wgVersion;
-		if ( version_compare( $wgVersion, '1.25', '<' ) ) {
-			die( 'This version of SyntaxHighlight GeSHi requires MediaWiki 1.25' );
+		if ( !$lexers ) {
+			$lexers = require __DIR__ . '/SyntaxHighlight_GeSHi.lexers.php';
 		}
 
-		global $wgGeSHiSupportedLanguages;
-		if ( !$wgGeSHiSupportedLanguages ) {
-			// If not set already, load it (@see ExtensionRegistry::exportExtractedData)
-			require_once __DIR__ . '/SyntaxHighlight_GeSHi.langs.php';
+		$lexer = strtolower( $lang );
+
+		if ( isset( GeSHi::$compatibleLexers[$lexer] ) ) {
+			$lexer = GeSHi::$compatibleLexers[$lexer];
 		}
-		// @fixme we shouldn't be loading this on every request
-		require_once __DIR__ . '/geshi/geshi.php';
+
+		if ( in_array( $lexer, $lexers ) ) {
+			return $lexer;
+		}
+
+		return null;
 	}
 
 	/**
@@ -54,10 +68,10 @@ class SyntaxHighlight_GeSHi {
 	 * @param $parser Parser
 	 * @return bool
 	 */
-	public static function configureParser( &$parser ) {
-		$parser->setHook( 'source', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
-		$parser->setHook( 'syntaxhighlight', array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
-		return true;
+	public static function onParserFirstCallInit( Parser &$parser ) {
+		foreach ( array( 'source', 'syntaxhighlight' ) as $tag ) {
+			$parser->setHook( $tag, array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
+		}
 	}
 
 	/**
@@ -69,114 +83,117 @@ class SyntaxHighlight_GeSHi {
 	 * @return string
 	 */
 	public static function parserHook( $text, $args = array(), $parser ) {
-		global $wgSyntaxHighlightDefaultLang, $wgUseTidy;
-		self::initialise();
-		$text = rtrim( $text );
+		global $wgUseTidy;
+
 		// Don't trim leading spaces away, just the linefeeds
-		$text = preg_replace( '/^\n+/', '', $text );
+		$out = preg_replace( '/^\n+/', '', rtrim( $text ) );
 
 		// Validate language
-		if ( isset( $args['lang'] ) && $args['lang'] ) {
-			$lang = $args['lang'];
+		if ( isset( $args['lang'] ) ) {
+			$lexer = self::getLexer( $args['lang'] );
 		} else {
-			// language is not specified. Check if default exists, if yes, use it.
-			if ( !is_null( $wgSyntaxHighlightDefaultLang ) ) {
-				$lang = $wgSyntaxHighlightDefaultLang;
-			} else {
-				$error = self::formatLanguageError( $text );
-				return $error;
-			}
-		}
-		$lang = strtolower( $lang );
-		if ( !preg_match( '/^[a-z_0-9-]*$/', $lang ) ) {
-			$error = self::formatLanguageError( $text );
-			return $error;
-		}
-		$geshi = self::prepare( $text, $lang );
-		if ( !$geshi instanceof GeSHi ) {
-			$error = self::formatLanguageError( $text );
-			return $error;
+			$lexer = null;
 		}
 
-		$enclose = self::getEncloseType( $args );
+		$out = self::highlight( $out, $lexer, $args );
 
-		// Line numbers
-		if ( isset( $args['line'] ) ) {
-			$geshi->enable_line_numbers( GESHI_NORMAL_LINE_NUMBERS );
-		}
-		// Highlighting specific lines
-		if ( isset( $args['highlight'] ) ) {
-			$lines = self::parseHighlightLines( $args['highlight'] );
-			if ( count( $lines ) ) {
-				$geshi->highlight_lines_extra( $lines );
-			}
-		}
-		// Starting line number
-		if ( isset( $args['start'] ) ) {
-			$geshi->start_line_numbers_at( $args['start'] );
-		}
-		$geshi->set_header_type( $enclose );
-		// Strict mode
-		if ( isset( $args['strict'] ) ) {
-			$geshi->enable_strict_mode();
-		}
-		// Format
-		$out = $geshi->parse_code();
-		if ( $geshi->error == GESHI_ERROR_NO_SUCH_LANG ) {
-			// Common error :D
-			$error = self::formatLanguageError( $text );
-			return $error;
-		}
-		$err = $geshi->error();
-		if ( $err ) {
-			// Other unknown error!
-			$error = self::formatError( $err );
-			return $error;
-		}
-		// Armour for Parser::doBlockLevels()
-		if ( $enclose === GESHI_HEADER_DIV ) {
-			$out = str_replace( "\n", '', $out );
-		}
 		// HTML Tidy will convert tabs to spaces incorrectly (bug 30930).
 		// But the conversion from tab to space occurs while reading the input,
 		// before the conversion from &#9; to tab, so we can armor it that way.
 		if ( $wgUseTidy ) {
 			$out = str_replace( "\t", '&#9;', $out );
 		}
+
 		// Register CSS
-		$parser->getOutput()->addModuleStyles( array( "ext.geshi.language.$lang", 'ext.geshi.local' ) );
-
-		$encloseTag = $enclose === GESHI_HEADER_NONE ? 'span' : 'div';
-		$attribs = Sanitizer::validateTagAttributes( $args, $encloseTag );
-
-		//lang is valid in HTML context, but also used on GeSHi
-		unset( $attribs['lang'] );
-
-		if ( $enclose === GESHI_HEADER_NONE ) {
-			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi ' . $lang . ' source-' . $lang );
-		} else {
-			// Default dir="ltr" (but allow dir="rtl", although unsure if needed)
-			$attribs['dir'] = isset( $attribs['dir'] ) && $attribs['dir'] === 'rtl' ? 'rtl' : 'ltr';
-			$attribs = self::addAttribute( $attribs, 'class', 'mw-geshi mw-code mw-content-' . $attribs['dir'] );
-		}
-		$out = Html::rawElement( $encloseTag, $attribs, $out );
+		$parser->getOutput()->addModuleStyles( 'ext.pygments' );
 
 		return $out;
 	}
 
 	/**
-	 * @param $attribs array
-	 * @param $name string
-	 * @param $value string
-	 * @return array
+	 * Highlight a code-block using a particular lexer.
+	 *
+	 * @param string $code Code to highlight.
+	 * @param string|null $lexer Lexer name, or null to use plain markup.
+	 * @param array $args Associative array of additional arguments. If it
+	 *  contains a 'line' key, the output will include line numbers. If it
+	 *  includes a 'highlight' key, the value will be parsed as a
+	 *  comma-separated list of lines and line-ranges to highlight. If it
+	 *  contains a 'start' key, the value will be used as the line at which to
+	 *  start highlighting.
+	 * @return string Highlighted code as HTML.
 	 */
-	private static function addAttribute( $attribs, $name, $value ) {
-		if ( isset( $attribs[$name] ) ) {
-			$attribs[$name] = $value . ' ' . $attribs[$name];
-		} else {
-			$attribs[$name] = $value;
+	protected static function highlight( $code, $lexer = null, $args = array() ) {
+		global $wgPygmentizePath;
+
+		if ( strlen( $code ) > self::HIGHLIGHT_MAX_BYTES ) {
+			$lexer = null;
 		}
-		return $attribs;
+
+		$inline = isset( $args['enclose'] ) && $args['enclose'] === 'span';
+		$attrs = array( 'class' => self::HIGHLIGHT_CSS_CLASS );
+
+		if ( $lexer === null ) {
+			if ( $inline ) {
+				return Html::element( 'span', $attrs, trim( $code ) );
+			}
+			$pre = Html::element( 'pre', array(), $code );
+			return Html::rawElement( 'div', $attrs, $pre );
+		}
+
+		$options = array(
+			'cssclass' => self::HIGHLIGHT_CSS_CLASS,
+			'encoding' => 'utf-8',
+		);
+
+		// Line numbers
+		if ( isset( $args['line'] ) ) {
+			$options['linenos'] = 'inline';
+		}
+
+		if ( $lexer === 'php' && strpos( $code, '<?php' ) === false ) {
+			$options['startinline'] = 1;
+		}
+
+		// Highlight specific lines
+		if ( isset( $args['highlight'] ) ) {
+			$lines = self::parseHighlightLines( $args['highlight'] );
+			if ( count( $lines ) ) {
+				$options['hl_lines'] = implode( ',', $lines );
+			}
+		}
+
+		// Starting line number
+		if ( isset( $args['start'] ) ) {
+			$options['linenostart'] = $args['start'];
+		}
+
+		if ( $inline ) {
+			$options['nowrap'] = 1;
+		}
+
+		$cache = wfGetMainCache();
+		$cacheKey = 'highlight:' . md5( json_encode( array( $lexer, $code, $options ) ) );
+		$output = $cache->get( $cacheKey );
+
+		if ( $output === false ) {
+			try {
+				$pygments = new Pygments( $wgPygmentizePath );
+				$output = $pygments->highlight( $code, $lexer, 'html', $options );
+			} catch ( RuntimeException $e ) {
+				wfWarn( 'Failed to invoke Pygments. Please check that Pygments is installed ' .
+					'and that $wgPygmentizePath is accurate.' );
+				return self::highlight( $code, null, $args );
+			}
+			$cache->set( $cacheKey, $output );
+		}
+
+		if ( $inline ) {
+			return Html::rawElement( 'span', $attrs, trim( $output ) );
+		}
+
+		return $output;
+
 	}
 
 	/**
@@ -185,68 +202,33 @@ class SyntaxHighlight_GeSHi {
 	 *
 	 * Input is comma-separated list of lines or line ranges.
 	 *
-	 * @param $arg string
-	 * @return array of ints
+	 * @param string $lineSpec
+	 * @return int[] Line numbers.
 	 */
-	protected static function parseHighlightLines( $arg ) {
+	protected static function parseHighlightLines( $lineSpec ) {
 		$lines = array();
-		$values = array_map( 'trim', explode( ',', $arg ) );
-		foreach ( $values as $value ) {
-			if ( ctype_digit($value) ) {
-				$lines[] = (int) $value;
-			} elseif ( strpos( $value, '-' ) !== false ) {
-				list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
-				if ( self::validHighlightRange( $start, $end ) ) {
-					for ($i = intval( $start ); $i <= $end; $i++ ) {
-						$lines[] = $i;
-					}
-				} else {
-					wfDebugLog( 'geshi', "Invalid range: $value\n" );
+
+		foreach ( preg_split( '/\s*,\s*/', $lineSpec ) as $spec ) {
+			// Individual line
+			if ( ctype_digit( $spec ) ) {
+				$lines[] = (int) $spec;
+			}
+
+			// Range of lines
+			if ( preg_match( '/^(?P<start>\d+) *- *(?P<end>\d+)$/', $spec, $match ) ) {
+				$range = $match['start'] - $match['end'];
+				if ( $range > 0 && $range <= self::HIGHLIGHT_MAX_LINES ) {
+					$lines = array_merge( $lines,  range( $match['start'], $match['end'] ) );
 				}
-			} else {
-				wfDebugLog( 'geshi', "Invalid line: $value\n" );
+			}
+
+			if ( count( $lines ) > self::HIGHLIGHT_MAX_LINES ) {
+				$lines = array_slice( $lines, 0, self::HIGHLIGHT_MAX_LINES );
+				break;
 			}
 		}
+
 		return $lines;
-	}
-
-	/**
-	 * Validate a provided input range
-	 * @param $start
-	 * @param $end
-	 * @return bool
-	 */
-	protected static function validHighlightRange( $start, $end ) {
-		// Since we're taking this tiny range and producing a an
-		// array of every integer between them, it would be trivial
-		// to DoS the system by asking for a huge range.
-		// Impose an arbitrary limit on the number of lines in a
-		// given range to reduce the impact.
-		$arbitrarilyLargeConstant = 10000;
-		return
-			ctype_digit($start) &&
-			ctype_digit($end) &&
-			$start > 0 &&
-			$start < $end &&
-			$end - $start < $arbitrarilyLargeConstant;
-	}
-
-	/**
-	 * @param $args array
-	 * @return int
-	 */
-	static function getEncloseType( $args ) {
-		// "Enclose" parameter
-		$enclose = GESHI_HEADER_PRE_VALID;
-		if ( isset( $args['enclose'] ) ) {
-			if ( $args['enclose'] === 'div' ) {
-				$enclose = GESHI_HEADER_DIV;
-			} elseif ( $args['enclose'] === 'none' ) {
-				$enclose = GESHI_HEADER_NONE;
-			}
-		}
-
-		return $enclose;
 	}
 
 	/**
@@ -256,31 +238,29 @@ class SyntaxHighlight_GeSHi {
 	 * @return bool
 	 * @since MW 1.21
 	 */
-	public static function renderHook( Content $content, Title $title,
-			$revId, ParserOptions $options, $generateHtml, ParserOutput &$output
-	) {
+	public static function onContentGetParserOutput( Content $content, Title $title,
+			$revId, ParserOptions $options, $generateHtml, ParserOutput &$output ) {
 
-		global $wgSyntaxHighlightModels, $wgUseSiteCss,
-			$wgParser, $wgTextModelsToParse;
-
-		$highlightModels = ExtensionRegistry::getInstance()->getAttribute( 'SyntaxHighlightModels' );
-
-		// Determine the language
-		$model = $content->getModel();
-		if ( !isset( $highlightModels[$model] ) && !isset( $wgSyntaxHighlightModels[$model] ) ) {
-			// We don't care about this model, carry on.
-			return true;
-		}
+		global $wgParser, $wgTextModelsToParse;
 
 		if ( !$generateHtml ) {
 			// Nothing special for us to do, let MediaWiki handle this.
 			return true;
 		}
 
+		// Determine the language
+		$extension = ExtensionRegistry::getInstance();
+		$models = $extension->getAttribute( 'SyntaxHighlightModels' );
+		$model = $content->getModel();
+		if ( !isset( $models[$model] ) ) {
+			// We don't care about this model, carry on.
+			return true;
+		}
+		$lexer = $models[$model];
+
 		// Hope that $wgSyntaxHighlightModels does not contain silly types.
 		$text = ContentHandler::getContentText( $content );
-
-		if ( $text === null || $text === false ) {
+		if ( !$text ) {
 			// Oops! Non-text content? Let MediaWiki handle this.
 			return true;
 		}
@@ -291,35 +271,16 @@ class SyntaxHighlight_GeSHi {
 			$output = $wgParser->parse( $text, $title, $options, true, true, $revId );
 		}
 
-		if ( isset( $highlightModels[$model] ) ) {
-			$lang = $highlightModels[$model];
-		} else {
-			// TODO: Add deprecation warning after a while?
-			$lang = $wgSyntaxHighlightModels[$model];
+		$out = self::highlight( $text, $lexer );
+		if ( !$out ) {
+			return true;
 		}
 
+		$output->addModuleStyles( 'ext.pygments' );
+		$output->setText( '<div dir="ltr">' . $out . '</div>' );
 
-		// Attempt to format
-		$geshi = self::prepare( $text, $lang );
-		if ( $geshi instanceof GeSHi ) {
-
-			$out = $geshi->parse_code();
-			if ( !$geshi->error() ) {
-				// Done
-				$output->addModuleStyles( "ext.geshi.language.$lang" );
-				$output->setText( "<div dir=\"ltr\">{$out}</div>" );
-
-				if ( $wgUseSiteCss ) {
-					$output->addModuleStyles( 'ext.geshi.local' );
-				}
-
-				// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
-				return false;
-			}
-		}
-
-		// Bottle out
-		return true;
+		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
+		return false;
 	}
 
 	/**
@@ -331,233 +292,43 @@ class SyntaxHighlight_GeSHi {
 	 * @param string $format
 	 * @since MW 1.24
 	 */
-	public static function apiFormatHighlight( IContextSource $context, $text, $mime, $format ) {
-		switch ( $mime ) {
-			case 'text/javascript':
-			case 'application/json':
-				$lang = 'javascript';
-				break;
-
-			case 'text/xml':
-				$lang = 'xml';
-				break;
-
-			default:
-				// Don't know how to handle this
-				return true;
+	public static function onApiFormatHighlight( IContextSource $context, $text, $mime, $format ) {
+		if ( !isset( self::$mimeLexers[$mime] ) ) {
+			return true;
 		}
 
-		$geshi = self::prepare( $text, $lang );
-		if ( $geshi instanceof GeSHi ) {
-			$out = $geshi->parse_code();
-			if ( !$geshi->error() ) {
-				if ( preg_match( '/^<pre([^>]*)>/i', $out, $m ) ) {
-					$attrs = Sanitizer::decodeTagAttributes( $m[1] );
-					$attrs['class'] .= ' api-pretty-content';
-					$out = '<pre' . Sanitizer::safeEncodeTagAttributes( $attrs ) . '>' .
-						substr( $out, strlen( $m[0] ) );
-				}
-				$output = $context->getOutput();
-				$output->addModuleStyles( array( "ext.geshi.language.$lang", 'ext.geshi.local' ) );
-				$output->addHTML( "<div dir=\"ltr\">{$out}</div>" );
+		$lexer = self::$mimeLexers[$mime];
+		$out = self::highlight( $text, $lexer );
 
-				// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
-				return false;
-			}
+		if ( !$out ) {
+			return true;
 		}
 
-		// Bottle out
-		return true;
+		if ( preg_match( '/^<pre([^>]*)>/i', $out, $m ) ) {
+			$attrs = Sanitizer::decodeTagAttributes( $m[1] );
+			$attrs['class'] .= ' api-pretty-content';
+			$encodedAttrs = Sanitizer::safeEncodeTagAttributes( $attrs );
+			$out = '<pre' . $encodedAttrs. '>' .  substr( $out, strlen( $m[0] ) );
+		}
+		$output = $context->getOutput();
+		$output->addModuleStyles( 'ext.pygments' );
+		$output->addHTML( '<div dir="ltr">' . $out . '</div>' );
+
+		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
+		return false;
 	}
 
-	/**
-	 * Initialise a GeSHi object to format some code, performing
-	 * common setup for all our uses of it
-	 *
-	 * @param string $text
-	 * @param string $lang
-	 * @return GeSHi
-	 */
+	/** Backward-compatibility shim for extensions.  */
 	public static function prepare( $text, $lang ) {
-
-		global $wgSyntaxHighlightKeywordLinks;
-
-		self::initialise();
-		$geshi = new GeSHi( $text, $lang );
-		if ( $geshi->error == GESHI_ERROR_NO_SUCH_LANG ) {
-			return null;
-		}
-		$geshi->set_encoding( 'UTF-8' );
-		$geshi->enable_classes();
-		$geshi->set_overall_class( "source-$lang" );
-		$geshi->enable_keyword_links( $wgSyntaxHighlightKeywordLinks );
-
-		// If the source code is over 100 kB, disable higlighting of symbols.
-		// If over 200 kB, disable highlighting of strings too.
-		$bytes = strlen( $text );
-		if ( $bytes > 102400 ) {
-			$geshi->set_symbols_highlighting( false );
-			if ( $bytes > 204800 ) {
-				$geshi->set_strings_highlighting( false );
-			}
-		}
-
-		/**
-		 * GeSHi comes by default with a font-family set to monospace, which
-		 * causes the font-size to be smaller than one would expect.
-		 * We append a CSS hack to the default GeSHi styles: specifying 'monospace'
-		 * twice "resets" the browser font-size specified for monospace.
-		 *
-		 * The hack is documented in MediaWiki core under
-		 * docs/uidesign/monospace.html and in bug 33496.
-		 */
-		// Preserve default since we don't want to override the other style
-		// properties set by geshi (padding, font-size, vertical-align etc.)
-		$geshi->set_code_style(
-			'font-family: monospace, monospace;',
-			/* preserve defaults = */ true
-		);
-
-		// No need to preserve default (which is just "font-family: monospace;")
-		// outputting both is unnecessary
-		$geshi->set_overall_style(
-			'font-family: monospace, monospace;',
-			/* preserve defaults = */ false
-		);
-
-		return $geshi;
-	}
-
-	/**
-	 * Prepare a CSS snippet suitable for use as a ParserOutput/OutputPage
-	 * head item.
-	 *
-	 * Not used anymore, kept for backwards-compatibility with other extensions.
-	 *
-	 * @deprecated
-	 * @param GeSHi $geshi
-	 * @return string
-	 */
-	public static function buildHeadItem( $geshi ) {
 		wfDeprecated( __METHOD__ );
-		$css = array();
-		$css[] = '<style type="text/css">/*<![CDATA[*/';
-		$css[] = self::getCSS( $geshi );
-		$css[] = '/*]]>*/';
-		$css[] = '</style>';
-		return implode( "\n", $css );
+		$html = self::highlight( $text, $lang );
+		return new GeSHi( $html );
 	}
 
-	/**
-	 * Get the complete CSS code necessary to display styles for given GeSHi instance.
-	 *
-	 * @param GeSHi $geshi
-	 * @return string
-	 */
-	public static function getCSS( $geshi ) {
-		$lang = $geshi->language;
-		$css = array();
-		$css[] = ".source-$lang {line-height: normal;}";
-		$css[] = ".source-$lang li, .source-$lang pre {";
-		$css[] = "\tline-height: normal; border: 0px none white;";
-		$css[] = "}";
-		$css[] = $geshi->get_stylesheet( /*$economy_mode*/ false );
-		return implode( "\n", $css );
-	}
-
-	/**
-	 * Format an 'unknown language' error message and append formatted
-	 * plain text to it.
-	 *
-	 * @param string $text
-	 * @return string HTML fragment
-	 */
-	private static function formatLanguageError( $text ) {
-		$msg = wfMessage( 'syntaxhighlight-err-language' )->inContentLanguage()->escaped();
-		$error = self::formatError( $msg, $text );
-		return $error . '<pre>' . htmlspecialchars( $text ) . '</pre>';
-	}
-
-	/**
-	 * Format an error message
-	 *
-	 * @param string $error
-	 * @return string
-	 */
-	private static function formatError( $error = '' ) {
-		$html = '';
-		if ( $error ) {
-			$html .= "<p>{$error}</p>";
-		}
-		$html .= '<p>' . wfMessage( 'syntaxhighlight-specify')->inContentLanguage()->escaped()
-			. ' <samp>&lt;source lang=&quot;html4strict&quot;&gt;...&lt;/source&gt;</samp></p>'
-			. '<p>' . wfMessage( 'syntaxhighlight-supported' )->inContentLanguage()->escaped()
-			. '</p>' . self::formatLanguages();
-		return "<div style=\"border: solid red 1px; padding: .5em;\">{$html}</div>";
-	}
-
-	/**
-	 * Format the list of supported languages
-	 *
-	 * @return string
-	 */
-	private static function formatLanguages() {
-		$langs = self::getSupportedLanguages();
-		$list = array();
-		if ( count( $langs ) > 0 ) {
-			foreach ( $langs as $lang ) {
-				$list[] = '<samp>' . htmlspecialchars( $lang ) . '</samp>';
-			}
-			return '<p class="mw-collapsible mw-collapsed" style="padding: 0em 1em;">' . implode( ', ', $list ) . '</p><br style="clear: all"/>';
-		} else {
-			return '<p>' . wfMessage( 'syntaxhighlight-err-loading' )->inContentLanguage()->escaped() . '</p>';
-		}
-	}
-
-	/**
-	 * Get the list of supported languages
-	 *
-	 * @return array
-	 */
-	private static function getSupportedLanguages() {
-		global $wgGeSHiSupportedLanguages;
-		self::initialise();
-		return $wgGeSHiSupportedLanguages;
-	}
-
-	/**
-	 * Initialise messages and ensure the GeSHi class is loaded
-	 * @return bool
-	 */
-	private static function initialise() {
-		if ( !self::$initialised ) {
-			if ( !class_exists( 'GeSHi' ) ) {
-				require ( dirname( __FILE__ ) . '/geshi/geshi.php' );
-			}
-			self::$initialised = true;
-		}
-		return true;
-	}
-
-	/**
-	 * Register a ResourceLoader module providing styles for each supported language.
-	 *
-	 * @param ResourceLoader $resourceLoader
-	 * @return bool true
-	 */
-	public static function resourceLoaderRegisterModules( &$resourceLoader ) {
-		$modules = array();
-
-		foreach ( self::getSupportedLanguages() as $lang ) {
-			$modules["ext.geshi.language.$lang" ] = array(
-				'position' => 'top',
-				'class' => 'ResourceLoaderGeSHiModule',
-				'lang' => $lang,
-			);
-		}
-
-		$resourceLoader->register( $modules );
-
-		return true;
+	/** Backward-compatibility shim for extensions. */
+	public static function buildHeadItem( $geshi ) {
+			wfDeprecated( __METHOD__ );
+			$geshi->parse_code();
+			return '';
 	}
 }

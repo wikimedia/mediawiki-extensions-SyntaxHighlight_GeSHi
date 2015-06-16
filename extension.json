@@ -1,17 +1,17 @@
 {
 	"name": "SyntaxHighlight",
-	"version": "1.0.8.12",
+	"version": "2.0",
 	"author": [
 		"Brion Vibber",
 		"Tim Starling",
 		"Rob Church",
-		"Niklas Laxström"
+		"Niklas Laxström",
+		"Ori Livneh"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi",
 	"descriptionmsg": "syntaxhighlight-desc",
 	"license-name": "GPL-2.0+",
 	"type": "parserhook",
-	"callback": "SyntaxHighlight_GeSHi::registerExtension",
 	"MessagesDirs": {
 		"SyntaxHighlight_GeSHi": [
 			"i18n"
@@ -19,27 +19,30 @@
 	},
 	"AutoloadClasses": {
 		"SyntaxHighlight_GeSHi": "SyntaxHighlight_GeSHi.class.php",
-		"ResourceLoaderGeSHiModule": "ResourceLoaderGeSHiModule.php",
-		"ResourceLoaderGeSHiLocalModule": "ResourceLoaderGeSHiLocalModule.php"
+		"GeSHi": "SyntaxHighlight_GeSHi.compat.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "SyntaxHighlight_GeSHi/modules"
 	},
 	"ResourceModules": {
-		"ext.geshi.local": {
+		"ext.pygments": {
 			"position": "top",
-			"class": "ResourceLoaderGeSHiLocalModule"
+			"styles": [
+				"pygments.wrapper.css",
+				"pygments.generated.css"
+			]
 		}
 	},
 	"Hooks": {
 		"ParserFirstCallInit": [
-			"SyntaxHighlight_GeSHi::configureParser"
-		],
-		"ResourceLoaderRegisterModules": [
-			"SyntaxHighlight_GeSHi::resourceLoaderRegisterModules"
+			"SyntaxHighlight_GeSHi::onParserFirstCallInit"
 		],
 		"ContentGetParserOutput": [
-			"SyntaxHighlight_GeSHi::renderHook"
+			"SyntaxHighlight_GeSHi::onContentGetParserOutput"
 		],
 		"ApiFormatHighlight": [
-			"SyntaxHighlight_GeSHi::apiFormatHighlight"
+			"SyntaxHighlight_GeSHi::onApiFormatHighlight"
 		]
 	},
 	"SyntaxHighlightModels": {
@@ -47,9 +50,7 @@
 		"javascript": "javascript"
 	},
 	"config": {
-		"SyntaxHighlightDefaultLang": null,
-		"SyntaxHighlightKeywordLinks": false,
-		"GeSHiSupportedLanguages": null
+		"PygmentizePath": "pygmentize"
 	},
 	"manifest_version": 1
 }
