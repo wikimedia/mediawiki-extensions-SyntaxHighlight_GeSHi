@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "8ec42329_3e23c055",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-06-16T18:24:03Z",
+      "side": 1,
+      "message": "composer.json should not be edited by users, it\u0027s managed by git. Instead, create a composer.local.json with the following content:\n\n{\n    \"extra\": {\n        \"merge-plugin\": {\n            \"include\": [\n                \"extensions/SytaxHighlight_GeSHi/composer.json\"\n            ]\n        }\n    }\n}",
+      "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_fe1c581a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-06-16T18:24:03Z",
+      "side": 1,
+      "message": "We will need to figure out a solution for tarball users...",
+      "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_a859b92e",
         "filename": "SyntaxHighlight_GeSHi.class.php",
         "patchSetId": 2
