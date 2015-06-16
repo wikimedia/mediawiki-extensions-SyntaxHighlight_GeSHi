@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_a859b92e",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-06-16T08:42:32Z",
+      "side": 1,
+      "message": "Remove this since it would limit the highlighting making it less better then geshi since geshi doesn\u0027t need to add a max limit.",
+      "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_48a055f1",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-06-16T08:42:32Z",
+      "side": 1,
+      "message": "It should be unlimited.",
+      "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
