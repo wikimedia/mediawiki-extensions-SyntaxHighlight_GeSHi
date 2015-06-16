@@ -5,7 +5,7 @@
 			"Michaello"
 		]
 	},
-	"syntaxhighlight-desc": "Omogućava vizuelno označavanje sintakse <code>&lt;syntaxhighlight&gt;</code> korišćenjem [http://qbnz.com/highlighter/ GeSHi hajlajtera].",
+	"syntaxhighlight-desc": "Omogućava vizuelno označavanje sintakse <code>&lt;syntaxhighlight&gt;</code> korišćenjem [http://pygments.org/ GeSHi hajlajtera].",
 	"syntaxhighlight-specify": "Potrebno je odrediti jezik kao ovaj:",
 	"syntaxhighlight-supported": "Podržani jezici u vizuelom označavanju sintakse:",
 	"syntaxhighlight-err-loading": "(greška pri učitavanju podržanih jezika)",

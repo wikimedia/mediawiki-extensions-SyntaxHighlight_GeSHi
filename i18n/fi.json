@@ -5,7 +5,7 @@
 			"Nike"
 		]
 	},
-	"syntaxhighlight-desc": "Mahdollistaa syntaksin korostuksen [http://qbnz.com/highlighter/ GeSHillä] <code>&lt;syntaxhighlight&gt;</code>-elementtiä käyttämällä.",
+	"syntaxhighlight-desc": "Mahdollistaa syntaksin korostuksen [http://pygments.org/ GeSHillä] <code>&lt;syntaxhighlight&gt;</code>-elementtiä käyttämällä.",
 	"syntaxhighlight-specify": "Kieli pitää määritellä seuraavasti:",
 	"syntaxhighlight-supported": "Syntaksinkorostus on mahdollista seuraaville kielille:",
 	"syntaxhighlight-err-loading": "(tuettujen kielten luettelon lataaminen epäonnistui)",

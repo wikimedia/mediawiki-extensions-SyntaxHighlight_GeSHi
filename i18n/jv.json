@@ -4,7 +4,7 @@
 			"Meursault2004"
 		]
 	},
-	"syntaxhighlight-desc": "Mènèhaké panyorotan sintaksis <code>&lt;syntaxhighlight&gt;</code> nganggo [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Mènèhaké panyorotan sintaksis <code>&lt;syntaxhighlight&gt;</code> nganggo [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Panjenengan kudu nentokaké sawijining basa kaya iki:",
 	"syntaxhighlight-supported": "Basa-basa sing disengkuyung déning panandhan werna sintaksis:",
 	"syntaxhighlight-err-loading": "(ana kaluputan ngunggahaké daftar basa sing disengkuyung)",

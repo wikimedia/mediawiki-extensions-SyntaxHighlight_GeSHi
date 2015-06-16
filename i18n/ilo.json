@@ -4,7 +4,7 @@
 			"Lam-ang"
 		]
 	},
-	"syntaxhighlight-desc": "Mangited ti panangimaris ti eskritu <code>&lt;syntaxhighlight&gt;</code> nga agus-usar iti [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]",
+	"syntaxhighlight-desc": "Mangited ti panangimaris ti eskritu <code>&lt;syntaxhighlight&gt;</code> nga agus-usar iti [http://pygments.org/ GeSHi - Generic Syntax Highlighter]",
 	"syntaxhighlight-specify": "Nasken nga inaganan ti pagsasao a kasla daytoy:",
 	"syntaxhighlight-supported": "Dagiti nasuportaran a pagsasao para iti panangimaris ti eskritu:",
 	"syntaxhighlight-err-loading": "(biddut ti panangikarga ti listaan ti nasuportaran a pagsasao)",

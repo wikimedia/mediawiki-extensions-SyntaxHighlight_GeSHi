@@ -6,7 +6,7 @@
 			"Stelistcristi"
 		]
 	},
-	"syntaxhighlight-desc": "Produce evidențierea sintaxei prin baliza <code>&lt;syntaxhighlight&gt;</code> folosind [http://qbnz.com/highlighter/ GeSHi - Generic Syntax Highlighter]",
+	"syntaxhighlight-desc": "Produce evidențierea sintaxei prin baliza <code>&lt;syntaxhighlight&gt;</code> folosind [http://pygments.org/ GeSHi - Generic Syntax Highlighter]",
 	"syntaxhighlight-specify": "Trebuie să specificați o limbă în acest mod:",
 	"syntaxhighlight-supported": "Limbile suportate pentru evidențierea sintaxei:",
 	"syntaxhighlight-err-loading": "(eroare la încărcarea listei cu limbile suportate)",

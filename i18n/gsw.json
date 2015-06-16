@@ -4,7 +4,7 @@
 			"Als-Holder"
 		]
 	},
-	"syntaxhighlight-desc": "Syntax firihebe <code>&lt;syntaxhighlight&gt;</code> mit Hilf vum [http://qbnz.com/highlighter/ GeSHi-Highlighter]",
+	"syntaxhighlight-desc": "Syntax firihebe <code>&lt;syntaxhighlight&gt;</code> mit Hilf vum [http://pygments.org/ GeSHi-Highlighter]",
 	"syntaxhighlight-specify": "Di gwinscht Sproch muess eso definiert wäre:",
 	"syntaxhighlight-supported": "Unterstitzti Sproche fir s Fiirihebe vu dr Syntax:",
 	"syntaxhighlight-err-loading": "(Fehler bim Lade vu dr Sprochelischt)",

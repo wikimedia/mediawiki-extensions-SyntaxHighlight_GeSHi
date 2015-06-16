@@ -4,7 +4,7 @@
 			"BrokenArrow"
 		]
 	},
-	"syntaxhighlight-desc": "Evidenzia la sintassi dei linguaggi di programmazione <code>&lt;syntaxhighlight&gt;</code> tramite [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Evidenzia la sintassi dei linguaggi di programmazione <code>&lt;syntaxhighlight&gt;</code> tramite [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "È necessario specificare un linguaggio in questo modo:",
 	"syntaxhighlight-supported": "Linguaggi di cui è possibile evidenziare la sintassi in colore:",
 	"syntaxhighlight-err-loading": "(errore nel caricamento dell'elenco dei linguaggi supportati)",

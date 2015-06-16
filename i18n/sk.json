@@ -4,7 +4,7 @@
 			"Helix84"
 		]
 	},
-	"syntaxhighlight-desc": "Poskytuje zvýazňovanie syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocou [http://qbnz.com/highlighter/ zvýrazňovača GeSHi]",
+	"syntaxhighlight-desc": "Poskytuje zvýazňovanie syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocou [http://pygments.org/ zvýrazňovača GeSHi]",
 	"syntaxhighlight-specify": "Musíte uviesť jazyk takto:",
 	"syntaxhighlight-supported": "Jazyky, pre ktoré je zvýrazňovanie syntaxe podporované:",
 	"syntaxhighlight-err-loading": "(chyba pri načítaní zoznamu podporovaných jazykov)",

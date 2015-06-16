@@ -4,7 +4,7 @@
 			"Michawiki"
 		]
 	},
-	"syntaxhighlight-desc": "Zmóžnja syntaksowe wuzwignjenje <code>&lt;syntaxhighlight&gt;</code> z pomocu [http://qbnz.com/highlighter/ rěda GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Zmóžnja syntaksowe wuzwignjenje <code>&lt;syntaxhighlight&gt;</code> z pomocu [http://pygments.org/ rěda Pygments]",
 	"syntaxhighlight-specify": "Musyš rěc kaž slědujo pódaś:",
 	"syntaxhighlight-supported": "Pódpěrane rěcy za syntaksowe wuzwignjenje:",
 	"syntaxhighlight-err-loading": "(zmólka pśi zacytowanju lisćiny pódpěranych rěcow)",

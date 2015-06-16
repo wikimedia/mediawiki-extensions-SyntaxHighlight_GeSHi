@@ -5,7 +5,7 @@
 			"Sp5uhe"
 		]
 	},
-	"syntaxhighlight-desc": "Zapewnia kolorowanie składni dla znacznika <code>&lt;syntaxhighlight&gt;</code> wykorzystując [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Zapewnia kolorowanie składni dla znacznika <code>&lt;syntaxhighlight&gt;</code> wykorzystując [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Musisz wybrać język w następujący sposób:",
 	"syntaxhighlight-supported": "Języki obsługiwane w podświetlaniu składni:",
 	"syntaxhighlight-err-loading": "(błąd przy wczytywaniu listy obsługiwanych języków)",

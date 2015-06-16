@@ -4,7 +4,7 @@
 			"Kandar"
 		]
 	},
-	"syntaxhighlight-desc": "Nyadiakeun sorotan rumpaka <code>&lt;syntaxhighlight&gt;</code> migunakeun [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Nyadiakeun sorotan rumpaka <code>&lt;syntaxhighlight&gt;</code> migunakeun [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Anjeun kudu milih basa kawas kieu:",
 	"syntaxhighlight-supported": "Basa nu dirojong ku sorotan rumpaka:",
 	"syntaxhighlight-err-loading": "(éror ngamuat daptar basa nu dirojong)",

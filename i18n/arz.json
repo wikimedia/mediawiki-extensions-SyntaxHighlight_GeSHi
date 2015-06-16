@@ -5,7 +5,7 @@
 			"Ramsis II"
 		]
 	},
-	"syntaxhighlight-desc": "بيوفر تظليل السينتاكس <code>&lt;syntaxhighlight&gt;</code> باستعمال [http://qbnz.com/highlighter/ GeSHi مظلل]",
+	"syntaxhighlight-desc": "بيوفر تظليل السينتاكس <code>&lt;syntaxhighlight&gt;</code> باستعمال [http://pygments.org/ GeSHi مظلل]",
 	"syntaxhighlight-specify": "انت لازم تحدد لغة زى كدا:",
 	"syntaxhighlight-supported": "اللغات المدعومة لتظليل السينتاكس:",
 	"syntaxhighlight-err-loading": "(غلط فى تحميل لستة اللغات المدعومة)",

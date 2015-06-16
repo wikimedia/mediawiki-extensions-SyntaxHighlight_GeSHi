@@ -5,7 +5,7 @@
 			"Rotem Liss"
 		]
 	},
-	"syntaxhighlight-desc": "אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "יש לציין שפה באופן הבא:",
 	"syntaxhighlight-supported": "שפות נתמכות:",
 	"syntaxhighlight-err-loading": "(שגיאה בטעינת הרשימה של השפות הנתמכות)",

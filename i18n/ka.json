@@ -4,7 +4,7 @@
 			"გიორგიმელა"
 		]
 	},
-	"syntaxhighlight-desc": "გაძლევთ ნებართვას ფამოიყენოთ თეგი <code>&lt;syntaxhighlight&gt;</code> სინტაქსის გასანათებლად[http://qbnz.com/highlighter/ GeSHi Highlighter-ის] მეშვეობით",
+	"syntaxhighlight-desc": "გაძლევთ ნებართვას ფამოიყენოთ თეგი <code>&lt;syntaxhighlight&gt;</code> სინტაქსის გასანათებლად[http://pygments.org/ Pygments-ის] მეშვეობით",
 	"syntaxhighlight-specify": "თქვენ უნდა წარადგინოთ სახელი შემდეგი სახით:",
 	"syntaxhighlight-supported": "მხარდამჭერი ახელები",
 	"syntaxhighlight-err-loading": "(შეუძებელია მხარდამჭერი ენების სიის ატვირთვა)",

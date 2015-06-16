@@ -5,7 +5,7 @@
 			"Yerpo"
 		]
 	},
-	"syntaxhighlight-desc": "Nudi označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://qbnz.com/highlighter/ označevalnika GeSHi]",
+	"syntaxhighlight-desc": "Nudi označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://pygments.org/ označevalnika GeSHi]",
 	"syntaxhighlight-specify": "Morate navesti jezik tako:",
 	"syntaxhighlight-supported": "Jeziki, ki jih podpira funkcija za označevanje sintakse:",
 	"syntaxhighlight-err-loading": "(napaka pri nalaganju podprtih jezikov)",

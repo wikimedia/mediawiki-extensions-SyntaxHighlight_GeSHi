@@ -4,7 +4,7 @@
 			"Ahonc"
 		]
 	},
-	"syntaxhighlight-desc": "Дозволяє використовувати тег <code>&lt;syntaxhighlight&gt;</code> для підсвічування синтаксису за допомогою [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Дозволяє використовувати тег <code>&lt;syntaxhighlight&gt;</code> для підсвічування синтаксису за допомогою [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Ви повинні зазначити мову наступним чином:",
 	"syntaxhighlight-supported": "Підтримувані мови:",
 	"syntaxhighlight-err-loading": "(неможливо завантажити список мов)",

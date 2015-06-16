@@ -4,7 +4,7 @@
 			"CERminator"
 		]
 	},
-	"syntaxhighlight-desc": "Omogućava isticanje sintakse <code>&lt;syntaxhighlight&gt;</code> uz pomoć [http://qbnz.com/highlighter/ GeSHi Highlightera]",
+	"syntaxhighlight-desc": "Omogućava isticanje sintakse <code>&lt;syntaxhighlight&gt;</code> uz pomoć [http://pygments.org/ Pygmentsa]",
 	"syntaxhighlight-specify": "Potrebno je da specificirate jezik ovako:",
 	"syntaxhighlight-supported": "Podržani jezici za isticanje sintakse:",
 	"syntaxhighlight-err-loading": "(greška pri korištenju spiska podržanih jezika)",

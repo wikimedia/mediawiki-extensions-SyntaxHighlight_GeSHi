@@ -5,7 +5,7 @@
 			"Solde"
 		]
 	},
-	"syntaxhighlight-desc": "Proveeix de ressaltat sintàctic amb l'etiqueta <code>&lt;syntaxhighlight&gt;</code> usant el programa [http://qbnz.com/highlighter/ GeSHi]",
+	"syntaxhighlight-desc": "Proveeix de ressaltat sintàctic amb l'etiqueta <code>&lt;syntaxhighlight&gt;</code> usant el programa [http://pygments.org/ GeSHi]",
 	"syntaxhighlight-specify": "Heu d'especificar un dels llenguatges:",
 	"syntaxhighlight-supported": "Llenguatges admesos per al ressaltament sintàctic:",
 	"syntaxhighlight-err-loading": "(error en carregar la llista de llenguatges)",

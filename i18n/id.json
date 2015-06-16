@@ -4,7 +4,7 @@
 			"IvanLanin"
 		]
 	},
-	"syntaxhighlight-desc": "Memberikan penyorotan sintaks <code>&lt;syntaxhighlight&gt;</code> menggunakan [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Memberikan penyorotan sintaks <code>&lt;syntaxhighlight&gt;</code> menggunakan [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Anda harus menentukan suatu bahasa seperti ini:",
 	"syntaxhighlight-supported": "Bahasa-bahasa yang didukung oleh pewarnaan sintaks:",
 	"syntaxhighlight-err-loading": "(kesalahan pemuatan daftar bahasa yang didukung)",

@@ -5,7 +5,7 @@
 			"Ælsån"
 		]
 	},
-	"syntaxhighlight-desc": "Gäv syntaks highlighting <code>&lt;syntaxhighlight&gt;</code> via [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Gäv syntaks highlighting <code>&lt;syntaxhighlight&gt;</code> via [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Du nødst til spæsifiær en språg als dette:",
 	"syntaxhighlight-supported": "Understønde språg før syntaks highlighting:",
 	"syntaxhighlight-err-loading": "(fejl lægende understønde språg liste)",

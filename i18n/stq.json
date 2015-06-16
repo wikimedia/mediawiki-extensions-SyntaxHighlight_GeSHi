@@ -4,7 +4,7 @@
 			"Pyt"
 		]
 	},
-	"syntaxhighlight-desc": "Syntax-Apljuchtenge <code>&lt;syntaxhighlight&gt;</code> mäd Hälpe fon dän [http://qbnz.com/highlighter/ GeSHi-Apljuchter]",
+	"syntaxhighlight-desc": "Syntax-Apljuchtenge <code>&lt;syntaxhighlight&gt;</code> mäd Hälpe fon dän [http://pygments.org/ GeSHi-Apljuchter]",
 	"syntaxhighlight-specify": "Ju wonskede Sproake mout as foulget definierd wäide:",
 	"syntaxhighlight-supported": "Unnerstöände Sproaken foar ju Syntax-Betoonenge:",
 	"syntaxhighlight-err-loading": "(Failer bie dät Leeden fon ju Sproakenlieste)",

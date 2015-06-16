@@ -4,7 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
-	"syntaxhighlight-desc": "Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Треба да наведете јазик на следниов начин:",
 	"syntaxhighlight-supported": "Поддржани јазици за синтаксно потцртување:",
 	"syntaxhighlight-err-loading": "(грешка при вчитувањето на списокот на поддржани јазици)",

@@ -6,7 +6,7 @@
 			"Sasa Stefanovic"
 		]
 	},
-	"syntaxhighlight-desc": "Омогућава визуелно означавање синтаксе <code>&lt;syntaxhighlight&gt;</code> коришћењем [http://qbnz.com/highlighter/ GeSHi хајлајтера].",
+	"syntaxhighlight-desc": "Омогућава визуелно означавање синтаксе <code>&lt;syntaxhighlight&gt;</code> коришћењем [http://pygments.org/ GeSHi хајлајтера].",
 	"syntaxhighlight-specify": "Потребно је одредити језик као овај:",
 	"syntaxhighlight-supported": "Подржани језици у визуелом означавању синтаксе:",
 	"syntaxhighlight-err-loading": "(грешка при учитавању подржаних језика)",

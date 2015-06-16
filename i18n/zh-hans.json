@@ -4,7 +4,7 @@
 			"Shinjiman"
 		]
 	},
-	"syntaxhighlight-desc": "使用[http://qbnz.com/highlighter/ GeSHi Highlighter]以<code>&lt;syntaxhighlight&gt;</code>提供高亮",
+	"syntaxhighlight-desc": "使用[http://pygments.org/ Pygments]以<code>&lt;syntaxhighlight&gt;</code>提供高亮",
 	"syntaxhighlight-specify": "您需要指定一种语言，像这样:",
 	"syntaxhighlight-supported": "语法高亮所支持的语言:",
 	"syntaxhighlight-err-loading": "（支持语言列表载入错误）",

@@ -4,7 +4,7 @@
 			"Esbardu"
 		]
 	},
-	"syntaxhighlight-desc": "Proporciona resaltáu de sintaxis <code>&lt;syntaxhighlight&gt;</code> usando [http://qbnz.com/highlighter/ GeSHi Highlighter]",
+	"syntaxhighlight-desc": "Proporciona resaltáu de sintaxis <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments]",
 	"syntaxhighlight-specify": "Necesites conseñar una llingua como esta:",
 	"syntaxhighlight-supported": "Llingües sofitaes pa la sintaxis en colores:",
 	"syntaxhighlight-err-loading": "(error al cargar la llista de llingües sofitaes)",

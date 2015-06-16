@@ -6,7 +6,7 @@
 			"SpeedyGonsales"
 		]
 	},
-	"syntaxhighlight-desc": "Omogućava bojanje sintakse <code>&lt;syntaxhighlight&gt;</code> korištenjem [http://qbnz.com/highlighter/ GeSHi Highlighter-a]",
+	"syntaxhighlight-desc": "Omogućava bojanje sintakse <code>&lt;syntaxhighlight&gt;</code> korištenjem [http://pygments.org/ Pygments-a]",
 	"syntaxhighlight-specify": "Molimo navedite jezik na slijedeći način:",
 	"syntaxhighlight-supported": "Jezici podržani za bojanje sintakse:",
 	"syntaxhighlight-err-loading": "(pogrješka pri učitavanju popisa podržanih jezika)",

@@ -4,7 +4,7 @@
 			"Dani"
 		]
 	},
-	"syntaxhighlight-desc": "Lehetőséget nyújt szintaxiskiemelésre a <code>&lt;syntaxhighlight&gt;</code> tag-gel, a [http://qbnz.com/highlighter/ GeSHi Highlighter] használatával",
+	"syntaxhighlight-desc": "Lehetőséget nyújt szintaxiskiemelésre a <code>&lt;syntaxhighlight&gt;</code> tag-gel, a [http://pygments.org/ Pygments] használatával",
 	"syntaxhighlight-specify": "Meg kell adnod egy nyelvet az alábbi módon:",
 	"syntaxhighlight-supported": "Támogatott programozási nyelvek:",
 	"syntaxhighlight-err-loading": "(hiba történt a támogatott nyelvek listájának betöltése közben)",

@@ -4,7 +4,7 @@
 			"HalanTul"
 		]
 	},
-	"syntaxhighlight-desc": "[http://qbnz.com/highlighter/ GeSHi Highlighter] көмөтүнэн синтаксис подсветкатын холбуурга <code>&lt;syntaxhighlight&gt;</code> тиэги туһанар кыах биэрэр.",
+	"syntaxhighlight-desc": "[http://pygments.org/ Pygments] көмөтүнэн синтаксис подсветкатын холбуурга <code>&lt;syntaxhighlight&gt;</code> тиэги туһанар кыах биэрэр.",
 	"syntaxhighlight-specify": "Омугун тылын маннык ыйыахтааххын:",
 	"syntaxhighlight-supported": "Өйөнүллэр тыллара:",
 	"syntaxhighlight-err-loading": "(тылларын испииһэгэ кыайан көрдөрүллүбэтэ)",

@@ -4,7 +4,7 @@
 			"AnakngAraw"
 		]
 	},
-	"syntaxhighlight-desc": "Nagbibigay ng pagbibigay ng liwanag sa palaugnayan <code>&lt;syntaxhighlight&gt;</code> na ginagamitan ng [http://qbnz.com/highlighter/ pambigay ng liwanag (''highlighter'') ng GeSHi]",
+	"syntaxhighlight-desc": "Nagbibigay ng pagbibigay ng liwanag sa palaugnayan <code>&lt;syntaxhighlight&gt;</code> na ginagamitan ng [http://pygments.org/ pambigay ng liwanag (''highlighter'') ng GeSHi]",
 	"syntaxhighlight-specify": "Kinakailangan mong tumukoy ng isang wikang katulad nito:",
 	"syntaxhighlight-supported": "Sinusuportahang mga wika para sa pagbibigay ng liwanag/pagtatampok ng palaugnayan:",
 	"syntaxhighlight-err-loading": "(kamalian sa pagkarga ng sinusuportahang talaan ng wika)",
