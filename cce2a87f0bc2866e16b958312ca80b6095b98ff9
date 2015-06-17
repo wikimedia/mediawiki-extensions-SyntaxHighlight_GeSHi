@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_00953942",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-06-17T10:42:27Z",
+      "side": 1,
+      "message": "I think we can be conservative preliminary and expand from there... Are we logging when we trip the max, so that we know how often it occurs ?",
+      "parentUuid": "8ec42329_a859b92e",
+      "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_48a055f1",
         "filename": "SyntaxHighlight_GeSHi.class.php",
         "patchSetId": 2
@@ -64,6 +82,23 @@
       "writtenOn": "2015-06-16T08:42:32Z",
       "side": 1,
       "message": "It should be unlimited.",
+      "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_20b075f0",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-06-17T10:42:27Z",
+      "side": 1,
+      "message": "doesn\u0027t return a bool. not documented like that and not actually handled like that in Parser.php as far as I can tell.",
       "revId": "cce2a87f0bc2866e16b958312ca80b6095b98ff9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
