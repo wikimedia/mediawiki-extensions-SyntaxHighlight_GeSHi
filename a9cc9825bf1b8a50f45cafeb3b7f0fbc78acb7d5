@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_ec36d5ff",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2015-06-18T22:15:18Z",
+      "side": 1,
+      "message": "This could use some extra context information for translators. Assuming this is: \"Below is a text area with wikitext\" or something similar?",
+      "revId": "a9cc9825bf1b8a50f45cafeb3b7f0fbc78acb7d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
