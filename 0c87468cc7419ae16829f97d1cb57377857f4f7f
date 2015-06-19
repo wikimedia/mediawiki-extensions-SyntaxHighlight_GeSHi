@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_8454bd02",
+        "filename": "composer.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-06-19T22:16:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_a943d465",
+      "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_6925ecbb",
         "filename": "composer.json",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2015-06-19T22:13:57Z",
       "side": 1,
       "message": "We usually pin to a specific version.",
+      "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_c44ac55e",
+        "filename": "composer.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-06-19T22:16:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_6925ecbb",
       "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_242ce98e",
+        "filename": "composer.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-06-19T22:16:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_8940585c",
+      "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_4911105e",
         "filename": "maintenance/updateCSS.php",
         "patchSetId": 8
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_a4577904",
+        "filename": "maintenance/updateCSS.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-06-19T22:16:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_4911105e",
+      "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_690c0c46",
         "filename": "maintenance/updateCSS.php",
         "patchSetId": 8
@@ -81,6 +153,24 @@
       "writtenOn": "2015-06-19T22:13:57Z",
       "side": 1,
       "message": "no ()",
+      "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_443ed5b6",
+        "filename": "maintenance/updateCSS.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-06-19T22:16:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ec42329_690c0c46",
       "revId": "0c87468cc7419ae16829f97d1cb57377857f4f7f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
