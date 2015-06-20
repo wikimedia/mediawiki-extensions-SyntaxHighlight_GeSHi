@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c4bba2dc",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T18:48:19Z",
+      "side": 1,
+      "message": "Sorry I misled you a bit on the previous patch. require_once will return true instead of the array if it was included before. Typically for \u0027return\u0027 files (as opposed to files that declare interfaces) we use require instead of require_once.\n\nWhile nothing else should be trying to include this file, as long as that\u0027s true the once doesn\u0027t change that. If something else did include it, the \"once\" would bite us. Once is enforced when PHP throws if the same interface is declared twice, but for return files it\u0027s safe.\n\nStill \u0027require\u0027 over \u0027include\u0027 so that errors are not ignored.",
+      "revId": "0230c989873a2d1c0128f20e09d959873aee37c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_c4b2c2f8",
+        "filename": "maintenance/updateLexerList.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T18:48:19Z",
+      "side": 1,
+      "message": "Interesting this was using json_encode, perhaps var_export would be more appropriate? By default json_encode uses legacy PHP defaults resulting in \"ambienttalk\\/2\" and \"red\\/system\". While this works fine, it seems a little bit fragile to rely on PHP supporting all JSON string literals.\n\nWe could pass more options (like JSON_UNESCAPED_SLASHES, or use FormatJson which does so by default), but var_export should be be a good fit. MediaWiki core uses it as well; in mergeMessageFileList.php, AutoloadGenerator.php, and LCStoreStaticArray.php.",
+      "revId": "0230c989873a2d1c0128f20e09d959873aee37c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
