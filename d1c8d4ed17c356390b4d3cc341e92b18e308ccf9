@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_3efab9b6",
+        "filename": "README",
+        "patchSetId": 15
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T02:33:56Z",
+      "side": 1,
+      "message": "This seems really strange. I\u0027ve heard of this pattern, but it seems like this is the first extension where a contributor to an extension bundled with MediaWiki uses composer.\n\nAt least during development, plugging in the extension from git and running \u0027composer update\u0027 inside the SytaxHighlight_GeSHi directory should be enough.\n\nI tried locally and adding a \"require_once __DIR__ . \u0027/vendor/autoload.php\u0027;\" to a setup callback from this extension works perfect.\n\n+ \t\"callback\": \"SyntaxHighlight_GeSHi::registerExtension\",\n\n\tpublic static function registerExtension() {\n\t\t$vendor \u003d __DIR__ . \u0027/vendor/autoload.php\u0027;\n\t\tif ( is_readable( $vendor ) ) {\n\t\t\trequire_once $vendor;\n\t\t}\n\t}\n\nAt least I think we should add the callback to detect the class from missing and print a useful exception. People upgrading won\u0027t be reading the readme again, and all they get is a cryptic exception about KzykHys\\Pygments\\Pygments being undefined. (It\u0027s the exception I got after checking out this patch and running composer update).",
+      "revId": "d1c8d4ed17c356390b4d3cc341e92b18e308ccf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7ef4c1ca",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T02:33:56Z",
+      "side": 1,
+      "message": "May want to use require instead.",
+      "revId": "d1c8d4ed17c356390b4d3cc341e92b18e308ccf9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
