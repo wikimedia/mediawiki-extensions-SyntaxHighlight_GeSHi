@@ -21,6 +21,9 @@
 		"SyntaxHighlight_GeSHi": "SyntaxHighlight_GeSHi.class.php",
 		"GeSHi": "SyntaxHighlight_GeSHi.compat.php"
 	},
+	"ExtensionFunctions": [
+		"SyntaxHighlight_GeSHi::onSetup"
+	],
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "SyntaxHighlight_GeSHi/modules"
@@ -50,7 +53,7 @@
 		"javascript": "javascript"
 	},
 	"config": {
-		"PygmentizePath": "pygmentize"
+		"PygmentizePath": false
 	},
 	"manifest_version": 1
 }

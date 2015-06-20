@@ -36,6 +36,14 @@ class SyntaxHighlight_GeSHi {
 		'text/xml'         => 'xml',
 	);
 
+	public static function onSetup() {
+		global $wgPygmentizePath;
+
+		// If $wgPygmentizePath is unset, use the bundled copy.
+		if ( $wgPygmentizePath === false ) {
+			$wgPygmentizePath = __DIR__ . '/pygments/pygmentize';
+		}
+	}
 	/**
 	 * Get the Pygments lexer name for a particular language.
 	 *

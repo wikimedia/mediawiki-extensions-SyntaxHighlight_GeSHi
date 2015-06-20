@@ -35,13 +35,9 @@ Next, Add this line to your LocalSettings.php:
 
     wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 
-You will also need to install Pygments, the syntax highlighting library that
-this extension uses. On Ubuntu, Debian, RHEL, CentOS, and Fedora, you can use
-your package manager to install the 'python-pygments' package. On other
-systems, you can (usually) 'pip install pygments'. For additional help in
-obtaining and installing Pygments, please see:
-
-    http://pygments.org/download/
+By default, this extension will use a bundled copy of Pygments 2.0.2. If you
+would like to use a different copy of the library, you can set
+$wgPygmentizePath to point to the path to the 'pygmentize' binary.
 
 == Usage ==
 
