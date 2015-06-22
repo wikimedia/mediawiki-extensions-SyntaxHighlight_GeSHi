@@ -51,12 +51,17 @@ class SyntaxHighlight_GeSHi {
 
 		$lexer = strtolower( $lang );
 
-		if ( isset( GeSHi::$compatibleLexers[$lexer] ) ) {
-			$lexer = GeSHi::$compatibleLexers[$lexer];
-		}
-
 		if ( in_array( $lexer, $lexers ) ) {
 			return $lexer;
+		}
+
+		// Check if this is a GeSHi lexer name for which there exists
+		// a compatible Pygments lexer with a different name.
+		if ( isset( GeSHi::$compatibleLexers[$lexer] ) ) {
+			$lexer = GeSHi::$compatibleLexers[$lexer];
+			if ( in_array( $lexer, $lexers ) ) {
+				return $lexer;
+			}
 		}
 
 		return null;
