@@ -143,6 +143,16 @@ class SyntaxHighlight_GeSHi {
 			$lexer = null;
 		}
 
+		if ( wfShellExecDisabled() !== false ) {
+			wfWarn(
+				'MediaWiki determined that it cannot invoke Pygments. ' .
+				'As a result, SyntaxHighlight_GeSHi will not perform any syntax highlighting. ' .
+				'See the debug log for details: ' .
+				'https://www.mediawiki.org/wiki/Manual:$wgDebugLogFile'
+			);
+			$lexer = null;
+		}
+
 		$inline = isset( $args['enclose'] ) && $args['enclose'] === 'span';
 		$attrs = array( 'class' => self::HIGHLIGHT_CSS_CLASS );
 
