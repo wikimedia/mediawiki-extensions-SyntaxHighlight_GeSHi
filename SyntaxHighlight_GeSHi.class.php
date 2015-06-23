@@ -182,7 +182,7 @@ class SyntaxHighlight_GeSHi {
 		if ( isset( $args['highlight'] ) ) {
 			$lines = self::parseHighlightLines( $args['highlight'] );
 			if ( count( $lines ) ) {
-				$options['hl_lines'] = implode( ',', $lines );
+				$options['hl_lines'] = implode( ' ', $lines );
 			}
 		}
 
@@ -230,28 +230,44 @@ class SyntaxHighlight_GeSHi {
 	 */
 	protected static function parseHighlightLines( $lineSpec ) {
 		$lines = array();
-
-		foreach ( preg_split( '/\s*,\s*/', $lineSpec ) as $spec ) {
-			// Individual line
-			if ( ctype_digit( $spec ) ) {
-				$lines[] = (int) $spec;
-			}
-
-			// Range of lines
-			if ( preg_match( '/^(?P<start>\d+) *- *(?P<end>\d+)$/', $spec, $match ) ) {
-				$range = $match['start'] - $match['end'];
-				if ( $range > 0 && $range <= self::HIGHLIGHT_MAX_LINES ) {
-					$lines = array_merge( $lines,  range( $match['start'], $match['end'] ) );
+		$values = array_map( 'trim', explode( ',', $lineSpec ) );
+		foreach ( $values as $value ) {
+			if ( ctype_digit( $value ) ) {
+				$lines[] = (int)$value;
+			} elseif ( strpos( $value, '-' ) !== false ) {
+				list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
+				if ( self::validHighlightRange( $start, $end ) ) {
+					for ($i = intval( $start ); $i <= $end; $i++ ) {
+						$lines[] = $i;
+					}
 				}
 			}
-
 			if ( count( $lines ) > self::HIGHLIGHT_MAX_LINES ) {
 				$lines = array_slice( $lines, 0, self::HIGHLIGHT_MAX_LINES );
 				break;
 			}
 		}
-
 		return $lines;
+	}
+
+	/**
+	 * Validate a provided input range
+	 * @param $start
+	 * @param $end
+	 * @return bool
+	 */
+	protected static function validHighlightRange( $start, $end ) {
+		// Since we're taking this tiny range and producing a an
+		// array of every integer between them, it would be trivial
+		// to DoS the system by asking for a huge range.
+		// Impose an arbitrary limit on the number of lines in a
+		// given range to reduce the impact.
+		return
+			ctype_digit( $start ) &&
+			ctype_digit( $end ) &&
+			$start > 0 &&
+			$start < $end &&
+			$end - $start < self::HIGHLIGHT_MAX_LINES;
 	}
 
 	/**
