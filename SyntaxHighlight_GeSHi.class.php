@@ -29,6 +29,9 @@ class SyntaxHighlight_GeSHi {
 	/** @var const CSS class for syntax-highlighted code. **/
 	const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
 
+	/** @var const Cache version. Increment whenever the HTML changes. */
+	const CACHE_VERSION = 1;
+
 	/** @var array Mapping of MIME-types to lexer names. **/
 	private static $mimeLexers = array(
 		'text/javascript'  => 'javascript',
@@ -196,7 +199,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		$cache = wfGetMainCache();
-		$cacheKey = wfGlobalCacheKey( 'highlight', md5( json_encode( array( $lexer, $code, $options ) ) ) );
+		$cacheKey = self::makeCacheKey( $code, $lexer, $options );
 		$output = $cache->get( $cacheKey );
 
 		if ( $output === false ) {
@@ -217,6 +220,24 @@ class SyntaxHighlight_GeSHi {
 
 		return $output;
 
+	}
+
+	/**
+	 * Construct a cache key for the results of a Pygments invocation.
+	 *
+	 * @param string $code Code to be highlighted.
+	 * @param string $lexer Lexer name.
+	 * @param array $options Options array.
+	 * @return string Cache key.
+	 */
+	private static function makeCacheKey( $code, $lexer, $options ) {
+		$optionString = FormatJson::encode( $options, false, FormatJson::ALL_OK );
+		$hash = md5( "{$code}|{$lexer}|{$optionString}|" . self::CACHE_VERSION );
+		if ( function_exists( 'wfGlobalCacheKey' ) ) {
+			return wfGlobalCacheKey( 'highlight', $hash );
+		} else {
+			return 'highlight:' . $hash;
+		}
 	}
 
 	/**
