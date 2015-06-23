@@ -383,11 +383,11 @@ class SyntaxHighlight_GeSHi {
 	 * ResourceLoader modules no longer exist
 	 *
 	 * @param ParserOutput $parserOutput
-	 * @param WikiPage $page
+	 * @param WikiPage|Article $page
 	 * @param ParserOptions $popts
 	 * @return bool
 	 */
-	public static function onRejectParserCacheValue( ParserOutput $parserOutput, WikiPage $page, ParserOptions $popts ) {
+	public static function onRejectParserCacheValue( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
 		foreach ( $parserOutput->getModuleStyles() as $module ) {
 			if ( strpos( $module, 'ext.geshi.' ) === 0 ) {
 				return false;
