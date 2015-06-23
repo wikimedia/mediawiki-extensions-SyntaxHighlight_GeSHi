@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_2c627637",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-06-23T21:12:43Z",
+      "side": 1,
+      "message": "Checking for this module won\u0027t work for sites that don\u0027t set $wgUseSiteCss. You should iterate on getModuleStyles() and look for anything that starts with \u0027ext.geshi.\u0027.",
+      "revId": "5451d7df940ca665c35ea5795aedc3cf2ff434c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
