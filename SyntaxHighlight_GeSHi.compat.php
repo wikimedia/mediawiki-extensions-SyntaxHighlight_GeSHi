@@ -93,6 +93,9 @@ class GeSHi {
 		// REXX
 		'oorexx'  => 'rexx',
 		'netrexx' => 'rexx',
+
+		// xpp is basically Java
+		'xpp' => 'java',
 	);
 
 	public function __construct( $html ) {
