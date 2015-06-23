@@ -120,7 +120,7 @@ class SyntaxHighlight_GeSHi {
 		// Register CSS
 		$parser->getOutput()->addModuleStyles( 'ext.pygments' );
 
-		return $out;
+		return trim( $out );
 	}
 
 	/**
