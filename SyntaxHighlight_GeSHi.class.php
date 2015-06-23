@@ -153,7 +153,7 @@ class SyntaxHighlight_GeSHi {
 			$lexer = null;
 		}
 
-		$inline = isset( $args['enclose'] ) && $args['enclose'] === 'span';
+		$inline = isset( $args['enclose'] ) && $args['enclose'] === 'none';
 		$attrs = array( 'class' => self::HIGHLIGHT_CSS_CLASS );
 
 		if ( $lexer === null ) {
