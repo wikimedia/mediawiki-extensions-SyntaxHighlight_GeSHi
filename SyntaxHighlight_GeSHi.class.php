@@ -196,7 +196,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		$cache = wfGetMainCache();
-		$cacheKey = 'highlight:' . md5( json_encode( array( $lexer, $code, $options ) ) );
+		$cacheKey = wfGlobalCacheKey( 'highlight', md5( json_encode( array( $lexer, $code, $options ) ) ) );
 		$output = $cache->get( $cacheKey );
 
 		if ( $output === false ) {
