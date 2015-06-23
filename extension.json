@@ -31,6 +31,10 @@
 	"ResourceModules": {
 		"ext.pygments": {
 			"position": "top",
+			"targets": [
+				"desktop",
+				"mobile"
+			],
 			"styles": [
 				"pygments.wrapper.css",
 				"pygments.generated.css"
