@@ -55,5 +55,8 @@
 	"config": {
 		"PygmentizePath": false
 	},
+	"ParserTestFiles": [
+		"tests/parserTests.txt"
+	],
 	"manifest_version": 1
 }
