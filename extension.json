@@ -50,6 +50,9 @@
 		],
 		"ApiFormatHighlight": [
 			"SyntaxHighlight_GeSHi::onApiFormatHighlight"
+		],
+		"RejectParserCacheValue": [
+			"SyntaxHighlight_GeSHi::onRejectParserCacheValue"
 		]
 	},
 	"SyntaxHighlightModels": {

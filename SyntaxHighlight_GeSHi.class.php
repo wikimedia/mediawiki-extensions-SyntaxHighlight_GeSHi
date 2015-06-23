@@ -378,6 +378,24 @@ class SyntaxHighlight_GeSHi {
 		return false;
 	}
 
+	/**
+	 * Reject parser cache values that are for GeSHi since those
+	 * ResourceLoader modules no longer exist
+	 *
+	 * @param ParserOutput $parserOutput
+	 * @param WikiPage $page
+	 * @param ParserOptions $popts
+	 * @return bool
+	 */
+	public static function onRejectParserCacheValue( ParserOutput $parserOutput, WikiPage $page, ParserOptions $popts ) {
+		foreach ( $parserOutput->getModuleStyles() as $module ) {
+			if ( strpos( $module, 'ext.geshi.' ) === 0 ) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	/** Backward-compatibility shim for extensions.  */
 	public static function prepare( $text, $lang ) {
 		wfDeprecated( __METHOD__ );
