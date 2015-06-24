@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_8b1ee973",
+        "filename": "ResourceLoaderGeSHiDataModule.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-24T17:28:24Z",
+      "side": 1,
+      "message": "Does not exist",
+      "revId": "5d0669857f4f373f2acced3fd5c7054339d719c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_d616d84d",
+        "filename": "modules/VisualEditor/ve.ui.MWSyntaxHighlightInspector.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-24T17:28:24Z",
+      "side": 1,
+      "message": "Is that necessarily true?",
+      "revId": "5d0669857f4f373f2acced3fd5c7054339d719c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
