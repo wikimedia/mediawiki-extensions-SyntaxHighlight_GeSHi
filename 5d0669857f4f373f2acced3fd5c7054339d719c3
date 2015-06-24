@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8ec42329_97b4cad0",
+        "filename": "ResourceLoaderGeSHiDataModule.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-24T20:23:38Z",
+      "side": 1,
+      "message": "getModifiedHash and getDefinitionSummary can be omitted entirely. Just opt-in to the automated versioning based on module content. Now handled internally by ResourceLoader. No need to track it manually. \n\n \n\tpublic function enableModuleContentVersion() {\n\t\treturn true;\n\t}\n\nThis will essentially do `modifiedhash \u003d md5(getScript)` – though differently implemented.",
+      "revId": "5d0669857f4f373f2acced3fd5c7054339d719c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_8b1ee973",
         "filename": "ResourceLoaderGeSHiDataModule.php",
         "patchSetId": 17
