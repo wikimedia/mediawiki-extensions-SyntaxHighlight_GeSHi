@@ -8,9 +8,5 @@
 			"Macofe"
 		]
 	},
-	"syntaxhighlight-desc": "Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [http://pygments.org/ Pygments]",
-	"syntaxhighlight-specify": "Necesitas especificar un lenguaje de este modo:",
-	"syntaxhighlight-supported": "Lenguajes admitidos para el resaltado de sintaxis:",
-	"syntaxhighlight-err-loading": "(error al cargar la lista de lenguajes admitidos)",
-	"syntaxhighlight-err-language": "Lenguaje no válido."
+	"syntaxhighlight-desc": "Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [http://pygments.org/ Pygments]"
 }

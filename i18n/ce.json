@@ -5,7 +5,5 @@
 			"Умар"
 		]
 	},
-	"syntaxhighlight-desc": "Таро хуьлуьйту тег <code>&lt;syntaxhighlight&gt;</code> лело [http://pygments.org/ Pygments] гӀоьнца синтаксисан бос хилийта",
-	"syntaxhighlight-supported": "Ловш долу меттанаш:",
-	"geshi.css": "/* CSS-код, кху чу хlоттайахь, оцо болх бийра бу сизашдо беснашна хlокхуньца GeSHI */"
+	"syntaxhighlight-desc": "Таро хуьлуьйту тег <code>&lt;syntaxhighlight&gt;</code> лело [http://pygments.org/ Pygments] гӀоьнца синтаксисан бос хилийта"
 }

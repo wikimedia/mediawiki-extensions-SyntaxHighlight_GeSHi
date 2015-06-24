@@ -5,10 +5,5 @@
 			"[[et:Kasutaja:M2s17]]"
 		]
 	},
-	"syntaxhighlight-desc": "Võimaldab [http://pygments.org/ GeSHi] abil <code>&lt;syntaxhighlight&gt;</code>-silti kasutades süntaksit esile tõsta.",
-	"syntaxhighlight-specify": "Sa pead täpsustama keelt nõnda:",
-	"syntaxhighlight-supported": "Süntaksi esiletõstu toetavad keeled:",
-	"syntaxhighlight-err-loading": "(toetatud keelte loetelu laadimisel esines viga)",
-	"syntaxhighlight-err-language": "Vigane keel.",
-	"geshi.css": "/* Siin asuvat kaskaadilaadistikku rakendatakse süntaksi GeSHi-esiletõstu juures. */"
+	"syntaxhighlight-desc": "Võimaldab [http://pygments.org/ GeSHi] abil <code>&lt;syntaxhighlight&gt;</code>-silti kasutades süntaksit esile tõsta."
 }

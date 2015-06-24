@@ -5,10 +5,5 @@
 			"Malafaya"
 		]
 	},
-	"syntaxhighlight-desc": "Permite o realce sintáctico de código fonte, através do elemento <code>&lt;syntaxhighlight&gt;</code>, usando o [http://pygments.org/ Pygments]",
-	"syntaxhighlight-specify": "Precisa de especificar uma linguagem assim:",
-	"syntaxhighlight-supported": "Linguagens suportadas no realce de sintaxe:",
-	"syntaxhighlight-err-loading": "(erro ao carregar a lista de linguagens suportadas)",
-	"syntaxhighlight-err-language": "Linguagem inválida.",
-	"geshi.css": "/* O código CSS aqui colocado será aplicado ao realce de sintaxe GeSHi */"
+	"syntaxhighlight-desc": "Permite o realce sintáctico de código fonte, através do elemento <code>&lt;syntaxhighlight&gt;</code>, usando o [http://pygments.org/ Pygments]"
 }
