@@ -391,6 +391,7 @@ class SyntaxHighlight_GeSHi {
 	public static function onRejectParserCacheValue( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
 		foreach ( $parserOutput->getModuleStyles() as $module ) {
 			if ( strpos( $module, 'ext.geshi.' ) === 0 ) {
+				$page->getTitle()->purgeSquid();
 				return false;
 			}
 		}
