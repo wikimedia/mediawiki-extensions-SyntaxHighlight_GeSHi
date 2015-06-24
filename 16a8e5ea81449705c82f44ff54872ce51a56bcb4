@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_493c862d",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-24T22:45:37Z",
+      "side": 1,
+      "message": "no matching i18n file changes?",
+      "revId": "16a8e5ea81449705c82f44ff54872ce51a56bcb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_69314256",
+        "filename": "modules/VisualEditor/ve.ui.MWSyntaxHighlightInspector.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-24T22:45:37Z",
+      "side": 1,
+      "message": "needs to be internationalised",
+      "revId": "16a8e5ea81449705c82f44ff54872ce51a56bcb4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
