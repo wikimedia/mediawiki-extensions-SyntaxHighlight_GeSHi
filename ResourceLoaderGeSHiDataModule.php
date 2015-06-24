@@ -37,16 +37,6 @@ class ResourceLoaderGeSHiDataModule extends ResourceLoaderModule {
 	}
 
 	/**
-	 * Get the definition summary for this module.
-	 *
-	 * @param ResourceLoaderContext $context
-	 * @return array
-	 */
-	public function getDefinitionSummary( ResourceLoaderContext $context ) {
-		return array_merge( parent::getDefinitionSummary( $context ), $this->getLanguages() );
-	}
-
-	/**
 	 * Get a full list of available langauges
 	 * @return array
 	 */
