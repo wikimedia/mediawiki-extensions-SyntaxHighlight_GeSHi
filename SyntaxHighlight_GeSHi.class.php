@@ -127,6 +127,36 @@ class SyntaxHighlight_GeSHi {
 	}
 
 	/**
+	 * Use the Pyglet web service (if configured) to highlight code.
+	 *
+	 * @param string $source Source code to highlight.
+	 * @param string $lexer Lexer name.
+	 * @param array $options Additional options to pass to the Pygments formatter.
+	 * @return string|bool Highlighted HTML, or false if Pyglet is unreachable
+	 *   or not configured.
+	 */
+	protected static function highlightWithPyglet( $source, $lexer, $options = array() ) {
+		global $wgPygletURL;
+
+		if ( !$wgPygletURL ) {
+			return false;
+		}
+
+		$data = array_merge( array( 'source' => $source, 'lexer' => $lexer ), $options );
+		$client = new Http;
+		$output = $client->post( $wgPygletURL, array(
+			'timeout'        => 1.5,
+			'connectTimeout' => 0.1,
+			'postData'       => $data,
+		), __METHOD__ );
+
+		if ( $output === false ) {
+			wfWarn( "Failed to connect to Pyglet server at {$wgPygletURL}." );
+		}
+
+		return false;
+	}
+	/**
 	 * Highlight a code-block using a particular lexer.
 	 *
 	 * @param string $code Code to highlight.
@@ -204,13 +234,17 @@ class SyntaxHighlight_GeSHi {
 		$output = $cache->get( $cacheKey );
 
 		if ( $output === false ) {
-			try {
-				$pygments = new Pygments( $wgPygmentizePath );
-				$output = $pygments->highlight( $code, $lexer, 'html', $options );
-			} catch ( RuntimeException $e ) {
-				wfWarn( 'Failed to invoke Pygments. Please check that Pygments is installed ' .
-					'and that $wgPygmentizePath is accurate.' );
-				return self::highlight( $code, null, $args );
+			// Try the Pyglet web service, if configured.
+			$output = self::highlightWithPyglet( $code, $lexer, $options );
+			if ( $output === false ) {
+				try {
+					$pygments = new Pygments( $wgPygmentizePath );
+					$output = $pygments->highlight( $code, $lexer, 'html', $options );
+				} catch ( RuntimeException $e ) {
+					wfWarn( 'Failed to invoke Pygments. Please check that Pygments is installed ' .
+						'and that $wgPygmentizePath is accurate.' );
+					return self::highlight( $code, null, $args );
+				}
 			}
 			$cache->set( $cacheKey, $output );
 		}
