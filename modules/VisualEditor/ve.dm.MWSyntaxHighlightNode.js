@@ -37,15 +37,28 @@ ve.dm.MWSyntaxHighlightNode.static.getMatchRdfaTypes = function () {
 
 /* Static methods */
 
-/**
- * Check if a language is supported
- *
- * @param {string} langauge Language name
- * @return {boolean} The language is supported
- */
-ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported = function ( language ) {
-	return mw.config.get( 'wgGeSHiSupportedLanguages' ).indexOf( language ) !== -1;
-};
+( function () {
+	var supportedLanguages = [];
+
+	/**
+	 * Register supported languages.
+	 *
+	 * @param {Array} languages
+	 */
+	ve.dm.MWSyntaxHighlightNode.static.addLanguages = function ( languages ) {
+		ve.batchPush( supportedLanguages, languages );
+	};
+
+	/**
+	 * Check if a language is supported
+	 *
+	 * @param {string} language Language name
+	 * @return {boolean} The language is supported
+	 */
+	ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported = function ( language ) {
+		return supportedLanguages.indexOf( language ) !== -1;
+	};
+}() );
 
 /* Methods */
 

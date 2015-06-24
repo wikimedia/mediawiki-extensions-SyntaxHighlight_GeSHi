@@ -29,8 +29,7 @@ class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
 		$scripts = parent::getScript( $context );
 
 		return $scripts . Xml::encodeJsCall(
-			'mw.config.set', array(
-				'wgGeSHiSupportedLanguages',
+			've.dm.MWSyntaxHighlightNode.static.addLanguages', array(
 				$this->getLanguages()
 			),
 			ResourceLoader::inDebugMode()
