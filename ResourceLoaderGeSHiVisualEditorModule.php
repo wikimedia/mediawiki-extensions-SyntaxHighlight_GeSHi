@@ -17,7 +17,7 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
-class ResourceLoaderGeSHiDataModule extends ResourceLoaderModule {
+class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
 
 	protected $targets = array( 'desktop', 'mobile' );
 
@@ -26,9 +26,10 @@ class ResourceLoaderGeSHiDataModule extends ResourceLoaderModule {
 	 * @return string JavaScript code
 	 */
 	public function getScript( ResourceLoaderContext $context ) {
-		return Xml::encodeJsCall(
-			'mw.config.set',
-			array(
+		$scripts = parent::getScript( $context );
+
+		return $scripts . Xml::encodeJsCall(
+			'mw.config.set', array(
 				'wgGeSHiSupportedLanguages',
 				$this->getLanguages()
 			),

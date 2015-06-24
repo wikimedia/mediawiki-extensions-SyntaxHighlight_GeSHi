@@ -21,7 +21,7 @@
 	"AutoloadClasses": {
 		"SyntaxHighlight_GeSHi": "SyntaxHighlight_GeSHi.class.php",
 		"GeSHi": "SyntaxHighlight_GeSHi.compat.php",
-		"ResourceLoaderGeSHiDataModule": "ResourceLoaderGeSHiDataModule.php"
+		"ResourceLoaderGeSHiVisualEditorModule": "ResourceLoaderGeSHiVisualEditorModule.php"
 	},
 	"ExtensionFunctions": [
 		"SyntaxHighlight_GeSHi::onSetup"
@@ -43,6 +43,7 @@
 			]
 		},
 		"ext.geshi.visualEditor": {
+			"class": "ResourceLoaderGeSHiVisualEditorModule",
 			"scripts": [
 				"VisualEditor/ve.dm.MWSyntaxHighlightNode.js",
 				"VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
@@ -53,8 +54,7 @@
 				"VisualEditor/ve.ui.MWSyntaxHighlightInspector.css"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore",
-				"ext.geshi.data"
+				"ext.visualEditor.mwcore"
 			],
 			"messages": [
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code",
@@ -62,9 +62,6 @@
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title"
 			],
 			"targets": [ "desktop", "mobile" ]
-		},
-		"ext.geshi.data": {
-			"class": "ResourceLoaderGeSHiDataModule"
 		}
 	},
 	"Hooks": {
