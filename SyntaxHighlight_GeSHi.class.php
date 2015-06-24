@@ -162,7 +162,7 @@ class SyntaxHighlight_GeSHi {
 
 		if ( $lexer === null ) {
 			if ( $inline ) {
-				return Html::element( 'span', $attrs, trim( $code ) );
+				return Html::element( 'code', $attrs, trim( $code ) );
 			}
 			$pre = Html::element( 'pre', array(), $code );
 			return Html::rawElement( 'div', $attrs, $pre );
@@ -216,7 +216,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		if ( $inline ) {
-			return Html::rawElement( 'span', $attrs, trim( $output ) );
+			return Html::rawElement( 'code', $attrs, trim( $output ) );
 		}
 
 		return $output;
