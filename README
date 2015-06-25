@@ -61,6 +61,8 @@ HtmlFormatter at <http://pygments.org/docs/formatters/#HtmlFormatter>.
 * lang;		Defines the language.
 * line;		Corresponds to linenos="inline" option.
 * start;	Corresponds to linenostart opion.
+* enclose;  If set to "none", corresponds to the nowrap=1 option.
+* inline;   Corresponds to the nowrap=1 option.
 * highlight;    Corresponds to hl_lines option (comma separated).
 
 == Note ==
