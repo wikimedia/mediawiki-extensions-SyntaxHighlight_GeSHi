@@ -12,24 +12,10 @@ with earlier versions of MediaWiki, visit:
 
     https://www.mediawiki.org/wiki/Special:ExtensionDistributor/SyntaxHighlight_GeSHi
 
-
 == Installation ==
 
 First, you will need to ensure that this extension's Composer-managed
-dependencies are available. In your root MediaWiki directory, create a
-composer.local.json file with the following contents:
-
-    {
-        "extra": {
-            "merge-plugin": {
-                "include": [
-                    "extensions/SyntaxHighlight_GeSHi/composer.json"
-                ]
-            }
-        }
-    }
-
-Then run 'composer update'.
+dependencies are available. In the extension directory, run 'composer update'.
 
 Next, Add this line to your LocalSettings.php:
 
