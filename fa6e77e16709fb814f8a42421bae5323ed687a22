@@ -34,6 +34,24 @@
       "revId": "fa6e77e16709fb814f8a42421bae5323ed687a22",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5819ae87",
+        "filename": "modules/pygments.wrapper.css",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2015-06-25T11:40:46Z",
+      "side": 0,
+      "message": "Only mostly. We still need some custom styling. https://gerrit.wikimedia.org/r/#/c/220744/",
+      "parentUuid": "8ec42329_f6d194fc",
+      "revId": "fa6e77e16709fb814f8a42421bae5323ed687a22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
