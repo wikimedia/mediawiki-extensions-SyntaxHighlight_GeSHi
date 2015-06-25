@@ -4,3 +4,13 @@
 	direction: ltr;
 	unicode-bidi: embed;
 }
+
+/* Avoid displaying double borders for nested 'code' elements.
+   Before we started using the 'code' tag for inline code snippets,
+   <code><syntaxhighlight enclose=none ...>...</syntaxhighlight></code>
+   was a common pattern. Continue supporting it in existing content. */
+code code.mw-highlight {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
