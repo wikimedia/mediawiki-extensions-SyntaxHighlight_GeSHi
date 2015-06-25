@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_5fb438cf",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-06-25T01:24:07Z",
+      "side": 1,
+      "message": "Is the url supposed to have the /highlight suffix?",
+      "revId": "0c0d0e7363cd6d2545f0bc881529131c822de1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
