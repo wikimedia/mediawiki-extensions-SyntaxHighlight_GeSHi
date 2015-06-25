@@ -16,6 +16,23 @@
       "revId": "0c0d0e7363cd6d2545f0bc881529131c822de1a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_dfc7c848",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-25T01:25:34Z",
+      "side": 1,
+      "message": "This seems too late. If shell is disabled, $lexer is null, and it returns early on line 200.",
+      "revId": "0c0d0e7363cd6d2545f0bc881529131c822de1a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
