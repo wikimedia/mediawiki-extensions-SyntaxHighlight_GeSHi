@@ -8,5 +8,5 @@
 			"Macofe"
 		]
 	},
-	"syntaxhighlight-desc": "Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [http://pygments.org/ GeSHi - Resaltador de sintaxis genérico]"
 }

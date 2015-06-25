@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shinjiman"
+			"Shinjiman",
+			"Liuxinyu970226"
 		]
 	},
-	"syntaxhighlight-desc": "使用[http://pygments.org/ Pygments]以<code>&lt;syntaxhighlight&gt;</code>提供高亮"
+	"syntaxhighlight-desc": "使用[http://pygments.org/ GeSHi - Generic Syntax Highlighter]以<code>&lt;syntaxhighlight&gt;</code>提供高亮"
 }
