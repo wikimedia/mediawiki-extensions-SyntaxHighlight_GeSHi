@@ -5,7 +5,7 @@
             "Ed Sanders"
         ]
     },
-    "syntaxhighlight-desc": "Provides syntax highlighting <code>&lt;syntaxhighlight&gt;</code> using [http://pygments.org/ GeSHi - Generic Syntax Highlighter]",
+    "syntaxhighlight-desc": "Provides syntax highlighting <code>&lt;syntaxhighlight&gt;</code> using [http://pygments.org/ Pygments - Python syntax highlighter]",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Language",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Code block"
