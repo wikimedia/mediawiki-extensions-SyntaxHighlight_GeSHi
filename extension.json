@@ -86,8 +86,7 @@
 		"ext.geshi.visualEditor"
 	],
 	"config": {
-		"PygmentizePath": false,
-		"PygletURL": false
+		"PygmentizePath": false
 	},
 	"ParserTestFiles": [
 		"tests/parserTests.txt"
