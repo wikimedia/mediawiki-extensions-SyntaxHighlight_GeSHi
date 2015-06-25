@@ -43,29 +43,42 @@ ve.ui.MWSyntaxHighlightInspector.static.dir = 'ltr';
  * @inheritdoc
  */
 ve.ui.MWSyntaxHighlightInspector.prototype.initialize = function () {
+	var languageField, codeField, showLinesField,
+		noneMsg = ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none' );
 	// Parent method
 	ve.ui.MWSyntaxHighlightInspector.super.prototype.initialize.call( this );
 
-	this.language = new OO.ui.TextInputWidget( {
-		validate: function ( value ) {
-			return ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported( value );
-		}
+	this.language = new OO.ui.ComboBoxWidget( {
+		menu: { filterFromInput: true },
+		input: { validate: function ( input ) {
+			return input === '' || ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported( input );
+		} }
 	} );
+	this.language.getInput().connect( this, { change: 'onLanguageInputChange' } );
+	this.language.getMenu()
+		.clearItems()
+		.addItems(
+			[ new OO.ui.MenuOptionWidget( { data: '', label: noneMsg } ) ].concat(
+				$.map( ve.dm.MWSyntaxHighlightNode.static.getLanguages(), function ( lang ) {
+					return new OO.ui.MenuOptionWidget( { data: lang, label: lang } );
+				} )
+			)
+		);
 
 	this.showLinesCheckbox = new OO.ui.CheckboxInputWidget();
 
-	var languageField = new OO.ui.FieldLayout( this.language, {
-			align: 'top',
-			label: ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language' )
-		} ),
-		codeField = new OO.ui.FieldLayout( this.input, {
-			align: 'top',
-			label: ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code' )
-		} ),
-		showLinesField = new OO.ui.FieldLayout( this.showLinesCheckbox, {
-			align: 'inline',
-			label: ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines' )
-		} );
+	languageField = new OO.ui.FieldLayout( this.language, {
+		align: 'top',
+		label: ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language' )
+	} );
+	codeField = new OO.ui.FieldLayout( this.input, {
+		align: 'top',
+		label: ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code' )
+	} );
+	showLinesField = new OO.ui.FieldLayout( this.showLinesCheckbox, {
+		align: 'inline',
+		label: ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines' )
+	} );
 
 	// Initialization
 	this.$content.addClass( 've-ui-mwSyntaxHighlightInspector-content' );
@@ -77,15 +90,27 @@ ve.ui.MWSyntaxHighlightInspector.prototype.initialize = function () {
 };
 
 /**
+ * Handle input change events
+ *
+ * @param {string} value New value
+ */
+ve.ui.MWSyntaxHighlightInspector.prototype.onLanguageInputChange = function () {
+	var inspector = this;
+	this.language.getInput().isValid().done( function ( valid ) {
+		inspector.getActions().setAbilities( { done: valid } );
+	} );
+};
+
+/**
  * @inheritdoc
  */
 ve.ui.MWSyntaxHighlightInspector.prototype.getReadyProcess = function ( data ) {
 	return ve.ui.MWSyntaxHighlightInspector.super.prototype.getReadyProcess.call( this, data )
 		.next( function () {
-			if ( this.language.getValue() ) {
+			if ( this.language.input.getValue() ) {
 				this.input.focus();
 			} else {
-				this.language.focus();
+				this.language.getMenu().toggle( true );
 			}
 		}, this );
 };
@@ -100,11 +125,10 @@ ve.ui.MWSyntaxHighlightInspector.prototype.getSetupProcess = function ( data ) {
 				language = attrs.lang || '',
 				showLines = attrs.line !== undefined;
 
-			this.language.setValue( language );
-			if ( !language ) {
-				this.language.setValidityFlag( true );
+			if ( ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported( language ) ) {
+				this.language.input.setValue( language );
 			}
-			this.language.on( 'change', this.onChangeHandler );
+			this.language.input.on( 'change', this.onChangeHandler );
 
 			this.showLinesCheckbox.setSelected( showLines );
 			this.showLinesCheckbox.on( 'change', this.onChangeHandler );
@@ -117,7 +141,7 @@ ve.ui.MWSyntaxHighlightInspector.prototype.getSetupProcess = function ( data ) {
 ve.ui.MWSyntaxHighlightInspector.prototype.getTeardownProcess = function ( data ) {
 	return ve.ui.MWSyntaxHighlightInspector.super.prototype.getTeardownProcess.call( this, data )
 		.first( function () {
-			this.language.off( 'change', this.onChangeHandler );
+			this.language.input.off( 'change', this.onChangeHandler );
 			this.showLinesCheckbox.off( 'change', this.onChangeHandler );
 		}, this );
 };
@@ -129,7 +153,7 @@ ve.ui.MWSyntaxHighlightInspector.prototype.updateMwData = function ( mwData ) {
 	// Parent method
 	ve.ui.MWSyntaxHighlightInspector.super.prototype.updateMwData.call( this, mwData );
 
-	var language = this.language.getValue(),
+	var language = this.language.input.getValue(),
 		showLines = this.showLinesCheckbox.isSelected();
 
 	mwData.attrs.lang = language || undefined;

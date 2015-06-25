@@ -60,6 +60,7 @@
 			"messages": [
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code",
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language",
+				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none",
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines",
 				"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title"
 			],

@@ -10,6 +10,7 @@
     "syntaxhighlight-error-category-desc": "There was an error when attempting to highlight code included on the page.",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Language",
+    "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(None)",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Show line numbers",
     "syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Code block",
     "syntaxhighlight-error-pygments-invocation-failure": "Failed to invoke Pygments",

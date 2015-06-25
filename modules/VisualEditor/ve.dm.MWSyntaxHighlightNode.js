@@ -58,6 +58,15 @@ ve.dm.MWSyntaxHighlightNode.static.getMatchRdfaTypes = function () {
 	ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported = function ( language ) {
 		return supportedLanguages.indexOf( language ) !== -1;
 	};
+
+	/**
+	 * Get an array of all languages
+	 *
+	 * @return {Array} All currently supported languages
+	 */
+	ve.dm.MWSyntaxHighlightNode.static.getLanguages = function () {
+		return supportedLanguages.slice();
+	};
 }() );
 
 /* Methods */
