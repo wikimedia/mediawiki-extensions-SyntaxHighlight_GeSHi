@@ -38,6 +38,7 @@
 				"mobile"
 			],
 			"styles": [
+				"pygments.wrapper.css",
 				"pygments.generated.css"
 			]
 		},
