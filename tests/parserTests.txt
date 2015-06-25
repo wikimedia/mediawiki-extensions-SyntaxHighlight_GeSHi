@@ -37,3 +37,33 @@ SRC=&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105
 %253cscript%253ealert(document.cookie)%253c/script%253e</pre></div>
 
 !! end
+
+!! test
+Default behaviour (inner is pre)
+!!input
+<source lang="javascript">
+var a;
+</source>
+!! result
+<div class="mw-highlight"><pre><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+</pre></div>
+
+!! end
+
+!! test
+Inline attribute (inline code)
+!!input
+Text <source lang="javascript" inline>var a;</source>.
+!! result
+<p>Text <code class="mw-highlight"><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span></code>.
+</p>
+!! end
+
+!! test
+Enclose none (inline code)
+!!input
+Text <source lang="javascript" enclose="none">var a;</source>.
+!! result
+<p>Text <code class="mw-highlight"><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span></code>.
+</p>
+!! end
