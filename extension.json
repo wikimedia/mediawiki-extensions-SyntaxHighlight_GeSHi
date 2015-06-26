@@ -38,8 +38,8 @@
 				"mobile"
 			],
 			"styles": [
-				"pygments.wrapper.css",
-				"pygments.generated.css"
+				"pygments.generated.css",
+				"pygments.wrapper.css"
 			]
 		},
 		"ext.geshi.visualEditor": {

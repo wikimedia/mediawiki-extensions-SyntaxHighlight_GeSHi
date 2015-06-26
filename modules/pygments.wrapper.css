@@ -14,3 +14,13 @@ code code.mw-highlight {
 	border: 0;
 	padding: 0;
 }
+
+/*
+ * Don't show a red border around syntax errors. This behavior may be useful
+ * in code editors, but it is not useful in a wiki environment, especially
+ * given the longstanding habit of using an existing, mostly-compatible lexer
+ * to highlight a language for which no lexer exists.
+ */
+.mw-highlight .err {
+    border: 0;
+}
