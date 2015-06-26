@@ -5,5 +5,5 @@
 			"Yerpo"
 		]
 	},
-	"syntaxhighlight-desc": "Nudi označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://pygments.org/ označevalnika GeSHi]"
+	"syntaxhighlight-desc": "Nudi označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://pygments.org/ Pygments – označevalnika skladnje Python]"
 }

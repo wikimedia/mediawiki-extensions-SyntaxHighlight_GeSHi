@@ -2,8 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Kghbln",
-			"Raimond Spekking"
+			"Raimond Spekking",
+			"Metalhead64"
 		]
 	},
-	"syntaxhighlight-desc": "Ergänzt das Tag <code>&lt;syntaxhighlight&gt;</code> zur Syntaxhervorhebung mit Hilfe des [http://pygments.org/ Generic Syntax Highlighter (GeSHi)]"
+	"syntaxhighlight-desc": "Ergänzt das Tag <code>&lt;syntaxhighlight&gt;</code> zur Syntaxhervorhebung mit Hilfe des [http://pygments.org/ Python-Syntax-Highlighters „Pygments“]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Sprache",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Code-Block"
 }

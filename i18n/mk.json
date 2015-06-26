@@ -4,5 +4,8 @@
 			"Bjankuloski06"
 		]
 	},
-	"syntaxhighlight-desc": "Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://pygments.org/ Pygments — подвлекувач на Python-синтакса]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Јазик",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Коден блок"
 }

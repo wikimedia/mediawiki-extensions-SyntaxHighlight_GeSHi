@@ -2,8 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Guycn2",
-			"Rotem Liss"
+			"Rotem Liss",
+			"Amire80"
 		]
 	},
-	"syntaxhighlight-desc": "אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://pygments.org/ Pygments – צובע קוד בשפת Python]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "קוד",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "שפה",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "גוש קוד"
 }

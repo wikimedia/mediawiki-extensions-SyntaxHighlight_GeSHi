@@ -2,8 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Hamilton Abreu",
-			"Malafaya"
+			"Malafaya",
+			"Vitorvicentevalente"
 		]
 	},
-	"syntaxhighlight-desc": "Permite o realce sintáctico de código fonte, através do elemento <code>&lt;syntaxhighlight&gt;</code>, usando o [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Permite o realce sintático de código fonte, através do elemento <code>&lt;syntaxhighlight&gt;</code>, usando o [http://pygments.org/ Pygments]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Idioma"
 }

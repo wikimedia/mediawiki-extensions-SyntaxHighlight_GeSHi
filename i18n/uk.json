@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahonc"
+			"Ahonc",
+			"Ата"
 		]
 	},
-	"syntaxhighlight-desc": "Дозволяє використовувати тег <code>&lt;syntaxhighlight&gt;</code> для підсвічування синтаксису за допомогою [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Забезпечує підсвічування синтаксису <code>&lt;syntaxhighlight&gt;</code> за допомогою [http://pygments.org/ Pygments] для синтаксису Python",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Мова",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Блок коду"
 }

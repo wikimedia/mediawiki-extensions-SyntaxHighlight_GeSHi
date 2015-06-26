@@ -7,5 +7,6 @@
 			"Liuxinyu970226"
 		]
 	},
-	"syntaxhighlight-desc": "使用 [http://pygments.org/ GeSHi - Generic Syntax Highlighter] 提供可強調語法顯示的 <code>&lt;syntaxhighlight&gt;</code> 標籤。"
+	"syntaxhighlight-desc": "使用 [http://pygments.org/ GeSHi - Generic Syntax Highlighter] 提供可強調語法顯示的 <code>&lt;syntaxhighlight&gt;</code> 標籤。",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "語言"
 }

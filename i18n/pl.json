@@ -2,8 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Derbeth",
-			"Sp5uhe"
+			"Sp5uhe",
+			"Chrumps"
 		]
 	},
-	"syntaxhighlight-desc": "Zapewnia kolorowanie składni dla znacznika <code>&lt;syntaxhighlight&gt;</code> wykorzystując [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Zapewnia kolorowanie składni dla znacznika <code>&lt;syntaxhighlight&gt;</code> wykorzystując [http://pygments.org/ Pygments]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kod",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Język"
 }
