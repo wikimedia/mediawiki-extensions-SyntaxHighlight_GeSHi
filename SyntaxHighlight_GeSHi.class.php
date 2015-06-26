@@ -60,6 +60,10 @@ class SyntaxHighlight_GeSHi {
 	private static function getLexer( $lang ) {
 		static $lexers = null;
 
+		if ( $lang === null ) {
+			return null;
+		}
+
 		if ( !$lexers ) {
 			$lexers = require __DIR__ . '/SyntaxHighlight_GeSHi.lexers.php';
 		}
@@ -108,14 +112,13 @@ class SyntaxHighlight_GeSHi {
 		// Don't trim leading spaces away, just the linefeeds
 		$out = preg_replace( '/^\n+/', '', rtrim( $text ) );
 
-		// Validate language
-		if ( isset( $args['lang'] ) ) {
-			$lexer = self::getLexer( $args['lang'] );
-		} else {
-			$lexer = null;
-		}
+		$lexer = isset( $args['lang'] ) ? $args['lang'] : '';
 
-		$out = self::highlight( $out, $lexer, $args );
+		$result = self::highlight( $out, $lexer, $args );
+		if ( !$result->isGood() ) {
+			$parser->addTrackingCategory( 'syntaxhighlight-error-category' );
+		}
+		$out = $result->getValue();
 
 		// HTML Tidy will convert tabs to spaces incorrectly (bug 30930).
 		// But the conversion from tab to space occurs while reading the input,
@@ -134,23 +137,35 @@ class SyntaxHighlight_GeSHi {
 	 * Highlight a code-block using a particular lexer.
 	 *
 	 * @param string $code Code to highlight.
-	 * @param string|null $lexer Lexer name, or null to use plain markup.
+	 * @param string|null $lang Language name, or null to use plain markup.
 	 * @param array $args Associative array of additional arguments. If it
 	 *  contains a 'line' key, the output will include line numbers. If it
 	 *  includes a 'highlight' key, the value will be parsed as a
 	 *  comma-separated list of lines and line-ranges to highlight. If it
 	 *  contains a 'start' key, the value will be used as the line at which to
 	 *  start highlighting.
-	 * @return string Highlighted code as HTML.
+	 * @return Status Status object, with HTML representing the highlighted
+	 *  code as its value.
 	 */
-	protected static function highlight( $code, $lexer = null, $args = array() ) {
+	protected static function highlight( $code, $lang = null, $args = array() ) {
 		global $wgPygmentizePath;
 
+		$status = new Status;
+
+		$lexer = self::getLexer( $lang );
+		if ( $lexer === null && $lang !== null ) {
+			$status->warning( 'syntaxhighlight-error-unknown-language', $lang );
+		}
+
+		$length = strlen( $code );
 		if ( strlen( $code ) > self::HIGHLIGHT_MAX_BYTES ) {
+			$status->warning( 'syntaxhighlight-error-exceeds-size-limit',
+				$length, self::HIGHLIGHT_MAX_BYTES );
 			$lexer = null;
 		}
 
 		if ( wfShellExecDisabled() !== false ) {
+			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
 			wfWarn(
 				'MediaWiki determined that it cannot invoke Pygments. ' .
 				'As a result, SyntaxHighlight_GeSHi will not perform any syntax highlighting. ' .
@@ -166,10 +181,12 @@ class SyntaxHighlight_GeSHi {
 
 		if ( $lexer === null ) {
 			if ( $inline ) {
-				return Html::element( 'code', $attrs, trim( $code ) );
+				$status->value = Html::element( 'code', $attrs, trim( $code ) );
+			} else {
+				$pre = Html::element( 'pre', array(), $code );
+				$status->value = Html::rawElement( 'div', $attrs, $pre );
 			}
-			$pre = Html::element( 'pre', array(), $code );
-			return Html::rawElement( 'div', $attrs, $pre );
+			return $status;
 		}
 
 		$options = array(
@@ -212,18 +229,23 @@ class SyntaxHighlight_GeSHi {
 				$pygments = new Pygments( $wgPygmentizePath );
 				$output = $pygments->highlight( $code, $lexer, 'html', $options );
 			} catch ( RuntimeException $e ) {
-				wfWarn( 'Failed to invoke Pygments. Please check that Pygments is installed ' .
-					'and that $wgPygmentizePath is accurate.' );
-				return self::highlight( $code, null, $args );
+				$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
+				wfWarn(
+					'Failed to invoke Pygments. Please check that Pygments is installed ' .
+					'and that $wgPygmentizePath is accurate.'
+				);
+				$status->value = self::highlight( $code, null, $args )->getValue();
+				return $status;
 			}
 			$cache->set( $cacheKey, $output );
 		}
 
 		if ( $inline ) {
-			return Html::rawElement( 'code', $attrs, trim( $output ) );
+			$output = Html::rawElement( 'code', $attrs, trim( $output ) );
 		}
 
-		return $output;
+		$status->value = $output;
+		return $status;
 
 	}
 
@@ -336,10 +358,11 @@ class SyntaxHighlight_GeSHi {
 			$output = $wgParser->parse( $text, $title, $options, true, true, $revId );
 		}
 
-		$out = self::highlight( $text, $lexer );
-		if ( !$out ) {
+		$status = self::highlight( $text, $lexer );
+		if ( !$status->isOK() ) {
 			return true;
 		}
+		$out = $status->getValue();
 
 		$output->addModuleStyles( 'ext.pygments' );
 		$output->setText( '<div dir="ltr">' . $out . '</div>' );
@@ -363,12 +386,12 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		$lexer = self::$mimeLexers[$mime];
-		$out = self::highlight( $text, $lexer );
-
-		if ( !$out ) {
+		$status = self::highlight( $text, $lexer );
+		if ( !$status->isOK() ) {
 			return true;
 		}
 
+		$out = $status->getValue();
 		if ( preg_match( '/^<pre([^>]*)>/i', $out, $m ) ) {
 			$attrs = Sanitizer::decodeTagAttributes( $m[1] );
 			$attrs['class'] .= ' api-pretty-content';
@@ -405,8 +428,7 @@ class SyntaxHighlight_GeSHi {
 	/** Backward-compatibility shim for extensions.  */
 	public static function prepare( $text, $lang ) {
 		wfDeprecated( __METHOD__ );
-		$html = self::highlight( $text, $lang );
-		return new GeSHi( $html );
+		return new GeSHi( self::highlight( $text, $lang )->getValue() );
 	}
 
 	/** Backward-compatibility shim for extensions. */
