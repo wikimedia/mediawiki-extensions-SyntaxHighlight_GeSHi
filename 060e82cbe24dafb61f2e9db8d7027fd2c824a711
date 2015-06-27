@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_7fe55b31",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1718
+      },
+      "writtenOn": "2015-06-27T00:15:15Z",
+      "side": 1,
+      "message": "Lexer name \u003d Language name?",
+      "revId": "060e82cbe24dafb61f2e9db8d7027fd2c824a711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_ff82ab51",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1718
+      },
+      "writtenOn": "2015-06-27T00:15:15Z",
+      "side": 1,
+      "message": "fwiw, it looks like this breaks any subclass which invokes this method with a lexer.",
+      "revId": "060e82cbe24dafb61f2e9db8d7027fd2c824a711",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
