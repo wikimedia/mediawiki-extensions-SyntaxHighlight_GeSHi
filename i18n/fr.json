@@ -3,8 +3,12 @@
 		"authors": [
 			"Grondin",
 			"Sherbrooke",
-			"Verdy p"
+			"Verdy p",
+			"Macofe",
+			"Mattho69"
 		]
 	},
-	"syntaxhighlight-desc": "Fournit la mise en relief de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [http://pygments.org/ la coloration syntaxique GeSHi]"
+	"syntaxhighlight-desc": "Fournit la mise en relief de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [http://pygments.org/ la coloration syntaxique GeSHi]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Langage"
 }

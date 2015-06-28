@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"CERminator"
+			"CERminator",
+			"Semso98"
 		]
 	},
-	"syntaxhighlight-desc": "Omogućava isticanje sintakse <code>&lt;syntaxhighlight&gt;</code> uz pomoć [http://pygments.org/ Pygmentsa]"
+	"syntaxhighlight-desc": "Omogućava isticanje sintakse <code>&lt;source&gt;</code> uz pomoć [http://pygments.org/ Pygments - Python syntax highlighter]"
 }
