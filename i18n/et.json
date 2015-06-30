@@ -5,5 +5,8 @@
 			"[[et:Kasutaja:M2s17]]"
 		]
 	},
-	"syntaxhighlight-desc": "Võimaldab [http://pygments.org/ GeSHi] abil <code>&lt;syntaxhighlight&gt;</code>-silti kasutades süntaksit esile tõsta."
+	"syntaxhighlight-desc": "Võimaldab [http://pygments.org/ Pygmentsi] (Pythoni süntaksi esiletõstja) abil <code>&lt;syntaxhighlight&gt;</code>-silti kasutades süntaksit esile tõsta.",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kood",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Keel",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Koodiplokk"
 }

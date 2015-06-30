@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"Okras"
 		]
 	},
-	"syntaxhighlight-desc": "Позволяет использовать тег <code>&lt;syntaxhighlight&gt;</code> для подсветки синтаксиса с помощью [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Обеспечивает подсветки синтаксиса <code>&lt;syntaxhighlight&gt;</code> с помощью [http://pygments.org/ Pygments — средства подсветки синтаксиса для Python]"
 }
