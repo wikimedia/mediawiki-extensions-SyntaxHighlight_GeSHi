@@ -21,3 +21,19 @@ code code.mw-highlight {
 .mw-highlight .err {
 	border: 0;
 }
+
+/* Highlight background of whole lines, not just text in them */
+.mw-highlight .hll {
+	display: block;
+}
+
+/* To interact better with the 'display: block' above, doesn't affect other uses */
+/* @noflip */
+.mw-highlight.mw-content-ltr .lineno {
+	float: left;
+}
+
+/* @noflip */
+.mw-highlight.mw-content-rtl .lineno {
+	float: right;
+}
