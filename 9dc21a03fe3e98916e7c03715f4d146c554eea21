@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_bacc1839",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-01T02:59:47Z",
+      "side": 1,
+      "message": "Maybe use validateAttributes() with a subset of attributes we explicitly want to be used and supported. This opens up a lot of willy nilly attributes, encourages creation of uncoordinated hacks and technical debt. It\u0027s also a source of hard to edit content (e.g. we can\u0027t communicate to Parsoid and VisualEditor which attributes to expect).\n\n\u0027class\u0027 is a good one. \"id\" is questionable, but do-able. \"style\" probably a bad idea (though discuss at T103964). And while those are the three listed here, the Sanitiszr lets a bunch of others through as well.",
+      "revId": "9dc21a03fe3e98916e7c03715f4d146c554eea21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_da600430",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-01T02:59:47Z",
+      "side": 1,
+      "message": "As being a protected method, this doesn\u0027t need to keep supporting \"enclose\". We can have the parserHook normalise it to reduce duplication.",
+      "revId": "9dc21a03fe3e98916e7c03715f4d146c554eea21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
