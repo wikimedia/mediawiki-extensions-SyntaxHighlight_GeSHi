@@ -16,6 +16,24 @@
       "revId": "9d31f10f4e114f33bff8268b0a104e58cc4a1c78",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1a4769c0",
+        "filename": "i18n/en.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-07-01T14:45:23Z",
+      "side": 1,
+      "message": "although we don\u0027t actually seem to use them anywhere... why are they in extension.json?",
+      "parentUuid": "8ec42329_9a3b5935",
+      "revId": "9d31f10f4e114f33bff8268b0a104e58cc4a1c78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
