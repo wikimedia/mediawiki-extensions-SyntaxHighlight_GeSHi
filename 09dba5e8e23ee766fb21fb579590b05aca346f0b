@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c48c9b8b",
+        "filename": "SyntaxHighlight_GeSHi.class.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2015-07-02T12:05:00Z",
+      "side": 1,
+      "message": "documented return type is no longer correct.",
+      "revId": "09dba5e8e23ee766fb21fb579590b05aca346f0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
