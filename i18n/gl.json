@@ -2,8 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Toliño",
-			"Xosé"
+			"Xosé",
+			"Elisardojm"
 		]
 	},
-	"syntaxhighlight-desc": "Proporciona unha sintaxe resaltada <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments]"
+	"syntaxhighlight-desc": "Proporciona unha sintaxe resaltada <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments - Resaltador de sintaxe en Python]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Lingua",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Segmento de código"
 }
