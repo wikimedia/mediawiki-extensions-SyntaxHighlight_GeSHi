@@ -112,6 +112,14 @@ class SyntaxHighlight_GeSHi {
 		// Don't trim leading spaces away, just the linefeeds
 		$out = preg_replace( '/^\n+/', '', rtrim( $text ) );
 
+		// Convert deprecated attributes
+		if ( isset( $args['enclose'] ) ) {
+			if ( $args['enclose'] === 'none' ) {
+				$args['inline'] = true;
+			}
+			unset( $args['enclose'] );
+		}
+
 		$lexer = isset( $args['lang'] ) ? $args['lang'] : '';
 
 		$result = self::highlight( $out, $lexer, $args );
@@ -127,10 +135,51 @@ class SyntaxHighlight_GeSHi {
 			$out = str_replace( "\t", '&#9;', $out );
 		}
 
+		// Allow certain HTML attributes
+		$htmlAttribs = Sanitizer::validateAttributes( $args, array( 'style', 'class', 'id', 'dir' ) );
+		if ( !isset( $htmlAttribs['class'] ) ) {
+			$htmlAttribs['class'] = self::HIGHLIGHT_CSS_CLASS;
+		} else {
+			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS;
+		}
+		if ( !( isset( $htmlAttribs['dir'] ) && $htmlAttribs['dir'] === 'rtl' ) ) {
+			$htmlAttribs['dir'] = 'ltr';
+		}
+
+		if ( isset( $args['inline'] ) ) {
+			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
+			// (also known as doBlockLevels()).
+			$out = str_replace( "\n", ' ', $out );
+			$out = Html::rawElement( 'code', $htmlAttribs, $out );
+
+		} else {
+			// Not entirely sure what benefit this provides, but it was here already
+			$htmlAttribs['class'] .= ' ' . 'mw-content-' . $htmlAttribs['dir'];
+
+			// Unwrap Pygments output to provide our own wrapper. We can't just always use the 'nowrap'
+			// option (pass 'inline'), since it disables other useful things like line highlighting.
+			$m = array();
+			if ( preg_match( '/^<div class="mw-highlight">(.*)<\/div>$/s', trim( $out ), $m ) ) {
+				$out = trim( $m[1] );
+			} else {
+				throw new MWException( 'Unexpected output from Pygments encountered' );
+			}
+
+			// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
+			// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
+			$marker = $parser::MARKER_PREFIX . '-syntaxhighlightinner-' .
+				sprintf( '%08X', $parser->mMarkerIndex++ ) . $parser::MARKER_SUFFIX;
+			$parser->mStripState->addNoWiki( $marker, $out );
+
+			$out = Html::openElement( 'div', $htmlAttribs ) .
+				$marker .
+				Html::closeElement( 'div' );
+		}
+
 		// Register CSS
 		$parser->getOutput()->addModuleStyles( 'ext.pygments' );
 
-		return trim( $out );
+		return $out;
 	}
 
 	/**
@@ -138,12 +187,13 @@ class SyntaxHighlight_GeSHi {
 	 *
 	 * @param string $code Code to highlight.
 	 * @param string|null $lang Language name, or null to use plain markup.
-	 * @param array $args Associative array of additional arguments. If it
-	 *  contains a 'line' key, the output will include line numbers. If it
-	 *  includes a 'highlight' key, the value will be parsed as a
-	 *  comma-separated list of lines and line-ranges to highlight. If it
-	 *  contains a 'start' key, the value will be used as the line at which to
+	 * @param array $args Associative array of additional arguments.
+	 *  If it contains a 'line' key, the output will include line numbers.
+	 *  If it includes a 'highlight' key, the value will be parsed as a
+	 *  comma-separated list of lines and line-ranges to highlight.
+	 *  If it contains a 'start' key, the value will be used as the line at which to
 	 *  start highlighting.
+	 *  If it contains a 'inline' key, the output will not be wrapped in `<div><pre/></div>`.
 	 * @return Status Status object, with HTML representing the highlighted
 	 *  code as its value.
 	 */
@@ -175,16 +225,14 @@ class SyntaxHighlight_GeSHi {
 			$lexer = null;
 		}
 
-		$inline = ( isset( $args['enclose'] ) && $args['enclose'] === 'none' )
-			|| isset( $args['inline'] );
-		$attrs = array( 'class' => self::HIGHLIGHT_CSS_CLASS );
+		$inline = isset( $args['inline'] );
 
 		if ( $lexer === null ) {
 			if ( $inline ) {
-				$status->value = Html::element( 'code', $attrs, trim( $code ) );
+				$status->value = htmlspecialchars( trim( $code ), ENT_NOQUOTES );
 			} else {
 				$pre = Html::element( 'pre', array(), $code );
-				$status->value = Html::rawElement( 'div', $attrs, $pre );
+				$status->value = Html::rawElement( 'div', array( 'class' => self::HIGHLIGHT_CSS_CLASS ), $pre );
 			}
 			return $status;
 		}
@@ -241,7 +289,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		if ( $inline ) {
-			$output = Html::rawElement( 'code', $attrs, trim( $output ) );
+			$output = trim( $output );
 		}
 
 		$status->value = $output;

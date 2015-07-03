@@ -1,7 +1,4 @@
 .mw-highlight {
-	/* All supported programming languages are written left-to-right */
-	/* @noflip */
-	direction: ltr;
 	unicode-bidi: embed;
 }
 
@@ -22,5 +19,5 @@ code code.mw-highlight {
  * to highlight a language for which no lexer exists.
  */
 .mw-highlight .err {
-    border: 0;
+	border: 0;
 }
