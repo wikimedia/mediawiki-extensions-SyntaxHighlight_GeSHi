@@ -88,6 +88,9 @@
 	"config": {
 		"PygmentizePath": false
 	},
+	"TrackingCategories": [
+		"syntaxhighlight-error-category"
+	],
 	"ParserTestFiles": [
 		"tests/parserTests.txt"
 	],
