@@ -3,8 +3,11 @@
 		"authors": [
 			"Dalibor Bosits",
 			"Roberta F.",
-			"SpeedyGonsales"
+			"SpeedyGonsales",
+			"MaGa"
 		]
 	},
-	"syntaxhighlight-desc": "Omogućava bojanje sintakse <code>&lt;syntaxhighlight&gt;</code> korištenjem [http://pygments.org/ Pygments-a]"
+	"syntaxhighlight-desc": "Omogućava bojanje sintakse <code>&lt;syntaxhighlight&gt;</code> korištenjem [http://pygments.org/ Pygments-a]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kôd",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Jezik"
 }
