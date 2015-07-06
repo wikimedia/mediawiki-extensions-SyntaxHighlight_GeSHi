@@ -8,5 +8,6 @@
 	},
 	"syntaxhighlight-desc": "Syntax-Ervirhiewung <code>&lt;syntaxhighlight&gt;</code> mat Hëllef vu [http://pygments.org/ 'Pygments']",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Sprooch"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Sprooch",
+	"syntaxhighlight-error-unknown-language": "Onbekannt Sprooch \"$1\""
 }

@@ -7,6 +7,9 @@
 		]
 	},
 	"syntaxhighlight-desc": "Zapewnia kolorowanie składni dla znacznika <code>&lt;syntaxhighlight&gt;</code> wykorzystując [http://pygments.org/ Pygments]",
+	"syntaxhighlight-error-category": "Strony z podświetlaniem składni błędów",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kod",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Język"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Język",
+	"syntaxhighlight-error-unknown-language": "Nierozpoznany język „$1”",
+	"syntaxhighlight-error-exceeds-size-limit": "Rozmiar kodu równy $1 {{PLURAL:$1|bajt|bajtów}} przekracza dozwolone maksimum $2 {{PLURAL:$2|bajt|bajtów}}"
 }
