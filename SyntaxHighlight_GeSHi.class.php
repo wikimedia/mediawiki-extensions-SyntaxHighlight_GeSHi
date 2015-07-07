@@ -158,8 +158,9 @@ class SyntaxHighlight_GeSHi {
 
 			// Unwrap Pygments output to provide our own wrapper. We can't just always use the 'nowrap'
 			// option (pass 'inline'), since it disables other useful things like line highlighting.
+			// Tolerate absence of quotes for Html::element() and wgWellFormedXml=false.
 			$m = array();
-			if ( preg_match( '/^<div class="mw-highlight">(.*)<\/div>$/s', trim( $out ), $m ) ) {
+			if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
 				$out = trim( $m[1] );
 			} else {
 				throw new MWException( 'Unexpected output from Pygments encountered' );

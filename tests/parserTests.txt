@@ -14,6 +14,30 @@ foobar
 !! end
 
 !! test
+No language specified
+!! wikitext
+<source>
+foo
+</source>
+!! html
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre>foo</pre></div>
+
+!! end
+
+!! test
+No language specified (no wellformed xml)
+!! config
+wgWellFormedXml=false
+!! wikitext
+<source>
+bar
+</source>
+!! html
+<div class="mw-highlight mw-content-ltr" dir=ltr><pre>bar</pre></div>
+
+!! end
+
+!! test
 XSS is escaped
 !!input
 <source lang="doesnotexist">
