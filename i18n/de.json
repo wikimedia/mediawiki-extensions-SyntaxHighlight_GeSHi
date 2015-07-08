@@ -11,6 +11,7 @@
 	"syntaxhighlight-error-category-desc": "Es gab einen Fehler beim Versuch, Code in der Seite hervorzuheben.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Sprache",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Zeilennummern anzeigen",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Code-Block",
 	"syntaxhighlight-error-pygments-invocation-failure": "Fehler beim Aufrufen von Pygments",
 	"syntaxhighlight-error-unknown-language": "Unbekannte Sprache „$1“",
