@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_1142b8b2",
+        "filename": "modules/VisualEditor/ve.ce.MWSyntaxHighlightNode.css",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-07-08T18:40:49Z",
+      "side": 1,
+      "message": "This should be dealt with in a different commit, but I just noticed: We have no AUTHORS.txt in this repository. Or a LICENSE.txt for that matter.",
+      "revId": "d38d9c1994eb1cf382806d8746f262e9c33a59ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
