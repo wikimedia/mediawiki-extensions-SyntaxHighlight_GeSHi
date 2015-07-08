@@ -50,6 +50,13 @@ ve.ce.MWSyntaxHighlightNode.prototype.onSetup = function () {
 	this.$element.addClass( 've-ce-mwSyntaxHighlightNode' );
 };
 
+/** */
+ve.ce.MWSyntaxHighlightNode.prototype.getBoundingRect = function () {
+	// HACK: Because nodes can overflow due to the pre tag, just use the
+	// first rect (of the wrapper div) for placing the context.
+	return this.rects[0];
+};
+
 /* Registration */
 
 ve.ce.nodeFactory.register( ve.ce.MWSyntaxHighlightNode );
