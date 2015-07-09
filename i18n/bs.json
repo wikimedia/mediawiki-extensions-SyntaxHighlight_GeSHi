@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"CERminator",
-			"Semso98"
+			"Semso98",
+			"Srdjan m"
 		]
 	},
-	"syntaxhighlight-desc": "Omogućava isticanje sintakse <code>&lt;source&gt;</code> uz pomoć [http://pygments.org/ Pygments - Python syntax highlighter]"
+	"syntaxhighlight-desc": "Omogućava isticanje sintakse <code>&lt;source&gt;</code> uz pomoć [http://pygments.org/ Pygments - Python syntax highlighter]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Prikaži brojeve redova"
 }

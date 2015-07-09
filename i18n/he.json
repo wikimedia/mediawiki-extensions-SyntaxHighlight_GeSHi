@@ -11,6 +11,7 @@
 	"syntaxhighlight-error-category-desc": "אירעה שגיאה בעת ניסיון לצבוע קוד שכלול בדף.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "קוד",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "שפה",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "להציג מספרי שורות",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "גוש קוד",
 	"syntaxhighlight-error-pygments-invocation-failure": "הרצת Pygments לא עבדה",
 	"syntaxhighlight-error-unknown-language": "השפה \"$1\" אינה ידועה",

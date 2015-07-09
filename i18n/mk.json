@@ -9,6 +9,7 @@
 	"syntaxhighlight-error-category-desc": "Се појави грешка при обидот да се подвлече кодот вклучен во страницава.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Јазик",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Прикажувај броеви на редовите",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Коден блок",
 	"syntaxhighlight-error-pygments-invocation-failure": "Не успеав да го повикам Pygments",
 	"syntaxhighlight-error-unknown-language": "Непознат јазик „$1“",

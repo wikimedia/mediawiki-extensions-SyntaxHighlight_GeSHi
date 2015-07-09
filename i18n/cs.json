@@ -3,10 +3,13 @@
 		"authors": [
 			"Li-sung",
 			"Matěj Grabovský",
-			"Mormegil"
+			"Mormegil",
+			"Matěj Suchánek"
 		]
 	},
 	"syntaxhighlight-desc": "Poskytuje zvýrazňování syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocí [http://pygments.org Pygments – zvýrazňovače syntaxe v Pythonu]",
+	"syntaxhighlight-error-category": "Stránky s chybami ve zvýrazňování kódu",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kód",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Jazyk"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Jazyk",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Zobrazit čísla řádků"
 }
