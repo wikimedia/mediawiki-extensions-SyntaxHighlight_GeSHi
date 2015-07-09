@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_cd81ecc9",
+        "filename": "modules/VisualEditor/ve.ui.MWSyntaxHighlightInspector.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-09T11:56:14Z",
+      "side": 1,
+      "message": "May wanna use $.map() here to simplify the code a bit.\n\n languageItems \u003d $.map( .., -\u003e\n     return { data: lang };\n );",
+      "revId": "fe0bf7c76dd0b09ddf77bd2810dd35d8df716e8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
