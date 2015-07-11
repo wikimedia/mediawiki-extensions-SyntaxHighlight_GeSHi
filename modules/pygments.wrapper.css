@@ -1,4 +1,7 @@
 .mw-highlight {
+	/* All supported programming languages are written left-to-right */
+	/* @noflip */
+	direction: ltr;
 	unicode-bidi: embed;
 }
 
