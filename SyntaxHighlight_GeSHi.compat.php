@@ -75,6 +75,7 @@ class GeSHi {
 		'rails'     => 'ruby',
 		'rpmspec'   => 'spec',
 		'rsplus'    => 'splus',
+		'bnf'       => 'ebnf',
 
 		// ML
 		'ocaml-brief' => 'ocaml',
