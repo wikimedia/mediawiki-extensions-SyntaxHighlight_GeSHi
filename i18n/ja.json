@@ -5,9 +5,11 @@
 			"Fryed-peach",
 			"JtFuruhata",
 			"Shirayuki",
-			"Sujiniku"
+			"Sujiniku",
+			"Runequest77"
 		]
 	},
 	"syntaxhighlight-desc": "[http://pygments.org/ Pygments - Python 構文ハイライト機能] を利用したタグ <code>&lt;syntaxhighlight&gt;</code> を提供する",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "コード"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "コード",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "行番号を表示"
 }
