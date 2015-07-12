@@ -67,6 +67,7 @@ class GeSHi {
 
 		// Miscellaneous
 		'cadlisp'   => 'lisp',
+		'arm'       => 'asm',
 		'j'         => 'objj',
 		'java5'     => 'java',
 		'php-brief' => 'php',
