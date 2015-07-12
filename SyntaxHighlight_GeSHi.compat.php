@@ -96,6 +96,9 @@ class GeSHi {
 
 		// xpp is basically Java
 		'xpp' => 'java',
+
+		// bibtex is basically LaTeX
+		'bibtex' => 'latex',
 	);
 
 	public function __construct( $html ) {
