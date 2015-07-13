@@ -3,9 +3,11 @@
 		"authors": [
 			"SMP",
 			"Solde",
-			"Macofe"
+			"Macofe",
+			"Annamerida"
 		]
 	},
 	"syntaxhighlight-desc": "Proveeix de ressaltat sintàctic amb l'etiqueta <code>&lt;syntaxhighlight&gt;</code> usant el programa [http://pygments.org/ GeSHi]",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Codi"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Codi",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Mostra els números de línia"
 }
