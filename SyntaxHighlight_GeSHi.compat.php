@@ -25,6 +25,19 @@
 class GeSHi {
 	/** @var array A mapping of GeSHi lexer names to compatible Pygments lexers. */
 	public static $compatibleLexers = array(
+		// Assembler
+		'arm'       => 'asm',
+		'6502acme'  => 'asm',
+		'6502tasm'  => 'asm',
+		'6502kickass'=> 'asm',
+		'68000devpac'=> 'asm',
+		'dcpu16'    => 'asm',
+		'm68k'      => 'asm',
+		'mmix'      => 'nasm',
+		'mpasm'     => 'asm',
+		'pic16'     => 'asm',
+		'z80'       => 'asm',
+
 		// BASIC
 		'xbasic'    => 'basic',
 		'thinbasic' => 'basic',
@@ -67,7 +80,6 @@ class GeSHi {
 
 		// Miscellaneous
 		'cadlisp'   => 'lisp',
-		'arm'       => 'asm',
 		'j'         => 'objj',
 		'java5'     => 'java',
 		'php-brief' => 'php',
