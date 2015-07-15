@@ -18,7 +18,9 @@
 
 use KzykHys\Pygments\Pygments;
 
+// @codingStandardsIgnoreStart
 class SyntaxHighlight_GeSHi {
+// @codingStandardsIgnoreEnd
 
 	/** @var const The maximum number of lines that may be selected for highlighting. **/
 	const HIGHLIGHT_MAX_LINES = 1000;
@@ -334,7 +336,7 @@ class SyntaxHighlight_GeSHi {
 			} elseif ( strpos( $value, '-' ) !== false ) {
 				list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
 				if ( self::validHighlightRange( $start, $end ) ) {
-					for ($i = intval( $start ); $i <= $end; $i++ ) {
+					for ( $i = intval( $start ); $i <= $end; $i++ ) {
 						$lines[] = $i;
 					}
 				}
@@ -464,7 +466,9 @@ class SyntaxHighlight_GeSHi {
 	 * @param ParserOptions $popts
 	 * @return bool
 	 */
-	public static function onRejectParserCacheValue( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
+	public static function onRejectParserCacheValue(
+		ParserOutput $parserOutput, $page, ParserOptions $popts
+	) {
 		foreach ( $parserOutput->getModuleStyles() as $module ) {
 			if ( strpos( $module, 'ext.geshi.' ) === 0 ) {
 				$page->getTitle()->purgeSquid();
