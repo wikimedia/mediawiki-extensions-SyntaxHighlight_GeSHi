@@ -5,7 +5,7 @@
         "kzykhys/pygments": "1.0"
     },
     "require-dev": {
-        "jakub-onderka/php-parallel-lint": "0.9.*",
+        "jakub-onderka/php-parallel-lint": "0.9",
         "mediawiki/mediawiki-codesniffer": "0.4.0"
     },
     "license": "GPL-2+",
