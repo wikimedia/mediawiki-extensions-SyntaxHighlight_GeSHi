@@ -6,10 +6,12 @@
 			"Verdy p",
 			"Macofe",
 			"Mattho69",
-			"Dcausse"
+			"Dcausse",
+			"Orlodrim"
 		]
 	},
 	"syntaxhighlight-desc": "Fournit la mise en relief de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [http://pygments.org/ la coloration syntaxique GeSHi]",
+	"syntaxhighlight-error-category": "Pages avec des erreurs de coloration syntaxique",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Langage",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Afficher les numéros de ligne"
