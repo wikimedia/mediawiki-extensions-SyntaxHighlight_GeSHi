@@ -89,6 +89,7 @@ class GeSHi {
 		'rpmspec'   => 'spec',
 		'rsplus'    => 'splus',
 		'bnf'       => 'ebnf',
+		'gettext'   => 'pot',
 
 		// ML
 		'ocaml-brief' => 'ocaml',
