@@ -99,6 +99,7 @@ class GeSHi {
 		'oberon2' => 'modula2',
 
 		// SQL
+		'dcl'      => 'sql',
 		'tsql'     => 'sql',
 		'plsql'    => 'sql',
 		'oracle11' => 'sql',
