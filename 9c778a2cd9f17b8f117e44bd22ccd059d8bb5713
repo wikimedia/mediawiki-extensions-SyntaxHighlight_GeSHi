@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_69b382e8",
+        "filename": "ResourceLoaderGeSHiVisualEditorModule.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-28T22:47:35Z",
+      "side": 1,
+      "message": "This will still show urls. I assume you meant \"file urls\".",
+      "revId": "9c778a2cd9f17b8f117e44bd22ccd059d8bb5713",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
