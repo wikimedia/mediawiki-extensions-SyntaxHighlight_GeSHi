@@ -37,6 +37,13 @@ class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
 	}
 
 	/**
+	 * Don't break debug mode by only showing file URLs
+	 */
+	public function getScriptURLsForDebug( ResourceLoaderContext $context ) {
+		return ResourceLoaderModule::getScriptURLsForDebug( $context );
+	}
+
+	/**
 	 * Get a full list of available langauges
 	 * @return array
 	 */
