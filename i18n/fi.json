@@ -2,8 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Crt",
-			"Nike"
+			"Nike",
+			"Stryn"
 		]
 	},
-	"syntaxhighlight-desc": "Mahdollistaa syntaksin korostuksen [http://pygments.org/ GeSHillä] <code>&lt;syntaxhighlight&gt;</code>-elementtiä käyttämällä."
+	"syntaxhighlight-desc": "Mahdollistaa syntaksin korostuksen [http://pygments.org/ Pygments - Python -syntaksin korostimella]",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Koodi",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Kieli",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Näytä rivinumerot",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Koodipätkä",
+	"syntaxhighlight-error-unknown-language": "Tuntematon kieli: \"$1\""
 }
