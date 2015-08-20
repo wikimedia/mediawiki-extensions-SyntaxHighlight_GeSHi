@@ -32,7 +32,7 @@
 	},
 	"ResourceModules": {
 		"ext.pygments": {
-			"position": "bottom",
+			"position": "top",
 			"targets": [
 				"desktop",
 				"mobile"
