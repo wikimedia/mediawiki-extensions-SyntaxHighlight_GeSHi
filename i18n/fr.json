@@ -16,6 +16,7 @@
 	"syntaxhighlight-error-category-desc": "Il y a eu une erreur lors de la tentative de mise en valeur du code inclus sur la page.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Langage",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(aucun)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Afficher les numéros de ligne",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Bloc de code",
 	"syntaxhighlight-error-pygments-invocation-failure": "Impossible d'appeler Pygments",
