@@ -12,6 +12,7 @@
 	"syntaxhighlight-error-category-desc": "Wystąpił błąd podczas próby podświetlenia kodu zawartego na stronie.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kod",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Język",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Brak)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Pokaż numery linii",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Blok kodu",
 	"syntaxhighlight-error-unknown-language": "Nierozpoznany język „$1”",
