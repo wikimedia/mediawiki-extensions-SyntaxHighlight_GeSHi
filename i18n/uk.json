@@ -3,7 +3,8 @@
 		"authors": [
 			"Ahonc",
 			"Ата",
-			"AS"
+			"AS",
+			"Dars"
 		]
 	},
 	"syntaxhighlight-desc": "Забезпечує підсвічування синтаксису <code>&lt;syntaxhighlight&gt;</code> за допомогою [http://pygments.org/ Pygments] для синтаксису Python",
@@ -11,6 +12,7 @@
 	"syntaxhighlight-error-category-desc": "Сталася помилка при спробі підсвічення коду на сторінці.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Мова",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Немає)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Показати номери рядків",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Блок коду",
 	"syntaxhighlight-error-pygments-invocation-failure": "Не вдалося викликати Pygments",
