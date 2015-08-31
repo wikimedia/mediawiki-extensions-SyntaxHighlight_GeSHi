@@ -49,21 +49,19 @@ ve.ui.MWSyntaxHighlightInspector.prototype.initialize = function () {
 	ve.ui.MWSyntaxHighlightInspector.super.prototype.initialize.call( this );
 
 	this.language = new OO.ui.ComboBoxWidget( {
-		menu: { filterFromInput: true },
+		menu: {
+			filterFromInput: true,
+			items: [ new OO.ui.MenuOptionWidget( { data: '', label: noneMsg } ) ].concat(
+				$.map( ve.dm.MWSyntaxHighlightNode.static.getLanguages(), function ( lang ) {
+					return new OO.ui.MenuOptionWidget( { data: lang, label: lang } );
+				} )
+			)
+		},
 		input: { validate: function ( input ) {
 			return input === '' || ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported( input );
 		} }
 	} );
 	this.language.getInput().connect( this, { change: 'onLanguageInputChange' } );
-	this.language.getMenu()
-		.clearItems()
-		.addItems(
-			[ new OO.ui.MenuOptionWidget( { data: '', label: noneMsg } ) ].concat(
-				$.map( ve.dm.MWSyntaxHighlightNode.static.getLanguages(), function ( lang ) {
-					return new OO.ui.MenuOptionWidget( { data: lang, label: lang } );
-				} )
-			)
-		);
 
 	this.showLinesCheckbox = new OO.ui.CheckboxInputWidget();
 
