@@ -2,8 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Lejonel",
-			"Lokal Profil"
+			"Lokal Profil",
+			"WikiPhoenix"
 		]
 	},
-	"syntaxhighlight-desc": "Ger syntaxmarkering med [http://pygments.org/ Pygments] inuti <code>&lt;syntaxhighlight&gt;</code>-taggar"
+	"syntaxhighlight-desc": "Ger syntaxmarkering med [http://pygments.org/ Pygments] inuti <code>&lt;syntaxhighlight&gt;</code>-taggar",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Ingen)"
 }
