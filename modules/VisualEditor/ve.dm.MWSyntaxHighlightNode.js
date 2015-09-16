@@ -47,7 +47,7 @@ ve.dm.MWSyntaxHighlightNode.static.toDataElement = function ( domElements, conve
 };
 
 ( function () {
-	var supportedLanguages = [];
+	var supportedLanguages = [ undefined ];
 
 	/**
 	 * Register supported languages.
@@ -65,7 +65,7 @@ ve.dm.MWSyntaxHighlightNode.static.toDataElement = function ( domElements, conve
 	 * @return {boolean} The language is supported
 	 */
 	ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported = function ( language ) {
-		return supportedLanguages.indexOf( language ) !== -1;
+		return supportedLanguages.indexOf( language || undefined ) !== -1;
 	};
 
 	/**
