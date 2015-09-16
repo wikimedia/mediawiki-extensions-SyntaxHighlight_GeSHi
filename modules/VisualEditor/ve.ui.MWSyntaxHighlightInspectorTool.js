@@ -25,7 +25,7 @@ ve.ui.MWSyntaxHighlightInspectorTool.static.group = 'object';
 ve.ui.MWSyntaxHighlightInspectorTool.static.icon = 'alienextension';
 ve.ui.MWSyntaxHighlightInspectorTool.static.title = OO.ui.deferMsg(
 	'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title' );
-ve.ui.MWSyntaxHighlightInspectorTool.static.modelClasses = [ ve.dm.MWSyntaxHighlightNode ];
+ve.ui.MWSyntaxHighlightInspectorTool.static.modelClasses = [ ve.dm.MWBlockSyntaxHighlightNode, ve.dm.MWInlineSyntaxHighlightNode ];
 ve.ui.MWSyntaxHighlightInspectorTool.static.commandName = 'syntaxhighlight';
 ve.ui.toolFactory.register( ve.ui.MWSyntaxHighlightInspectorTool );
 

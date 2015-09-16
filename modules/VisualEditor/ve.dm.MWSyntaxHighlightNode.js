@@ -9,25 +9,20 @@
  * DataModel MediaWiki syntax highlight node.
  *
  * @class
- * @extends ve.dm.MWBlockExtensionNode
+ * @abstract
  *
  * @constructor
- * @param {Object} [element]
  */
 ve.dm.MWSyntaxHighlightNode = function VeDmMWSyntaxHighlightNode() {
-	// Parent constructor
-	ve.dm.MWSyntaxHighlightNode.super.apply( this, arguments );
 };
 
 /* Inheritance */
 
-OO.inheritClass( ve.dm.MWSyntaxHighlightNode, ve.dm.MWBlockExtensionNode );
+OO.initClass( ve.dm.MWSyntaxHighlightNode );
 
 /* Static members */
 
 ve.dm.MWSyntaxHighlightNode.static.name = 'mwSyntaxHighlight';
-
-ve.dm.MWSyntaxHighlightNode.static.tagName = 'div';
 
 ve.dm.MWSyntaxHighlightNode.static.extensionName = 'syntaxhighlight';
 
@@ -36,6 +31,20 @@ ve.dm.MWSyntaxHighlightNode.static.getMatchRdfaTypes = function () {
 };
 
 /* Static methods */
+
+/**
+ * @inheritdoc
+ */
+ve.dm.MWSyntaxHighlightNode.static.toDataElement = function ( domElements, converter ) {
+	// Parent method
+	var dataElement = ve.dm.MWExtensionNode.static.toDataElement( domElements, converter ),
+		isInline = this.isHybridInline( domElements, converter ),
+		type = isInline ? 'mwInlineSyntaxHighlight' : 'mwBlockSyntaxHighlight';
+
+	dataElement.type = type;
+
+	return dataElement;
+};
 
 ( function () {
 	var supportedLanguages = [];
@@ -84,6 +93,43 @@ ve.dm.MWSyntaxHighlightNode.prototype.getLanguage = function () {
 	return this.getAttribute( 'mw' ).attrs.lang;
 };
 
+/* Concrete subclasses */
+
+ve.dm.MWBlockSyntaxHighlightNode = function VeDmMWBlockSyntaxHighlightNode() {
+	// Parent method
+	ve.dm.MWBlockExtensionNode.super.apply( this, arguments );
+
+	// Mixin method
+	ve.dm.MWSyntaxHighlightNode.call( this );
+};
+
+OO.inheritClass( ve.dm.MWBlockSyntaxHighlightNode, ve.dm.MWBlockExtensionNode );
+
+OO.mixinClass( ve.dm.MWBlockSyntaxHighlightNode, ve.dm.MWSyntaxHighlightNode );
+
+ve.dm.MWBlockSyntaxHighlightNode.static.name = 'mwBlockSyntaxHighlight';
+
+ve.dm.MWBlockSyntaxHighlightNode.static.tagName = 'div';
+
+ve.dm.MWInlineSyntaxHighlightNode = function VeDmMWInlineSyntaxHighlightNode() {
+	// Parent method
+	ve.dm.MWInlineExtensionNode.super.apply( this, arguments );
+
+	// Mixin method
+	ve.dm.MWSyntaxHighlightNode.call( this );
+};
+
+OO.inheritClass( ve.dm.MWInlineSyntaxHighlightNode, ve.dm.MWInlineExtensionNode );
+
+OO.mixinClass( ve.dm.MWInlineSyntaxHighlightNode, ve.dm.MWSyntaxHighlightNode );
+
+ve.dm.MWInlineSyntaxHighlightNode.static.name = 'mwInlineSyntaxHighlight';
+
+ve.dm.MWInlineSyntaxHighlightNode.static.tagName = 'code';
+
+ve.dm.MWInlineSyntaxHighlightNode.static.isContent = true;
+
 /* Registration */
 
-ve.dm.modelRegistry.register( ve.dm.MWSyntaxHighlightNode );
+ve.dm.modelRegistry.register( ve.dm.MWBlockSyntaxHighlightNode );
+ve.dm.modelRegistry.register( ve.dm.MWInlineSyntaxHighlightNode );

@@ -33,7 +33,7 @@ ve.ui.MWSyntaxHighlightInspector.static.size = 'large';
 
 ve.ui.MWSyntaxHighlightInspector.static.title = OO.ui.deferMsg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title' );
 
-ve.ui.MWSyntaxHighlightInspector.static.modelClasses = [ ve.dm.MWSyntaxHighlightNode ];
+ve.ui.MWSyntaxHighlightInspector.static.modelClasses = [ ve.dm.MWBlockSyntaxHighlightNode, ve.dm.MWInlineSyntaxHighlightNode ];
 
 ve.ui.MWSyntaxHighlightInspector.static.dir = 'ltr';
 
