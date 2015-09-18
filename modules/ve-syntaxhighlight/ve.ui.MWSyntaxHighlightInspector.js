@@ -146,11 +146,13 @@ ve.ui.MWSyntaxHighlightInspector.prototype.getTeardownProcess = function ( data 
  * @inheritdoc
  */
 ve.ui.MWSyntaxHighlightInspector.prototype.updateMwData = function ( mwData ) {
+	var language, showLines;
+
 	// Parent method
 	ve.ui.MWSyntaxHighlightInspector.super.prototype.updateMwData.call( this, mwData );
 
-	var language = this.language.input.getValue(),
-		showLines = this.showLinesCheckbox.isSelected();
+	language = this.language.input.getValue();
+	showLines = this.showLinesCheckbox.isSelected();
 
 	mwData.attrs.lang = language || undefined;
 	mwData.attrs.line = showLines ? '1' : undefined;
