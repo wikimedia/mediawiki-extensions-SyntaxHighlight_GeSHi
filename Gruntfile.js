@@ -40,6 +40,9 @@ module.exports = function ( grunt ) {
 			all: 'modules/**/*.css'
 		},
 		banana: {
+			options: {
+				disallowDuplicateTranslations: false
+			},
 			all: 'i18n/'
 		},
 		watch: {
