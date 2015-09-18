@@ -45,14 +45,14 @@
 		"ext.geshi.visualEditor": {
 			"class": "ResourceLoaderGeSHiVisualEditorModule",
 			"scripts": [
-				"VisualEditor/ve.dm.MWSyntaxHighlightNode.js",
-				"VisualEditor/ve.ce.MWSyntaxHighlightNode.js",
-				"VisualEditor/ve.ui.MWSyntaxHighlightInspector.js",
-				"VisualEditor/ve.ui.MWSyntaxHighlightInspectorTool.js"
+				"ve-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js",
+				"ve-syntaxhighlight/ve.ce.MWSyntaxHighlightNode.js",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspector.js",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspectorTool.js"
 			],
 			"styles": [
-				"VisualEditor/ve.ce.MWSyntaxHighlightNode.css",
-				"VisualEditor/ve.ui.MWSyntaxHighlightInspector.css"
+				"ve-syntaxhighlight/ve.ce.MWSyntaxHighlightNode.css",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspector.css"
 			],
 			"dependencies": [
 				"ext.visualEditor.mwcore"
