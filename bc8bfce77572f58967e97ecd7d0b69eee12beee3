@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_20fc1d08",
+        "filename": "composer.json",
+        "patchSetId": 20
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-09-27T19:16:44Z",
+      "side": 1,
+      "message": "Passing -s  (show Sniff name)  helps troubleshooting :-)",
+      "revId": "bc8bfce77572f58967e97ecd7d0b69eee12beee3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
