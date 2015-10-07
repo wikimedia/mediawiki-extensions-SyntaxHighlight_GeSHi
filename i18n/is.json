@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Snævar"
+		]
+	},
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kóði",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Tungumál",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ekkert)",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Sýna línu númer",
+	"syntaxhighlight-error-unknown-language": "Óþekkt tungumál \"$1\""
+}
