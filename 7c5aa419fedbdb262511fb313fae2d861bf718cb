@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_756a01b3",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2015-10-11T16:36:35Z",
+      "side": 1,
+      "message": "This can be updated to 1.0.5. It was just released.",
+      "revId": "7c5aa419fedbdb262511fb313fae2d861bf718cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
