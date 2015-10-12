@@ -173,6 +173,8 @@ class SyntaxHighlight {
 		}
 
 		// Register CSS
+		// TODO: Consider moving to a separate method so that public method
+		// highlight() can be used without needing to know the module name.
 		$parser->getOutput()->addModuleStyles( 'ext.pygments' );
 
 		return $out;
@@ -210,6 +212,9 @@ class SyntaxHighlight {
 
 	/**
 	 * Highlight a code-block using a particular lexer.
+	 *
+	 * This produces raw HTML (wrapped by Status), the caller is responsible
+	 * for making sure the "ext.pygments" module is loaded in the output.
 	 *
 	 * @param string $code Code to highlight.
 	 * @param string|null $lang Language name, or null to use plain markup.
