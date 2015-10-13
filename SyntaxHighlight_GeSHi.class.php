@@ -53,6 +53,7 @@ class SyntaxHighlight_GeSHi {
 			require_once __DIR__ . '/vendor/autoload.php';
 		}
 	}
+
 	/**
 	 * Get the Pygments lexer name for a particular language.
 	 *
