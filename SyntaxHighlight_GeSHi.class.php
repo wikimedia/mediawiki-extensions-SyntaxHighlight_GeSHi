@@ -201,7 +201,7 @@ class SyntaxHighlight_GeSHi {
 	 * @return Status Status object, with HTML representing the highlighted
 	 *  code as its value.
 	 */
-	protected static function highlight( $code, $lang = null, $args = array() ) {
+	public static function highlight( $code, $lang = null, $args = array() ) {
 		global $wgPygmentizePath;
 
 		$status = new Status;
