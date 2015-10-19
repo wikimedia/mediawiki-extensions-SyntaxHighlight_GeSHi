@@ -47,11 +47,15 @@
 			"scripts": [
 				"ve-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js",
 				"ve-syntaxhighlight/ve.ce.MWSyntaxHighlightNode.js",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightWindow.js",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightDialog.js",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightDialogTool.js",
 				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspector.js",
 				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspectorTool.js"
 			],
 			"styles": [
 				"ve-syntaxhighlight/ve.ce.MWSyntaxHighlightNode.css",
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightDialog.css",
 				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspector.css"
 			],
 			"dependencies": [
