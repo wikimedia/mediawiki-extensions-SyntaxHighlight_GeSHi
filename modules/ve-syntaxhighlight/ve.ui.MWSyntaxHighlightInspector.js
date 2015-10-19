@@ -122,9 +122,7 @@ ve.ui.MWSyntaxHighlightInspector.prototype.getSetupProcess = function ( data ) {
 				language = attrs.lang || '',
 				showLines = attrs.line !== undefined;
 
-			if ( ve.dm.MWSyntaxHighlightNode.static.isLanguageSupported( language ) ) {
-				this.language.input.setValue( language );
-			}
+			this.language.input.setValue( language );
 			this.language.input.on( 'change', this.onChangeHandler );
 
 			this.showLinesCheckbox.setSelected( showLines );
