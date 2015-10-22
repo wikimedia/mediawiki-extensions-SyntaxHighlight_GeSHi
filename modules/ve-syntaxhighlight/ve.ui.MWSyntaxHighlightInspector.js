@@ -103,10 +103,11 @@ ve.ui.MWSyntaxHighlightInspector.prototype.onLanguageInputChange = function () {
 ve.ui.MWSyntaxHighlightInspector.prototype.getReadyProcess = function ( data ) {
 	return ve.ui.MWSyntaxHighlightInspector.super.prototype.getReadyProcess.call( this, data )
 		.next( function () {
-			if ( this.language.input.getValue() ) {
-				this.input.focus();
+			this.language.getMenu().toggle( false );
+			if ( !this.language.getInput().getValue() ) {
+				this.language.getInput().focus();
 			} else {
-				this.language.getMenu().toggle( true );
+				this.input.focus();
 			}
 		}, this );
 };
