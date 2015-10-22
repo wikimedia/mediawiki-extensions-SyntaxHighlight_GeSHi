@@ -35,3 +35,12 @@ ve.ui.commandRegistry.register(
 		{ args: [ 'syntaxhighlightDialog' ], supportedSelections: [ 'linear' ] }
 	)
 );
+
+ve.ui.sequenceRegistry.register(
+	// Don't wait for the user to type out the full <syntaxhighlight> tag
+	new ve.ui.Sequence( 'wikitextSyntax', 'syntaxhighlightDialog', '<syntax', 7 )
+);
+
+ve.ui.sequenceRegistry.register(
+	new ve.ui.Sequence( 'wikitextSource', 'syntaxhighlightDialog', '<source', 7 )
+);
