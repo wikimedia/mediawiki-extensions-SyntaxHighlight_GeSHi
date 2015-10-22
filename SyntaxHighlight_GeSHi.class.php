@@ -272,7 +272,7 @@ class SyntaxHighlight_GeSHi {
 			$options['nowrap'] = 1;
 		}
 
-		$cache = wfGetMainCache();
+		$cache = ObjectCache::getMainWANInstance();
 		$cacheKey = self::makeCacheKey( $code, $lexer, $options );
 		$output = $cache->get( $cacheKey );
 
