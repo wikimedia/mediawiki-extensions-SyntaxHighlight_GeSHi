@@ -126,6 +126,7 @@ ve.ui.MWSyntaxHighlightDialog.prototype.getSetupProcess = function ( data ) {
 		}, this )
 		.next( function () {
 			this.onShowLinesCheckboxChange();
+			this.input.clearUndoStack();
 		}, this );
 };
 
