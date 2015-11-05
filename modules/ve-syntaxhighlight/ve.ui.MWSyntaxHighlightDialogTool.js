@@ -44,3 +44,8 @@ ve.ui.sequenceRegistry.register(
 ve.ui.sequenceRegistry.register(
 	new ve.ui.Sequence( 'wikitextSource', 'syntaxhighlightDialog', '<source', 7 )
 );
+
+ve.ui.commandHelpRegistry.register( 'insert', 'syntax', {
+	sequences: [ 'wikitextSyntax', 'wikitextSource' ],
+	label: OO.ui.deferMsg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title' )
+} );
