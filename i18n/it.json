@@ -7,6 +7,11 @@
 		]
 	},
 	"syntaxhighlight-desc": "Evidenzia la sintassi dei linguaggi di programmazione <code>&lt;syntaxhighlight&gt;</code> tramite [http://pygments.org/ Pygments - evidenziatore della sintassi Python]",
+	"syntaxhighlight-error-category": "Pagine con errori nell'evidenziazione della sintassi",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Codice",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Lingua"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Linguaggio",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(nessuno)",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Mostra i numeri di riga",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Blocco di codice",
+	"syntaxhighlight-error-unknown-language": "Linguaggio sconosciuto \"$1\""
 }
