@@ -4,6 +4,10 @@
     "require": {
         "kzykhys/pygments": "1.0"
     },
+    "require-dev": {
+        "jakub-onderka/php-parallel-lint": "0.9",
+        "mediawiki/mediawiki-codesniffer": "0.4.0"
+    },
     "license": "GPL-2+",
     "authors": [
         {
@@ -25,5 +29,11 @@
             "name": "Tim Starling",
             "email": "tstarling@wikimedia.org"
         }
-    ]
+    ],
+    "scripts": {
+        "test": [
+            "parallel-lint . --exclude vendor",
+            "phpcs -p -s"
+        ]
+    }
 }
