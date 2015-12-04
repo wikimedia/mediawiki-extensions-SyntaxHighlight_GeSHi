@@ -16,6 +16,24 @@
       "revId": "9b0d29e48f14e57679a81a993a7e18dbd4ae454f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb37bc7_1af41b83",
+        "filename": "composer.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-12-04T22:59:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ceb37bc7_17e15efb",
+      "revId": "9b0d29e48f14e57679a81a993a7e18dbd4ae454f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
