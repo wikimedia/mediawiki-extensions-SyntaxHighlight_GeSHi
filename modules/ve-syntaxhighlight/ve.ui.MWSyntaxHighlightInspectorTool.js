@@ -11,7 +11,7 @@
  * MediaWiki UserInterface syntax highlight tool.
  *
  * @class
- * @extends ve.ui.InspectorTool
+ * @extends ve.ui.FragmentInspectorTool
  * @constructor
  * @param {OO.ui.ToolGroup} toolGroup
  * @param {Object} [config] Configuration options
@@ -19,7 +19,7 @@
 ve.ui.MWSyntaxHighlightInspectorTool = function VeUiMWSyntaxHighlightInspectorTool() {
 	ve.ui.MWSyntaxHighlightInspectorTool.super.apply( this, arguments );
 };
-OO.inheritClass( ve.ui.MWSyntaxHighlightInspectorTool, ve.ui.InspectorTool );
+OO.inheritClass( ve.ui.MWSyntaxHighlightInspectorTool, ve.ui.FragmentInspectorTool );
 ve.ui.MWSyntaxHighlightInspectorTool.static.name = 'syntaxhighlightInspector';
 ve.ui.MWSyntaxHighlightInspectorTool.static.group = 'object';
 ve.ui.MWSyntaxHighlightInspectorTool.static.icon = 'alienextension';
