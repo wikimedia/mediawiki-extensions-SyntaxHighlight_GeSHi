@@ -11,7 +11,7 @@
  * MediaWiki UserInterface syntax highlight tool.
  *
  * @class
- * @extends ve.ui.DialogTool
+ * @extends ve.ui.FragmentWindowTool
  * @constructor
  * @param {OO.ui.ToolGroup} toolGroup
  * @param {Object} [config] Configuration options
@@ -19,7 +19,7 @@
 ve.ui.MWSyntaxHighlightDialogTool = function VeUiMWSyntaxHighlightDialogTool() {
 	ve.ui.MWSyntaxHighlightDialogTool.super.apply( this, arguments );
 };
-OO.inheritClass( ve.ui.MWSyntaxHighlightDialogTool, ve.ui.DialogTool );
+OO.inheritClass( ve.ui.MWSyntaxHighlightDialogTool, ve.ui.FragmentWindowTool );
 ve.ui.MWSyntaxHighlightDialogTool.static.name = 'syntaxhighlightDialog';
 ve.ui.MWSyntaxHighlightDialogTool.static.group = 'object';
 ve.ui.MWSyntaxHighlightDialogTool.static.icon = 'alienextension';
