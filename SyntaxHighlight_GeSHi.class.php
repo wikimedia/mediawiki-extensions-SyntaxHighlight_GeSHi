@@ -48,10 +48,6 @@ class SyntaxHighlight_GeSHi {
 		if ( $wgPygmentizePath === false ) {
 			$wgPygmentizePath = __DIR__ . '/pygments/pygmentize';
 		}
-
-		if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-			require_once __DIR__ . '/vendor/autoload.php';
-		}
 	}
 
 	/**
