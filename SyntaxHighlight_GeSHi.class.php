@@ -494,8 +494,8 @@ class SyntaxHighlight_GeSHi {
 
 	/** Backward-compatibility shim for extensions. */
 	public static function buildHeadItem( $geshi ) {
-			wfDeprecated( __METHOD__ );
-			$geshi->parse_code();
-			return '';
+		wfDeprecated( __METHOD__ );
+		$geshi->parse_code();
+		return '';
 	}
 }
