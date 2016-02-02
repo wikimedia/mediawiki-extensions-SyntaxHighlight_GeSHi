@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_d363ded8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1718
+      },
+      "writtenOn": "2016-02-02T22:24:01Z",
+      "side": 1,
+      "message": "hmm, why isnt Algol (algol68) in this list?  I thought that would be part of v2.1\n\nprobably worth adding a separate list indicating which GeSHi langs are now supported again.  i.e. regressions caused by the switch to Pygments, that have now been fixed.\n\ni.e. BNF, ParaSail ; maybe JCL, Algol, typescript, and others.  need to recheck lost languages list.",
+      "revId": "62855de76cf976f01b15e67acf27ce540d74ec09",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
