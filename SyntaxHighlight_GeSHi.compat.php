@@ -80,7 +80,6 @@ class GeSHi {
 
 		// Miscellaneous
 		'cadlisp'   => 'lisp',
-		'j'         => 'objj',
 		'java5'     => 'java',
 		'php-brief' => 'php',
 		'povray'    => 'pov',
@@ -88,7 +87,6 @@ class GeSHi {
 		'rails'     => 'ruby',
 		'rpmspec'   => 'spec',
 		'rsplus'    => 'splus',
-		'bnf'       => 'ebnf',
 		'gettext'   => 'pot',
 
 		// ML
