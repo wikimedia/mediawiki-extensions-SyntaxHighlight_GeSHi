@@ -16,6 +16,24 @@
       "revId": "d73ffc64870af890ee4d22274b8f126183e67301",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_b6aac680",
+        "filename": "SyntaxHighlight_GeSHi.lexers.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1718
+      },
+      "writtenOn": "2016-02-04T00:30:11Z",
+      "side": 0,
+      "message": "this was a regression: https://bitbucket.org/birkenfeld/pygments-main/issues/1207/regression-lexer-name-emacs-lisp-undefined",
+      "parentUuid": "4ea78b8a_33583235",
+      "revId": "d73ffc64870af890ee4d22274b8f126183e67301",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
