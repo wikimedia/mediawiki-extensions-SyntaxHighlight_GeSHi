@@ -6,10 +6,12 @@
 			"JtFuruhata",
 			"Shirayuki",
 			"Sujiniku",
-			"Runequest77"
+			"Runequest77",
+			"Rxy"
 		]
 	},
 	"syntaxhighlight-desc": "[http://pygments.org/ Pygments - Python 構文ハイライト機能] を利用したタグ <code>&lt;syntaxhighlight&gt;</code> を提供する",
+	"syntaxhighlight-error-category": "構文ハイライトエラーがあるページ",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "コード",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "言語",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(なし)",
