@@ -38,6 +38,13 @@ code code.mw-highlight {
 	display: block;
 }
 
+/* Make line numbers non copyable */
+.mw-highlight .lineno {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
 /* To interact better with the 'display: block' above, doesn't affect other uses */
 /* @noflip */
 .mw-highlight.mw-content-ltr .lineno {
