@@ -120,6 +120,9 @@ class GeSHi {
 		// Upstream bug:
 		//   https://bitbucket.org/birkenfeld/pygments-main/issues/1207
 		'emacs-lisp' => 'elisp',
+
+		// apt
+		'apt_sources' => 'debsources',
 	);
 
 	public function __construct( $html ) {
