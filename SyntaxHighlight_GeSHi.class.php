@@ -70,6 +70,10 @@ class SyntaxHighlight_GeSHi {
 	public static function parserHook( $text, $args = array(), $parser ) {
 		global $wgSyntaxHighlightDefaultLang, $wgUseTidy;
 		self::initialise();
+
+		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
+		$text = $parser->mStripState->unstripNoWiki( $text );
+
 		$text = rtrim( $text );
 		// Don't trim leading spaces away, just the linefeeds
 		$text = preg_replace( '/^\n+/', '', $text );
