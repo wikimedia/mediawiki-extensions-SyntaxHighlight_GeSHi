@@ -31,10 +31,10 @@ module.exports = function ( grunt ) {
 			]
 		},
 		jscs: {
-			src: '<%= jshint.all %>'
+			all: '<%= jshint.all %>'
 		},
 		stylelint: {
-			src: [
+			all: [
 				'**/*.css',
 				'!**/*.generated.css',
 				'!vendor/**',
