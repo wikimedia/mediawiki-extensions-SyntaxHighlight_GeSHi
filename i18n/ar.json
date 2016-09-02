@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
-			"زكريا"
+			"زكريا",
+			"Mr. Ibrahem"
 		]
 	},
 	"syntaxhighlight-desc": "يوفر تعليم النص <code>&lt;syntaxhighlight&gt;</code> باستخدام [http://pygments.org/ معلم GeSHi]",
+	"syntaxhighlight-error-category": "صفحات بها أخطاء في تعليم الصيغة",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "نص خام"
 }
