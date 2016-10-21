@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_19aeaae4",
+        "filename": "SyntaxHighlight_GeSHi.ace.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2016-10-21T16:54:51Z",
+      "side": 1,
+      "message": "if you want these arrows to line up you should use spaces, because tabs don\u0027t always render the same width",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 11
+      },
+      "revId": "35417d16b9d528366d63a28f9ef60679fc727156",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
