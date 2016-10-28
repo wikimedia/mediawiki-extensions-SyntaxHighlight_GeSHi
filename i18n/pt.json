@@ -11,7 +11,7 @@
 	"syntaxhighlight-error-category": "Páginas com erros no destaque de sintaxe",
 	"syntaxhighlight-error-category-desc": "Ocorreu um erro ao tentar realçar o código incluído na página.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Idioma",
-	"syntaxhighlight-error-unknown-language": "Idioma \"$1\" desconhecido",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Língua",
+	"syntaxhighlight-error-unknown-language": "Língua \"$1\" desconhecida",
 	"syntaxhighlight-error-exceeds-size-limit": "O tamanho do código de $1 {{PLURAL:$1|bytes}} excede o máximo permitido de $2 {{PLURAL:$2|bytes}}"
 }
