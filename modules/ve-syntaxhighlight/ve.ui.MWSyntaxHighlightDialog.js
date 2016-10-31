@@ -91,7 +91,8 @@ ve.ui.MWSyntaxHighlightDialog.prototype.onLanguageInputChange = function () {
 	ve.ui.MWSyntaxHighlightWindow.prototype.onLanguageInputChange.call( this );
 
 	this.language.getInput().isValid().done( function ( valid ) {
-		dialog.input.setLanguage( valid ? dialog.language.getInput().getValue() : 'text' );
+		var language = ve.dm.MWSyntaxHighlightNode.static.convertLanguageToAce( dialog.language.getInput().getValue() );
+		dialog.input.setLanguage( valid ? language : 'text' );
 	} );
 };
 
