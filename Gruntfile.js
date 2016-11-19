@@ -4,20 +4,16 @@
  * @package SyntaxHighlight_GeSHi
  */
 
-/*jshint node:true */
+/* eslint-env node */
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-jscs' );
+	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
-		jshint: {
-			options: {
-				jshintrc: true
-			},
+		eslint: {
 			all: [
 				'*.js',
 				'modules/**/*.js'
@@ -29,9 +25,6 @@ module.exports = function ( grunt ) {
 				'i18n/*.json',
 				'modules/**/*.json'
 			]
-		},
-		jscs: {
-			all: '<%= jshint.all %>'
 		},
 		stylelint: {
 			all: [
@@ -50,13 +43,13 @@ module.exports = function ( grunt ) {
 		watch: {
 			files: [
 				'.{stylelintrc,jscsrc,jshintignore,jshintrc}',
-				'<%= jshint.all %>',
+				'<%= eslint.all %>',
 				'<%= stylelint.all %>'
 			],
 			tasks: 'test'
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'jshint', 'jsonlint', 'jscs', 'stylelint', 'banana' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'jsonlint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'default', 'test' );
 };
