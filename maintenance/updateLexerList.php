@@ -35,8 +35,6 @@ class UpdateLanguageList extends Maintenance {
 	}
 
 	public function execute() {
-		global $wgPygmentizePath;
-
 		function lang_filter( $val ) {
 			return preg_match( '/^[a-zA-Z0-9\-_]+$/', $val );
 		}
@@ -46,7 +44,7 @@ class UpdateLanguageList extends Maintenance {
 		$lexers = [];
 
 		$builder = new ProcessBuilder();
-		$builder->setPrefix( $wgPygmentizePath );
+		$builder->setPrefix( SyntaxHighlight_GeSHi::getPygmentizePath() );
 
 		$process = $builder->add( '-L' )->add( 'lexer' )->getProcess();
 		$process->run();

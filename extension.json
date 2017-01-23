@@ -30,9 +30,6 @@
 		"ResourceLoaderGeSHiVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php",
 		"ResourceLoaderSyntaxHighlightVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php"
 	},
-	"ExtensionFunctions": [
-		"SyntaxHighlight::onSetup"
-	],
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "SyntaxHighlight_GeSHi/modules"
