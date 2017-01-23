@@ -6,6 +6,8 @@
 
 /* eslint-env node */
 module.exports = function ( grunt ) {
+	var conf = grunt.file.readJSON( 'extension.json' );
+
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
@@ -34,12 +36,7 @@ module.exports = function ( grunt ) {
 				'!node_modules/**'
 			]
 		},
-		banana: {
-			options: {
-				disallowDuplicateTranslations: false
-			},
-			all: 'i18n/'
-		},
+		banana: conf.MessagesDirs,
 		watch: {
 			files: [
 				'.{stylelintrc,jscsrc,jshintignore,jshintrc}',
