@@ -22,16 +22,16 @@ use Symfony\Component\Process\ProcessBuilder;
 class SyntaxHighlight_GeSHi {
 // @codingStandardsIgnoreEnd
 
-	/** @var const The maximum number of lines that may be selected for highlighting. **/
+	/** @var int The maximum number of lines that may be selected for highlighting. **/
 	const HIGHLIGHT_MAX_LINES = 1000;
 
-	/** @var const Maximum input size for the highlighter (100 kB). **/
+	/** @var int Maximum input size for the highlighter (100 kB). **/
 	const HIGHLIGHT_MAX_BYTES = 102400;
 
-	/** @var const CSS class for syntax-highlighted code. **/
+	/** @var string CSS class for syntax-highlighted code. **/
 	const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
 
-	/** @var const Cache version. Increment whenever the HTML changes. */
+	/** @var int Cache version. Increment whenever the HTML changes. */
 	const CACHE_VERSION = 1;
 
 	/** @var array Mapping of MIME-types to lexer names. **/
