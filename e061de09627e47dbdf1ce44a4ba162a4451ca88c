@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_0db43932",
+        "filename": "tests/parserTests.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 61
+      },
+      "writtenOn": "2017-01-30T20:11:44Z",
+      "side": 1,
+      "message": "huh? why is there an empty span here now ?",
+      "revId": "e061de09627e47dbdf1ce44a4ba162a4451ca88c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
