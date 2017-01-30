@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_adfbea43",
+        "filename": "SyntaxHighlight_GeSHi.compat.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-01-30T10:49:25Z",
+      "side": 0,
+      "message": "Is this also now done upstream?",
+      "revId": "50ce659e511924ca9eacde72b23b2d9370feb517",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
