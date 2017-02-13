@@ -504,7 +504,7 @@ class SyntaxHighlight_GeSHi {
 	 * @return true
 	 */
 	public static function onResourceLoaderRegisterModules( &$resourceLoader ) {
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
+		if ( ! ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
 			return;
 		}
 
