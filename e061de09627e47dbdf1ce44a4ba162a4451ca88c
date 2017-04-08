@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e506ba4_11a0ec3d",
+        "filename": "SyntaxHighlight_GeSHi.compat.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1718
+      },
+      "writtenOn": "2017-04-08T11:28:45Z",
+      "side": 1,
+      "message": "This should be unnecessary now, due to mapping\n\n   \u0027TransactSqlLexer\u0027: (\u0027pygments.lexers.sql\u0027, \u0027Transact-SQL\u0027, (\u0027tsql\u0027, \u0027t-sql\u0027), (\u0027*.sql\u0027,), (\u0027text/x-tsql\u0027,))",
+      "revId": "e061de09627e47dbdf1ce44a4ba162a4451ca88c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_0db43932",
         "filename": "tests/parserTests.txt",
         "patchSetId": 4
