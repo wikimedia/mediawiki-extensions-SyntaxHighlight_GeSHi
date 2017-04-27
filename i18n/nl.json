@@ -4,10 +4,13 @@
 			"Siebrand",
 			"Tvdm",
 			"Romaine",
-			"SPQRobin"
+			"SPQRobin",
+			"Mainframe98"
 		]
 	},
 	"syntaxhighlight-desc": "Voorziet in het markeren van syntaxis voor <code>&lt;syntaxhighlight&gt;</code> met [http://pygments.org/ Pygments]",
 	"syntaxhighlight-error-category": "Pagina's met fouten in de syntaxmarkering",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Taal"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Taal",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Geen)"
 }
