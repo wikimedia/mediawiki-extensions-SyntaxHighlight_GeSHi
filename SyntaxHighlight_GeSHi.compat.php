@@ -99,7 +99,6 @@ class GeSHi {
 
 		// SQL
 		'dcl'      => 'sql',
-		'tsql'     => 'sql',
 		'plsql'    => 'sql',
 		'oracle11' => 'sql',
 		'oracle8'  => 'sql',
