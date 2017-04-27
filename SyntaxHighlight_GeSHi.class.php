@@ -32,7 +32,7 @@ class SyntaxHighlight_GeSHi {
 	const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
 
 	/** @var int Cache version. Increment whenever the HTML changes. */
-	const CACHE_VERSION = 1;
+	const CACHE_VERSION = 2;
 
 	/** @var array Mapping of MIME-types to lexer names. **/
 	private static $mimeLexers = array(
