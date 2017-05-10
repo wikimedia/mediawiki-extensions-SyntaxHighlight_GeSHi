@@ -17,7 +17,7 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
-class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
+class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFileModule {
 
 	protected $targets = array( 'desktop', 'mobile' );
 
@@ -58,7 +58,7 @@ class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
 	 * @return array
 	 */
 	private function getPygmentsLanguages() {
-		$lexers = require __DIR__ . '/SyntaxHighlight_GeSHi.lexers.php';
+		$lexers = require __DIR__ . '/SyntaxHighlight.lexers.php';
 		return $lexers;
 	}
 
@@ -66,3 +66,5 @@ class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
 		return true;
 	}
 }
+class_alias( ResourceLoaderSyntaxHighlightVisualEditorModule::class,
+	'ResourceLoaderGeSHiVisualEditorModule' );

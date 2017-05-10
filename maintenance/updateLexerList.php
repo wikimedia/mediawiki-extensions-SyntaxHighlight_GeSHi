@@ -69,10 +69,10 @@ class UpdateLanguageList extends Maintenance {
 		$code = preg_replace( '/(\d+ \=\>| (?=\())/i', '', $code );
 		$code = preg_replace( "/^ +/m", "\t", $code );
 
-		file_put_contents( __DIR__ . '/../SyntaxHighlight_GeSHi.lexers.php', $code );
-		$this->output( "Updated language list written to SyntaxHighlight_GeSHi.lexers.php\n" );
+		file_put_contents( __DIR__ . '/../SyntaxHighlight.lexers.php', $code );
+		$this->output( "Updated language list written to SyntaxHighlight.lexers.php\n" );
 	}
 }
 
-$maintClass = "UpdateLanguageList";
-require_once ( RUN_MAINTENANCE_IF_MAIN );
+$maintClass = 'UpdateLanguageList';
+require_once RUN_MAINTENANCE_IF_MAIN;
