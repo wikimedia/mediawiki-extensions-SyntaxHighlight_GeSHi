@@ -49,7 +49,7 @@ class ResourceLoaderGeSHiVisualEditorModule extends ResourceLoaderFileModule {
 	 */
 	private function getLanguages() {
 		$lexers = require __DIR__ . '/SyntaxHighlight_GeSHi.lexers.php';
-		return array_merge( $lexers, array_keys( GeSHi::$compatibleLexers ) );
+		return array_merge( $lexers, array_keys( SyntaxHighlightGeSHiCompat::getGeSHiToPygmentsMap() ) );
 	}
 
 	public function enableModuleContentVersion() {
