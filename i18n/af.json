@@ -13,7 +13,7 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kode",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Taal",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Geen)",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Wys lyn nommers.",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Wys lynnommers",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Kodeblok",
 	"syntaxhighlight-error-unknown-language": "Onbekende taal  \"$1\""
 }
