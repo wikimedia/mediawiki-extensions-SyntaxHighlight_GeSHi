@@ -60,9 +60,6 @@
 		"ApiFormatHighlight": [
 			"SyntaxHighlight::onApiFormatHighlight"
 		],
-		"RejectParserCacheValue": [
-			"SyntaxHighlight::onRejectParserCacheValue"
-		],
 		"ResourceLoaderRegisterModules": [
 			"SyntaxHighlight::onResourceLoaderRegisterModules"
 		]

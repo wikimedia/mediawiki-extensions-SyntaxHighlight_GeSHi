@@ -483,27 +483,6 @@ class SyntaxHighlight {
 	}
 
 	/**
-	 * Reject parser cache values that are for GeSHi since those
-	 * ResourceLoader modules no longer exist
-	 *
-	 * @param ParserOutput $parserOutput
-	 * @param WikiPage|Article $page
-	 * @param ParserOptions $popts
-	 * @return bool
-	 */
-	public static function onRejectParserCacheValue(
-		ParserOutput $parserOutput, $page, ParserOptions $popts
-	) {
-		foreach ( $parserOutput->getModuleStyles() as $module ) {
-			if ( strpos( $module, 'ext.geshi.' ) === 0 ) {
-				$page->getTitle()->purgeSquid();
-				return false;
-			}
-		}
-		return true;
-	}
-
-	/**
 	 * Conditionally register resource loader modules that depends on the
 	 * VisualEditor MediaWiki extension.
 	 *
