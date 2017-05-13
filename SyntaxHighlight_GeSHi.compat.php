@@ -15,29 +15,6 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  * http://www.gnu.org/copyleft/gpl.html
  */
-
-/**
- * Stub class for maintaining backward-compatibility with extensions
- * that have not been updated for version 2.0 of SyntaxHighlight_GeSHi.
- */
-class GeSHi {
-	public function __construct( $html ) {
-		$this->html = $html;
-	}
-
-	public function error() {
-	}
-
-	public function set_language( $language ) {
-	}
-
-	public function parse_code() {
-		global $wgOut;
-		$wgOut->addModuleStyles( 'ext.pygments' );
-		return $this->html;
-	}
-}
-
 class SyntaxHighlightGeSHiCompat {
 	/** @var array A mapping of GeSHi lexer names to compatible Pygments lexers. */
 	private static $compatibleLexers = array(
