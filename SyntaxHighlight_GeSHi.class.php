@@ -540,6 +540,7 @@ class SyntaxHighlight_GeSHi {
 				'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language',
 				'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none',
 				'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines',
+				'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-startingline',
 				'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title',
 			],
 			'targets' => [ 'desktop', 'mobile' ],
