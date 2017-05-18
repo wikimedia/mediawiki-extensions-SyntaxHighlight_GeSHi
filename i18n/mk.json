@@ -11,6 +11,7 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Јазик",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ниеден)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Прикажувај броеви на редовите",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-startingline": "Број на почетниот ред",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Коден блок",
 	"syntaxhighlight-error-pygments-invocation-failure": "Не успеав да го повикам Pygments",
 	"syntaxhighlight-error-unknown-language": "Непознат јазик „$1“",

@@ -3,7 +3,8 @@
 		"authors": [
 			"Александр Сигачёв",
 			"Okras",
-			"Kaganer"
+			"Kaganer",
+			"Esukhovnina"
 		]
 	},
 	"syntaxhighlight-desc": "Обеспечивает подсветки синтаксиса <code>&lt;syntaxhighlight&gt;</code> с помощью [http://pygments.org/ Pygments — средства подсветки синтаксиса для Python]",
@@ -11,5 +12,6 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Язык",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ничего)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Показать номера строк",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-startingline": "начинающий номер линии",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Фрагмент кода"
 }
