@@ -1,8 +1,5 @@
 {
-  "name": "SyntaxHighlight_GeSHi",
-  "version": "0.0.0",
   "private": true,
-  "description": "Build tools for the SyntaxHighlight_GeSHi MediaWiki extension.",
   "scripts": {
     "test": "grunt test"
   },
