@@ -19,7 +19,7 @@
 use Symfony\Component\Process\ProcessBuilder;
 
 // @codingStandardsIgnoreStart
-class SyntaxHighlight_GeSHi {
+class SyntaxHighlight {
 // @codingStandardsIgnoreEnd
 
 	/** @var int The maximum number of lines that may be selected for highlighting. **/
@@ -64,7 +64,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		if ( !$lexers ) {
-			$lexers = require __DIR__ . '/SyntaxHighlight_GeSHi.lexers.php';
+			$lexers = require __DIR__ . '/SyntaxHighlight.lexers.php';
 		}
 
 		$lexer = strtolower( $lang );
@@ -515,7 +515,7 @@ class SyntaxHighlight_GeSHi {
 		}
 
 		$resourceLoader->register( 'ext.geshi.visualEditor', [
-			'class' => 'ResourceLoaderGeSHiVisualEditorModule',
+			'class' => 'ResourceLoaderSyntaxHighlightVisualEditorModule',
 			'localBasePath' => __DIR__ . DIRECTORY_SEPARATOR . 'modules',
 			'remoteExtPath' => 'SyntaxHighlight_GeSHi/modules',
 			'scripts' => [
@@ -568,3 +568,5 @@ class SyntaxHighlight_GeSHi {
 		return '';
 	}
 }
+class_alias( SyntaxHighlight::class, 'SyntaxHighlight_GeSHi' );
+

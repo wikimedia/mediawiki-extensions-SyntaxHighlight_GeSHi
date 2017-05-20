@@ -47,7 +47,7 @@ class UpdateCSS extends Maintenance {
 		$process = $builder
 			->add( '-f' )->add( 'html' )
 			->add( '-S' )->add( 'default' )
-			->add( '-a' )->add( '.' . SyntaxHighlight_GeSHi::HIGHLIGHT_CSS_CLASS )
+			->add( '-a' )->add( '.' . SyntaxHighlight::HIGHLIGHT_CSS_CLASS )
 			->getProcess();
 
 		$process->run();
