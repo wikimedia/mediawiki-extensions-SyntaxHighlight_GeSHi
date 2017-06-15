@@ -17,7 +17,7 @@
  */
 class SyntaxHighlightGeSHiCompat {
 	/** @var array A mapping of GeSHi lexer names to compatible Pygments lexers. */
-	private static $compatibleLexers = array(
+	private static $compatibleLexers = [
 		// Assembler
 		'arm'       => 'asm',
 		'6502acme'  => 'asm',
@@ -105,7 +105,7 @@ class SyntaxHighlightGeSHiCompat {
 
 		// apt
 		'apt_sources' => 'debsources',
-	);
+	];
 
 	public static function getGeSHiToPygmentsMap() {
 		return self::$compatibleLexers;

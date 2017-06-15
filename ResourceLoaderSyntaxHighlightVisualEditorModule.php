@@ -19,7 +19,7 @@
 
 class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFileModule {
 
-	protected $targets = array( 'desktop', 'mobile' );
+	protected $targets = [ 'desktop', 'mobile' ];
 
 	/**
 	 * @param ResourceLoaderContext $context
@@ -29,19 +29,19 @@ class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFile
 		$scripts = parent::getScript( $context );
 
 		return $scripts . Xml::encodeJsCall(
-			've.dm.MWSyntaxHighlightNode.static.addPygmentsLanguages', array(
+			've.dm.MWSyntaxHighlightNode.static.addPygmentsLanguages', [
 				$this->getPygmentsLanguages()
-			),
+			],
 			ResourceLoader::inDebugMode()
 		) . Xml::encodeJsCall(
-			've.dm.MWSyntaxHighlightNode.static.addGeshiToPygmentsMap', array(
+			've.dm.MWSyntaxHighlightNode.static.addGeshiToPygmentsMap', [
 				SyntaxHighlightGeSHiCompat::getGeSHiToPygmentsMap()
-			),
+			],
 			ResourceLoader::inDebugMode()
 		) . Xml::encodeJsCall(
-			've.dm.MWSyntaxHighlightNode.static.addPygmentsToAceMap', array(
+			've.dm.MWSyntaxHighlightNode.static.addPygmentsToAceMap', [
 				SyntaxHighlightAce::getPygmentsToAceMap()
-			),
+			],
 			ResourceLoader::inDebugMode()
 		);
 	}

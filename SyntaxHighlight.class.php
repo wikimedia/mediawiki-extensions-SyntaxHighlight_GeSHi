@@ -35,11 +35,11 @@ class SyntaxHighlight {
 	const CACHE_VERSION = 2;
 
 	/** @var array Mapping of MIME-types to lexer names. **/
-	private static $mimeLexers = array(
+	private static $mimeLexers = [
 		'text/javascript'  => 'javascript',
 		'application/json' => 'javascript',
 		'text/xml'         => 'xml',
-	);
+	];
 
 	public static function onSetup() {
 		global $wgPygmentizePath;
@@ -93,8 +93,8 @@ class SyntaxHighlight {
 	 * @param $parser Parser
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
-		foreach ( array( 'source', 'syntaxhighlight' ) as $tag ) {
-			$parser->setHook( $tag, array( 'SyntaxHighlight_GeSHi', 'parserHook' ) );
+		foreach ( [ 'source', 'syntaxhighlight' ] as $tag ) {
+			$parser->setHook( $tag, [ 'SyntaxHighlight_GeSHi', 'parserHook' ] );
 		}
 	}
 
@@ -107,7 +107,7 @@ class SyntaxHighlight {
 	 * @return string
 	 * @throws MWException
 	 */
-	public static function parserHook( $text, $args = array(), $parser ) {
+	public static function parserHook( $text, $args = [], $parser ) {
 		global $wgUseTidy;
 
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
@@ -140,7 +140,7 @@ class SyntaxHighlight {
 		}
 
 		// Allow certain HTML attributes
-		$htmlAttribs = Sanitizer::validateAttributes( $args, array( 'style', 'class', 'id', 'dir' ) );
+		$htmlAttribs = Sanitizer::validateAttributes( $args, [ 'style', 'class', 'id', 'dir' ] );
 		if ( !isset( $htmlAttribs['class'] ) ) {
 			$htmlAttribs['class'] = self::HIGHLIGHT_CSS_CLASS;
 		} else {
@@ -163,7 +163,7 @@ class SyntaxHighlight {
 			// Unwrap Pygments output to provide our own wrapper. We can't just always use the 'nowrap'
 			// option (pass 'inline'), since it disables other useful things like line highlighting.
 			// Tolerate absence of quotes for Html::element() and wgWellFormedXml=false.
-			$m = array();
+			$m = [];
 			if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
 				$out = trim( $m[1] );
 			} else {
@@ -202,7 +202,7 @@ class SyntaxHighlight {
 	 * @return Status Status object, with HTML representing the highlighted
 	 *  code as its value.
 	 */
-	public static function highlight( $code, $lang = null, $args = array() ) {
+	public static function highlight( $code, $lang = null, $args = [] ) {
 		global $wgPygmentizePath;
 
 		$status = new Status;
@@ -236,20 +236,20 @@ class SyntaxHighlight {
 			if ( $inline ) {
 				$status->value = htmlspecialchars( trim( $code ), ENT_NOQUOTES );
 			} else {
-				$pre = Html::element( 'pre', array(), $code );
+				$pre = Html::element( 'pre', [], $code );
 				$status->value = Html::rawElement(
 					'div',
-					array( 'class' => self::HIGHLIGHT_CSS_CLASS ),
+					[ 'class' => self::HIGHLIGHT_CSS_CLASS ],
 					$pre
 				);
 			}
 			return $status;
 		}
 
-		$options = array(
+		$options = [
 			'cssclass' => self::HIGHLIGHT_CSS_CLASS,
 			'encoding' => 'utf-8',
-		);
+		];
 
 		// Line numbers
 		if ( isset( $args['line'] ) ) {
@@ -282,7 +282,7 @@ class SyntaxHighlight {
 		$output = $cache->get( $cacheKey );
 
 		if ( $output === false ) {
-			$optionPairs = array();
+			$optionPairs = [];
 			foreach ( $options as $k => $v ) {
 				$optionPairs[] = "{$k}={$v}";
 			}
@@ -352,7 +352,7 @@ class SyntaxHighlight {
 	 * @return int[] Line numbers.
 	 */
 	protected static function parseHighlightLines( $lineSpec ) {
-		$lines = array();
+		$lines = [];
 		$values = array_map( 'trim', explode( ',', $lineSpec ) );
 		foreach ( $values as $value ) {
 			if ( ctype_digit( $value ) ) {
