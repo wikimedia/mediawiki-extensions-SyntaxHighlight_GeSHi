@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_1fd9e52c",
+        "filename": "SyntaxHighlight.lexers.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-06-15T18:34:49Z",
+      "side": 1,
+      "message": "I checked, there is nothing to update there.",
+      "range": {
+        "startLine": 2,
+        "startChar": 16,
+        "endLine": 2,
+        "endChar": 35
+      },
+      "revId": "038fde9ed16f01b56456c5a63fcffac8e00bd904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
