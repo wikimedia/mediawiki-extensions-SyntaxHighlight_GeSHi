@@ -15,5 +15,7 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Taal",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Geen)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Toon regelnummers",
-	"syntaxhighlight-error-unknown-language": "Onbekende taal \"$1\""
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Codeblok",
+	"syntaxhighlight-error-unknown-language": "Onbekende taal \"$1\"",
+	"syntaxhighlight-error-exceeds-size-limit": "Code grootte is $1 {{PLURAL:$1|bytes}} en overschrijdt de maximale waarde van $2 {{PLURAL:$2|bytes}}"
 }
