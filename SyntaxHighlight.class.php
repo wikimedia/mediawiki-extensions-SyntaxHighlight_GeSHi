@@ -172,7 +172,7 @@ class SyntaxHighlight {
 
 			// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
 			// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
-			$marker = $parser->mUniqPrefix . '-syntaxhighlightinner-' .
+			$marker = $parser::MARKER_PREFIX . '-syntaxhighlightinner-' .
 				sprintf( '%08X', $parser->mMarkerIndex++ ) . $parser::MARKER_SUFFIX;
 			$parser->mStripState->addNoWiki( $marker, $out );
 
