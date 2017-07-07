@@ -41,15 +41,6 @@ class SyntaxHighlight {
 		'text/xml'         => 'xml',
 	];
 
-	public static function onSetup() {
-		global $wgPygmentizePath;
-
-		// If $wgPygmentizePath is unset, use the bundled copy.
-		if ( $wgPygmentizePath === false ) {
-			$wgPygmentizePath = __DIR__ . '/pygments/pygmentize';
-		}
-	}
-
 	/**
 	 * Get the Pygments lexer name for a particular language.
 	 *
@@ -188,6 +179,20 @@ class SyntaxHighlight {
 	}
 
 	/**
+	 * @return string
+	 */
+	public static function getPygmentizePath() {
+		global $wgPygmentizePath;
+
+		// If $wgPygmentizePath is unset, use the bundled copy.
+		if ( $wgPygmentizePath === false ) {
+			$wgPygmentizePath = __DIR__ . '/pygments/pygmentize';
+		}
+
+		return $wgPygmentizePath;
+	}
+
+	/**
 	 * Highlight a code-block using a particular lexer.
 	 *
 	 * @param string $code Code to highlight.
@@ -203,8 +208,6 @@ class SyntaxHighlight {
 	 *  code as its value.
 	 */
 	public static function highlight( $code, $lang = null, $args = [] ) {
-		global $wgPygmentizePath;
-
 		$status = new Status;
 
 		$lexer = self::getLexer( $lang );
@@ -287,7 +290,7 @@ class SyntaxHighlight {
 				$optionPairs[] = "{$k}={$v}";
 			}
 			$builder = new ProcessBuilder();
-			$builder->setPrefix( $wgPygmentizePath );
+			$builder->setPrefix( self::getPygmentizePath() );
 			$process = $builder
 				->add( '-l' )->add( $lexer )
 				->add( '-f' )->add( 'html' )
