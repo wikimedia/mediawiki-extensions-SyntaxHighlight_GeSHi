@@ -37,4 +37,3 @@ class GeSHi {
 		return $this->html;
 	}
 }
-

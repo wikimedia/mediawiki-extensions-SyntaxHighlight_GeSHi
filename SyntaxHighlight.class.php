@@ -304,7 +304,7 @@ class SyntaxHighlight {
 				replace this with "$process->run(); $output = $process->getOutput();"
 			*/
 			$output = '';
-			$process->run( function( $type, $capturedOutput ) use ( &$output ) {
+			$process->run( function ( $type, $capturedOutput ) use ( &$output ) {
 				$output .= $capturedOutput;
 			} );
 
@@ -324,7 +324,6 @@ class SyntaxHighlight {
 
 		$status->value = $output;
 		return $status;
-
 	}
 
 	/**
@@ -404,8 +403,8 @@ class SyntaxHighlight {
 	 * @since MW 1.21
 	 */
 	public static function onContentGetParserOutput( Content $content, Title $title,
-			$revId, ParserOptions $options, $generateHtml, ParserOutput &$output ) {
-
+		$revId, ParserOptions $options, $generateHtml, ParserOutput &$output
+	) {
 		global $wgParser, $wgTextModelsToParse;
 
 		if ( !$generateHtml ) {
@@ -551,4 +550,3 @@ class SyntaxHighlight {
 	}
 }
 class_alias( SyntaxHighlight::class, 'SyntaxHighlight_GeSHi' );
-

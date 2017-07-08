@@ -19,8 +19,7 @@
 /**
  * Class provides functionality to map Ace lexer definitions
  */
-class SyntaxHighlightAce
-{
+class SyntaxHighlightAce {
 	/** @var array This map is inverted, because it is easier to maintain this way */
 	private static $aceLexers = [
 		'ABAP'         => [ 'abap' ],
@@ -105,7 +104,7 @@ class SyntaxHighlightAce
 		'Nix'          => [ 'nix', 'nixos' ],
 		'NSIS'         => [ 'nsis', 'nsi', 'nsh' ],
 		'ObjectiveC'   => [ 'objectivec', 'objective-c', 'obj-c', 'objc',
-		                    'objective-c++', 'objectivec++', 'obj-c++', 'objc++' ],
+			'objective-c++', 'objectivec++', 'obj-c++', 'objc++' ],
 		'OCaml'        => [ 'ocaml' ],
 		'Pascal'       => [ 'pascal', 'delphi', 'pas', 'objectpascal' ],
 		'Perl'         => [ 'perl', 'pl', 'perl6', 'pl6' ],
