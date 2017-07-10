@@ -37,6 +37,7 @@ ve.ui.MWSyntaxHighlightWindow.prototype.initialize = function () {
 	var noneMsg = ve.msg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none' );
 
 	this.language = new OO.ui.ComboBoxInputWidget( {
+		$overlay: this.$overlay,
 		menu: {
 			filterFromInput: true,
 			items: $.map( ve.dm.MWSyntaxHighlightNode.static.getLanguages(), function ( lang ) {
