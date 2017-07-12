@@ -25,7 +25,8 @@ module.exports = function ( grunt ) {
 			all: [
 				'*.json',
 				'i18n/*.json',
-				'modules/**/*.json'
+				'modules/**/*.json',
+				'.stylelintrc'
 			]
 		},
 		stylelint: {
@@ -39,8 +40,8 @@ module.exports = function ( grunt ) {
 		banana: conf.MessagesDirs,
 		watch: {
 			files: [
-				'.{stylelintrc,jscsrc,jshintignore,jshintrc}',
 				'<%= eslint.all %>',
+				'<%= jsonlint.all %>',
 				'<%= stylelint.all %>'
 			],
 			tasks: 'test'
