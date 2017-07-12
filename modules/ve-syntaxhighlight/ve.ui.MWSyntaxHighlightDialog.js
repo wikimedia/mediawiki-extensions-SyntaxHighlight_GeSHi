@@ -48,7 +48,6 @@ ve.ui.MWSyntaxHighlightDialog.prototype.initialize = function () {
 
 	this.input = new ve.ui.MWAceEditorWidget( {
 		limit: 1,
-		multiline: true,
 		rows: 10,
 		maxRows: 25,
 		autosize: true,
