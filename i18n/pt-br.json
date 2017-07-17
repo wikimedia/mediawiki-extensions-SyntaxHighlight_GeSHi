@@ -6,7 +6,7 @@
 			"Felipe L. Ewald"
 		]
 	},
-	"syntaxhighlight-desc": "Providencia realce de sintaxe <code>&lt;syntaxhighlight&gt;</code> através do [http://pygments.org/ Pygments]",
+	"syntaxhighlight-desc": "Providencia realce de sintaxe <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments - Marcador de sintaxe Python]",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Idioma",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Nenhum)",
