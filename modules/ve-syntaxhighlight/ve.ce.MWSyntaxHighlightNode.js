@@ -30,9 +30,6 @@ ve.ce.MWSyntaxHighlightNode.static.name = 'mwSyntaxHighlight';
 ve.ce.MWSyntaxHighlightNode.prototype.generateContents = function () {
 	var node = this,
 		args = arguments;
-	if ( !this.getModel().isLanguageSupported() ) {
-		return $.Deferred().reject().promise();
-	}
 	// Parent method
 	return mw.loader.using( 'ext.pygments' ).then( function () {
 		return ve.ce.MWExtensionNode.prototype.generateContents.apply( node, args );
