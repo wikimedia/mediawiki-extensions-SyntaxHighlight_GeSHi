@@ -25,8 +25,7 @@ module.exports = function ( grunt ) {
 			all: [
 				'*.json',
 				'i18n/*.json',
-				'modules/**/*.json',
-				'.stylelintrc'
+				'modules/**/*.json'
 			]
 		},
 		stylelint: {
