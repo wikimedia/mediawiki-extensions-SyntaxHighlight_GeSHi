@@ -16,6 +16,7 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+use MediaWiki\Shell\Shell;
 use Symfony\Component\Process\ProcessBuilder;
 
 // @codingStandardsIgnoreStart
@@ -222,7 +223,7 @@ class SyntaxHighlight {
 			$lexer = null;
 		}
 
-		if ( wfShellExecDisabled() !== false ) {
+		if ( Shell::isDisabled() ) {
 			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
 			wfWarn(
 				'MediaWiki determined that it cannot invoke Pygments. ' .
