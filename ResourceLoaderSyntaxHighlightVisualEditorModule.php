@@ -48,13 +48,15 @@ class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFile
 
 	/**
 	 * Don't break debug mode by only showing file URLs
+	 * @param ResourceLoaderContext $context
+	 * @return array
 	 */
 	public function getScriptURLsForDebug( ResourceLoaderContext $context ) {
 		return ResourceLoaderModule::getScriptURLsForDebug( $context );
 	}
 
 	/**
-	 * Get a full list of available langauges
+	 * Get a full list of available languages
 	 * @return array
 	 */
 	private function getPygmentsLanguages() {

@@ -82,7 +82,7 @@ class SyntaxHighlight {
 	/**
 	 * Register parser hook
 	 *
-	 * @param $parser Parser
+	 * @param Parser &$parser
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		foreach ( [ 'source', 'syntaxhighlight' ] as $tag ) {
@@ -378,8 +378,8 @@ class SyntaxHighlight {
 
 	/**
 	 * Validate a provided input range
-	 * @param $start
-	 * @param $end
+	 * @param int $start
+	 * @param int $end
 	 * @return bool
 	 */
 	protected static function validHighlightRange( $start, $end ) {
@@ -400,6 +400,12 @@ class SyntaxHighlight {
 	 * Hook into Content::getParserOutput to provide syntax highlighting for
 	 * script content.
 	 *
+	 * @param Content $content
+	 * @param Title $title
+	 * @param int $revId
+	 * @param ParserOptions $options
+	 * @param bool $generateHtml
+	 * @param ParserOutput &$output
 	 * @return bool
 	 * @since MW 1.21
 	 */
@@ -489,7 +495,7 @@ class SyntaxHighlight {
 	 * Conditionally register resource loader modules that depends on the
 	 * VisualEditor MediaWiki extension.
 	 *
-	 * @param ResourceLoader $resourceLoader
+	 * @param ResourceLoader &$resourceLoader
 	 */
 	public static function onResourceLoaderRegisterModules( &$resourceLoader ) {
 		if ( ! ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
