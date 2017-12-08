@@ -17,7 +17,6 @@
  */
 
 use MediaWiki\Shell\Shell;
-use Symfony\Component\Process\ProcessBuilder;
 
 class SyntaxHighlight {
 
@@ -288,32 +287,23 @@ class SyntaxHighlight {
 			foreach ( $options as $k => $v ) {
 				$optionPairs[] = "{$k}={$v}";
 			}
-			$builder = new ProcessBuilder();
-			$builder->setPrefix( self::getPygmentizePath() );
-			$process = $builder
-				->add( '-l' )->add( $lexer )
-				->add( '-f' )->add( 'html' )
-				->add( '-O' )->add( implode( ',', $optionPairs ) )
-				->getProcess();
+			$result = Shell::command(
+				self::getPygmentizePath(),
+				'-l', $lexer,
+				'-f', 'html',
+				'-O', implode( ',', $optionPairs )
+			)
+				->input( $code )
+				->execute();
 
-			$process->setInput( $code );
-
-			/* Workaround for T151523 (buggy $process->getOutput()).
-				If/when this issue is fixed in HHVM or Symfony,
-				replace this with "$process->run(); $output = $process->getOutput();"
-			*/
-			$output = '';
-			$process->run( function ( $type, $capturedOutput ) use ( &$output ) {
-				$output .= $capturedOutput;
-			} );
-
-			if ( !$process->isSuccessful() ) {
+			if ( $result->getExitCode() != 0 ) {
 				$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
-				wfWarn( 'Failed to invoke Pygments: ' . $process->getErrorOutput() );
+				wfWarn( 'Failed to invoke Pygments: ' . $result->getStderr() );
 				$status->value = self::highlight( $code, null, $args )->getValue();
 				return $status;
 			}
 
+			$output = $result->getStdout();
 			$cache->set( $cacheKey, $output );
 		}
 

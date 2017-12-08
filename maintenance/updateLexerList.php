@@ -22,7 +22,7 @@
  * @ingroup Maintenance
  */
 
-use Symfony\Component\Process\ProcessBuilder;
+use MediaWiki\Shell\Shell;
 
 $IP = getenv( 'MW_INSTALL_PATH' ) ?: __DIR__ . '/../../..';
 
@@ -43,17 +43,16 @@ class UpdateLexerList extends Maintenance {
 
 		$lexers = [];
 
-		$builder = new ProcessBuilder();
-		$builder->setPrefix( SyntaxHighlight::getPygmentizePath() );
+		$result = Shell::command(
+			SyntaxHighlight::getPygmentizePath(),
+			'-L', 'lexer'
+		)->execute();
 
-		$process = $builder->add( '-L' )->add( 'lexer' )->getProcess();
-		$process->run();
-
-		if ( !$process->isSuccessful() ) {
-			throw new \RuntimeException( $process->getErrorOutput() );
+		if ( $result->getExitCode() != 0 ) {
+			throw new \RuntimeException( $result->getStderr() );
 		}
 
-		$output = $process->getOutput();
+		$output = $result->getStdout();
 		foreach ( explode( "\n", $output ) as $line ) {
 			if ( substr( $line, 0, 1 ) === '*' ) {
 				$newLexers = explode( ', ', trim( $line, "* :\n" ) );

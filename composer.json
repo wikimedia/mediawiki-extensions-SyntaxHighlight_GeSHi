@@ -1,9 +1,6 @@
 {
 	"name": "mediawiki/syntax-highlight",
 	"description": "Syntax highlighting extension for MediaWiki",
-	"require": {
-		"symfony/process": "~3.3"
-	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9.2",
 		"mediawiki/mediawiki-codesniffer": "15.0.0",

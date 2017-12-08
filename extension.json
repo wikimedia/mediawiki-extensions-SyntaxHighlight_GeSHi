@@ -14,7 +14,7 @@
 	"license-name": "GPL-2.0+",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.27"
+		"MediaWiki": ">= 1.31"
 	},
 	"MessagesDirs": {
 		"SyntaxHighlight_GeSHi": [
@@ -77,6 +77,5 @@
 	"ParserTestFiles": [
 		"tests/parserTests.txt"
 	],
-	"load_composer_autoloader": true,
 	"manifest_version": 1
 }
