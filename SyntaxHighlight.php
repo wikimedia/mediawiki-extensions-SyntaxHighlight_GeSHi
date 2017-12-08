@@ -294,6 +294,7 @@ class SyntaxHighlight {
 				'-O', implode( ',', $optionPairs )
 			)
 				->input( $code )
+				->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
 				->execute();
 
 			if ( $result->getExitCode() != 0 ) {
