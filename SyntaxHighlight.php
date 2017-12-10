@@ -19,9 +19,7 @@
 use MediaWiki\Shell\Shell;
 use Symfony\Component\Process\ProcessBuilder;
 
-// @codingStandardsIgnoreStart
 class SyntaxHighlight {
-// @codingStandardsIgnoreEnd
 
 	/** @var int The maximum number of lines that may be selected for highlighting. **/
 	const HIGHLIGHT_MAX_LINES = 1000;
