@@ -22,11 +22,11 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SyntaxHighlight": "SyntaxHighlight.class.php",
-		"SyntaxHighlight_GeSHi": "SyntaxHighlight.class.php",
-		"GeSHi": "SyntaxHighlight.GeSHi.php",
-		"SyntaxHighlightAce": "SyntaxHighlight.ace.php",
-		"SyntaxHighlightGeSHiCompat": "SyntaxHighlight.GeSHi.compat.php",
+		"SyntaxHighlight": "SyntaxHighlight.php",
+		"SyntaxHighlight_GeSHi": "SyntaxHighlight.php",
+		"GeSHi": "GeSHi.php",
+		"SyntaxHighlightAce": "SyntaxHighlightAce.php",
+		"SyntaxHighlightGeSHiCompat": "SyntaxHighlightGeSHiCompat.php",
 		"ResourceLoaderGeSHiVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php",
 		"ResourceLoaderSyntaxHighlightVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php"
 	},

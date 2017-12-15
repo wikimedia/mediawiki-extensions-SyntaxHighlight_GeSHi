@@ -3,10 +3,11 @@
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamComment" />
-		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
-		<exclude name="MediaWiki.Files.ClassMatchesFilename.WrongCase" />
 		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName"/>
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment"/>
+	</rule>
+	<rule ref="MediaWiki.Files.ClassMatchesFilename.WrongCase">
+		<exclude-pattern>*/maintenance/*</exclude-pattern>
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>

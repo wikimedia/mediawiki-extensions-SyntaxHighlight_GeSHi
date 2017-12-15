@@ -28,7 +28,7 @@ $IP = getenv( 'MW_INSTALL_PATH' ) ?: __DIR__ . '/../../..';
 
 require_once "$IP/maintenance/Maintenance.php";
 
-class UpdateLanguageList extends Maintenance {
+class UpdateLexerList extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Update list of lexers supported by SyntaxHighlight_GeSHi' );
@@ -72,5 +72,5 @@ class UpdateLanguageList extends Maintenance {
 	}
 }
 
-$maintClass = 'UpdateLanguageList';
+$maintClass = 'UpdateLexerList';
 require_once RUN_MAINTENANCE_IF_MAIN;
