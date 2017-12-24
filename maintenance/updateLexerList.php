@@ -44,7 +44,7 @@ class UpdateLexerList extends Maintenance {
 		$lexers = [];
 
 		$builder = new ProcessBuilder();
-		$builder->setPrefix( SyntaxHighlight_GeSHi::getPygmentizePath() );
+		$builder->setPrefix( SyntaxHighlight::getPygmentizePath() );
 
 		$process = $builder->add( '-L' )->add( 'lexer' )->getProcess();
 		$process->run();

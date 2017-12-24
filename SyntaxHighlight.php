@@ -84,7 +84,7 @@ class SyntaxHighlight {
 	 */
 	public static function onParserFirstCallInit( Parser &$parser ) {
 		foreach ( [ 'source', 'syntaxhighlight' ] as $tag ) {
-			$parser->setHook( $tag, [ 'SyntaxHighlight_GeSHi', 'parserHook' ] );
+			$parser->setHook( $tag, [ 'SyntaxHighlight', 'parserHook' ] );
 		}
 	}
 
@@ -97,7 +97,7 @@ class SyntaxHighlight {
 	 * @return string
 	 * @throws MWException
 	 */
-	public static function parserHook( $text, $args = [], $parser ) {
+	public static function parserHook( $text, $args, $parser ) {
 		global $wgUseTidy;
 
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})

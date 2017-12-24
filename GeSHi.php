@@ -21,6 +21,9 @@
  * that have not been updated for version 2.0 of SyntaxHighlight_GeSHi.
  */
 class GeSHi {
+
+	private $html;
+
 	public function __construct( $html ) {
 		$this->html = $html;
 	}
