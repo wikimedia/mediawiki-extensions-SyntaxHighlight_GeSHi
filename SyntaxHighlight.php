@@ -386,8 +386,7 @@ class SyntaxHighlight {
 		// to DoS the system by asking for a huge range.
 		// Impose an arbitrary limit on the number of lines in a
 		// given range to reduce the impact.
-		return
-			ctype_digit( $start ) &&
+		return ctype_digit( $start ) &&
 			ctype_digit( $end ) &&
 			$start > 0 &&
 			$start < $end &&
