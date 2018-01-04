@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeed6739_fb21f3f7",
+        "filename": "SyntaxHighlight.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2018-01-04T01:46:30Z",
+      "side": 1,
+      "message": "No need to pass an array here, this function is varargs. Also in other places.",
+      "range": {
+        "startLine": 290,
+        "startChar": 29,
+        "endLine": 290,
+        "endChar": 30
+      },
+      "revId": "49a79809119489ceadcf8c0c86ebdcdd995c6f14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
