@@ -22,6 +22,30 @@
       "revId": "49a79809119489ceadcf8c0c86ebdcdd995c6f14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeed6739_e72dd18c",
+        "filename": "SyntaxHighlight.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2018-01-04T21:08:28Z",
+      "side": 1,
+      "message": "Done everywhere. Something something trailing commas.",
+      "parentUuid": "aeed6739_fb21f3f7",
+      "range": {
+        "startLine": 290,
+        "startChar": 29,
+        "endLine": 290,
+        "endChar": 30
+      },
+      "revId": "49a79809119489ceadcf8c0c86ebdcdd995c6f14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
