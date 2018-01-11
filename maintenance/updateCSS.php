@@ -44,7 +44,9 @@ class UpdateCSS extends Maintenance {
 			'-f', 'html',
 			'-S', 'default',
 			'-a', '.' . SyntaxHighlight::HIGHLIGHT_CSS_CLASS
-		)->execute();
+		)
+			->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+			->execute();
 
 		if ( $result->getExitCode() != 0 ) {
 			throw new \RuntimeException( $result->getStderr() );
