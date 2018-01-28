@@ -32,6 +32,8 @@ class UpdateCSS extends Maintenance {
 
 	public function __construct() {
 		parent::__construct();
+
+		$this->requireExtension( 'SyntaxHighlight' );
 		$this->addDescription( 'Generate CSS code for SyntaxHighlight_GeSHi' );
 	}
 

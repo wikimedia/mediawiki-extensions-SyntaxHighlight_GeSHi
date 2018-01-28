@@ -31,6 +31,8 @@ require_once "$IP/maintenance/Maintenance.php";
 class UpdateLexerList extends Maintenance {
 	public function __construct() {
 		parent::__construct();
+
+		$this->requireExtension( 'SyntaxHighlight' );
 		$this->addDescription( 'Update list of lexers supported by SyntaxHighlight_GeSHi' );
 	}
 
