@@ -53,7 +53,7 @@ class SyntaxHighlight {
 		}
 
 		if ( !$lexers ) {
-			$lexers = require __DIR__ . '/SyntaxHighlight.lexers.php';
+			$lexers = require __DIR__ . '/../SyntaxHighlight.lexers.php';
 		}
 
 		$lexer = strtolower( $lang );
@@ -184,7 +184,7 @@ class SyntaxHighlight {
 
 		// If $wgPygmentizePath is unset, use the bundled copy.
 		if ( $wgPygmentizePath === false ) {
-			$wgPygmentizePath = __DIR__ . '/pygments/pygmentize';
+			$wgPygmentizePath = __DIR__ . '/../pygments/pygmentize';
 		}
 
 		return $wgPygmentizePath;
@@ -492,7 +492,7 @@ class SyntaxHighlight {
 
 		$resourceLoader->register( 'ext.geshi.visualEditor', [
 			'class' => ResourceLoaderSyntaxHighlightVisualEditorModule::class,
-			'localBasePath' => __DIR__ . DIRECTORY_SEPARATOR . 'modules',
+			'localBasePath' => __DIR__ . '/../modules',
 			'remoteExtPath' => 'SyntaxHighlight_GeSHi/modules',
 			'scripts' => [
 				've-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js',

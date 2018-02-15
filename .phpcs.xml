@@ -6,9 +6,6 @@
 		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName"/>
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment"/>
 	</rule>
-	<rule ref="MediaWiki.Files.ClassMatchesFilename.WrongCase">
-		<exclude-pattern>*/maintenance/*</exclude-pattern>
-	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="UTF-8"/>

@@ -60,7 +60,7 @@ class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFile
 	 * @return array
 	 */
 	private function getPygmentsLanguages() {
-		$lexers = require __DIR__ . '/SyntaxHighlight.lexers.php';
+		$lexers = require __DIR__ . '/../SyntaxHighlight.lexers.php';
 		return $lexers;
 	}
 

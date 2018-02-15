@@ -22,12 +22,12 @@
 		]
 	},
 	"AutoloadClasses": {
-		"SyntaxHighlight": "SyntaxHighlight.php",
-		"SyntaxHighlight_GeSHi": "SyntaxHighlight.php",
-		"GeSHi": "GeSHi.php",
-		"SyntaxHighlightAce": "SyntaxHighlightAce.php",
-		"SyntaxHighlightGeSHiCompat": "SyntaxHighlightGeSHiCompat.php",
-		"ResourceLoaderSyntaxHighlightVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php"
+		"SyntaxHighlight": "includes/SyntaxHighlight.php",
+		"SyntaxHighlight_GeSHi": "includes/SyntaxHighlight.php",
+		"GeSHi": "includes/GeSHi.php",
+		"SyntaxHighlightAce": "includes/SyntaxHighlightAce.php",
+		"SyntaxHighlightGeSHiCompat": "includes/SyntaxHighlightGeSHiCompat.php",
+		"ResourceLoaderSyntaxHighlightVisualEditorModule": "includes/ResourceLoaderSyntaxHighlightVisualEditorModule.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
