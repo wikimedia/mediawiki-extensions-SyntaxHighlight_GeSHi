@@ -491,7 +491,7 @@ class SyntaxHighlight {
 		}
 
 		$resourceLoader->register( 'ext.geshi.visualEditor', [
-			'class' => 'ResourceLoaderSyntaxHighlightVisualEditorModule',
+			'class' => ResourceLoaderSyntaxHighlightVisualEditorModule::class,
 			'localBasePath' => __DIR__ . DIRECTORY_SEPARATOR . 'modules',
 			'remoteExtPath' => 'SyntaxHighlight_GeSHi/modules',
 			'scripts' => [

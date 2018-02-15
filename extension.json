@@ -27,7 +27,6 @@
 		"GeSHi": "GeSHi.php",
 		"SyntaxHighlightAce": "SyntaxHighlightAce.php",
 		"SyntaxHighlightGeSHiCompat": "SyntaxHighlightGeSHiCompat.php",
-		"ResourceLoaderGeSHiVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php",
 		"ResourceLoaderSyntaxHighlightVisualEditorModule": "ResourceLoaderSyntaxHighlightVisualEditorModule.php"
 	},
 	"ResourceFileModulePaths": {

@@ -68,5 +68,3 @@ class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFile
 		return true;
 	}
 }
-class_alias( ResourceLoaderSyntaxHighlightVisualEditorModule::class,
-	'ResourceLoaderGeSHiVisualEditorModule' );
