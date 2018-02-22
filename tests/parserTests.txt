@@ -162,3 +162,21 @@ Enclose with nowiki
 <p><code class="mw-highlight" dir="ltr">foo</code>
 </p>
 !! end
+
+!! test
+No code
+!! input
+<source lang="CSharp"></source>
+!! result
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+
+!! end
+
+!! test
+Just whitespace
+!! input
+<source lang="CSharp"> </source>
+!! result
+<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+
+!! end

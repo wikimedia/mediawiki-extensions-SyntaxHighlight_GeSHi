@@ -152,11 +152,13 @@ class SyntaxHighlight {
 			// Unwrap Pygments output to provide our own wrapper. We can't just always use the 'nowrap'
 			// option (pass 'inline'), since it disables other useful things like line highlighting.
 			// Tolerate absence of quotes for Html::element() and wgWellFormedXml=false.
-			$m = [];
-			if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
-				$out = trim( $m[1] );
-			} else {
-				throw new MWException( 'Unexpected output from Pygments encountered' );
+			if ( $out !== '' ) {
+				$m = [];
+				if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
+					$out = trim( $m[1] );
+				} else {
+					throw new MWException( 'Unexpected output from Pygments encountered' );
+				}
 			}
 
 			// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
@@ -218,6 +220,9 @@ class SyntaxHighlight {
 			$status->warning( 'syntaxhighlight-error-exceeds-size-limit',
 				$length, self::HIGHLIGHT_MAX_BYTES );
 			$lexer = null;
+		} elseif ( $length === 0 ) {
+			$status->value = '';
+			return $status;
 		}
 
 		if ( Shell::isDisabled() ) {
