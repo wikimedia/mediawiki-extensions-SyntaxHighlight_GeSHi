@@ -198,7 +198,7 @@ class SyntaxHighlight {
 	 */
 	private static function plainCodeWrap( $code, $inline ) {
 		if ( $inline ) {
-			return htmlspecialchars( trim( $code ), ENT_NOQUOTES );
+			return htmlspecialchars( $code, ENT_NOQUOTES );
 		}
 
 		return Html::rawElement(
@@ -260,6 +260,10 @@ class SyntaxHighlight {
 
 		$inline = isset( $args['inline'] );
 
+		if ( $inline ) {
+			$code = trim( $code );
+		}
+
 		if ( $lexer === null ) {
 			// When syntax highlighting is disabled..
 			$status->value = self::plainCodeWrap( $code, $inline );
@@ -298,37 +302,47 @@ class SyntaxHighlight {
 		}
 
 		$cache = ObjectCache::getMainWANInstance();
-		$cacheKey = self::makeCacheKey( $code, $lexer, $options );
-		$output = $cache->get( $cacheKey );
+		$error = null;
+		$output = $cache->getWithSetCallback(
+			$cache->makeGlobalKey( 'highlight', self::makeCacheKeyHash( $code, $lexer, $options ) ),
+			$cache::TTL_MONTH,
+			function ( $oldValue, &$ttl ) use ( $code, $lexer, $options, &$error ) {
+				$optionPairs = [];
+				foreach ( $options as $k => $v ) {
+					$optionPairs[] = "{$k}={$v}";
+				}
+				$result = Shell::command(
+					self::getPygmentizePath(),
+					'-l', $lexer,
+					'-f', 'html',
+					'-O', implode( ',', $optionPairs )
+				)
+					->input( $code )
+					->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
+					->execute();
 
-		if ( $output === false ) {
-			$optionPairs = [];
-			foreach ( $options as $k => $v ) {
-				$optionPairs[] = "{$k}={$v}";
+				if ( $result->getExitCode() != 0 ) {
+					$ttl = WANObjectCache::TTL_UNCACHEABLE;
+					$error = $result->getStderr();
+					return null;
+				}
+
+				return $result->getStdout();
 			}
-			$result = Shell::command(
-				self::getPygmentizePath(),
-				'-l', $lexer,
-				'-f', 'html',
-				'-O', implode( ',', $optionPairs )
-			)
-				->input( $code )
-				->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
-				->execute();
+		);
 
-			if ( $result->getExitCode() != 0 ) {
-				$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
-				wfWarn( 'Failed to invoke Pygments: ' . $result->getStderr() );
-				// Fall back to preformatted code without syntax highlighting
-				$status->value = self::plainCodeWrap( $code, $inline );
-				return $status;
-			}
-
-			$output = $result->getStdout();
-			$cache->set( $cacheKey, $output );
+		if ( $error !== null || $output === null ) {
+			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
+			wfWarn( 'Failed to invoke Pygments: ' . $error );
+			// Fall back to preformatted code without syntax highlighting
+			$output = self::plainCodeWrap( $code, $inline );
 		}
 
 		if ( $inline ) {
+			// We've already trimmed the input $code before highlighting,
+			// but pygment's standard out adds a line break afterwards,
+			// which would then be preserved in the paragraph that wraps this,
+			// and become visible as a space. Avoid that.
 			$output = trim( $output );
 		}
 
@@ -344,14 +358,9 @@ class SyntaxHighlight {
 	 * @param array $options Options array.
 	 * @return string Cache key.
 	 */
-	private static function makeCacheKey( $code, $lexer, $options ) {
+	private static function makeCacheKeyHash( $code, $lexer, $options ) {
 		$optionString = FormatJson::encode( $options, false, FormatJson::ALL_OK );
-		$hash = md5( "{$code}|{$lexer}|{$optionString}|" . self::CACHE_VERSION );
-		if ( function_exists( 'wfGlobalCacheKey' ) ) {
-			return wfGlobalCacheKey( 'highlight', $hash );
-		} else {
-			return 'highlight:' . $hash;
-		}
+		return md5( "{$code}|{$lexer}|{$optionString}|" . self::CACHE_VERSION );
 	}
 
 	/**
