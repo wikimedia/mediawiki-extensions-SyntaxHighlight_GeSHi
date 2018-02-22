@@ -193,6 +193,22 @@ class SyntaxHighlight {
 	}
 
 	/**
+	 * @param string $code
+	 * @param bool $inline
+	 */
+	private static function plainCodeWrap( $code, $inline ) {
+		if ( $inline ) {
+			return htmlspecialchars( trim( $code ), ENT_NOQUOTES );
+		}
+
+		return Html::rawElement(
+			'div',
+			[ 'class' => self::HIGHLIGHT_CSS_CLASS ],
+			Html::element( 'pre', [], $code )
+		);
+	}
+
+	/**
 	 * Highlight a code-block using a particular lexer.
 	 *
 	 * @param string $code Code to highlight.
@@ -246,15 +262,7 @@ class SyntaxHighlight {
 
 		if ( $lexer === null ) {
 			// When syntax highlighting is disabled..
-			if ( $inline ) {
-				$status->value = htmlspecialchars( trim( $code ), ENT_NOQUOTES );
-			} else {
-				$status->value = Html::rawElement(
-					'div',
-					[ 'class' => self::HIGHLIGHT_CSS_CLASS ],
-					Html::element( 'pre', [], $code )
-				);
-			}
+			$status->value = self::plainCodeWrap( $code, $inline );
 			return $status;
 		}
 
@@ -311,9 +319,8 @@ class SyntaxHighlight {
 			if ( $result->getExitCode() != 0 ) {
 				$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
 				wfWarn( 'Failed to invoke Pygments: ' . $result->getStderr() );
-				// Recursive call to the same method, this time with syntax highlighting
-				// disabled (to re-use above code). TODO: Factor out to separate method.
-				$status->value = self::highlight( $code, null, $args )->getValue();
+				// Fall back to preformatted code without syntax highlighting
+				$status->value = self::plainCodeWrap( $code, $inline );
 				return $status;
 			}
 
