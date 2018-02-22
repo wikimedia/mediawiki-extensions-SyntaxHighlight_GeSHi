@@ -215,17 +215,24 @@ class SyntaxHighlight {
 			$status->warning( 'syntaxhighlight-error-unknown-language', $lang );
 		}
 
-		$length = strlen( $code );
-		if ( strlen( $code ) > self::HIGHLIGHT_MAX_BYTES ) {
-			$status->warning( 'syntaxhighlight-error-exceeds-size-limit',
-				$length, self::HIGHLIGHT_MAX_BYTES );
-			$lexer = null;
-		} elseif ( $length === 0 ) {
+		// For empty tag, output nothing instead of empty <pre>.
+		if ( $code === '' ) {
 			$status->value = '';
 			return $status;
 		}
 
-		if ( Shell::isDisabled() ) {
+		$length = strlen( $code );
+		if ( strlen( $code ) > self::HIGHLIGHT_MAX_BYTES ) {
+			// Disable syntax highlighting
+			$lexer = null;
+			$status->warning(
+				'syntaxhighlight-error-exceeds-size-limit',
+				$length,
+				self::HIGHLIGHT_MAX_BYTES
+			);
+		} elseif ( Shell::isDisabled() ) {
+			// Disable syntax highlighting
+			$lexer = null;
 			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
 			wfWarn(
 				'MediaWiki determined that it cannot invoke Pygments. ' .
@@ -233,20 +240,19 @@ class SyntaxHighlight {
 				'See the debug log for details: ' .
 				'https://www.mediawiki.org/wiki/Manual:$wgDebugLogFile'
 			);
-			$lexer = null;
 		}
 
 		$inline = isset( $args['inline'] );
 
 		if ( $lexer === null ) {
+			// When syntax highlighting is disabled..
 			if ( $inline ) {
 				$status->value = htmlspecialchars( trim( $code ), ENT_NOQUOTES );
 			} else {
-				$pre = Html::element( 'pre', [], $code );
 				$status->value = Html::rawElement(
 					'div',
 					[ 'class' => self::HIGHLIGHT_CSS_CLASS ],
-					$pre
+					Html::element( 'pre', [], $code )
 				);
 			}
 			return $status;
@@ -305,6 +311,8 @@ class SyntaxHighlight {
 			if ( $result->getExitCode() != 0 ) {
 				$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
 				wfWarn( 'Failed to invoke Pygments: ' . $result->getStderr() );
+				// Recursive call to the same method, this time with syntax highlighting
+				// disabled (to re-use above code). TODO: Factor out to separate method.
 				$status->value = self::highlight( $code, null, $args )->getValue();
 				return $status;
 			}
