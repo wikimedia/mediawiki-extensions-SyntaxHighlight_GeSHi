@@ -8,7 +8,7 @@
 		"mediawiki/minus-x": "0.3.1",
 		"mediawiki/mediawiki-phan-config": "0.1.0"
 	},
-	"license": "GPL-2.0+",
+	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "Brion Vibber",
