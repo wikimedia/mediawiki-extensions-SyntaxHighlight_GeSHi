@@ -106,24 +106,10 @@ b</pre></div></li></ul>
 b</pre></div></li></ul>
 
 !! html+tidy
-<ul>
-<li>
-<div class="mw-highlight mw-content-ltr" dir="ltr">
-<pre>
-a
-b
-</pre></div>
-</li>
-</ul>
-<ul>
-<li>foo
-<div class="mw-highlight mw-content-ltr" dir="ltr">
-<pre>
-a
-b
-</pre></div>
-</li>
-</ul>
+<ul><li> <div class="mw-highlight mw-content-ltr" dir="ltr"><pre>a
+b</pre></div></li></ul>
+<ul><li> foo <div class="mw-highlight mw-content-ltr" dir="ltr"><pre>a
+b</pre></div></li></ul>
 !! end
 
 !! test
