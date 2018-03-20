@@ -515,7 +515,7 @@ class SyntaxHighlight {
 	 * @param ResourceLoader &$resourceLoader
 	 */
 	public static function onResourceLoaderRegisterModules( &$resourceLoader ) {
-		if ( ! ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
 			return;
 		}
 
@@ -539,6 +539,7 @@ class SyntaxHighlight {
 			],
 			'dependencies' => [
 				'ext.visualEditor.mwcore',
+				'oojs-ui.styles.icons-editing-advanced'
 			],
 			'messages' => [
 				'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code',
