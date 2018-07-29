@@ -58,7 +58,7 @@ class SyntaxHighlight {
 
 		$lexer = strtolower( $lang );
 
-		if ( in_array( $lexer, $lexers ) ) {
+		if ( isset( $lexers[$lexer] ) ) {
 			return $lexer;
 		}
 
