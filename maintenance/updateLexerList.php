@@ -23,6 +23,7 @@
  */
 
 use MediaWiki\Shell\Shell;
+use Wikimedia\StaticArrayWriter;
 
 $IP = getenv( 'MW_INSTALL_PATH' ) ?: __DIR__ . '/../../..';
 
@@ -66,7 +67,8 @@ class UpdateLexerList extends Maintenance {
 			$data[$lexer] = true;
 		}
 
-		$code = wfMakeStaticArrayFile( $data, $header );
+		$writer = new StaticArrayWriter();
+		$code = $writer->create( $data, $header );
 
 		file_put_contents( __DIR__ . '/../SyntaxHighlight.lexers.php', $code );
 		$this->output( "Updated language list written to SyntaxHighlight.lexers.php\n" );
