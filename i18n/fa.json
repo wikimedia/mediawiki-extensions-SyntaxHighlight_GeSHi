@@ -12,5 +12,6 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "کد",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "زبان",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(هیچ)",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "نشان‌دادن شماره خطوط"
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "نشان‌دادن شماره خطوط",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-startingline": "شروع شماره از خط"
 }
