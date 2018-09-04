@@ -503,7 +503,7 @@ class SyntaxHighlight {
 			$attrs = Sanitizer::decodeTagAttributes( $m[1] );
 			$attrs['class'] .= ' api-pretty-content';
 			$encodedAttrs = Sanitizer::safeEncodeTagAttributes( $attrs );
-			$out = '<pre' . $encodedAttrs. '>' .  substr( $out, strlen( $m[0] ) );
+			$out = '<pre' . $encodedAttrs . '>' . substr( $out, strlen( $m[0] ) );
 		}
 		$output = $context->getOutput();
 		$output->addModuleStyles( 'ext.pygments' );
