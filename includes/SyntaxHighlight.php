@@ -97,8 +97,6 @@ class SyntaxHighlight {
 	 * @throws MWException
 	 */
 	public static function parserHook( $text, $args, $parser ) {
-		global $wgUseTidy;
-
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
 		$out = $parser->mStripState->unstripNoWiki( $text );
 
@@ -124,7 +122,7 @@ class SyntaxHighlight {
 		// HTML Tidy will convert tabs to spaces incorrectly (bug 30930).
 		// But the conversion from tab to space occurs while reading the input,
 		// before the conversion from &#9; to tab, so we can armor it that way.
-		if ( $wgUseTidy ) {
+		if ( MWTidy::isEnabled() ) {
 			$out = str_replace( "\t", '&#9;', $out );
 		}
 
