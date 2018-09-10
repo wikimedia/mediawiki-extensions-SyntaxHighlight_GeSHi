@@ -166,3 +166,20 @@ Just whitespace
 <div class="mw-highlight mw-content-ltr" dir="ltr"></div>
 
 !! end
+
+!! test
+tabs plus tidy (T32930, T59826)
+!! input
+<syntaxhighlight lang="javascript" enclose="pre" highlight="2-3">
+function doSomething() {
+	var	foo,
+		bar;
+	if (baz) {
+</syntaxhighlight>
+!! html+tidy
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">&#9;<span class="kd">var</span>&#9;<span class="nx">foo</span><span class="p">,</span>
+</span><span class="hll">&#9;&#9;<span class="nx">bar</span><span class="p">;</span>
+</span>&#9;<span class="k">if</span> <span class="p">(</span><span class="nx">baz</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+!! end
