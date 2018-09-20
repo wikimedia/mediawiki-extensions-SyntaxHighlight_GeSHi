@@ -178,8 +178,8 @@ function doSomething() {
 </syntaxhighlight>
 !! html+tidy
 <div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">()</span> <span class="p">{</span>
-<span class="hll">&#9;<span class="kd">var</span>&#9;<span class="nx">foo</span><span class="p">,</span>
-</span><span class="hll">&#9;&#9;<span class="nx">bar</span><span class="p">;</span>
-</span>&#9;<span class="k">if</span> <span class="p">(</span><span class="nx">baz</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">	<span class="kd">var</span>	<span class="nx">foo</span><span class="p">,</span>
+</span><span class="hll">		<span class="nx">bar</span><span class="p">;</span>
+</span>	<span class="k">if</span> <span class="p">(</span><span class="nx">baz</span><span class="p">)</span> <span class="p">{</span>
 </pre></div>
 !! end

@@ -119,13 +119,6 @@ class SyntaxHighlight {
 		}
 		$out = $result->getValue();
 
-		// HTML Tidy will convert tabs to spaces incorrectly (bug 30930).
-		// But the conversion from tab to space occurs while reading the input,
-		// before the conversion from &#9; to tab, so we can armor it that way.
-		if ( MWTidy::isEnabled() ) {
-			$out = str_replace( "\t", '&#9;', $out );
-		}
-
 		// Allow certain HTML attributes
 		$htmlAttribs = Sanitizer::validateAttributes( $args, [ 'style', 'class', 'id', 'dir' ] );
 		if ( !isset( $htmlAttribs['class'] ) ) {
