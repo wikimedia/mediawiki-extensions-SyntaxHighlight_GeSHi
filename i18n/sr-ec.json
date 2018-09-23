@@ -13,7 +13,7 @@
 	"syntaxhighlight-desc": "Омогућава истицање синтаксе <code>&lt;syntaxhighlight&gt;</code> коришћењем алатке [http://pygments.org/ Pygments — Пајтон истицач синтаксе]",
 	"syntaxhighlight-error-category": "Странице с грешкама у истицању синтаксе",
 	"syntaxhighlight-error-category-desc": "Дошло је до грешке при покушају истицања кода који је укључен на страници.",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Кôд",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Језик",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ниједан)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Бројеви редова",
