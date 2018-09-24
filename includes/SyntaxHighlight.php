@@ -521,7 +521,11 @@ class SyntaxHighlight {
 			'remoteExtPath' => 'SyntaxHighlight_GeSHi/modules',
 			'scripts' => [
 				've-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js',
+				've-syntaxhighlight/ve.dm.MWBlockSyntaxHighlightNode.js',
+				've-syntaxhighlight/ve.dm.MWInlineSyntaxHighlightNode.js',
 				've-syntaxhighlight/ve.ce.MWSyntaxHighlightNode.js',
+				've-syntaxhighlight/ve.ce.MWBlockSyntaxHighlightNode.js',
+				've-syntaxhighlight/ve.ce.MWInlineSyntaxHighlightNode.js',
 				've-syntaxhighlight/ve.ui.MWSyntaxHighlightWindow.js',
 				've-syntaxhighlight/ve.ui.MWSyntaxHighlightDialog.js',
 				've-syntaxhighlight/ve.ui.MWSyntaxHighlightDialogTool.js',
