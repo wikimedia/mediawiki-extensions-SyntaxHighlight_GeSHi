@@ -14,5 +14,6 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(هیچ)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "نشان‌دادن شماره خطوط",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-startingline": "شروع شماره از خط",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "بلاک کد",
 	"syntaxhighlight-error-unknown-language": "زبان ناشناخته «$1»"
 }
