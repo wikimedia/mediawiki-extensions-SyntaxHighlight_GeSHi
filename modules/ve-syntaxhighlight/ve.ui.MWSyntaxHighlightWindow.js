@@ -22,8 +22,6 @@ OO.initClass( ve.ui.MWSyntaxHighlightWindow );
 
 /* Static properties */
 
-ve.ui.MWSyntaxHighlightWindow.static.icon = 'alienextension';
-
 ve.ui.MWSyntaxHighlightWindow.static.title = OO.ui.deferMsg( 'syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title' );
 
 ve.ui.MWSyntaxHighlightWindow.static.dir = 'ltr';
