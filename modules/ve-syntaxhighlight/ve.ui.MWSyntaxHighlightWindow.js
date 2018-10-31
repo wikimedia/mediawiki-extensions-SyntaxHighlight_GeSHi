@@ -145,7 +145,7 @@ ve.ui.MWSyntaxHighlightWindow.prototype.getReadyProcess = function ( data, proce
 ve.ui.MWSyntaxHighlightWindow.prototype.getSetupProcess = function ( data, process ) {
 	return process.next( function () {
 		var attrs = this.selectedNode ? this.selectedNode.getAttribute( 'mw' ).attrs : {},
-			language = attrs.lang.toLowerCase() || '',
+			language = attrs.lang ? attrs.lang.toLowerCase() : '',
 			showLines = attrs.line !== undefined,
 			startLine = attrs.start;
 
