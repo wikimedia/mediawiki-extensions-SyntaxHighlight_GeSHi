@@ -1,13 +1,13 @@
 {
 	"extends": "wikimedia",
 	"env": {
-		"browser": true,
-		"jquery": true
+		"browser": true
 	},
 	"globals": {
 		"ve": true,
 		"OO": false,
-		"mw": false
+		"mw": false,
+		"$": false
 	},
 	"rules": {
 		"dot-notation": [ "error", { "allowKeywords": true } ],
