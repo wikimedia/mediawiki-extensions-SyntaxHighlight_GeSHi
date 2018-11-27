@@ -1,13 +1,11 @@
 {
-	"extends": "wikimedia",
-	"env": {
-		"browser": true
-	},
+	"extends": [
+		"wikimedia/client",
+		"wikimedia/jquery"
+	],
 	"globals": {
-		"ve": true,
 		"OO": false,
-		"mw": false,
-		"$": false
+		"mw": false
 	},
 	"rules": {
 		"dot-notation": [ "error", { "allowKeywords": true } ],
