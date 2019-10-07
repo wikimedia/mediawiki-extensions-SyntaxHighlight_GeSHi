@@ -5,8 +5,8 @@
 		"wikimedia/jquery"
 	],
 	"globals": {
-		"OO": false,
-		"mw": false
+		"OO": "readonly",
+		"mw": "readonly"
 	},
 	"rules": {
 		"max-len": "off"
