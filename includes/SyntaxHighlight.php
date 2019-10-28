@@ -426,7 +426,7 @@ class SyntaxHighlight {
 	public static function onContentGetParserOutput( Content $content, Title $title,
 		$revId, ParserOptions $options, $generateHtml, ParserOutput &$output
 	) {
-		global $wgParser, $wgTextModelsToParse;
+		global $wgTextModelsToParse;
 
 		if ( !$generateHtml ) {
 			// Nothing special for us to do, let MediaWiki handle this.
@@ -453,7 +453,8 @@ class SyntaxHighlight {
 		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
 		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
 		if ( $content instanceof TextContent && in_array( $model, $wgTextModelsToParse ) ) {
-			$output = $wgParser->parse( $text, $title, $options, true, true, $revId );
+			$output = MediaWikiServices::getInstance()->getParser()
+				->parse( $text, $title, $options, true, true, $revId );
 		}
 
 		$status = self::highlight( $text, $lexer );
