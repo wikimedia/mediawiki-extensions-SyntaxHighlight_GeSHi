@@ -554,26 +554,5 @@ class SyntaxHighlight {
 			'targets' => [ 'desktop', 'mobile' ],
 		] );
 	}
-
-	/**
-	 * Backward-compatibility shim for extensions.
-	 * @deprecated since MW 1.25
-	 */
-	public static function prepare( $text, $lang ) {
-		wfDeprecated( __METHOD__ );
-		return new GeSHi( self::highlight( $text, $lang )->getValue() );
-	}
-
-	/**
-	 * Backward-compatibility shim for extensions.
-	 * @deprecated since MW 1.25
-	 * @param GeSHi $geshi
-	 * @return string
-	 */
-	public static function buildHeadItem( $geshi ) {
-		wfDeprecated( __METHOD__ );
-		$geshi->parse_code();
-		return '';
-	}
 }
 class_alias( SyntaxHighlight::class, 'SyntaxHighlight_GeSHi' );
