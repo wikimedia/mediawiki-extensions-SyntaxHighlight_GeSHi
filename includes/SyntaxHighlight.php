@@ -80,9 +80,9 @@ class SyntaxHighlight {
 	/**
 	 * Register parser hook
 	 *
-	 * @param Parser &$parser
+	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( Parser &$parser ) {
+	public static function onParserFirstCallInit( Parser $parser ) {
 		foreach ( [ 'source', 'syntaxhighlight' ] as $tag ) {
 			$parser->setHook( $tag, [ 'SyntaxHighlight', 'parserHook' ] );
 		}
@@ -510,9 +510,9 @@ class SyntaxHighlight {
 	 * Conditionally register resource loader modules that depends on the
 	 * VisualEditor MediaWiki extension.
 	 *
-	 * @param ResourceLoader &$resourceLoader
+	 * @param ResourceLoader $resourceLoader
 	 */
-	public static function onResourceLoaderRegisterModules( &$resourceLoader ) {
+	public static function onResourceLoaderRegisterModules( $resourceLoader ) {
 		if ( !ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
 			return;
 		}
