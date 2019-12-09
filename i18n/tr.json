@@ -3,9 +3,20 @@
 		"authors": [
 			"Erkan Yilmaz",
 			"Joseph",
-			"McAang"
+			"McAang",
+			"BaRaN6161 TURK"
 		]
 	},
-	"syntaxhighlight-desc": "[http://pygments.org/ Pygments] kullanarak <code>&lt;syntaxhighlight&gt;</code> sözdizimi vurgulamasını sağlar",
-	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Kod bloğu"
+	"syntaxhighlight-desc": "[https://pygments.org/ Pygments - Python sözdizimi vurgulayıcısı] kullanarak <code>&lt;syntaxhighlight&gt;</code> öğesini vurgulayarak sözdizimi sağlar",
+	"syntaxhighlight-error-category": "Hataları vurgulayan sözdizimi olan sayfalar",
+	"syntaxhighlight-error-category-desc": "Sayfada yer alan kodu vurgulamaya çalışırken bir hata oluştu.",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kod",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Dil",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Hiçbiri)",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Satır numaralarını göster",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-startingline": "Başlangıç çizgisi numarası",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Kod bloğu",
+	"syntaxhighlight-error-pygments-invocation-failure": "Pigmentler çağrılamadı",
+	"syntaxhighlight-error-unknown-language": "Bilinmeyen dil \"$1\"",
+	"syntaxhighlight-error-exceeds-size-limit": "$1 {{PLURAL:$1|bayt}} kod büyüklüğü izin verilen maksimum $2 {{PLURAL:$2|bayt}} aşıyor"
 }
