@@ -130,6 +130,7 @@ class SyntaxHighlight {
 		if ( !( isset( $htmlAttribs['dir'] ) && $htmlAttribs['dir'] === 'rtl' ) ) {
 			$htmlAttribs['dir'] = 'ltr';
 		}
+		'@phan-var array{class:string,dir:string} $htmlAttribs';
 
 		if ( isset( $args['inline'] ) ) {
 			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
@@ -330,7 +331,12 @@ class SyntaxHighlight {
 
 		if ( $error !== null || $output === null ) {
 			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
-			wfWarn( 'Failed to invoke Pygments: ' . $error );
+			if ( $error !== null ) {
+				wfWarn( 'Failed to invoke Pygments: ' . $error );
+			} else {
+				wfWarn( 'Invoking Pygments returned blank output with no error response' );
+			}
+
 			// Fall back to preformatted code without syntax highlighting
 			$output = self::plainCodeWrap( $code, $inline );
 		}
@@ -376,9 +382,9 @@ class SyntaxHighlight {
 			if ( ctype_digit( $value ) ) {
 				$lines[] = (int)$value;
 			} elseif ( strpos( $value, '-' ) !== false ) {
-				list( $start, $end ) = array_map( 'trim', explode( '-', $value ) );
+				list( $start, $end ) = array_map( 'intval', explode( '-', $value ) );
 				if ( self::validHighlightRange( $start, $end ) ) {
-					for ( $i = intval( $start ); $i <= $end; $i++ ) {
+					for ( $i = $start; $i <= $end; $i++ ) {
 						$lines[] = $i;
 					}
 				}
@@ -403,9 +409,7 @@ class SyntaxHighlight {
 		// to DoS the system by asking for a huge range.
 		// Impose an arbitrary limit on the number of lines in a
 		// given range to reduce the impact.
-		return ctype_digit( $start ) &&
-			ctype_digit( $end ) &&
-			$start > 0 &&
+		return $start > 0 &&
 			$start < $end &&
 			$end - $start < self::HIGHLIGHT_MAX_LINES;
 	}
