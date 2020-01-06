@@ -83,13 +83,26 @@ class SyntaxHighlight {
 	 * @param Parser $parser
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
-		foreach ( [ 'source', 'syntaxhighlight' ] as $tag ) {
-			$parser->setHook( $tag, [ 'SyntaxHighlight', 'parserHook' ] );
-		}
+		$parser->setHook( 'source', [ 'SyntaxHighlight', 'parserHookSource' ] );
+		$parser->setHook( 'syntaxhighlight', [ 'SyntaxHighlight', 'parserHook' ] );
 	}
 
 	/**
-	 * Parser hook
+	 * Parser hook for <source> to add deprecated tracking category
+	 *
+	 * @param string $text
+	 * @param array $args
+	 * @param Parser $parser
+	 * @return string
+	 * @throws MWException
+	 */
+	public static function parserHookSource( $text, $args, $parser ) {
+		$parser->addTrackingCategory( 'syntaxhighlight-source-category' );
+		return self::parserHook( $text, $args, $parser );
+	}
+
+	/**
+	 * Parser hook for both <source> and <syntaxhighlight> logic
 	 *
 	 * @param string $text
 	 * @param array $args
@@ -110,6 +123,7 @@ class SyntaxHighlight {
 				$args['inline'] = true;
 			}
 			unset( $args['enclose'] );
+			$parser->addTrackingCategory( 'syntaxhighlight-enclose-category' );
 		}
 
 		$lexer = $args['lang'] ?? '';

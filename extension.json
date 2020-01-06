@@ -73,7 +73,9 @@
 		"PygmentizePath": false
 	},
 	"TrackingCategories": [
-		"syntaxhighlight-error-category"
+		"syntaxhighlight-error-category",
+		"syntaxhighlight-enclose-category",
+		"syntaxhighlight-source-category"
 	],
 	"manifest_version": 1
 }
