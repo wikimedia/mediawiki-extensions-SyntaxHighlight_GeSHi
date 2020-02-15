@@ -127,6 +127,10 @@ class SyntaxHighlight {
 		} else {
 			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS;
 		}
+		$lexer = self::getLexer( $lexer );
+		if ( $lexer !== null ) {
+			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS . '-lang-' . $lexer;
+		}
 		if ( !( isset( $htmlAttribs['dir'] ) && $htmlAttribs['dir'] === 'rtl' ) ) {
 			$htmlAttribs['dir'] = 'ltr';
 		}
