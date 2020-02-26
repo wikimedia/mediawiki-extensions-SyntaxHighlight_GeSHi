@@ -82,7 +82,7 @@ Default behaviour (inner is pre)
 var a;
 </source>
 !! result
-<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
 </pre></div>
 !! end
 
@@ -111,7 +111,7 @@ Custom attributes
 !!input
 <source lang="javascript" id="foo" class="bar" dir="rtl" style="font-size: larger;">var a;</source>
 !! result
-<div id="foo" class="bar mw-highlight mw-content-rtl" dir="rtl" style="font-size: larger;"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
+<div id="foo" class="bar mw-highlight mw-highlight-lang-javascript mw-content-rtl" dir="rtl" style="font-size: larger;"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span>
 </pre></div>
 !! end
 
@@ -120,7 +120,7 @@ Inline attribute (inline code)
 !!input
 Text <source lang="javascript" inline>var a;</source>.
 !! result
-<p>Text <code class="mw-highlight" dir="ltr"><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span></code>.
+<p>Text <code class="mw-highlight mw-highlight-lang-javascript" dir="ltr"><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span></code>.
 </p>
 !! end
 
@@ -129,7 +129,7 @@ Enclose none (inline code)
 !!input
 Text <source lang="javascript" enclose="none">var a;</source>.
 !! result
-<p>Text <code class="mw-highlight" dir="ltr"><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span></code>.
+<p>Text <code class="mw-highlight mw-highlight-lang-javascript" dir="ltr"><span class="kd">var</span> <span class="nx">a</span><span class="p">;</span></code>.
 </p>
 !! end
 
@@ -138,7 +138,7 @@ Enclose with nowiki
 !! input
 {{#tag:syntaxhighlight|<nowiki>foo</nowiki>|lang="text"|inline=none}}
 !! result
-<p><code class="mw-highlight" dir="ltr">foo</code>
+<p><code class="mw-highlight mw-highlight-lang-text" dir="ltr">foo</code>
 </p>
 !! end
 
@@ -147,7 +147,7 @@ No code
 !! input
 <source lang="CSharp"></source>
 !! result
-<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-highlight-lang-csharp mw-content-ltr" dir="ltr"></div>
 !! end
 
 !! test
@@ -155,7 +155,7 @@ Just whitespace
 !! input
 <source lang="CSharp"> </source>
 !! result
-<div class="mw-highlight mw-content-ltr" dir="ltr"></div>
+<div class="mw-highlight mw-highlight-lang-csharp mw-content-ltr" dir="ltr"></div>
 !! end
 
 !! test
@@ -168,7 +168,7 @@ function doSomething() {
 	if (baz) {
 </syntaxhighlight>
 !! html+tidy
-<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">()</span> <span class="p">{</span>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span> <span class="nx">doSomething</span><span class="p">()</span> <span class="p">{</span>
 <span class="hll">	<span class="kd">var</span>	<span class="nx">foo</span><span class="p">,</span>
 </span><span class="hll">		<span class="nx">bar</span><span class="p">;</span>
 </span>	<span class="k">if</span> <span class="p">(</span><span class="nx">baz</span><span class="p">)</span> <span class="p">{</span>
