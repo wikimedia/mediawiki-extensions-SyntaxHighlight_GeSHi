@@ -194,6 +194,7 @@ class SyntaxHighlight {
 	/**
 	 * @param string $code
 	 * @param bool $inline
+	 * @return string HTML
 	 */
 	private static function plainCodeWrap( $code, $inline ) {
 		if ( $inline ) {
