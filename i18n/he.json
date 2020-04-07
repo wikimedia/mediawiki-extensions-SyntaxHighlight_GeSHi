@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Guycn2",
-			"Rotem Liss",
-			"Amire80"
+			"Rotem Liss"
 		]
 	},
 	"syntaxhighlight-desc": "אפשרות לסימון קוד מקור בצבעים עם התגית <code>&lt;syntaxhighlight&gt;</code> באמצעות [http://pygments.org/ Pygments – צובע קוד בשפת Python]",

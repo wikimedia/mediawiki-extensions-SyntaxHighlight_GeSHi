@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand",
-			"Tvdm",
+			"Mainframe98",
 			"Romaine",
 			"SPQRobin",
-			"Mainframe98"
+			"Siebrand",
+			"Tvdm"
 		]
 	},
 	"syntaxhighlight-desc": "Voorziet in het markeren van syntaxis voor <code>&lt;syntaxhighlight&gt;</code> met [http://pygments.org/ Pygments]",

@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shinjiman",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Shinjiman"
 		]
 	},
 	"syntaxhighlight-desc": "使用[http://pygments.org/ Pygments - Python syntax highlighter]以提供语法高亮<code>&lt;syntaxhighlight&gt;</code>",

@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Kwj2772",
-			"ToePeu",
-			"아라",
 			"Revi",
-			"Ykhwong"
+			"ToePeu",
+			"Ykhwong",
+			"아라"
 		]
 	},
 	"syntaxhighlight-desc": "[http://pygments.org/ Pygments - Python 구문 강조 기능]을 사용해 <code>&lt;syntaxhighlight&gt;</code>로 구문 강조를 제공합니다",

@@ -3,8 +3,8 @@
 		"authors": [
 			"Ebraminio",
 			"Huji",
-			"Reza1615",
-			"Ladsgroup"
+			"Ladsgroup",
+			"Reza1615"
 		]
 	},
 	"syntaxhighlight-desc": "امکان رنگین کردن دستورات <code>&lt;syntaxhighlight&gt;</code> با استفاده از [http://pygments.org/ Pygments] را فراهم می‌آورد",

@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Legoktm",
+			"Liuxinyu970226",
 			"Meno25",
+			"Robby",
 			"Shirayuki",
 			"The Evil IP address",
-			"Legoktm",
-			"Umherirrender",
-			"Liuxinyu970226",
-			"Robby"
+			"Umherirrender"
 		]
 	},
 	"syntaxhighlight-desc": "{{desc|name=Syntax Highlight GeSHi|url=https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi}}",

@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"Millosh",
-			"Rancher",
-			"Sasa Stefanovic",
-			"Сербијана",
 			"Obsuser",
 			"Prevodim",
-			"BadDog"
+			"Rancher",
+			"Sasa Stefanovic",
+			"Сербијана"
 		]
 	},
 	"syntaxhighlight-desc": "Омогућава истицање синтаксе <code>&lt;syntaxhighlight&gt;</code> коришћењем алатке [http://pygments.org/ Pygments — Пајтон истицач синтаксе]",

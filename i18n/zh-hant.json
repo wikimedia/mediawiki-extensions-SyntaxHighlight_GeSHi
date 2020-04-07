@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mark85296341",
-			"Shinjiman",
 			"Cwlin0416",
+			"Kly",
 			"Liuxinyu970226",
-			"Kly"
+			"Mark85296341",
+			"Shinjiman"
 		]
 	},
 	"syntaxhighlight-desc": "使用 [http://pygments.org/ Pygments - Python syntax highlighter] 提供可強調語法顯示的 <code>&lt;syntaxhighlight&gt;</code> 標籤。",

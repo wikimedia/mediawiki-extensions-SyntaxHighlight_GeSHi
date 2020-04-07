@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Helder.wiki",
+			"Felipe L. Ewald",
 			"He7d3r",
-			"Felipe L. Ewald"
+			"Helder.wiki"
 		]
 	},
 	"syntaxhighlight-desc": "Providencia realce de sintaxe <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments - Marcador de sintaxe Python]",

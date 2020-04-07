@@ -2,9 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
-			"زكريا",
 			"Mr. Ibrahem",
-			"ديفيد"
+			"ديفيد",
+			"زكريا"
 		]
 	},
 	"syntaxhighlight-desc": "يوفر تمييزا لتركيب <code>&lt;syntaxhighlight&gt;</code> باستخدام [http://pygments.org/ Pygments - Python syntax highlighter]",

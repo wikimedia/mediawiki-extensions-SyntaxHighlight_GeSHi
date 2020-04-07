@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"BaRaN6161 TURK",
 			"Erkan Yilmaz",
 			"Joseph",
-			"McAang",
-			"BaRaN6161 TURK"
+			"McAang"
 		]
 	},
 	"syntaxhighlight-desc": "[https://pygments.org/ Pygments - Python sözdizimi vurgulayıcısı] kullanarak <code>&lt;syntaxhighlight&gt;</code> öğesini vurgulayarak sözdizimi sağlar",

@@ -3,8 +3,8 @@
 		"authors": [
 			"Li-sung",
 			"Matěj Grabovský",
-			"Mormegil",
-			"Matěj Suchánek"
+			"Matěj Suchánek",
+			"Mormegil"
 		]
 	},
 	"syntaxhighlight-desc": "Poskytuje zvýrazňování syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocí [http://pygments.org Pygments – zvýrazňovače syntaxe v Pythonu]",

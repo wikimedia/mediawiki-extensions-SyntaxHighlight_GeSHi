@@ -1,15 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dcausse",
+			"Gomoko",
 			"Grondin",
-			"Sherbrooke",
-			"Verdy p",
 			"Macofe",
 			"Mattho69",
-			"Dcausse",
 			"Orlodrim",
-			"Wladek92",
-			"Gomoko"
+			"Sherbrooke",
+			"Verdy p",
+			"Wladek92"
 		]
 	},
 	"syntaxhighlight-desc": "Fournit la mise en valeur de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [http://pygments.org/ Pygments - coloration syntaxique Python]",

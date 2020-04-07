@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beta16",
 			"BrokenArrow",
-			"Macofe",
-			"Beta16"
+			"Macofe"
 		]
 	},
 	"syntaxhighlight-desc": "Evidenzia la sintassi dei linguaggi di programmazione <code>&lt;syntaxhighlight&gt;</code> tramite [http://pygments.org/ Pygments - evidenziatore della sintassi Python]",
