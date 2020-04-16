@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kghbln",
+			"Matěj Suchánek",
 			"Metalhead64",
 			"Raimond Spekking"
 		]
@@ -11,7 +12,7 @@
 	"syntaxhighlight-error-category-desc": "Es gab einen Fehler bei der Syntaxhervorhebung des auf der Seite eingebetteten Codes.",
 	"syntaxhighlight-enclose-category": "Seiten mit veraltetem enclose-Attribut",
 	"syntaxhighlight-enclose-category-desc": "Die Syntaxhervorhebung auf der Seite verwendet die veraltete enclose-Syntax.",
-	"syntaxhighlight-source-category": "Seiten mit dem veralteten soure-Tag",
+	"syntaxhighlight-source-category": "Seiten mit dem veralteten source-Tag",
 	"syntaxhighlight-source-category-desc": "Die Syntaxhervorhebung auf der Seite verwendet das veraltete source-Tag.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Sprache",
