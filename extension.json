@@ -26,7 +26,6 @@
 	},
 	"AutoloadClasses": {
 		"SyntaxHighlight": "includes/SyntaxHighlight.php",
-		"SyntaxHighlight_GeSHi": "includes/SyntaxHighlight.php",
 		"GeSHi": "includes/GeSHi.php",
 		"SyntaxHighlightAce": "includes/SyntaxHighlightAce.php",
 		"SyntaxHighlightGeSHiCompat": "includes/SyntaxHighlightGeSHiCompat.php",

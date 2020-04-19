@@ -578,4 +578,3 @@ class SyntaxHighlight {
 		] );
 	}
 }
-class_alias( SyntaxHighlight::class, 'SyntaxHighlight_GeSHi' );
