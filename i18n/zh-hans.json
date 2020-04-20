@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"Shinjiman"
+			"Shinjiman",
+			"Xiplus"
 		]
 	},
 	"syntaxhighlight-desc": "使用[http://pygments.org/ Pygments - Python syntax highlighter]以提供语法高亮<code>&lt;syntaxhighlight&gt;</code>",
 	"syntaxhighlight-error-category": "有语法高亮错误的页面",
 	"syntaxhighlight-error-category-desc": "尝试高亮包含在页面中的代码时出错。",
+	"syntaxhighlight-enclose-category": "使用已弃用enclose属性的页面",
+	"syntaxhighlight-source-category": "使用已弃用source标签的页面",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "代码",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "语言",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "（无）",
