@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bdijkstra",
 			"Mainframe98",
 			"PonkoSasuke",
 			"Romaine",
@@ -14,7 +15,7 @@
 	"syntaxhighlight-error-category-desc": "Er ging iets fout tijdens het markeren van de code op de pagina.",
 	"syntaxhighlight-enclose-category": "Pagina's die verouderde enclose attributen gebruiken",
 	"syntaxhighlight-enclose-category-desc": "De syntaxmarkering op de pagina gebruikt verouderde enclose syntax",
-	"syntaxhighlight-source-category": "Pagina's die verouderde source labels gebruiken",
+	"syntaxhighlight-source-category": "Pagina's die verouderde source-labels gebruiken",
 	"syntaxhighlight-source-category-desc": "De syntaxmarkering op de pagina gebruikt verouderde source labels.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Taal",
