@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Carn ru",
 			"Esukhovnina",
 			"Facenapalm",
 			"Kaganer",
@@ -12,6 +13,7 @@
 	"syntaxhighlight-desc": "Обеспечивает подсветки синтаксиса <code>&lt;syntaxhighlight&gt;</code> с помощью [http://pygments.org/ Pygments — средства подсветки синтаксиса для Python]",
 	"syntaxhighlight-error-category": "Страницы с ошибками в подсветке синтаксиса",
 	"syntaxhighlight-error-category-desc": "Произошла ошибка при попытке подсветки кода, включённого на страницу.",
+	"syntaxhighlight-enclose-category": "Страницы с устаревшими атрибутами",
 	"syntaxhighlight-source-category": "Страницы, использующие устаревший тег source",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Язык",
