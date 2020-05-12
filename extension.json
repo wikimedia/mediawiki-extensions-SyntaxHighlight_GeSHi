@@ -60,20 +60,28 @@
 			"SyntaxHighlight::onResourceLoaderRegisterModules"
 		]
 	},
-	"SyntaxHighlightModels": {
-		"css": "css",
-		"javascript": "javascript"
+	"attributes": {
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.geshi.visualEditor"
+			]
+		}
 	},
-	"VisualEditorPluginModules": [
-		"ext.geshi.visualEditor"
-	],
 	"config": {
-		"PygmentizePath": false
+		"SyntaxHighlightModels": {
+			"value": {
+				"css": "css",
+				"javascript": "javascript"
+			}
+		},
+		"PygmentizePath": {
+			"value": false
+		}
 	},
 	"TrackingCategories": [
 		"syntaxhighlight-error-category",
 		"syntaxhighlight-enclose-category",
 		"syntaxhighlight-source-category"
 	],
-	"manifest_version": 1
+	"manifest_version": 2
 }
