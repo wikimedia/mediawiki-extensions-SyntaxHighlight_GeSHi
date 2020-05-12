@@ -61,6 +61,12 @@
 		]
 	},
 	"attributes": {
+		"SyntaxHighlight": {
+			"Models" : {
+				"css": "css",
+				"javascript": "javascript"
+			}
+		},
 		"VisualEditor": {
 			"PluginModules": [
 				"ext.geshi.visualEditor"
@@ -68,12 +74,6 @@
 		}
 	},
 	"config": {
-		"SyntaxHighlightModels": {
-			"value": {
-				"css": "css",
-				"javascript": "javascript"
-			}
-		},
 		"PygmentizePath": {
 			"value": false
 		}
