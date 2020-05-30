@@ -22,16 +22,16 @@ use MediaWiki\Shell\Shell;
 class SyntaxHighlight {
 
 	/** @var int The maximum number of lines that may be selected for highlighting. */
-	const HIGHLIGHT_MAX_LINES = 1000;
+	private const HIGHLIGHT_MAX_LINES = 1000;
 
 	/** @var int Maximum input size for the highlighter (100 kB). */
-	const HIGHLIGHT_MAX_BYTES = 102400;
+	private const HIGHLIGHT_MAX_BYTES = 102400;
 
-	/** @var string CSS class for syntax-highlighted code. */
-	const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
+	/** @var string CSS class for syntax-highlighted code. Public as used by the udpateCSS maintenance script. */
+	public const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
 
 	/** @var int Cache version. Increment whenever the HTML changes. */
-	const CACHE_VERSION = 2;
+	private const CACHE_VERSION = 2;
 
 	/** @var array Mapping of MIME-types to lexer names. */
 	private static $mimeLexers = [
