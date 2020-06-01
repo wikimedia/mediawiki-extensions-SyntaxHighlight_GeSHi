@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Carn ru",
+			"Diman Russkov",
 			"Esukhovnina",
 			"Facenapalm",
 			"Kaganer",
@@ -14,6 +15,7 @@
 	"syntaxhighlight-error-category": "Страницы с ошибками в подсветке синтаксиса",
 	"syntaxhighlight-error-category-desc": "Произошла ошибка при попытке подсветки кода, включённого на страницу.",
 	"syntaxhighlight-enclose-category": "Страницы с устаревшим атрибутом подсветки синтаксиса «enclose»",
+	"syntaxhighlight-enclose-category-desc": "Подсветка синтаксиса на странице использует устаревший синтаксис.",
 	"syntaxhighlight-source-category": "Страницы, использующие устаревший тег source",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Язык",
