@@ -121,7 +121,9 @@ class SyntaxHighlight {
 		$out = $result->getValue();
 
 		// Allow certain HTML attributes
-		$htmlAttribs = Sanitizer::validateAttributes( $args, [ 'style', 'class', 'id', 'dir' ] );
+		$htmlAttribs = Sanitizer::validateAttributes(
+			$args, array_flip( [ 'style', 'class', 'id', 'dir' ] )
+		);
 		if ( !isset( $htmlAttribs['class'] ) ) {
 			$htmlAttribs['class'] = self::HIGHLIGHT_CSS_CLASS;
 		} else {
