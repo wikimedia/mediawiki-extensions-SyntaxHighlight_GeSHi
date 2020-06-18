@@ -17,6 +17,7 @@
 	"syntaxhighlight-enclose-category": "Страницы с устаревшим атрибутом подсветки синтаксиса «enclose»",
 	"syntaxhighlight-enclose-category-desc": "Подсветка синтаксиса на странице использует устаревший синтаксис.",
 	"syntaxhighlight-source-category": "Страницы, использующие устаревший тег source",
+	"syntaxhighlight-source-category-desc": "Подсветка синтаксиса на этой странице использует устаревшие теги источника.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Язык",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ничего)",

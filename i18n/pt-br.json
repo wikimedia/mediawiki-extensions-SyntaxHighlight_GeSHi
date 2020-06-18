@@ -13,7 +13,7 @@
 	"syntaxhighlight-error-category-desc": "Ocorreu um erro ao tentar destacar o código incluído na página.",
 	"syntaxhighlight-enclose-category": "Páginas usando atributos de inclusão descontinuados",
 	"syntaxhighlight-enclose-category-desc": "O syntaxhighlighting  na página usa sintaxe de anexo obsoleta.",
-	"syntaxhighlight-source-category": "Páginas que usam etiquetas de origem obsoletas",
+	"syntaxhighlight-source-category": "Páginas que usam etiquetas de código-fonte obsoletas",
 	"syntaxhighlight-source-category-desc": "O sublinhamento de sintaxe na página usa etiquetas de source obsoletas.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Idioma",
