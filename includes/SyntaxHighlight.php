@@ -346,7 +346,18 @@ class SyntaxHighlight {
 					return null;
 				}
 
-				return $result->getStdout();
+				$out = $result->getStdout();
+
+				// Convert line numbers to data attributes so they
+				// can be displayed as CSS generated content and be
+				// unselectable in all browsers.
+				$out = preg_replace(
+					'`<span class="linenos">([^<]*)</span>`',
+					'<span class="linenos" data-line="$1"></span>',
+					$out
+				);
+
+				return $out;
 			}
 		);
 
