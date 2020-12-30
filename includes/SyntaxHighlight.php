@@ -523,7 +523,7 @@ class SyntaxHighlight {
 				->parse( $text, $title, $options, true, true, $revId );
 		}
 
-		$status = self::highlight( $text, $lexer );
+		$status = self::highlight( $text, $lexer, [ 'line' => true ] );
 		if ( !$status->isOK() ) {
 			return true;
 		}
@@ -533,7 +533,7 @@ class SyntaxHighlight {
 			'class' => self::HIGHLIGHT_CSS_CLASS,
 			'dir' => 'ltr'
 		];
-		self::addExtraAttributes( $htmlAttribs, $lexer );
+		self::addExtraAttributes( $htmlAttribs, $lexer, false, true );
 
 		$output->addModuleStyles( 'ext.pygments' );
 		$output->setText(
