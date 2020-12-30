@@ -148,7 +148,7 @@ class SyntaxHighlight {
 		}
 		'@phan-var array{class:string,dir:string} $htmlAttribs';
 
-		self::addExtraAttributes( $htmlAttribs, $lexer, isset( $args['inline'] ) );
+		self::addExtraAttributes( $htmlAttribs, $lexer, isset( $args['inline'] ), isset( $args['line'] ) );
 
 		if ( isset( $args['inline'] ) ) {
 			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
@@ -185,11 +185,13 @@ class SyntaxHighlight {
 	 * @param array &$htmlAttribs Current HTML attributes, modified
 	 * @param string $lexer Language lexer
 	 * @param bool $isInline Inline mode
+	 * @param bool $showLines Show line numbers
 	 */
 	private static function addExtraAttributes(
 		array &$htmlAttribs,
 		string $lexer,
-		bool $isInline = false
+		bool $isInline = false,
+		bool $showLines = false
 	) : void {
 		$lexer = self::getLexer( $lexer );
 		if ( $lexer !== null ) {
@@ -197,6 +199,9 @@ class SyntaxHighlight {
 		}
 		if ( !$isInline ) {
 			$htmlAttribs['class'] .= ' ' . 'mw-content-' . $htmlAttribs['dir'];
+		}
+		if ( $showLines ) {
+			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS . '-lines';
 		}
 	}
 
