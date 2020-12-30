@@ -42,7 +42,7 @@
 			],
 			"styles": [
 				"pygments.generated.css",
-				"pygments.wrapper.css"
+				"pygments.wrapper.less"
 			]
 		}
 	},
