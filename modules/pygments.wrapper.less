@@ -45,10 +45,15 @@
 	.linenos {
 		margin-right: 4px;
 		/* Make line numbers non copyable */
+		/* TODO: This only exists for cached output and should be removed eventually */
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+
+		&:before {
+			content: attr( data-line );
+		}
 	}
 
 	/* To interact better with the 'display: block' above, doesn't affect other uses */
