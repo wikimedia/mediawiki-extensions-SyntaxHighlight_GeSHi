@@ -27,7 +27,7 @@ class SyntaxHighlight {
 	/** @var int Maximum input size for the highlighter (100 kB). */
 	private const HIGHLIGHT_MAX_BYTES = 102400;
 
-	/** @var string CSS class for syntax-highlighted code. Public as used by the udpateCSS maintenance script. */
+	/** @var string CSS class for syntax-highlighted code. Public as used by the updateCSS maintenance script. */
 	public const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
 
 	/** @var int Cache version. Increment whenever the HTML changes. */
@@ -143,14 +143,12 @@ class SyntaxHighlight {
 		} else {
 			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS;
 		}
-		$lexer = self::getLexer( $lexer );
-		if ( $lexer !== null ) {
-			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS . '-lang-' . $lexer;
-		}
 		if ( !( isset( $htmlAttribs['dir'] ) && $htmlAttribs['dir'] === 'rtl' ) ) {
 			$htmlAttribs['dir'] = 'ltr';
 		}
 		'@phan-var array{class:string,dir:string} $htmlAttribs';
+
+		self::addExtraAttributes( $htmlAttribs, $lexer, isset( $args['inline'] ) );
 
 		if ( isset( $args['inline'] ) ) {
 			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
@@ -159,20 +157,8 @@ class SyntaxHighlight {
 			$out = Html::rawElement( 'code', $htmlAttribs, $out );
 
 		} else {
-			// Not entirely sure what benefit this provides, but it was here already
-			$htmlAttribs['class'] .= ' ' . 'mw-content-' . $htmlAttribs['dir'];
 
-			// Unwrap Pygments output to provide our own wrapper. We can't just always use the 'nowrap'
-			// option (pass 'inline'), since it disables other useful things like line highlighting.
-			// Tolerate absence of quotes for Html::element() and wgWellFormedXml=false.
-			if ( $out !== '' ) {
-				$m = [];
-				if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
-					$out = trim( $m[1] );
-				} else {
-					throw new MWException( 'Unexpected output from Pygments encountered' );
-				}
-			}
+			$out = self::unwrap( $out );
 
 			// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
 			// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
@@ -190,6 +176,45 @@ class SyntaxHighlight {
 		// highlight() can be used without needing to know the module name.
 		$parser->getOutput()->addModuleStyles( 'ext.pygments' );
 
+		return $out;
+	}
+
+	/**
+	 * Add extra attributes to htmlAttribs based on current config
+	 *
+	 * @param array &$htmlAttribs Current HTML attributes, modified
+	 * @param string $lexer Language lexer
+	 * @param bool $isInline Inline mode
+	 */
+	private static function addExtraAttributes(
+		array &$htmlAttribs,
+		string $lexer,
+		bool $isInline = false
+	) : void {
+		$lexer = self::getLexer( $lexer );
+		if ( $lexer !== null ) {
+			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS . '-lang-' . $lexer;
+		}
+		if ( !$isInline ) {
+			$htmlAttribs['class'] .= ' ' . 'mw-content-' . $htmlAttribs['dir'];
+		}
+	}
+
+	/**
+	 * Unwrap the <div> wrapper of the Pygments output
+	 *
+	 * @param string $out Output
+	 * @return string Unwrapped output
+	 */
+	private static function unwrap( string $out ) : string {
+		if ( $out !== '' ) {
+			$m = [];
+			if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
+				$out = trim( $m[1] );
+			} else {
+				throw new MWException( 'Unexpected output from Pygments encountered' );
+			}
+		}
 		return $out;
 	}
 
@@ -499,8 +524,16 @@ class SyntaxHighlight {
 		}
 		$out = $status->getValue();
 
+		$htmlAttribs = [
+			'class' => self::HIGHLIGHT_CSS_CLASS,
+			'dir' => 'ltr'
+		];
+		self::addExtraAttributes( $htmlAttribs, $lexer );
+
 		$output->addModuleStyles( 'ext.pygments' );
-		$output->setText( '<div dir="ltr">' . $out . '</div>' );
+		$output->setText(
+			Html::rawElement( 'div', $htmlAttribs, self::unwrap( $out ) )
+		);
 
 		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
 		return false;
