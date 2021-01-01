@@ -42,7 +42,8 @@
 		display: block;
 	}
 
-	&-lines pre {
+	&-lines pre,
+	.content &-lines pre { // Increase specificty over mobile selectors
 		padding-left: 3.5em;
 		box-shadow: inset 2.75em 0 0 #f0f0f0;
 	}
