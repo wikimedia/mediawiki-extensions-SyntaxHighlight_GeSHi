@@ -272,6 +272,10 @@ class SyntaxHighlight {
 			$options['linenostart'] = (int)$args['start'];
 		}
 
+		if ( !empty( $args['linelinks'] ) && ctype_alpha( $args['linelinks'] ) ) {
+			$options['linespans'] = $args['linelinks'];
+		}
+
 		if ( $isInline ) {
 			$options['nowrap'] = 1;
 		}
@@ -334,10 +338,12 @@ class SyntaxHighlight {
 	 * @param array $args Associative array of additional arguments.
 	 *  If it contains a 'line' key, the output will include line numbers.
 	 *  If it includes a 'highlight' key, the value will be parsed as a
-	 *  comma-separated list of lines and line-ranges to highlight.
+	 *   comma-separated list of lines and line-ranges to highlight.
 	 *  If it contains a 'start' key, the value will be used as the line at which to
-	 *  start highlighting.
+	 *   start highlighting.
 	 *  If it contains a 'inline' key, the output will not be wrapped in `<div><pre/></div>`.
+	 *  If it contains a 'linelinks' key, lines will have links and anchors with a prefix
+	 *   of the value. Similar to the lineanchors+linespans features in Pygments.
 	 * @param Parser|null $parser Parser, if generating content to be parsed.
 	 * @return Status Status object, with HTML representing the highlighted
 	 *  code as its value.
@@ -352,14 +358,24 @@ class SyntaxHighlight {
 
 		// Post-Pygment HTML transformations.
 
-		// Convert line numbers to data attributes so they
-		// can be displayed as CSS generated content and be
-		// unselectable in all browsers.
-		$output = preg_replace(
-			'`<span class="linenos">([^<]*)</span>`',
-			'<span class="linenos" data-line="$1"></span>',
-			$output
-		);
+		if ( $showLines ) {
+			$lineReplace = Html::element( 'span', [ 'class' => 'linenos', 'data-line' => '$1' ] );
+			if ( !empty( $args['linelinks'] ) ) {
+				$lineReplace = Html::rawElement(
+					'a',
+					[ 'href' => '#' . $args['linelinks'] . '-$1' ],
+					$lineReplace
+				);
+			}
+			// Convert line numbers to data attributes so they
+			// can be displayed as CSS generated content and be
+			// unselectable in all browsers.
+			$output = preg_replace(
+				'`<span class="linenos">\s*([^<]*)\s*</span>`',
+				$lineReplace,
+				$output
+			);
+		}
 
 		// Allow certain HTML attributes
 		$htmlAttribs = Sanitizer::validateAttributes(
@@ -527,13 +543,14 @@ class SyntaxHighlight {
 				->parse( $text, $title, $options, true, true, $revId );
 		}
 
-		$status = self::highlight( $text, $lexer, [ 'line' => true ] );
+		$status = self::highlight( $text, $lexer, [ 'line' => true, 'linelinks' => 'L' ] );
 		if ( !$status->isOK() ) {
 			return true;
 		}
 		$out = $status->getValue();
 
 		$output->addModuleStyles( 'ext.pygments' );
+		$output->addModules( 'ext.pygments.linenumbers' );
 		$output->setText( $out );
 
 		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.

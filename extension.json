@@ -44,6 +44,15 @@
 				"pygments.generated.css",
 				"pygments.wrapper.less"
 			]
+		},
+		"ext.pygments.linenumbers": {
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+			"scripts": [
+				"pygments.linenumbers.js"
+			]
 		}
 	},
 	"Hooks": {
