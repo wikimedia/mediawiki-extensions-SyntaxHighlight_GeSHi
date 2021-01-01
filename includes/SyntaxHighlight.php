@@ -128,48 +128,11 @@ class SyntaxHighlight {
 
 		$lexer = $args['lang'] ?? '';
 
-		$result = self::highlight( $out, $lexer, $args );
+		$result = self::highlight( $out, $lexer, $args, $parser );
 		if ( !$result->isGood() ) {
 			$parser->addTrackingCategory( 'syntaxhighlight-error-category' );
 		}
 		$out = $result->getValue();
-
-		// Allow certain HTML attributes
-		$htmlAttribs = Sanitizer::validateAttributes(
-			$args, array_flip( [ 'style', 'class', 'id', 'dir' ] )
-		);
-		if ( !isset( $htmlAttribs['class'] ) ) {
-			$htmlAttribs['class'] = self::HIGHLIGHT_CSS_CLASS;
-		} else {
-			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS;
-		}
-		if ( !( isset( $htmlAttribs['dir'] ) && $htmlAttribs['dir'] === 'rtl' ) ) {
-			$htmlAttribs['dir'] = 'ltr';
-		}
-		'@phan-var array{class:string,dir:string} $htmlAttribs';
-
-		self::addExtraAttributes( $htmlAttribs, $lexer, isset( $args['inline'] ), isset( $args['line'] ) );
-
-		if ( isset( $args['inline'] ) ) {
-			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
-			// (also known as doBlockLevels()).
-			$out = str_replace( "\n", ' ', $out );
-			$out = Html::rawElement( 'code', $htmlAttribs, $out );
-
-		} else {
-
-			$out = self::unwrap( $out );
-
-			// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
-			// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
-			$marker = $parser::MARKER_PREFIX . '-syntaxhighlightinner-' .
-				sprintf( '%08X', $parser->mMarkerIndex++ ) . $parser::MARKER_SUFFIX;
-			$parser->mStripState->addNoWiki( $marker, $out );
-
-			$out = Html::openElement( 'div', $htmlAttribs ) .
-				$marker .
-				Html::closeElement( 'div' );
-		}
 
 		// Register CSS
 		// TODO: Consider moving to a separate method so that public method
@@ -177,32 +140,6 @@ class SyntaxHighlight {
 		$parser->getOutput()->addModuleStyles( 'ext.pygments' );
 
 		return $out;
-	}
-
-	/**
-	 * Add extra attributes to htmlAttribs based on current config
-	 *
-	 * @param array &$htmlAttribs Current HTML attributes, modified
-	 * @param string $lexer Language lexer
-	 * @param bool $isInline Inline mode
-	 * @param bool $showLines Show line numbers
-	 */
-	private static function addExtraAttributes(
-		array &$htmlAttribs,
-		string $lexer,
-		bool $isInline = false,
-		bool $showLines = false
-	) : void {
-		$lexer = self::getLexer( $lexer );
-		if ( $lexer !== null ) {
-			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS . '-lang-' . $lexer;
-		}
-		if ( !$isInline ) {
-			$htmlAttribs['class'] .= ' ' . 'mw-content-' . $htmlAttribs['dir'];
-		}
-		if ( $showLines ) {
-			$htmlAttribs['class'] .= ' ' . self::HIGHLIGHT_CSS_CLASS . '-lines';
-		}
 	}
 
 	/**
@@ -239,11 +176,11 @@ class SyntaxHighlight {
 
 	/**
 	 * @param string $code
-	 * @param bool $inline
+	 * @param bool $isInline
 	 * @return string HTML
 	 */
-	private static function plainCodeWrap( $code, $inline ) {
-		if ( $inline ) {
+	private static function plainCodeWrap( $code, $isInline ) {
+		if ( $isInline ) {
 			return htmlspecialchars( $code, ENT_NOQUOTES );
 		}
 
@@ -255,24 +192,12 @@ class SyntaxHighlight {
 	}
 
 	/**
-	 * Highlight a code-block using a particular lexer.
-	 *
-	 * This produces raw HTML (wrapped by Status), the caller is responsible
-	 * for making sure the "ext.pygments" module is loaded in the output.
-	 *
-	 * @param string $code Code to highlight.
-	 * @param string|null $lang Language name, or null to use plain markup.
-	 * @param array $args Associative array of additional arguments.
-	 *  If it contains a 'line' key, the output will include line numbers.
-	 *  If it includes a 'highlight' key, the value will be parsed as a
-	 *  comma-separated list of lines and line-ranges to highlight.
-	 *  If it contains a 'start' key, the value will be used as the line at which to
-	 *  start highlighting.
-	 *  If it contains a 'inline' key, the output will not be wrapped in `<div><pre/></div>`.
-	 * @return Status Status object, with HTML representing the highlighted
-	 *  code as its value.
+	 * @param string $code
+	 * @param string|null $lang
+	 * @param array $args
+	 * @return Status
 	 */
-	public static function highlight( $code, $lang = null, $args = [] ) {
+	private static function highlightInner( $code, $lang = null, $args = [] ) {
 		$status = new Status;
 
 		$lexer = self::getLexer( $lang );
@@ -307,15 +232,16 @@ class SyntaxHighlight {
 			);
 		}
 
-		$inline = isset( $args['inline'] );
+		$isInline = isset( $args['inline'] );
+		$showLines = isset( $args['line'] );
 
-		if ( $inline ) {
+		if ( $isInline ) {
 			$code = trim( $code );
 		}
 
 		if ( $lexer === null ) {
 			// When syntax highlighting is disabled..
-			$status->value = self::plainCodeWrap( $code, $inline );
+			$status->value = self::plainCodeWrap( $code, $isInline );
 			return $status;
 		}
 
@@ -325,7 +251,7 @@ class SyntaxHighlight {
 		];
 
 		// Line numbers
-		if ( isset( $args['line'] ) ) {
+		if ( $showLines ) {
 			$options['linenos'] = 'inline';
 		}
 
@@ -346,7 +272,7 @@ class SyntaxHighlight {
 			$options['linenostart'] = (int)$args['start'];
 		}
 
-		if ( $inline ) {
+		if ( $isInline ) {
 			$options['nowrap'] = 1;
 		}
 
@@ -376,18 +302,7 @@ class SyntaxHighlight {
 					return null;
 				}
 
-				$out = $result->getStdout();
-
-				// Convert line numbers to data attributes so they
-				// can be displayed as CSS generated content and be
-				// unselectable in all browsers.
-				$out = preg_replace(
-					'`<span class="linenos">([^<]*)</span>`',
-					'<span class="linenos" data-line="$1"></span>',
-					$out
-				);
-
-				return $out;
+				return $result->getStdout();
 			}
 		);
 
@@ -400,15 +315,104 @@ class SyntaxHighlight {
 			}
 
 			// Fall back to preformatted code without syntax highlighting
-			$output = self::plainCodeWrap( $code, $inline );
+			$output = self::plainCodeWrap( $code, $isInline );
 		}
 
-		if ( $inline ) {
+		$status->value = $output;
+
+		return $status;
+	}
+
+	/**
+	 * Highlight a code-block using a particular lexer.
+	 *
+	 * This produces raw HTML (wrapped by Status), the caller is responsible
+	 * for making sure the "ext.pygments" module is loaded in the output.
+	 *
+	 * @param string $code Code to highlight.
+	 * @param string|null $lang Language name, or null to use plain markup.
+	 * @param array $args Associative array of additional arguments.
+	 *  If it contains a 'line' key, the output will include line numbers.
+	 *  If it includes a 'highlight' key, the value will be parsed as a
+	 *  comma-separated list of lines and line-ranges to highlight.
+	 *  If it contains a 'start' key, the value will be used as the line at which to
+	 *  start highlighting.
+	 *  If it contains a 'inline' key, the output will not be wrapped in `<div><pre/></div>`.
+	 * @param Parser|null $parser Parser, if generating content to be parsed.
+	 * @return Status Status object, with HTML representing the highlighted
+	 *  code as its value.
+	 */
+	public static function highlight( $code, $lang = null, $args = [], ?Parser $parser = null ) {
+		$status = self::highlightInner( $code, $lang, $args );
+		$output = $status->getValue();
+
+		$isInline = isset( $args['inline'] );
+		$showLines = isset( $args['line'] );
+		$lexer = self::getLexer( $lang );
+
+		// Post-Pygment HTML transformations.
+
+		// Convert line numbers to data attributes so they
+		// can be displayed as CSS generated content and be
+		// unselectable in all browsers.
+		$output = preg_replace(
+			'`<span class="linenos">([^<]*)</span>`',
+			'<span class="linenos" data-line="$1"></span>',
+			$output
+		);
+
+		// Allow certain HTML attributes
+		$htmlAttribs = Sanitizer::validateAttributes(
+			$args, array_flip( [ 'style', 'class', 'id' ] )
+		);
+
+		$dir = ( isset( $args['dir'] ) && $args['dir'] === 'rtl' ) ? 'rtl' : 'ltr';
+
+		// Build class list
+		$classList = [];
+		if ( isset( $htmlAttribs['class'] ) ) {
+			$classList[] = $htmlAttribs['class'];
+		}
+		$classList[] = self::HIGHLIGHT_CSS_CLASS;
+		if ( $lexer !== null ) {
+			$classList[] = self::HIGHLIGHT_CSS_CLASS . '-lang-' . $lexer;
+		}
+		if ( !$isInline ) {
+			$classList[] = 'mw-content-' . $dir;
+		}
+		if ( $showLines ) {
+			$classList[] = self::HIGHLIGHT_CSS_CLASS . '-lines';
+		}
+		$htmlAttribs['class'] = implode( ' ', $classList );
+		$htmlAttribs['dir'] = $dir;
+		'@phan-var array{class:string,dir:string} $htmlAttribs';
+
+		if ( $isInline ) {
 			// We've already trimmed the input $code before highlighting,
 			// but pygment's standard out adds a line break afterwards,
 			// which would then be preserved in the paragraph that wraps this,
 			// and become visible as a space. Avoid that.
 			$output = trim( $output );
+
+			// Enforce inlineness. Stray newlines may result in unexpected list and paragraph processing
+			// (also known as doBlockLevels()).
+			$output = str_replace( "\n", ' ', $output );
+			$output = Html::rawElement( 'code', $htmlAttribs, $output );
+		} else {
+			$output = self::unwrap( $output );
+
+			if ( $parser ) {
+				// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
+				// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
+				$marker = $parser::MARKER_PREFIX . '-syntaxhighlightinner-' .
+					sprintf( '%08X', $parser->mMarkerIndex++ ) . $parser::MARKER_SUFFIX;
+				$parser->mStripState->addNoWiki( $marker, $output );
+				$output = $marker;
+			}
+
+			$output = Html::openElement( 'div', $htmlAttribs ) .
+				$output .
+				Html::closeElement( 'div' );
 		}
 
 		$status->value = $output;
@@ -529,16 +533,8 @@ class SyntaxHighlight {
 		}
 		$out = $status->getValue();
 
-		$htmlAttribs = [
-			'class' => self::HIGHLIGHT_CSS_CLASS,
-			'dir' => 'ltr'
-		];
-		self::addExtraAttributes( $htmlAttribs, $lexer, false, true );
-
 		$output->addModuleStyles( 'ext.pygments' );
-		$output->setText(
-			Html::rawElement( 'div', $htmlAttribs, self::unwrap( $out ) )
-		);
+		$output->setText( $out );
 
 		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
 		return false;
