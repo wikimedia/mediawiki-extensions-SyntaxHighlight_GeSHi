@@ -42,22 +42,41 @@
 
 	&-lines pre,
 	.content &-lines pre { // Increase specificty over mobile selectors
-		padding-left: 3.5em;
-		box-shadow: inset 2.75em 0 0 #f0f0f0;
-
-		.hll {
-			margin-left: -3.5em;
+		.mw-content-ltr& {
+			/* @noflip */
 			padding-left: 3.5em;
+			/* @noflip */
+			box-shadow: inset 2.75em 0 0 #f0f0f0;
+
+			.hll {
+				/* @noflip */
+				margin-left: -3.5em;
+				/* @noflip */
+				padding-left: 3.5em;
+			}
+		}
+
+		/* stylelint-disable-next-line no-descending-specificity */
+		.mw-content-rtl& {
+			/* @noflip */
+			padding-right: 3.5em;
+			/* @noflip */
+			box-shadow: inset -2.75em 0 0 #f0f0f0;
+
+			/* stylelint-disable-next-line no-descending-specificity */
+			.hll {
+				/* @noflip */
+				margin-right: -3.5em;
+				/* @noflip */
+				padding-right: 3.5em;
+			}
 		}
 	}
 
 	.linenos {
 		position: absolute;
-		left: 0;
 		box-sizing: border-box;
 		width: 2.75em;
-		text-align: right;
-		margin-right: 4px;
 		background: none;
 		color: #72777d;
 		white-space: pre;
@@ -67,6 +86,24 @@
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+
+		.mw-content-ltr& {
+			/* @noflip */
+			left: 0;
+			/* @noflip */
+			text-align: right;
+			/* @noflip */
+			margin-right: 4px;
+		}
+
+		.mw-content-rtl& {
+			/* @noflip */
+			right: 0;
+			/* @noflip */
+			text-align: left;
+			/* @noflip */
+			margin-left: 4px;
+		}
 
 		&:before {
 			content: attr( data-line );
