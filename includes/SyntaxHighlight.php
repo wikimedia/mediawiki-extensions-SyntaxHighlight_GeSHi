@@ -393,9 +393,7 @@ class SyntaxHighlight {
 		if ( $lexer !== null ) {
 			$classList[] = self::HIGHLIGHT_CSS_CLASS . '-lang-' . $lexer;
 		}
-		if ( !$isInline ) {
-			$classList[] = 'mw-content-' . $dir;
-		}
+		$classList[] = 'mw-content-' . $dir;
 		if ( $showLines ) {
 			$classList[] = self::HIGHLIGHT_CSS_CLASS . '-lines';
 		}
