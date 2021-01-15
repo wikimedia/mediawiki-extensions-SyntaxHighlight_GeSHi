@@ -1,7 +1,4 @@
 .mw-highlight {
-	/* All supported programming languages are written left-to-right */
-	/* @noflip */
-	direction: ltr;
 	unicode-bidi: embed;
 	position: relative;
 
@@ -74,17 +71,6 @@
 		&:before {
 			content: attr( data-line );
 		}
-	}
-
-	/* To interact better with the 'display: block' above, doesn't affect other uses */
-	/* @noflip */
-	&.mw-content-ltr .linenos {
-		float: left;
-	}
-
-	/* @noflip */
-	&.mw-content-rtl .linenos {
-		float: right;
 	}
 
 	a:hover .linenos,
