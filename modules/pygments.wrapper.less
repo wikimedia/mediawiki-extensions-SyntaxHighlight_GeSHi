@@ -1,12 +1,15 @@
 .mw-highlight {
 	unicode-bidi: embed;
-	position: relative;
 
 	pre {
 		/* Use a more commonly found tab size of 4 (e.g. as used in CodeEditor)
 		instead of the browser-default value of 8 */
 		-moz-tab-size: 4;
 		tab-size: 4;
+		// Position .linenos relative to this container.
+		// Do not put this on the main container as it is 100%
+		// and causes it to stack above floated elements (T272853)
+		position: relative;
 	}
 
 	/* Avoid displaying double borders for nested 'code' elements.
@@ -41,6 +44,7 @@
 
 	&-lines pre,
 	.content &-lines pre { // Increase specificty over mobile selectors
+
 		.mw-content-ltr& {
 			/* @noflip */
 			padding-left: 3.5em;
