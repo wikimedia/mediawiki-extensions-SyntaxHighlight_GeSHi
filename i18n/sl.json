@@ -7,5 +7,6 @@
 		]
 	},
 	"syntaxhighlight-desc": "Nudi označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://pygments.org/ Pygments – označevalnika skladnje Python]",
+	"syntaxhighlight-error-category": "Strani z napakami pri označevanju skladnje",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Blok kode"
 }
