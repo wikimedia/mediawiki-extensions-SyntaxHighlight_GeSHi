@@ -102,7 +102,7 @@
 	},
 	"attributes": {
 		"SyntaxHighlight": {
-			"Models" : {
+			"Models": {
 				"css": "css",
 				"javascript": "javascript"
 			}
