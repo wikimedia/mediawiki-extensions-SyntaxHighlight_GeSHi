@@ -517,9 +517,14 @@ class SyntaxHighlight {
 			return true;
 		}
 
-		// Determine the language
+		// Determine the SyntaxHighlight language from the page's
+		// content model. Extensions can extend the default CSS/JS
+		// mapping by setting the SyntaxHighlightModels attribute.
 		$extension = ExtensionRegistry::getInstance();
-		$models = $extension->getAttribute( 'SyntaxHighlightModels' );
+		$models = $extension->getAttribute( 'SyntaxHighlightModels' ) + [
+			CONTENT_MODEL_CSS => 'css',
+			CONTENT_MODEL_JAVASCRIPT => 'javascript',
+		];
 		$model = $content->getModel();
 		if ( !isset( $models[$model] ) ) {
 			// We don't care about this model, carry on.
@@ -527,7 +532,7 @@ class SyntaxHighlight {
 		}
 		$lexer = $models[$model];
 
-		// Hope that $wgSyntaxHighlightModels does not contain silly types.
+		// Hope that the "SyntaxHighlightModels" attribute does not contain silly types.
 		$text = ContentHandler::getContentText( $content );
 		if ( !$text ) {
 			// Oops! Non-text content? Let MediaWiki handle this.

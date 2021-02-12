@@ -102,10 +102,7 @@
 	},
 	"attributes": {
 		"SyntaxHighlight": {
-			"Models": {
-				"css": "css",
-				"javascript": "javascript"
-			}
+			"Models": {}
 		},
 		"VisualEditor": {
 			"PluginModules": [
