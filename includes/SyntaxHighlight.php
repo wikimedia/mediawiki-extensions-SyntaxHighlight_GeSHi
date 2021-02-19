@@ -112,7 +112,7 @@ class SyntaxHighlight {
 	 */
 	public static function parserHook( $text, $args, $parser ) {
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
-		$out = $parser->mStripState->unstripNoWiki( $text );
+		$out = $parser->getStripState()->unstripNoWiki( $text );
 
 		// Don't trim leading spaces away, just the linefeeds
 		$out = preg_replace( '/^\n+/', '', rtrim( $out ) );
@@ -420,7 +420,7 @@ class SyntaxHighlight {
 				// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
 				$marker = $parser::MARKER_PREFIX . '-syntaxhighlightinner-' .
 					sprintf( '%08X', $parser->mMarkerIndex++ ) . $parser::MARKER_SUFFIX;
-				$parser->mStripState->addNoWiki( $marker, $output );
+				$parser->getStripState()->addNoWiki( $marker, $output );
 				$output = $marker;
 			}
 
