@@ -512,6 +512,12 @@ class SyntaxHighlight {
 	) {
 		global $wgTextModelsToParse;
 
+		// Hope that the "SyntaxHighlightModels" attribute does not contain silly types.
+		if ( !( $content instanceof TextContent ) ) {
+			// Oops! Non-text content? Let MediaWiki handle this.
+			return true;
+		}
+
 		if ( !$generateHtml ) {
 			// Nothing special for us to do, let MediaWiki handle this.
 			return true;
@@ -531,17 +537,11 @@ class SyntaxHighlight {
 			return true;
 		}
 		$lexer = $models[$model];
-
-		// Hope that the "SyntaxHighlightModels" attribute does not contain silly types.
-		$text = ContentHandler::getContentText( $content );
-		if ( !$text ) {
-			// Oops! Non-text content? Let MediaWiki handle this.
-			return true;
-		}
+		$text = $content->getText();
 
 		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
 		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
-		if ( $content instanceof TextContent && in_array( $model, $wgTextModelsToParse ) ) {
+		if ( in_array( $model, $wgTextModelsToParse ) ) {
 			$output = MediaWikiServices::getInstance()->getParser()
 				->parse( $text, $title, $options, true, true, $revId );
 		}
