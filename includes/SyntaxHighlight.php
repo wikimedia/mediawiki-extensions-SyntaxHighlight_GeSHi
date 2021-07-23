@@ -148,7 +148,7 @@ class SyntaxHighlight {
 	 * @param string $out Output
 	 * @return string Unwrapped output
 	 */
-	private static function unwrap( string $out ) : string {
+	private static function unwrap( string $out ): string {
 		if ( $out !== '' ) {
 			$m = [];
 			if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
