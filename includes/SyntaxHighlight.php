@@ -220,16 +220,6 @@ class SyntaxHighlight {
 				$length,
 				self::HIGHLIGHT_MAX_BYTES
 			);
-		} elseif ( Shell::isDisabled() ) {
-			// Disable syntax highlighting
-			$lexer = null;
-			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
-			wfWarn(
-				'MediaWiki determined that it cannot invoke Pygments. ' .
-				'As a result, SyntaxHighlight_GeSHi will not perform any syntax highlighting. ' .
-				'See the debug log for details: ' .
-				'https://www.mediawiki.org/wiki/Manual:$wgDebugLogFile'
-			);
 		}
 
 		$isInline = isset( $args['inline'] );
