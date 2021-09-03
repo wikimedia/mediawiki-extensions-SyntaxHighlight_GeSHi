@@ -558,4 +558,18 @@ class SyntaxHighlight {
 		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
 		return false;
 	}
+
+	/**
+	 * Hook to add Pygments version to Special:Version
+	 *
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SoftwareInfo
+	 * @param array &$software
+	 */
+	public static function onSoftwareInfo( array &$software ) {
+		try {
+			$software['[https://pygments.org/ Pygments]'] = Pygmentize::getVersion();
+		} catch ( PygmentsException $e ) {
+			// pass
+		}
+	}
 }
