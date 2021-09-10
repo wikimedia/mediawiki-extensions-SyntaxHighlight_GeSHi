@@ -101,7 +101,8 @@
 		],
 		"ApiFormatHighlight": [
 			"SyntaxHighlight::onApiFormatHighlight"
-		]
+		],
+		"SoftwareInfo": "SyntaxHighlight::onSoftwareInfo"
 	},
 	"attributes": {
 		"SyntaxHighlight": {
