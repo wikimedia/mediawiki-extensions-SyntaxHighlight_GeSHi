@@ -17,7 +17,8 @@
  */
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Shell\Shell;
+use MediaWiki\SyntaxHighlight\Pygmentize;
+use MediaWiki\SyntaxHighlight\PygmentsException;
 
 class SyntaxHighlight {
 
@@ -54,7 +55,7 @@ class SyntaxHighlight {
 		}
 
 		if ( !$lexers ) {
-			$lexers = require __DIR__ . '/../SyntaxHighlight.lexers.php';
+			$lexers = Pygmentize::getLexers();
 		}
 
 		$lexer = strtolower( $lang );
@@ -161,20 +162,6 @@ class SyntaxHighlight {
 	}
 
 	/**
-	 * @return string
-	 */
-	public static function getPygmentizePath() {
-		global $wgPygmentizePath;
-
-		// If $wgPygmentizePath is unset, use the bundled copy.
-		if ( $wgPygmentizePath === false ) {
-			$wgPygmentizePath = __DIR__ . '/../pygments/pygmentize';
-		}
-
-		return $wgPygmentizePath;
-	}
-
-	/**
 	 * @param string $code
 	 * @param bool $isInline
 	 * @return string HTML
@@ -275,28 +262,14 @@ class SyntaxHighlight {
 		$output = $cache->getWithSetCallback(
 			$cache->makeGlobalKey( 'highlight', self::makeCacheKeyHash( $code, $lexer, $options ) ),
 			$cache::TTL_MONTH,
-			function ( $oldValue, &$ttl ) use ( $code, $lexer, $options, &$error ) {
-				$optionPairs = [];
-				foreach ( $options as $k => $v ) {
-					$optionPairs[] = "{$k}={$v}";
-				}
-				$result = Shell::command(
-					self::getPygmentizePath(),
-					'-l', $lexer,
-					'-f', 'html',
-					'-O', implode( ',', $optionPairs )
-				)
-					->input( $code )
-					->restrict( Shell::RESTRICT_DEFAULT | Shell::NO_NETWORK )
-					->execute();
-
-				if ( $result->getExitCode() != 0 ) {
+			static function ( $oldValue, &$ttl ) use ( $code, $lexer, $options, &$error ) {
+				try {
+					return Pygmentize::highlight( $lexer, $code, $options );
+				} catch ( PygmentsException $e ) {
 					$ttl = WANObjectCache::TTL_UNCACHEABLE;
-					$error = $result->getStderr();
+					$error = $e->getMessage();
 					return null;
 				}
-
-				return $result->getStdout();
 			}
 		);
 

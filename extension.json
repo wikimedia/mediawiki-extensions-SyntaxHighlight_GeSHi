@@ -24,6 +24,9 @@
 			"i18n"
 		]
 	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\SyntaxHighlight\\": "includes/"
+	},
 	"AutoloadClasses": {
 		"SyntaxHighlight": "includes/SyntaxHighlight.php",
 		"SyntaxHighlightAce": "includes/SyntaxHighlightAce.php",
@@ -36,12 +39,12 @@
 	},
 	"ResourceModules": {
 		"ext.pygments": {
+			"class": "MediaWiki\\SyntaxHighlight\\ResourceLoaderPygmentsModule",
 			"targets": [
 				"desktop",
 				"mobile"
 			],
 			"styles": [
-				"pygments.generated.css",
 				"pygments.wrapper.less"
 			]
 		},
