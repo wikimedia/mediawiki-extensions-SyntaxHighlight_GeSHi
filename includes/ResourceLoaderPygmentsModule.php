@@ -39,7 +39,8 @@ class ResourceLoaderPygmentsModule extends ResourceLoaderFileModule {
 	) {
 		$this->useBundled = Pygmentize::useBundled();
 		if ( $this->useBundled ) {
-			$options['styles'][] = 'pygments.generated.css';
+			// Generated styles before our overrides
+			array_unshift( $options['styles'], 'pygments.generated.css' );
 		}
 		parent::__construct( $options, $localBasePath, $remoteBasePath );
 	}
@@ -57,7 +58,8 @@ class ResourceLoaderPygmentsModule extends ResourceLoaderFileModule {
 	public function getStyles( ResourceLoaderContext $context ) {
 		$styles = parent::getStyles( $context );
 		if ( !$this->useBundled ) {
-			$styles['all'] = ( $styles['all'] ?? '' ) . Pygmentize::getGeneratedCSS();
+			// Generated styles before our overrides
+			$styles['all'] = Pygmentize::getGeneratedCSS() . ( $styles['all'] ?? '' );
 		}
 
 		return $styles;
