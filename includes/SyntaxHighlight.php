@@ -317,6 +317,7 @@ class SyntaxHighlight {
 
 		$isInline = isset( $args['inline'] );
 		$showLines = isset( $args['line'] );
+		$useWikiMarkup = isset( $args['wikify'] );
 		$lexer = self::getLexer( $lang );
 
 		// Post-Pygment HTML transformations.
@@ -378,7 +379,7 @@ class SyntaxHighlight {
 		} else {
 			$output = self::unwrap( $output );
 
-			if ( $parser ) {
+			if ( $parser && !$useWikiMarkup ) {
 				// Use 'nowiki' strip marker to prevent list processing (also known as doBlockLevels()).
 				// However, leave the wrapping <div/> outside to prevent <p/>-wrapping.
 				$marker = $parser::MARKER_PREFIX . '-syntaxhighlightinner-' .

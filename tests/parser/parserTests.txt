@@ -191,3 +191,13 @@ cat
 !! html
 cat=Pages_using_deprecated_enclose_attributes sort=
 !! end
+
+!! test
+nowiki overridden
+!! options
+cat
+!! wikitext
+<syntaxhighlight wikify>'''test'''</syntaxhighlight>
+!! html
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><strong>test</strong></pre></div>
+!! end
