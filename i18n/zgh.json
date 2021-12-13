@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ⵕⴰⵊⵉ"
+			"ⵕⴰⵊⵉ",
+			"Hakim1bal"
 		]
 	},
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "ⵜⴰⵏⴳⴰⵍⵜ",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "ⵜⵓⵜⵍⴰⵢⵜ",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ⵓⵍⴰ ⵢⴰⵏ)"
 }
