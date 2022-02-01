@@ -3,6 +3,7 @@
 		"authors": [
 			"Meno25",
 			"Mr. Ibrahem",
+			"SaldırganSincap",
 			"Tala Ali",
 			"ديفيد",
 			"زكريا"
@@ -12,6 +13,7 @@
 	"syntaxhighlight-error-category": "صفحات بها أخطاء في تعليم الصيغة",
 	"syntaxhighlight-error-category-desc": "كان هناك خطأ عند محاولة لتسليط الضوء على الكود المدرجة في الصفحة.",
 	"syntaxhighlight-enclose-category": "الصفحات التي تستخدم سمات مغلقة مهجورة",
+	"syntaxhighlight-enclose-category-desc": "يستخدم إبراز بناء الجملة على الصفحة بناء جملة enclose مهمل.",
 	"syntaxhighlight-source-category": "الصفحات التي تستخدم علامات المصدر الموقوفة",
 	"syntaxhighlight-source-category-desc": "يستخدم تسليط الضوء على الصفحة علامات مصدر مهجورة",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "الكود",
