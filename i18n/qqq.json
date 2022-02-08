@@ -8,14 +8,15 @@
 			"Robby",
 			"Shirayuki",
 			"The Evil IP address",
-			"Umherirrender"
+			"Umherirrender",
+			"SaldırganSincap"
 		]
 	},
 	"syntaxhighlight-desc": "{{desc|name=Syntax Highlight GeSHi|url=https://www.mediawiki.org/wiki/Extension:SyntaxHighlight_GeSHi}}",
 	"syntaxhighlight-error-category": "Tracking category for pages with syntax highlighting errors",
 	"syntaxhighlight-error-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|syntaxhighlight-error-category}} tracking category.",
-	"syntaxhighlight-enclose-category": "Tracking category for pages using the deprecated \"enclose\" attribute.\n\nDo not translate the word \"enclose\".",
-	"syntaxhighlight-enclose-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|syntaxhighlight-enclose-category}} tracking category.\n\nDo not translate the word \"enclose\".",
+	"syntaxhighlight-enclose-category": "{{doc-important|Do not translate the word \"<code>enclose</code>\".}}\nTracking category for pages using the deprecated \"enclose\" attribute.",
+	"syntaxhighlight-enclose-category-desc": "{{doc-important|Do not translate the word \"<code>enclose</code>\".}}\nDescription on [[Special:TrackingCategories]] for the {{msg-mw|syntaxhighlight-enclose-category}} tracking category.",
 	"syntaxhighlight-source-category": "Tracking category for pages using the deprecated &lt;source&gt; tags.\n\nDo not translate the word \"source\".",
 	"syntaxhighlight-source-category-desc": "Description on [[Special:TrackingCategories]] for the {{msg-mw|syntaxhighlight-source-category}} tracking category.\n\nDo not translate the word \"source\".",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Label for the code input field\n{{Identical|Code}}",
