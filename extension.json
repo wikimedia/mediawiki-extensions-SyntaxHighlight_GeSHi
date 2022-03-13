@@ -29,9 +29,7 @@
 	},
 	"AutoloadClasses": {
 		"SyntaxHighlight": "includes/SyntaxHighlight.php",
-		"SyntaxHighlightAce": "includes/SyntaxHighlightAce.php",
-		"SyntaxHighlightGeSHiCompat": "includes/SyntaxHighlightGeSHiCompat.php",
-		"ResourceLoaderSyntaxHighlightVisualEditorModule": "includes/ResourceLoaderSyntaxHighlightVisualEditorModule.php"
+		"MediaWiki\\SyntaxHighlight\\SyntaxHighlight": "includes/SyntaxHighlight.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
@@ -58,7 +56,7 @@
 			]
 		},
 		"ext.geshi.visualEditor": {
-			"class": "ResourceLoaderSyntaxHighlightVisualEditorModule",
+			"class": "MediaWiki\\SyntaxHighlight\\ResourceLoaderSyntaxHighlightVisualEditorModule",
 			"scripts": [
 				"ve-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js",
 				"ve-syntaxhighlight/ve.dm.MWBlockSyntaxHighlightNode.js",

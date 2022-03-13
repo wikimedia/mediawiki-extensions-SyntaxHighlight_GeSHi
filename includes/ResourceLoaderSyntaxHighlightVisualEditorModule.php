@@ -16,6 +16,11 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+namespace MediaWiki\SyntaxHighlight;
+
+use ResourceLoaderContext;
+use ResourceLoaderFileModule;
+
 class ResourceLoaderSyntaxHighlightVisualEditorModule extends ResourceLoaderFileModule {
 
 	protected $targets = [ 'desktop', 'mobile' ];
