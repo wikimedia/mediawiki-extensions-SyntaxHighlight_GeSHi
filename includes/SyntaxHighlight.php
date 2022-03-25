@@ -16,9 +16,23 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+namespace MediaWiki\SyntaxHighlight;
+
+use Content;
+use ExtensionRegistry;
+use FormatJson;
+use Html;
+use IContextSource;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\SyntaxHighlight\Pygmentize;
-use MediaWiki\SyntaxHighlight\PygmentsException;
+use MWException;
+use Parser;
+use ParserOptions;
+use ParserOutput;
+use Sanitizer;
+use Status;
+use TextContent;
+use Title;
+use WANObjectCache;
 
 class SyntaxHighlight {
 
@@ -84,8 +98,8 @@ class SyntaxHighlight {
 	 * @param Parser $parser
 	 */
 	public static function onParserFirstCallInit( Parser $parser ) {
-		$parser->setHook( 'source', [ 'SyntaxHighlight', 'parserHookSource' ] );
-		$parser->setHook( 'syntaxhighlight', [ 'SyntaxHighlight', 'parserHook' ] );
+		$parser->setHook( 'source', [ self::class, 'parserHookSource' ] );
+		$parser->setHook( 'syntaxhighlight', [ self::class, 'parserHook' ] );
 	}
 
 	/**
@@ -573,3 +587,5 @@ class SyntaxHighlight {
 		}
 	}
 }
+
+class_alias( SyntaxHighlight::class, 'SyntaxHighlight' );
