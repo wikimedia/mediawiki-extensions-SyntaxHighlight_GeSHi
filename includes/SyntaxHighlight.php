@@ -633,5 +633,3 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		}
 	}
 }
-
-class_alias( SyntaxHighlight::class, 'SyntaxHighlight' );

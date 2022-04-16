@@ -27,10 +27,6 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\SyntaxHighlight\\": "includes/"
 	},
-	"AutoloadClasses": {
-		"SyntaxHighlight": "includes/SyntaxHighlight.php",
-		"MediaWiki\\SyntaxHighlight\\SyntaxHighlight": "includes/SyntaxHighlight.php"
-	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "SyntaxHighlight_GeSHi/modules"
@@ -94,16 +90,10 @@
 		}
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"SyntaxHighlight::onParserFirstCallInit"
-		],
-		"ContentGetParserOutput": [
-			"SyntaxHighlight::onContentGetParserOutput"
-		],
-		"ApiFormatHighlight": [
-			"SyntaxHighlight::onApiFormatHighlight"
-		],
-		"SoftwareInfo": "SyntaxHighlight::onSoftwareInfo"
+		"ParserFirstCallInit": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onParserFirstCallInit",
+		"ContentGetParserOutput": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onContentGetParserOutput",
+		"ApiFormatHighlight": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onApiFormatHighlight",
+		"SoftwareInfo": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onSoftwareInfo"
 	},
 	"ParsoidModules": [
 		"MediaWiki\\SyntaxHighlight\\ParsoidExt"
