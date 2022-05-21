@@ -1,15 +1,16 @@
 {
+	"name": "SyntaxHighlight_GeSHi",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.22.1",
-		"grunt": "1.4.1",
+		"grunt": "1.5.2",
 		"grunt-banana-checker": "0.9.0",
 		"grunt-contrib-watch": "1.1.0",
 		"grunt-eslint": "24.0.0",
 		"grunt-stylelint": "0.17.0",
-		"stylelint-config-wikimedia": "0.12.2"
+		"stylelint-config-wikimedia": "0.13.0"
 	}
 }
