@@ -103,9 +103,10 @@ class Pygmentize {
 	/**
 	 * Shell out to get installed pygments version
 	 *
+	 * @internal For use by WANObjectCache/BagOStuff only
 	 * @return string
 	 */
-	private static function fetchVersion(): string {
+	public static function fetchVersion(): string {
 		$result = self::boxedCommand()
 			->params( self::getPath(), '-V' )
 			->includeStderr()
