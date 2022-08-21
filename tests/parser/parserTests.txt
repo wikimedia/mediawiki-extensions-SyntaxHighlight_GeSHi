@@ -170,6 +170,16 @@ Enclose with nowiki
 !! end
 
 !! test
+Self-closing tag
+!! options
+parsoid={ "modes": ["wt2html","wt2wt"], "normalizePhp": true }
+!! wikitext
+<syntaxhighlight lang="CSharp" />
+!! html
+<div class="mw-highlight mw-highlight-lang-csharp mw-content-ltr" dir="ltr"></div>
+!! end
+
+!! test
 No code
 !! options
 parsoid={ "modes": ["wt2html","wt2wt"], "normalizePhp": true }

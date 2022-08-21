@@ -109,7 +109,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	/**
 	 * Parser hook for <source> to add deprecated tracking category
 	 *
-	 * @param string $text
+	 * @param ?string $text
 	 * @param array $args
 	 * @param Parser $parser
 	 * @return string
@@ -162,7 +162,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	/**
 	 * Parser hook for both <source> and <syntaxhighlight> logic
 	 *
-	 * @param string $text
+	 * @param ?string $text
 	 * @param array $args
 	 * @param Parser $parser
 	 * @return string
@@ -170,7 +170,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 */
 	public static function parserHook( $text, $args, $parser ) {
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
-		$out = $parser->getStripState()->unstripNoWiki( $text );
+		$out = $parser->getStripState()->unstripNoWiki( $text ?? '' );
 
 		$result = self::processContent( $out, $args, $parser );
 		foreach ( $result['cats'] as $cat ) {
