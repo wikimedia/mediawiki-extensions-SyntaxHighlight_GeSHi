@@ -172,6 +172,11 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
 		$out = $parser->getStripState()->unstripNoWiki( $text ?? '' );
 
+		if ( !$parser->incrementExpensiveFunctionCount() ) {
+			// Highlighting is expensive, return unstyled
+			return self::plainCodeWrap( $out, isset( $args['inline'] ) );
+		}
+
 		$result = self::processContent( $out, $args, $parser );
 		foreach ( $result['cats'] as $cat ) {
 			$parser->addTrackingCategory( $cat );
