@@ -8,7 +8,7 @@
 	},
 	"syntaxhighlight-desc": "Omogoča označevanje skladnje <code>&lt;syntaxhighlight&gt;</code> z uporabo [http://pygments.org/ Pygments – označevalnika skladnje Python]",
 	"syntaxhighlight-error-category": "Strani z napakami pri označevanju skladnje",
-	"syntaxhighlight-error-category-desc": "Pri poskusu označevanja kode na strani se je pojavila napaka.",
+	"syntaxhighlight-error-category-desc": "Pri poskusu označevanja kode na strani je prišlo do napake.",
 	"syntaxhighlight-enclose-category": "Strani z opuščenimi vključitvenimi atributi",
 	"syntaxhighlight-enclose-category-desc": "Označevanje skladnje na strani uporablja opuščeno vključitveno skladnjo.",
 	"syntaxhighlight-source-category-desc": "Označevanje skladnje na strani uporablja opuščene značke vira.",
