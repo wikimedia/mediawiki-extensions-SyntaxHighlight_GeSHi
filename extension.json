@@ -111,6 +111,12 @@
 	"config": {
 		"PygmentizePath": {
 			"value": false
+		},
+		"SyntaxHighlightMaxLines": {
+			"value": 1000
+		},
+		"SyntaxHighlightMaxBytes": {
+			"value": 102400
 		}
 	},
 	"TrackingCategories": [
