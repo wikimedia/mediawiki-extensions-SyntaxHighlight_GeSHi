@@ -233,11 +233,20 @@ class Pygmentize {
 	}
 
 	private static function boxedCommand(): BoxedCommand {
-		return MediaWikiServices::getInstance()->getShellCommandFactory()
+		$command = MediaWikiServices::getInstance()->getShellCommandFactory()
 			->createBoxed( 'syntaxhighlight' )
 			->disableNetwork()
 			->firejailDefaultSeccomp()
 			->routeName( 'syntaxhighlight-pygments' );
+
+		if ( wfIsWindows() ) {
+			// Python requires the SystemRoot environment variable to initialize (T300223)
+			$command->environment( [
+				'SystemRoot' => getenv( 'SystemRoot' ),
+			] );
+		}
+
+		return $command;
 	}
 
 	/**
