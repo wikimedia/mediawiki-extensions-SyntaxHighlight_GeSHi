@@ -172,11 +172,6 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
 		$out = $parser->getStripState()->unstripNoWiki( $text ?? '' );
 
-		if ( !$parser->incrementExpensiveFunctionCount() ) {
-			// Highlighting is expensive, return unstyled
-			return self::plainCodeWrap( $out, isset( $args['inline'] ) );
-		}
-
 		$result = self::processContent( $out, $args, $parser );
 		foreach ( $result['cats'] as $cat ) {
 			$parser->addTrackingCategory( $cat );
@@ -242,9 +237,10 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @param string $code
 	 * @param string|null $lang
 	 * @param array $args
+	 * @param Parser|null $parser Parser, if generating content to be parsed.
 	 * @return Status
 	 */
-	private static function highlightInner( $code, $lang = null, $args = [] ) {
+	private static function highlightInner( $code, $lang = null, $args = [], ?Parser $parser = null ) {
 		$status = new Status;
 
 		$lexer = self::getLexer( $lang );
@@ -278,6 +274,12 @@ class SyntaxHighlight extends ExtensionTagHandler {
 
 		if ( $lexer === null ) {
 			// When syntax highlighting is disabled..
+			$status->value = self::plainCodeWrap( $code, $isInline );
+			return $status;
+		}
+
+		if ( $parser && !$parser->incrementExpensiveFunctionCount() ) {
+			// Highlighting is expensive, return unstyled
 			$status->value = self::plainCodeWrap( $code, $isInline );
 			return $status;
 		}
@@ -372,7 +374,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 *  code as its value.
 	 */
 	public static function highlight( $code, $lang = null, $args = [], ?Parser $parser = null ) {
-		$status = self::highlightInner( $code, $lang, $args );
+		$status = self::highlightInner( $code, $lang, $args, $parser );
 		$output = $status->getValue();
 
 		$isInline = isset( $args['inline'] );
