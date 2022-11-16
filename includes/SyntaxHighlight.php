@@ -33,7 +33,6 @@ use Status;
 use TextContent;
 use Title;
 use WANObjectCache;
-
 use Wikimedia\Parsoid\DOM\DocumentFragment;
 use Wikimedia\Parsoid\Ext\ExtensionTagHandler;
 use Wikimedia\Parsoid\Ext\ParsoidExtensionAPI;
