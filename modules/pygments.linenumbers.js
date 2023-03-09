@@ -22,6 +22,14 @@ $( function () {
 
 	window.addEventListener( 'hashchange', onHashChange );
 
+	$( document.body ).on( 'click', '.mw-highlight .linenos', function ( e ) {
+		e.preventDefault();
+
+		history.replaceState( null, '', e.target.parentNode.href );
+
+		onHashChange();
+	} );
+
 	// Check hash on load
 	onHashChange();
 
