@@ -192,6 +192,9 @@ class SyntaxHighlight extends ExtensionTagHandler {
 
 		// Register CSS
 		$parser->getOutput()->addModuleStyles( self::getModuleStyles() );
+		if ( !empty( $args['linelinks'] ) && ctype_alpha( $args['linelinks'] ) ) {
+			$parser->getOutput()->addModules( [ 'ext.pygments.linenumbers' ] );
+		}
 
 		return $result['html'];
 	}

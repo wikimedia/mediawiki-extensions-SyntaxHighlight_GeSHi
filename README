@@ -41,12 +41,14 @@ html text
 For details information of these parameters, see the documentation of Pygments'
 HtmlFormatter at <http://pygments.org/docs/formatters/#HtmlFormatter>.
 
-* lang;		Defines the language.
-* line;		Corresponds to linenos="inline" option.
-* start;	Corresponds to linenostart option.
-* enclose;  If set to "none", corresponds to the nowrap=1 option.
-* inline;   Corresponds to the nowrap=1 option.
-* highlight;    Corresponds to hl_lines option (comma separated).
+* lang;	      Defines the language.
+* line;	      Corresponds to linenos="inline" option.
+* start;      Corresponds to linenostart option.
+* enclose;    If set to "none", corresponds to the nowrap=1 option.
+* inline;     Corresponds to the nowrap=1 option.
+* highlight;  Corresponds to hl_lines option (comma separated).
+* linelinks;  Lines will have links and anchors with a prefix of the value.
+              Similar to the lineanchors+linespans features in Pygments
 
 == Note ==
 
