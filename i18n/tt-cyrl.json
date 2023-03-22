@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Blackisnewyellow",
 			"Ерней",
 			"Ильнар"
 		]
 	},
+	"syntaxhighlight-source-category": "Искергән source тегын кулланучы битләр",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(һични)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Код өлеше"
 }
