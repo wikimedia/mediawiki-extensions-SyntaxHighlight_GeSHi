@@ -55,7 +55,6 @@
 			]
 		},
 		"ext.geshi.visualEditor": {
-			"class": "MediaWiki\\SyntaxHighlight\\ResourceLoaderSyntaxHighlightVisualEditorModule",
 			"scripts": [
 				"ve-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js",
 				"ve-syntaxhighlight/ve.dm.MWBlockSyntaxHighlightNode.js",
@@ -67,7 +66,11 @@
 				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightDialog.js",
 				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightDialogTool.js",
 				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspector.js",
-				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspectorTool.js"
+				"ve-syntaxhighlight/ve.ui.MWSyntaxHighlightInspectorTool.js",
+				{
+					"name": "ve-syntaxhighlight/ve.MWSyntaxHighlightConfig.js",
+					"callback": "MediaWiki\\SyntaxHighlight\\VisualEditorConfig::makeScript"
+				}
 			],
 			"styles": [
 				"ve-syntaxhighlight/ve.ce.MWSyntaxHighlightNode.css",

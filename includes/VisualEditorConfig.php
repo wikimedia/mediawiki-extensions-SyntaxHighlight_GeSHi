@@ -20,19 +20,15 @@ namespace MediaWiki\SyntaxHighlight;
 
 use MediaWiki\ResourceLoader as RL;
 
-class ResourceLoaderSyntaxHighlightVisualEditorModule extends RL\FileModule {
-
-	protected $targets = [ 'desktop', 'mobile' ];
+class VisualEditorConfig {
 
 	/**
 	 * @param RL\Context $context
 	 * @return string JavaScript code
 	 */
-	public function getScript( RL\Context $context ) {
-		$scripts = parent::getScript( $context );
-		return $scripts
-			. 've.dm.MWSyntaxHighlightNode.static.addPygmentsLanguages('
-			. $context->encodeJson( $this->getPygmentsLanguages() )
+	public static function makeScript( RL\Context $context ) {
+		return 've.dm.MWSyntaxHighlightNode.static.addPygmentsLanguages('
+			. $context->encodeJson( self::getPygmentsLanguages() )
 			. ');'
 			. 've.dm.MWSyntaxHighlightNode.static.addGeshiToPygmentsMap('
 			. $context->encodeJson( SyntaxHighlightGeSHiCompat::getGeSHiToPygmentsMap() )
@@ -46,21 +42,7 @@ class ResourceLoaderSyntaxHighlightVisualEditorModule extends RL\FileModule {
 	 * Get a full list of available languages
 	 * @return array
 	 */
-	private function getPygmentsLanguages() {
+	private static function getPygmentsLanguages() {
 		return array_keys( require __DIR__ . '/../SyntaxHighlight.lexers.php' );
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function enableModuleContentVersion() {
-		return true;
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function supportsURLLoading() {
-		return false;
 	}
 }
