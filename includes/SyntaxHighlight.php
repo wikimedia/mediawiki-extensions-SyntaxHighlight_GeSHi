@@ -101,7 +101,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		// a compatible Pygments lexer with a different name.
 		if ( isset( $geshi2pygments[$lexer] ) ) {
 			$lexer = $geshi2pygments[$lexer];
-			if ( in_array( $lexer, $lexers ) ) {
+			if ( in_array( $lexer, $lexers, true ) ) {
 				return $lexer;
 			}
 		}
@@ -582,7 +582,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 
 		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
 		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
-		if ( in_array( $model, $wgTextModelsToParse ) ) {
+		if ( in_array( $model, $wgTextModelsToParse, true ) ) {
 			$parserOutput = MediaWikiServices::getInstance()->getParser()
 				->parse( $text, $title, $options, true, true, $revId );
 		}
