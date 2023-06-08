@@ -24,10 +24,10 @@ use FormatJson;
 use Html;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
-use MWException;
 use Parser;
 use ParserOptions;
 use ParserOutput;
+use RuntimeException;
 use Sanitizer;
 use Status;
 use TextContent;
@@ -126,7 +126,6 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @param array $args
 	 * @param Parser $parser
 	 * @return string
-	 * @throws MWException
 	 */
 	public static function parserHookSource( $text, $args, $parser ) {
 		$parser->addTrackingCategory( 'syntaxhighlight-source-category' );
@@ -146,7 +145,6 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @param array $args
 	 * @param ?Parser $parser
 	 * @return array
-	 * @throws MWException
 	 */
 	private static function processContent( string $text, array $args, ?Parser $parser = null ): array {
 		// Don't trim leading spaces away, just the linefeeds
@@ -179,7 +177,6 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @param array $args
 	 * @param Parser $parser
 	 * @return string
-	 * @throws MWException
 	 */
 	public static function parserHook( $text, $args, $parser ) {
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
@@ -226,7 +223,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 			if ( preg_match( '/^<div class="?mw-highlight"?>(.*)<\/div>$/s', trim( $out ), $m ) ) {
 				$out = trim( $m[1] );
 			} else {
-				throw new MWException( 'Unexpected output from Pygments encountered' );
+				throw new RuntimeException( 'Unexpected output from Pygments encountered' );
 			}
 		}
 		return $out;
