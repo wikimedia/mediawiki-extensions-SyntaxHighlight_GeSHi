@@ -23,6 +23,10 @@ use ExtensionRegistry;
 use FormatJson;
 use Html;
 use IContextSource;
+use MediaWiki\Api\Hook\ApiFormatHighlightHook;
+use MediaWiki\Content\Hook\ContentGetParserOutputHook;
+use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Hook\SoftwareInfoHook;
 use MediaWiki\MediaWikiServices;
 use Parser;
 use ParserOptions;
@@ -37,7 +41,12 @@ use Wikimedia\Parsoid\DOM\DocumentFragment;
 use Wikimedia\Parsoid\Ext\ExtensionTagHandler;
 use Wikimedia\Parsoid\Ext\ParsoidExtensionAPI;
 
-class SyntaxHighlight extends ExtensionTagHandler {
+class SyntaxHighlight extends ExtensionTagHandler implements
+	ParserFirstCallInitHook,
+	ContentGetParserOutputHook,
+	ApiFormatHighlightHook,
+	SoftwareInfoHook
+{
 
 	/** @var string CSS class for syntax-highlighted code. Public as used by the updateCSS maintenance script. */
 	public const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
@@ -114,7 +123,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 *
 	 * @param Parser $parser
 	 */
-	public static function onParserFirstCallInit( Parser $parser ) {
+	public function onParserFirstCallInit( $parser ) {
 		$parser->setHook( 'source', [ self::class, 'parserHookSource' ] );
 		$parser->setHook( 'syntaxhighlight', [ self::class, 'parserHook' ] );
 	}
@@ -545,8 +554,8 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @return bool
 	 * @since MW 1.21
 	 */
-	public static function onContentGetParserOutput( Content $content, Title $title,
-		$revId, ParserOptions $options, $generateHtml, ParserOutput &$parserOutput
+	public function onContentGetParserOutput( $content, $title,
+		$revId, $options, $generateHtml, &$parserOutput
 	) {
 		global $wgTextModelsToParse;
 
@@ -608,7 +617,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @since MW 1.24
 	 * @return bool
 	 */
-	public static function onApiFormatHighlight( IContextSource $context, $text, $mime, $format ) {
+	public function onApiFormatHighlight( $context, $text, $mime, $format ) {
 		if ( !isset( self::$mimeLexers[$mime] ) ) {
 			return true;
 		}
@@ -640,7 +649,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SoftwareInfo
 	 * @param array &$software
 	 */
-	public static function onSoftwareInfo( array &$software ) {
+	public function onSoftwareInfo( &$software ) {
 		try {
 			$software['[https://pygments.org/ Pygments]'] = Pygmentize::getVersion();
 		} catch ( PygmentsException $e ) {

@@ -93,10 +93,15 @@
 		}
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onParserFirstCallInit",
-		"ContentGetParserOutput": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onContentGetParserOutput",
-		"ApiFormatHighlight": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onApiFormatHighlight",
-		"SoftwareInfo": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight::onSoftwareInfo"
+		"ParserFirstCallInit": "main",
+		"ContentGetParserOutput": "main",
+		"ApiFormatHighlight": "main",
+		"SoftwareInfo": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight"
+		}
 	},
 	"ParsoidModules": [
 		"MediaWiki\\SyntaxHighlight\\ParsoidExt"
