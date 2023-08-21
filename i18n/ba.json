@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Assele"
+			"Assele",
+			"З. ӘЙЛЕ"
 		]
 	},
-	"syntaxhighlight-desc": "[http://pygments.org/ Pygments] ярҙамында синтаксисты айырып күрһәтеү өсөн <code>&lt;syntaxhighlight&gt;</code> билдәһен ҡулланыу мөмкинлеген бирә"
+	"syntaxhighlight-desc": "[http://pygments.org/ Pygments - Python өсөн синтаксисты айырып күрһәтеү сараһы] ярҙамында синтаксисты айырып күрһәтеүҙе <code>&lt;syntaxhighlight&gt;</code> тәьмин итә"
 }
