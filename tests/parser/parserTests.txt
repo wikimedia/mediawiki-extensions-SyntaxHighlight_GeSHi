@@ -1,5 +1,5 @@
 !! options
-parsoid-compatible
+parsoid-compatible=wt2html,wt2wt
 version=2
 !! end
 
@@ -160,6 +160,8 @@ Text <source lang="javascript" enclose="none">var a;</source>.
 
 !! test
 Enclose with nowiki
+!! options
+parsoid={ "modes": ["wt2html","wt2wt"], "normalizePhp": true }
 !! wikitext
 {{#tag:syntaxhighlight|<nowiki>foo</nowiki>|lang="text"|inline=none}}
 !! html/php
