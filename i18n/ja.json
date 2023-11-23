@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ant176",
 			"Aotake",
 			"Fryed-peach",
 			"JtFuruhata",
@@ -19,7 +20,7 @@
 	"syntaxhighlight-enclose-category": "非推奨のenclose引数を使用しているページ",
 	"syntaxhighlight-enclose-category-desc": "構文ハイライトで非推奨のenclose引数を使用しているページ。",
 	"syntaxhighlight-source-category": "非推奨のsourceタグを使用しているページ",
-	"syntaxhighlight-source-category-desc": "構文ハイライトで非推奨のsoueceタグを使用しているページ。",
+	"syntaxhighlight-source-category-desc": "構文ハイライトで非推奨のsourceタグを使用しているページ。",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "コード",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "言語",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(なし)",
