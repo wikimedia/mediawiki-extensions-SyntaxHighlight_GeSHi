@@ -54,7 +54,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 	/** @var int Cache version. Increment whenever the HTML changes. */
 	private const CACHE_VERSION = 2;
 
-	/** @var array Mapping of MIME-types to lexer names. */
+	/** @var array<string,string> Mapping of MIME-types to lexer names. */
 	private static $mimeLexers = [
 		'text/javascript'  => 'javascript',
 		'application/json' => 'javascript',
@@ -84,7 +84,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 	/**
 	 * Get the Pygments lexer name for a particular language.
 	 *
-	 * @param string $lang Language name.
+	 * @param string|null $lang Language name.
 	 * @return string|null Lexer name, or null if no matching lexer.
 	 */
 	private static function getLexer( $lang ) {
@@ -94,9 +94,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 			return null;
 		}
 
-		if ( !$lexers ) {
-			$lexers = Pygmentize::getLexers();
-		}
+		$lexers ??= Pygmentize::getLexers();
 
 		$lexer = strtolower( $lang );
 
@@ -110,7 +108,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 		// a compatible Pygments lexer with a different name.
 		if ( isset( $geshi2pygments[$lexer] ) ) {
 			$lexer = $geshi2pygments[$lexer];
-			if ( in_array( $lexer, $lexers, true ) ) {
+			if ( isset( $lexers[$lexer] ) ) {
 				return $lexer;
 			}
 		}
@@ -142,7 +140,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 	}
 
 	/**
-	 * @return array
+	 * @return string[]
 	 */
 	private static function getModuleStyles(): array {
 		return [ 'ext.pygments' ];
