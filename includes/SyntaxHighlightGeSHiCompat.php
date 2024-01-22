@@ -110,7 +110,10 @@ class SyntaxHighlightGeSHiCompat {
 		'apt_sources' => 'debsources',
 	];
 
-	public static function getGeSHiToPygmentsMap() {
+	/**
+	 * @return array<string,string>
+	 */
+	public static function getGeSHiToPygmentsMap(): array {
 		return self::$compatibleLexers;
 	}
 }
