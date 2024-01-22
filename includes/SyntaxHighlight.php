@@ -157,7 +157,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 	 */
 	private static function processContent( string $text, array $args, ?Parser $parser = null ): array {
 		// Don't trim leading spaces away, just the linefeeds
-		$out = preg_replace( '/^\n+/', '', rtrim( $text ) );
+		$out = rtrim( trim( $text, "\n" ) );
 		$trackingCats = [];
 
 		// Convert deprecated attributes
