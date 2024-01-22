@@ -159,7 +159,10 @@ class SyntaxHighlightAce {
 		'YAML'         => [ 'yaml' ],
 	];
 
-	public static function getPygmentsToAceMap() {
+	/**
+	 * @return array<string,string>
+	 */
+	public static function getPygmentsToAceMap(): array {
 		$result = [];
 		foreach ( self::$aceLexers as $aceName => $pygmentsLexers ) {
 			foreach ( $pygmentsLexers as $lexer ) {
