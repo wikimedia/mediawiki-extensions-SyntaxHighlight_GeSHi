@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Snævar"
+			"Snævar",
+			"Stefán Örvar Sigmundsson"
 		]
 	},
+	"syntaxhighlight-error-category": "Síður með ljómunarvillur málskipanar",
 	"syntaxhighlight-error-category-desc": "Villa átti sér stað við yfirstrikun kóða sem er innifalinn á síðunni.",
+	"syntaxhighlight-enclose-category": "Síður sem nota úreld enclose-eigindi",
+	"syntaxhighlight-source-category": "Síður sem nota úreld source-merki",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kóði",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Tungumál",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(ekkert)",
