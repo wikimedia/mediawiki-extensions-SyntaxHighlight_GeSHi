@@ -507,7 +507,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 			if ( ctype_digit( $value ) ) {
 				$lines[] = (int)$value;
 			} elseif ( strpos( $value, '-' ) !== false ) {
-				list( $start, $end ) = array_map( 'intval', explode( '-', $value ) );
+				[ $start, $end ] = array_map( 'intval', explode( '-', $value ) );
 				if ( self::validHighlightRange( $start, $end ) ) {
 					for ( $i = $start; $i <= $end; $i++ ) {
 						$lines[] = $i;
