@@ -12,20 +12,22 @@
 		position: relative;
 	}
 
+	/* The nested pre already has a background. T126010 */
+	code&,
+	div& {
+		background-color: #f8f8f8;
+		color: #333;
+	}
+
 	/* Avoid displaying double borders for nested 'code' elements.
 	   Before we started using the 'code' tag for inline code snippets,
 	   <code><syntaxhighlight enclose=none ...>...</syntaxhighlight></code>
 	   was a common pattern. Continue supporting it in existing content. */
 	code code& {
 		background-color: transparent;
+		color: inherit;
 		border: 0;
 		padding: 0;
-	}
-
-	/* The nested pre already has a background. T126010 */
-	div& {
-		background-color: #f8f8f8;
-		color: #333;
 	}
 
 	/*
