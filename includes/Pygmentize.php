@@ -298,7 +298,11 @@ class Pygmentize {
 
 		$output = $result->getStdout();
 		if ( $result->getExitCode() != 0 ) {
-			throw new PygmentsException( $output );
+			if ( $output === "" || $output === null ) {
+				// Stdout was empty, report stderr instead
+				$output = $result->getStderr();
+			}
+			throw new PygmentsException( (string)$output );
 		}
 
 		return $output;
