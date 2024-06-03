@@ -10,7 +10,7 @@
  *
  * @class
  * @extends ve.ui.MWLiveExtensionInspector
- * @mixins ve.ui.MWSyntaxHighlightWindow
+ * @mixes ve.ui.MWSyntaxHighlightWindow
  *
  * @constructor
  * @param {Object} [config] Configuration options
