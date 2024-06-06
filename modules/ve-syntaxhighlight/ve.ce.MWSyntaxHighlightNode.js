@@ -28,9 +28,9 @@ ve.ce.MWSyntaxHighlightNode.static.name = 'mwSyntaxHighlight';
 
 // Inherits from ve.ce.GeneratedContentNode
 ve.ce.MWSyntaxHighlightNode.prototype.generateContents = function () {
-	return mw.loader.using( 'ext.pygments' ).then( () =>
+	return mw.loader.using( 'ext.pygments' ).then(
 		// Parent method
-		ve.ce.MWExtensionNode.prototype.generateContents.apply( this, arguments )
+		() => ve.ce.MWExtensionNode.prototype.generateContents.apply( this, arguments )
 	);
 };
 

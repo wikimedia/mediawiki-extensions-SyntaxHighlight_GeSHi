@@ -40,8 +40,7 @@ ve.ui.MWSyntaxHighlightWindow.prototype.initialize = function () {
 		$overlay: this.$overlay,
 		menu: {
 			filterFromInput: true,
-			items: ve.dm.MWSyntaxHighlightNode.static.getLanguages().map( ( lang ) =>
-				new OO.ui.MenuOptionWidget( { data: lang, label: lang || noneMsg } )
+			items: ve.dm.MWSyntaxHighlightNode.static.getLanguages().map( ( lang ) => new OO.ui.MenuOptionWidget( { data: lang, label: lang || noneMsg } )
 			)
 		},
 		validate: function ( input ) {

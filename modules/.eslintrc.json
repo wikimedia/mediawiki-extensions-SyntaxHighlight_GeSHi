@@ -1,12 +1,11 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"max-len": "off",
-		"prefer-arrow-callback": "error"
+		"max-len": "off"
 	}
 }
