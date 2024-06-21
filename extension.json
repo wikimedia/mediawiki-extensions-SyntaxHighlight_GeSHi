@@ -38,9 +38,10 @@
 				"pygments.wrapper.less"
 			]
 		},
-		"ext.pygments.linenumbers": {
+		"ext.pygments.view": {
 			"scripts": [
-				"pygments.linenumbers.js"
+				"pygments.linenumbers.js",
+				"pygments.links.js"
 			],
 			"dependencies": [
 				"mediawiki.util"
