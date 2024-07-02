@@ -331,7 +331,10 @@ class Pygmentize {
 	 * @param string $type Type of shellout
 	 */
 	private static function recordShellout( $type ) {
-		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
-		$statsd->increment( "syntaxhighlight_shell.$type" );
+		MediaWikiServices::getInstance()->getStatsFactory()
+			->getCounter( 'syntaxhighlight_shell_total' )
+			->setLabel( 'type', $type )
+			->copyToStatsdAt( "syntaxhighlight_shell.$type" )
+			->increment();
 	}
 }
