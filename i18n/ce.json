@@ -9,6 +9,8 @@
 	"syntaxhighlight-source-category": "Ширйелла source тег лелош йолу агӀонаш",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Мотт",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(хӀума а)",
+	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "МогӀанийн лоьмарш гайта",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Кодан блок",
 	"syntaxhighlight-error-unknown-language": "Боьвзуш боцу мотт \"$1\""
 }
