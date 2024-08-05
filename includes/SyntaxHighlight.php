@@ -27,6 +27,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\SoftwareInfoHook;
 use MediaWiki\Html\Html;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\ParserOutput;
@@ -555,8 +556,6 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 	public function onContentGetParserOutput( $content, $title,
 		$revId, $options, $generateHtml, &$parserOutput
 	) {
-		global $wgTextModelsToParse;
-
 		// Hope that the "SyntaxHighlightModels" attribute does not contain silly types.
 		if ( !( $content instanceof TextContent ) ) {
 			// Oops! Non-text content? Let MediaWiki handle this.
@@ -584,9 +583,10 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 		$lexer = $models[$model];
 		$text = $content->getText();
 
+		$config = MediaWikiServices::getInstance()->getMainConfig();
 		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
 		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
-		if ( in_array( $model, $wgTextModelsToParse, true ) ) {
+		if ( in_array( $model, $config->get( MainConfigNames::TextModelsToParse ), true ) ) {
 			$parserOutput = MediaWikiServices::getInstance()->getParser()
 				->parse( $text, $title, $options, true, true, $revId );
 		}

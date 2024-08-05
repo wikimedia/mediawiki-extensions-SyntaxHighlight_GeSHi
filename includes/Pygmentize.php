@@ -33,18 +33,17 @@ class Pygmentize {
 	 * If no pygmentize is configured, use bundled
 	 */
 	public static function useBundled(): bool {
-		global $wgPygmentizePath;
-		return $wgPygmentizePath === false;
+		$config = MediaWikiServices::getInstance()->getMainConfig();
+		return $config->get( 'PygmentizePath' ) === false;
 	}
 
 	/**
 	 * Get a real path to pygmentize
 	 */
 	private static function getPath(): string {
-		global $wgPygmentizePath;
-
+		$config = MediaWikiServices::getInstance()->getMainConfig();
 		// If $wgPygmentizePath is unset, use the bundled copy.
-		return $wgPygmentizePath ?: __DIR__ . '/../pygments/pygmentize';
+		return $config->get( 'PygmentizePath' ) ?: __DIR__ . '/../pygments/pygmentize';
 	}
 
 	/**
