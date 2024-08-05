@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MainConfigNames;
 use MediaWiki\Shell\CommandFactory;
 use MediaWiki\SyntaxHighlight\SyntaxHighlight;
 use Shellbox\Command\BoxedCommand;
@@ -13,11 +14,11 @@ use Shellbox\ShellboxError;
 class PygmentizeTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
-		$this->setMwGlobals( [
+		$this->overrideConfigValues( [
 			// Run with the default useBundled=true
-			'wgPygmentizePath' => false,
+			'PygmentizePath' => false,
 			// Silence wfWarn for the expected Shellbox error
-			'wgDevelopmentWarnings' => false,
+			MainConfigNames::DevelopmentWarnings => false,
 		] );
 	}
 
