@@ -10,13 +10,18 @@
 		// Do not put this on the main container as it is 100%
 		// and causes it to stack above floated elements (T272853)
 		position: relative;
-		background-color: #f8f8f8;
-		color: #333;
 	}
 
 	/* The nested pre already has a background. T126010 */
-	code&,
 	div& {
+		background-color: inherit;
+	}
+
+	// Override light/dark mode colors for <code> and <pre> with forced light mode colors.
+	// The syntax highlighting palette does not support dark mode yet (T365926).
+	// Make sure to style the <pre> and not the <div class="mw-highlight"> (T365927).
+	code&,
+	div& pre {
 		background-color: #f8f8f8;
 		color: #333;
 	}
@@ -47,6 +52,7 @@
 		display: block;
 	}
 
+	/* stylelint-disable-next-line no-descending-specificity */
 	&-lines pre,
 	.content &-lines pre { // Increase specificty over mobile selectors
 
