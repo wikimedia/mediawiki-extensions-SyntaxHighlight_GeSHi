@@ -197,10 +197,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 
 		// Register CSS
 		$parser->getOutput()->addModuleStyles( self::getModuleStyles() );
-		if ( !empty( $args['linelinks'] ) ) {
-			$parser->getOutput()->addModules( [ 'ext.pygments.linenumbers' ] );
-		}
-
+		$parser->getOutput()->addModules( [ 'ext.pygments.view' ] );
 		return $result['html'];
 	}
 
@@ -598,7 +595,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 		$out = $status->getValue();
 
 		$parserOutput->addModuleStyles( self::getModuleStyles() );
-		$parserOutput->addModules( [ 'ext.pygments.linenumbers' ] );
+		$parserOutput->addModules( [ 'ext.pygments.view' ] );
 		$parserOutput->setText( $out );
 
 		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
