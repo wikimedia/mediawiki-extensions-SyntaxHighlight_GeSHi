@@ -32,6 +32,8 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Sanitizer;
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderRegisterModulesHook;
+use MediaWiki\ResourceLoader\ResourceLoader;
 use MediaWiki\Status\Status;
 use MediaWiki\Title\Title;
 use ParserOptions;
@@ -45,6 +47,7 @@ use Wikimedia\Parsoid\Ext\ParsoidExtensionAPI;
 class SyntaxHighlight extends ExtensionTagHandler implements
 	ParserFirstCallInitHook,
 	ContentGetParserOutputHook,
+	ResourceLoaderRegisterModulesHook,
 	ApiFormatHighlightHook,
 	SoftwareInfoHook
 {
@@ -654,5 +657,33 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 		} catch ( PygmentsException $e ) {
 			// pass
 		}
+	}
+
+	/**
+	 * Hook to register ext.pygments.view module.
+	 * @param ResourceLoader $rl
+	 */
+	public function onResourceLoaderRegisterModules( ResourceLoader $rl ): void {
+		$rl->register( 'ext.pygments.view', [
+			'localBasePath' => MW_INSTALL_PATH . '/extensions/SyntaxHighlight_GeSHi/modules',
+			'scripts' => array_merge( [
+				'pygments.linenumbers.js',
+				'pygments.links.js',
+				'pygments.copy.js'
+			], ExtensionRegistry::getInstance()->isLoaded( 'Scribunto' ) ? [
+				'pygments.links.scribunto.js'
+			] : [] ),
+			'styles' => [
+				'pygments.copy.css'
+			],
+			'messages' => [
+				'syntaxhighlight-button-copy',
+				'syntaxhighlight-button-copied'
+			],
+			'dependencies' => [
+				'mediawiki.util',
+				'mediawiki.Title'
+			]
+		] );
 	}
 }
