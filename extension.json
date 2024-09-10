@@ -41,7 +41,15 @@
 		"ext.pygments.view": {
 			"scripts": [
 				"pygments.linenumbers.js",
-				"pygments.links.js"
+				"pygments.links.js",
+				"pygments.copy.js"
+			],
+			"styles": [
+				"pygments.copy.css"
+			],
+			"messages": [
+				"syntaxhighlight-button-copy",
+				"syntaxhighlight-button-copied"
 			],
 			"dependencies": [
 				"mediawiki.util"

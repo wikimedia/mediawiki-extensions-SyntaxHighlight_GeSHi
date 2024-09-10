@@ -387,6 +387,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 	 *  If it contains a 'inline' key, the output will not be wrapped in `<div><pre/></div>`.
 	 *  If it contains a 'linelinks' key, lines will have links and anchors with a prefix
 	 *   of the value. Similar to the lineanchors+linespans features in Pygments.
+	 *  If it contains a 'copy' key, a link will be shown for copying content to the clipboard.
 	 * @param Parser|null $parser Parser, if generating content to be parsed.
 	 * @return Status Status object, with HTML representing the highlighted
 	 *  code as its value.
@@ -439,6 +440,9 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 		$classList[] = 'mw-content-' . $dir;
 		if ( $showLines ) {
 			$classList[] = self::HIGHLIGHT_CSS_CLASS . '-lines';
+		}
+		if ( !$isInline && isset( $args['copy'] ) ) {
+			$classList[] = 'mw-highlight-copy';
 		}
 		$htmlAttribs['class'] = implode( ' ', $classList );
 		$htmlAttribs['dir'] = $dir;
