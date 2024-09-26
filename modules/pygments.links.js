@@ -25,9 +25,14 @@ $( () => {
 			link.classList.add( 'code-link' );
 
 			if ( URLMatch ) {
-				const URL = URLMatch[ 0 ];
-				link.href = URL;
-				linkText = URL;
+				let url = URLMatch[ 0 ];
+
+				if ( !/^https?:/i.test( url ) ) {
+					url = '//' + url;
+				}
+
+				link.href = url;
+				linkText = URLMatch[ 0 ]; // Preserve visual link text as is
 			} else if ( wikilinkMatch ) {
 				linkText = wikilinkMatch[ 0 ];
 				title = mw.Title.newFromText( wikilinkMatch[ 1 ] );
