@@ -139,18 +139,44 @@ class Pygmentize {
 	 * @internal Only public for updateCSS.php
 	 */
 	public static function fetchGeneratedCSS(): string {
-		$result = self::boxedCommand()
+		$lightModeRun = self::boxedCommand()
 			->params(
 				self::getPath(), '-f', 'html',
 				'-S', 'default', '-a', '.mw-highlight' )
 			->includeStderr()
 			->execute();
+		$darkModeRun = self::boxedCommand()
+			->params(
+				self::getPath(), '-f', 'html',
+				'-S', 'monokai', '-a', '    .skin-theme-clientpref-night .mw-highlight' )
+			->includeStderr()
+			->execute();
 		self::recordShellout( 'generated_css' );
-		$output = $result->getStdout();
-		if ( $result->getExitCode() != 0 ) {
-			throw new PygmentsException( $output );
+
+		$lightModeOutput = $lightModeRun->getStdout();
+		if ( $lightModeRun->getExitCode() != 0 ) {
+			throw new PygmentsException( $lightModeOutput );
 		}
-		return $output;
+		$darkModeOutput = $darkModeRun->getStdout();
+		if ( $darkModeRun->getExitCode() != 0 ) {
+			throw new PygmentsException( $darkModeOutput );
+		}
+
+		$lightModeRules = explode( PHP_EOL, $lightModeOutput );
+		$darkModeRules = explode( PHP_EOL, $darkModeOutput );
+		$commonRules = array_intersect( $lightModeRules, $darkModeRules );
+
+		$nightThemeCss = implode( PHP_EOL, array_diff( $darkModeRules, $commonRules ) );
+		$osThemeCss = str_replace( '.skin-theme-clientpref-night',
+			'.skin-theme-clientpref-os', $nightThemeCss );
+
+		return $lightModeOutput
+			. "@media screen {" . PHP_EOL
+			. $nightThemeCss . PHP_EOL
+			. "}" . PHP_EOL
+			. "@media screen and ( prefers-color-scheme: dark ) {" . PHP_EOL
+			. $osThemeCss . PHP_EOL .
+			"}" . PHP_EOL;
 	}
 
 	/**
