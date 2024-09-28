@@ -38,23 +38,6 @@
 				"pygments.wrapper.less"
 			]
 		},
-		"ext.pygments.view": {
-			"scripts": [
-				"pygments.linenumbers.js",
-				"pygments.links.js",
-				"pygments.copy.js"
-			],
-			"styles": [
-				"pygments.copy.css"
-			],
-			"messages": [
-				"syntaxhighlight-button-copy",
-				"syntaxhighlight-button-copied"
-			],
-			"dependencies": [
-				"mediawiki.util"
-			]
-		},
 		"ext.geshi.visualEditor": {
 			"scripts": [
 				"ve-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js",
@@ -96,7 +79,8 @@
 		"ParserFirstCallInit": "main",
 		"ContentGetParserOutput": "main",
 		"ApiFormatHighlight": "main",
-		"SoftwareInfo": "main"
+		"SoftwareInfo": "main",
+		"ResourceLoaderRegisterModules": "main"
 	},
 	"HookHandlers": {
 		"main": {
