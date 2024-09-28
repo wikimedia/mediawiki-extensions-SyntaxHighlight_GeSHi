@@ -1,3 +1,5 @@
+@import 'mediawiki.skin.variables.less';
+
 /**
  * Adapted from https://www.mediawiki.org/wiki/MediaWiki:Gadget-site-tpl-copy.css
  * Original author: Krinkle
@@ -18,19 +20,20 @@
 	box-sizing: border-box;
 	padding: 5px 7px;
 	border-radius: 2px;
-	background: #fff;
-	color: #36c;
-	border: 1px solid #eaecf0;
+	background: @background-color-base;
+	color: @color-progressive;
+	border: 1px solid @border-color-muted;
 }
 
 .mw-highlight-copy--bound button:hover {
 	cursor: pointer;
-	background: #fff;
-	border: 1px solid #447ff5;
+	color: @color-progressive--hover;
+	background: @background-color-interactive-subtle;
+	border-color: @border-color-progressive--hover;
 }
 
 .mw-highlight-copy--bound button:active {
-	background: #eff3fa;
-	color: #2a4b8d;
-	border-color: #2a4b8d;
+	color: @color-progressive--active;
+	background: @background-color-interactive;
+	border-color: @border-color-progressive--active;
 }

@@ -674,7 +674,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 				'pygments.links.scribunto.js'
 			] : [] ),
 			'styles' => [
-				'pygments.copy.css'
+				'pygments.copy.less'
 			],
 			'messages' => [
 				'syntaxhighlight-button-copy',
