@@ -1,3 +1,5 @@
+@import 'mediawiki.skin.variables.less';
+
 .mw-highlight {
 	unicode-bidi: embed;
 
@@ -52,7 +54,7 @@
 			/* @noflip */
 			padding-left: 3.5em;
 			/* @noflip */
-			box-shadow: inset 2.75em 0 0 #f0f0f0;
+			box-shadow: inset 2.75em 0 0 @background-color-neutral;
 
 			.hll {
 				/* @noflip */
@@ -67,7 +69,7 @@
 			/* @noflip */
 			padding-right: 3.5em;
 			/* @noflip */
-			box-shadow: inset -2.75em 0 0 #f0f0f0;
+			box-shadow: inset -2.75em 0 0 @background-color-neutral;
 
 			/* stylelint-disable-next-line no-descending-specificity */
 			.hll {
@@ -84,7 +86,7 @@
 		box-sizing: border-box;
 		width: 2.75em;
 		background: none;
-		color: #72777d;
+		color: @color-placeholder;
 		white-space: pre;
 
 		.mw-content-ltr& {
@@ -112,6 +114,6 @@
 
 	a:hover .linenos,
 	.hll a .linenos {
-		color: #333;
+		color: @color-base--hover;
 	}
 }
