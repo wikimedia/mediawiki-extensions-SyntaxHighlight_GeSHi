@@ -23,17 +23,17 @@
 	background: @background-color-base;
 	color: @color-progressive;
 	border: 1px solid @border-color-muted;
-}
 
-.mw-highlight-copy--bound button:hover {
-	cursor: pointer;
-	color: @color-progressive--hover;
-	background: @background-color-interactive-subtle;
-	border-color: @border-color-progressive--hover;
-}
+	&:hover {
+		cursor: pointer;
+		color: @color-progressive--hover;
+		background: @background-color-interactive-subtle;
+		border-color: @border-color-progressive--hover;
+	}
 
-.mw-highlight-copy--bound button:active {
-	color: @color-progressive--active;
-	background: @background-color-interactive;
-	border-color: @border-color-progressive--active;
+	&:active {
+		color: @color-progressive--active;
+		background: @background-color-interactive;
+		border-color: @border-color-progressive--active;
+	}
 }
