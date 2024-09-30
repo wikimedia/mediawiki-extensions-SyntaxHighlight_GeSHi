@@ -153,30 +153,33 @@ class Pygmentize {
 			->execute();
 		self::recordShellout( 'generated_css' );
 
-		$lightModeOutput = $lightModeRun->getStdout();
+		$lightModeOutput = trim( $lightModeRun->getStdout() );
 		if ( $lightModeRun->getExitCode() != 0 ) {
 			throw new PygmentsException( $lightModeOutput );
 		}
-		$darkModeOutput = $darkModeRun->getStdout();
+		$darkModeOutput = trim( $darkModeRun->getStdout() );
 		if ( $darkModeRun->getExitCode() != 0 ) {
 			throw new PygmentsException( $darkModeOutput );
 		}
 
-		$lightModeRules = explode( PHP_EOL, $lightModeOutput );
-		$darkModeRules = explode( PHP_EOL, $darkModeOutput );
+		$lightModeRules = explode( "\n", $lightModeOutput );
+		$darkModeRules = explode( "\n", $darkModeOutput );
 		$commonRules = array_intersect( $lightModeRules, $darkModeRules );
 
-		$nightThemeCss = implode( PHP_EOL, array_diff( $darkModeRules, $commonRules ) );
+		$nightThemeCss = implode( "\n", array_diff( $darkModeRules, $commonRules ) );
 		$osThemeCss = str_replace( '.skin-theme-clientpref-night',
 			'.skin-theme-clientpref-os', $nightThemeCss );
 
-		return $lightModeOutput
-			. "@media screen {" . PHP_EOL
-			. $nightThemeCss . PHP_EOL
-			. "}" . PHP_EOL
-			. "@media screen and ( prefers-color-scheme: dark ) {" . PHP_EOL
-			. $osThemeCss . PHP_EOL .
-			"}" . PHP_EOL;
+		return <<<EOD
+			$lightModeOutput
+			@media screen {
+			$nightThemeCss
+			}
+			@media screen and ( prefers-color-scheme: dark ) {
+			$osThemeCss
+			}
+
+			EOD;
 	}
 
 	/**
