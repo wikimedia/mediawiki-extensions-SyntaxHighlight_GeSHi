@@ -3,7 +3,8 @@
 		"authors": [
 			"Les Meloures",
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"syntaxhighlight-desc": "Syntax-Ervirhiewung <code>&lt;syntaxhighlight&gt;</code> mat Hëllef vu [http://pygments.org/ 'Pygments']",
@@ -11,5 +12,7 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Sprooch",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Keng)",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-showlines": "Nummere vun den Zeile weisen",
-	"syntaxhighlight-error-unknown-language": "Onbekannt Sprooch \"$1\""
+	"syntaxhighlight-error-unknown-language": "Onbekannt Sprooch \"$1\"",
+	"syntaxhighlight-button-copy": "Kopéieren",
+	"syntaxhighlight-button-copied": "Kopéiert!"
 }
