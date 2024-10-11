@@ -33,7 +33,7 @@ $( () => {
 
 				link.href = url;
 				linkText = URLMatch[ 0 ]; // Preserve visual link text as is
-			} else if ( wikilinkMatch ) {
+			} else if ( wikilinkMatch && wikilinkMatch[ 1 ] ) {
 				linkText = wikilinkMatch[ 0 ];
 				title = mw.Title.newFromText( wikilinkMatch[ 1 ] );
 			} else if ( templateMatch ) {
