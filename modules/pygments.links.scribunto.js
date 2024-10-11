@@ -27,7 +27,9 @@ $( () => {
 		.concat( Array.from( document.getElementsByClassName( classes.doubleQuoteString ) ) );
 
 	stringNodes.forEach( ( node ) => {
-		if ( !node.nextElementSibling || !node.nextElementSibling.firstChild ||
+		if ( !node.nextElementSibling ||
+			!node.nextElementSibling.firstChild ||
+			!node.nextElementSibling.firstChild.nodeValue ||
 			node.nextElementSibling.firstChild.nodeValue.indexOf( ')' ) !== 0 ) {
 			return;
 		}
