@@ -40,6 +40,7 @@ use ParserOptions;
 use RuntimeException;
 use TextContent;
 use WANObjectCache;
+use Wikimedia\Parsoid\Core\ContentMetadataCollectorStringSets as CMCSS;
 use Wikimedia\Parsoid\DOM\DocumentFragment;
 use Wikimedia\Parsoid\Ext\ExtensionTagHandler;
 use Wikimedia\Parsoid\Ext\ParsoidExtensionAPI;
@@ -198,7 +199,7 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 			$parser->addTrackingCategory( $cat );
 		}
 
-		// Register CSS
+		// Register modules
 		$parser->getOutput()->addModuleStyles( self::getModuleStyles() );
 		$parser->getOutput()->addModules( [ 'ext.pygments.view' ] );
 		return $result['html'];
@@ -213,8 +214,9 @@ class SyntaxHighlight extends ExtensionTagHandler implements
 		// FIXME: There is no API method in Parsoid to add tracking categories
 		// So, $result['cats'] is being ignored
 
-		// Register CSS
-		$extApi->addModuleStyles( self::getModuleStyles() );
+		// Register modules
+		$extApi->getMetadata()->appendOutputStrings( CMCSS::MODULE_STYLE, self::getModuleStyles() );
+		$extApi->getMetadata()->appendOutputStrings( CMCSS::MODULE, [ 'ext.pygments.view' ] );
 
 		return $extApi->htmlToDom( $result['html'] );
 	}
