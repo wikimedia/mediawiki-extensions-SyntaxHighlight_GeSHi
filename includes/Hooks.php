@@ -37,13 +37,16 @@ class Hooks implements
 
 	private Config $config;
 	private ParserFactory $parserFactory;
+	private SyntaxHighlight $syntaxHighlight;
 
 	public function __construct(
 		Config $config,
-		ParserFactory $parserFactory
+		ParserFactory $parserFactory,
+		SyntaxHighlight $syntaxHighlight
 	) {
 		$this->config = $config;
 		$this->parserFactory = $parserFactory;
+		$this->syntaxHighlight = $syntaxHighlight;
 	}
 
 	/**
@@ -52,8 +55,8 @@ class Hooks implements
 	 * @param Parser $parser
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		$parser->setHook( 'source', [ SyntaxHighlight::class, 'parserHookSource' ] );
-		$parser->setHook( 'syntaxhighlight', [ SyntaxHighlight::class, 'parserHook' ] );
+		$parser->setHook( 'source', [ $this->syntaxHighlight, 'parserHookSource' ] );
+		$parser->setHook( 'syntaxhighlight', [ $this->syntaxHighlight, 'parserHook' ] );
 	}
 
 	/**
@@ -106,7 +109,7 @@ class Hooks implements
 				->parse( $text, $title, $options, true, true, $revId );
 		}
 
-		$status = SyntaxHighlight::highlight( $text, $lexer, [ 'line' => true, 'linelinks' => 'L' ] );
+		$status = $this->syntaxHighlight->syntaxHighlight( $text, $lexer, [ 'line' => true, 'linelinks' => 'L' ] );
 		if ( !$status->isOK() ) {
 			return true;
 		}
@@ -136,7 +139,7 @@ class Hooks implements
 		}
 
 		$lexer = self::$mimeLexers[$mime];
-		$status = SyntaxHighlight::highlight( $text, $lexer );
+		$status = $this->syntaxHighlight->syntaxHighlight( $text, $lexer );
 		if ( !$status->isOK() ) {
 			return true;
 		}
