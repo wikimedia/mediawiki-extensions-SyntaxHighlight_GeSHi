@@ -84,7 +84,11 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\SyntaxHighlight\\Hooks"
+			"class": "MediaWiki\\SyntaxHighlight\\Hooks",
+			"services": [
+				"MainConfig",
+				"ParserFactory"
+			]
 		}
 	},
 	"ParsoidModules": [
