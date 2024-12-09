@@ -3,6 +3,7 @@
 namespace MediaWiki\SyntaxHighlight;
 
 use MediaWiki\Api\Hook\ApiFormatHighlightHook;
+use MediaWiki\Config\Config;
 use MediaWiki\Content\Content;
 use MediaWiki\Content\Hook\ContentGetParserOutputHook;
 use MediaWiki\Content\TextContent;
@@ -10,8 +11,8 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\SoftwareInfoHook;
 use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\ParserFactory;
 use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Sanitizer;
@@ -33,6 +34,17 @@ class Hooks implements
 		'application/json' => 'javascript',
 		'text/xml'         => 'xml',
 	];
+
+	private Config $config;
+	private ParserFactory $parserFactory;
+
+	public function __construct(
+		Config $config,
+		ParserFactory $parserFactory
+	) {
+		$this->config = $config;
+		$this->parserFactory = $parserFactory;
+	}
 
 	/**
 	 * Register parser hook
@@ -87,11 +99,10 @@ class Hooks implements
 		$lexer = $models[$model];
 		$text = $content->getText();
 
-		$config = MediaWikiServices::getInstance()->getMainConfig();
 		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
 		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
-		if ( in_array( $model, $config->get( MainConfigNames::TextModelsToParse ), true ) ) {
-			$parserOutput = MediaWikiServices::getInstance()->getParser()
+		if ( in_array( $model, $this->config->get( MainConfigNames::TextModelsToParse ), true ) ) {
+			$parserOutput = $this->parserFactory->getInstance()
 				->parse( $text, $title, $options, true, true, $revId );
 		}
 
