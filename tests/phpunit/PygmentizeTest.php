@@ -23,6 +23,14 @@ class PygmentizeTest extends MediaWikiIntegrationTestCase {
 		] );
 	}
 
+	private function newInstance(): SyntaxHighlight {
+		$services = $this->getServiceContainer();
+		return new SyntaxHighlight(
+			$services->getMainConfig(),
+			$services->getMainWANObjectCache()
+		);
+	}
+
 	private function stubShellbox( ?BoxedResult $result, ?Exception $e ) {
 		$factory = $this->createStub( CommandFactory::class );
 		$command = new class ( $result, $e ) extends BoxedCommand {
@@ -74,6 +82,9 @@ class PygmentizeTest extends MediaWikiIntegrationTestCase {
 		$this->stubShellbox( $result, $e );
 
 		$status = SyntaxHighlight::highlight( '"example"', 'json' );
+		$this->assertSame( $expect, $status->getValue() );
+
+		$status = $this->newInstance()->syntaxHighlight( '"example"', 'json' );
 		$this->assertSame( $expect, $status->getValue() );
 	}
 

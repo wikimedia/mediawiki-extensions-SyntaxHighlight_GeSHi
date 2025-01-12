@@ -87,7 +87,8 @@
 			"class": "MediaWiki\\SyntaxHighlight\\Hooks",
 			"services": [
 				"MainConfig",
-				"ParserFactory"
+				"ParserFactory",
+				"SyntaxHighlight.SyntaxHighlight"
 			]
 		}
 	},
@@ -119,6 +120,9 @@
 		"syntaxhighlight-error-category",
 		"syntaxhighlight-enclose-category",
 		"syntaxhighlight-source-category"
+	],
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
 	],
 	"manifest_version": 2
 }
