@@ -81,6 +81,7 @@ class PygmentizeTest extends MediaWikiIntegrationTestCase {
 	public function testHighlightBasic( ?BoxedResult $result, ?Exception $e, string $expect ) {
 		$this->stubShellbox( $result, $e );
 
+		$this->hideDeprecated( SyntaxHighlight::class . '::highlight' );
 		$status = SyntaxHighlight::highlight( '"example"', 'json' );
 		$this->assertSame( $expect, $status->getValue() );
 
