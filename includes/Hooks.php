@@ -179,7 +179,7 @@ class Hooks implements
 	 */
 	public function onResourceLoaderRegisterModules( ResourceLoader $rl ): void {
 		$rl->register( 'ext.pygments.view', [
-			'localBasePath' => MW_INSTALL_PATH . '/extensions/SyntaxHighlight_GeSHi/modules',
+			'localBasePath' => dirname( __DIR__ ) . '/modules',
 			'remoteExtPath' => 'SyntaxHighlight_GeSHi/modules',
 			'scripts' => array_merge( [
 				'pygments.linenumbers.js',
