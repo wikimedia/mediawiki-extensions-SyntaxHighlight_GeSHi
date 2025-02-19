@@ -371,6 +371,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 *  code as its value.
 	 */
 	public static function highlight( $code, $lang = null, $args = [], ?Parser $parser = null ) {
+		wfDeprecated( __METHOD__, '1.44' );
 		return MediaWikiServices::getInstance()->getService( 'SyntaxHighlight.SyntaxHighlight' )
 			->syntaxHighlight( $code, $lang, $args, $parser );
 	}
