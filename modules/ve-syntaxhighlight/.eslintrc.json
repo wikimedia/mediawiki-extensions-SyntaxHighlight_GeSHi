@@ -1,5 +1,8 @@
 {
 	"globals": {
 		"ve": true
+	},
+	"rules": {
+		"no-jquery/no-done-fail": "warn"
 	}
 }
