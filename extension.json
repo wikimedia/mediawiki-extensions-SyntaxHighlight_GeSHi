@@ -78,7 +78,7 @@
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "main",
-		"ContentGetParserOutput": "main",
+		"ContentAlterParserOutput": "main",
 		"ApiFormatHighlight": "main",
 		"SoftwareInfo": "main",
 		"ResourceLoaderRegisterModules": "main"

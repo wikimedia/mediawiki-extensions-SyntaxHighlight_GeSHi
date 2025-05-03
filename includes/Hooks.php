@@ -5,15 +5,13 @@ namespace MediaWiki\SyntaxHighlight;
 use MediaWiki\Api\Hook\ApiFormatHighlightHook;
 use MediaWiki\Config\Config;
 use MediaWiki\Content\Content;
-use MediaWiki\Content\Hook\ContentGetParserOutputHook;
+use MediaWiki\Content\Hook\ContentAlterParserOutputHook;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Hook\ParserFirstCallInitHook;
 use MediaWiki\Hook\SoftwareInfoHook;
-use MediaWiki\MainConfigNames;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\ParserFactory;
-use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Registration\ExtensionRegistry;
@@ -23,7 +21,7 @@ use MediaWiki\Title\Title;
 
 class Hooks implements
 	ParserFirstCallInitHook,
-	ContentGetParserOutputHook,
+	ContentAlterParserOutputHook,
 	ResourceLoaderRegisterModulesHook,
 	ApiFormatHighlightHook,
 	SoftwareInfoHook
@@ -60,30 +58,16 @@ class Hooks implements
 	}
 
 	/**
-	 * Hook into Content::getParserOutput to provide syntax highlighting for
+	 * Hook to alter the parser output to provide syntax highlighting for
 	 * script content.
 	 *
-	 * @param Content $content
-	 * @param Title $title
-	 * @param int $revId
-	 * @param ParserOptions $options
-	 * @param bool $generateHtml
-	 * @param ParserOutput &$parserOutput
-	 * @return bool
-	 * @since MW 1.21
+	 * @param Content $content Content to render
+	 * @param Title $title Title of the page, as context
+	 * @param ParserOutput $parserOutput ParserOutput to manipulate
 	 */
-	public function onContentGetParserOutput( $content, $title,
-		$revId, $options, $generateHtml, &$parserOutput
-	) {
-		// Hope that the "SyntaxHighlightModels" attribute does not contain silly types.
+	public function onContentAlterParserOutput( $content, $title, $parserOutput ) {
 		if ( !( $content instanceof TextContent ) ) {
-			// Oops! Non-text content? Let MediaWiki handle this.
-			return true;
-		}
-
-		if ( !$generateHtml ) {
-			// Nothing special for us to do, let MediaWiki handle this.
-			return true;
+			return;
 		}
 
 		// Determine the SyntaxHighlight language from the page's
@@ -97,30 +81,20 @@ class Hooks implements
 		$model = $content->getModel();
 		if ( !isset( $models[$model] ) ) {
 			// We don't care about this model, carry on.
-			return true;
+			return;
 		}
 		$lexer = $models[$model];
 		$text = $content->getText();
 
-		// Parse using the standard parser to get links etc. into the database, HTML is replaced below.
-		// We could do this using $content->fillParserOutput(), but alas it is 'protected'.
-		if ( in_array( $model, $this->config->get( MainConfigNames::TextModelsToParse ), true ) ) {
-			$parserOutput = $this->parserFactory->getInstance()
-				->parse( $text, $title, $options, true, true, $revId );
-		}
-
 		$status = $this->syntaxHighlight->syntaxHighlight( $text, $lexer, [ 'line' => true, 'linelinks' => 'L' ] );
 		if ( !$status->isOK() ) {
-			return true;
+			return;
 		}
 		$out = $status->getValue();
 
 		$parserOutput->addModuleStyles( SyntaxHighlight::getModuleStyles() );
 		$parserOutput->addModules( [ 'ext.pygments.view' ] );
-		$parserOutput->setText( $out );
-
-		// Inform MediaWiki that we have parsed this page and it shouldn't mess with it.
-		return false;
+		$parserOutput->setRawText( $out );
 	}
 
 	/**
