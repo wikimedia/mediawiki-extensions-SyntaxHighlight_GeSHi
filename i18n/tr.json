@@ -3,6 +3,7 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Erkan Yilmaz",
+			"Gadir",
 			"Joseph",
 			"McAang",
 			"McDutchie",
@@ -25,5 +26,7 @@
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Kod bloğu",
 	"syntaxhighlight-error-pygments-invocation-failure": "Pygments çağrılaması başarısız oldu",
 	"syntaxhighlight-error-unknown-language": "Bilinmeyen \"$1\" dili",
-	"syntaxhighlight-error-exceeds-size-limit": "$1 baytın kod büyüklüğü izin verilen maksimum $2 {{PLURAL:$2|baytı}} aşıyor"
+	"syntaxhighlight-error-exceeds-size-limit": "$1 baytın kod büyüklüğü izin verilen maksimum $2 {{PLURAL:$2|baytı}} aşıyor",
+	"syntaxhighlight-button-copy": "Kopyala",
+	"syntaxhighlight-button-copied": "Kopyalandı!"
 }
