@@ -25,7 +25,9 @@
 		]
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\SyntaxHighlight\\": "includes/",
+		"MediaWiki\\SyntaxHighlight\\": "includes/"
+	},
+	"TestAutoloadNamespaces": {
 		"MediaWiki\\SyntaxHighlight\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceFileModulePaths": {
