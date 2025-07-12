@@ -142,7 +142,7 @@ class Hooks implements
 	public function onSoftwareInfo( &$software ) {
 		try {
 			$software['[https://pygments.org/ Pygments]'] = Pygmentize::getVersion();
-		} catch ( PygmentsException $e ) {
+		} catch ( PygmentsException ) {
 			// pass
 		}
 	}
