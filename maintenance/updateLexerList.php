@@ -27,9 +27,11 @@ use MediaWiki\SyntaxHighlight\Pygmentize;
 use MediaWiki\SyntaxHighlight\PygmentsException;
 use Wikimedia\StaticArrayWriter;
 
+// @codeCoverageIgnoreStart
 $IP = getenv( 'MW_INSTALL_PATH' ) ?: __DIR__ . '/../../..';
 
 require_once "$IP/maintenance/Maintenance.php";
+// @codeCoverageIgnoreEnd
 
 class UpdateLexerList extends Maintenance {
 	public function __construct() {
@@ -56,5 +58,7 @@ class UpdateLexerList extends Maintenance {
 	}
 }
 
+// @codeCoverageIgnoreStart
 $maintClass = UpdateLexerList::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
+// @codeCoverageIgnoreEnd

@@ -26,9 +26,11 @@ use MediaWiki\Maintenance\Maintenance;
 use MediaWiki\SyntaxHighlight\Pygmentize;
 use MediaWiki\SyntaxHighlight\PygmentsException;
 
+// @codeCoverageIgnoreStart
 $IP = getenv( 'MW_INSTALL_PATH' ) ?: __DIR__ . '/../../..';
 
 require_once "$IP/maintenance/Maintenance.php";
+// @codeCoverageIgnoreEnd
 
 class UpdateCSS extends Maintenance {
 
@@ -59,5 +61,7 @@ class UpdateCSS extends Maintenance {
 	}
 }
 
+// @codeCoverageIgnoreStart
 $maintClass = UpdateCSS::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
+// @codeCoverageIgnoreEnd
