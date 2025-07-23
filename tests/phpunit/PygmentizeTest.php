@@ -35,12 +35,10 @@ class PygmentizeTest extends MediaWikiIntegrationTestCase {
 	private function stubShellbox( ?BoxedResult $result, ?Exception $e ) {
 		$factory = $this->createStub( CommandFactory::class );
 		$command = new class ( $result, $e ) extends BoxedCommand {
-			private $result;
-			private $e;
-
-			public function __construct( $result, $e ) {
-				$this->result = $result;
-				$this->e = $e;
+			public function __construct(
+				private readonly ?BoxedResult $result,
+				private readonly ?Exception $e,
+			) {
 			}
 
 			public function execute(): BoxedResult {

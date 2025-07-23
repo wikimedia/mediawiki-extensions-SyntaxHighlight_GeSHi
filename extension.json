@@ -90,8 +90,6 @@
 		"main": {
 			"class": "MediaWiki\\SyntaxHighlight\\Hooks",
 			"services": [
-				"MainConfig",
-				"ParserFactory",
 				"SyntaxHighlight.SyntaxHighlight"
 			]
 		}

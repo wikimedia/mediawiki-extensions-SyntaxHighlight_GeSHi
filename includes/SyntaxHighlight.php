@@ -39,15 +39,10 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	/** @var int Cache version. Increment whenever the HTML changes. */
 	private const CACHE_VERSION = 2;
 
-	private Config $config;
-	private WANObjectCache $cache;
-
 	public function __construct(
-		Config $config,
-		WANObjectCache $cache
+		private readonly Config $config,
+		private readonly WANObjectCache $cache,
 	) {
-		$this->config = $config;
-		$this->cache = $cache;
 	}
 
 	/**
