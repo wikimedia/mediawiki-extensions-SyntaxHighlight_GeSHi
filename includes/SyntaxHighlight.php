@@ -39,28 +39,17 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	/** @var int Cache version. Increment whenever the HTML changes. */
 	private const CACHE_VERSION = 2;
 
+	/** Maximum number of lines that may be selected for highlighting */
+	private readonly int $maxLines;
+	/** Maximum input size for the highlighter */
+	private readonly int $maxBytes;
+
 	public function __construct(
-		private readonly Config $config,
+		Config $config,
 		private readonly WANObjectCache $cache,
 	) {
-	}
-
-	/**
-	 * Returns the maximum number of lines that may be selected for highlighting
-	 *
-	 * @return int
-	 */
-	private function getMaxLines(): int {
-		return $this->config->get( 'SyntaxHighlightMaxLines' );
-	}
-
-	/**
-	 * Returns the maximum input size for the highlighter
-	 *
-	 * @return int
-	 */
-	private function getMaxBytes(): int {
-		return $this->config->get( 'SyntaxHighlightMaxBytes' );
+		$this->maxLines = $config->get( 'SyntaxHighlightMaxLines' );
+		$this->maxBytes = $config->get( 'SyntaxHighlightMaxBytes' );
 	}
 
 	/**
@@ -245,13 +234,13 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		}
 
 		$length = strlen( $code );
-		if ( strlen( $code ) > $this->getMaxBytes() ) {
+		if ( strlen( $code ) > $this->maxBytes ) {
 			// Disable syntax highlighting
 			$lexer = null;
 			$status->warning(
 				'syntaxhighlight-error-exceeds-size-limit',
 				$length,
-				$this->getMaxBytes()
+				$this->maxBytes
 			);
 		}
 
@@ -487,8 +476,8 @@ class SyntaxHighlight extends ExtensionTagHandler {
 					}
 				}
 			}
-			if ( count( $lines ) > $this->getMaxLines() ) {
-				$lines = array_slice( $lines, 0, $this->getMaxLines() );
+			if ( count( $lines ) > $this->maxLines ) {
+				$lines = array_slice( $lines, 0, $this->maxLines );
 				break;
 			}
 		}
@@ -509,6 +498,6 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		// given range to reduce the impact.
 		return $start > 0 &&
 			$start < $end &&
-			$end - $start < $this->getMaxLines();
+			$end - $start < $this->maxLines;
 	}
 }
