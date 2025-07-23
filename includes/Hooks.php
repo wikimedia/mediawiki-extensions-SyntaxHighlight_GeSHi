@@ -77,6 +77,7 @@ class Hooks implements
 		$models = $extension->getAttribute( 'SyntaxHighlightModels' ) + [
 			CONTENT_MODEL_CSS => 'css',
 			CONTENT_MODEL_JAVASCRIPT => 'javascript',
+			CONTENT_MODEL_VUE => 'vue',
 		];
 		$model = $content->getModel();
 		if ( !isset( $models[$model] ) ) {
