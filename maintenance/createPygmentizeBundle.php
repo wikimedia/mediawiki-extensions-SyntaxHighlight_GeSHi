@@ -8,6 +8,11 @@
  * @ingroup Maintenance
  */
 
+namespace MediaWiki\SyntaxHighlight\Maintenance;
+
+use MediaWiki\Maintenance\Maintenance;
+use ZipArchive;
+
 // @codeCoverageIgnoreStart
 $IP = getenv( 'MW_INSTALL_PATH' ) ?: __DIR__ . '/../../..';
 
@@ -121,7 +126,9 @@ class CreatePygmentizeBundle extends Maintenance {
 		}
 
 		$this->output( sprintf( "Done. Wrote %d bytes to %s\n", strlen( $finalData ), $executablePath ) );
-		$this->output( "Don't forget to run updateCSS.php and updateLexerList.php (in ../maintenance).\n" );
+
+		$this->createChild( UpdateCSS::class )->execute();
+		$this->createChild( UpdateLexerList::class )->execute();
 	}
 }
 

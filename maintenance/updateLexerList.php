@@ -22,6 +22,8 @@
  * @ingroup Maintenance
  */
 
+namespace MediaWiki\SyntaxHighlight\Maintenance;
+
 use MediaWiki\Maintenance\Maintenance;
 use MediaWiki\SyntaxHighlight\Pygmentize;
 use MediaWiki\SyntaxHighlight\PygmentsException;
