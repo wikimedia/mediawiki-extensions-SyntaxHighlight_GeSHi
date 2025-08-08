@@ -217,7 +217,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 * @param string|null $lang
 	 * @param array $args
 	 * @param Parser|null $parser Parser, if generating content to be parsed.
-	 * @return Status
+	 * @return Status<string>
 	 */
 	private function highlightInner( $code, $lang = null, $args = [], ?Parser $parser = null ) {
 		$status = new Status;
@@ -349,7 +349,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	 *   of the value. Similar to the lineanchors+linespans features in Pygments.
 	 *  If it contains a 'copy' key, a link will be shown for copying content to the clipboard.
 	 * @param Parser|null $parser Parser, if generating content to be parsed.
-	 * @return Status Status object, with HTML representing the highlighted
+	 * @return Status<string> Status object, with HTML representing the highlighted
 	 *  code as its value.
 	 */
 	public function syntaxHighlight( $code, $lang = null, $args = [], ?Parser $parser = null ) {
