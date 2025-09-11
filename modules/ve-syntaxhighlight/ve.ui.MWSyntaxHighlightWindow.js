@@ -114,11 +114,10 @@ ve.ui.MWSyntaxHighlightWindow.prototype.onShowLinesCheckboxChange = function () 
 ve.ui.MWSyntaxHighlightWindow.prototype.onStartLineNumberChange = function ( value ) {
 	const input = this.input;
 
-	input.loadingPromise.done( () => {
+	input.loadingPromise.then( () => {
 		input.editor.setOption( 'firstLineNumber', value !== '' ? +value : 1 );
-	} ).always( () => {
 		this.updateActions();
-	} );
+	}, () => this.updateActions() );
 };
 
 /**
