@@ -108,7 +108,6 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	}
 
 	/**
-	 *
 	 * @param string $text
 	 * @param array $args
 	 * @param ?Parser $parser
