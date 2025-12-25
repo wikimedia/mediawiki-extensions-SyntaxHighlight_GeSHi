@@ -1,4 +1,5 @@
 @import 'mediawiki.skin.variables.less';
+@import 'mediawiki.mixins.less';
 
 /**
  * Adapted from https://www.mediawiki.org/wiki/MediaWiki:Gadget-site-tpl-copy.css
@@ -19,6 +20,7 @@
 	background: @background-color-base;
 	color: @color-progressive;
 	border: 1px solid @border-color-muted;
+	.user-select( none );
 
 	&:hover {
 		cursor: pointer;
