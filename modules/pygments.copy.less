@@ -10,12 +10,9 @@
  * https://doc.wikimedia.org/oojs-ui/master/demos/ (2023-11-13)
  * https://design.wikimedia.org/style-guide/components/buttons.html
  */
-.mw-highlight-copy--bound button {
-	position: absolute;
-	top: -1em;
-	right: -0.9em;
+.mw-highlight-copy-button {
 	box-sizing: border-box;
-	padding: 5px 7px;
+	padding: 1px 7px;
 	border-radius: 2px;
 	background: @background-color-base;
 	color: @color-progressive;
@@ -34,4 +31,12 @@
 		background: @background-color-interactive;
 		border-color: @border-color-progressive--active;
 	}
+}
+
+// Only for non-inline copy buttons
+.mw-highlight .mw-highlight-copy-button {
+	position: absolute;
+	top: -1em;
+	right: -0.9em;
+	padding: 5px 7px;
 }

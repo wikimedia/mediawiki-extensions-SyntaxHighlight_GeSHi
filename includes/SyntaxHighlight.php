@@ -400,7 +400,7 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		if ( $showLines ) {
 			$classList[] = self::HIGHLIGHT_CSS_CLASS . '-lines';
 		}
-		if ( !$isInline && isset( $args['copy'] ) ) {
+		if ( isset( $args['copy'] ) ) {
 			$classList[] = 'mw-highlight-copy';
 		}
 		$htmlAttribs['class'] = implode( ' ', $classList );
