@@ -237,6 +237,6 @@ cat
 nohtml
 !! wikitext
 <syntaxhighlight enclose="none" lang="python">print('Hi')</syntaxhighlight>
-!! metadata/php
+!! metadata
 cat=Pages_using_deprecated_enclose_attributes sort=
 !! end

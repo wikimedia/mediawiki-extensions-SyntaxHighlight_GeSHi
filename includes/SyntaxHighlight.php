@@ -166,8 +166,9 @@ class SyntaxHighlight extends ExtensionTagHandler {
 	): ?DocumentFragment {
 		$result = $this->processContent( $text, $extApi->extArgsToArray( $extArgs ) );
 
-		// FIXME: There is no API method in Parsoid to add tracking categories
-		// So, $result['cats'] is being ignored
+		foreach ( $result['cats'] as $cat ) {
+			$extApi->addTrackingCategory( $cat );
+		}
 
 		// Register modules
 		$extApi->getMetadata()->appendOutputStrings( CMCSS::MODULE_STYLE, self::getModuleStyles() );
