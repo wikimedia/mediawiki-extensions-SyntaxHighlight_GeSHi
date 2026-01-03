@@ -19,6 +19,10 @@
 namespace MediaWiki\SyntaxHighlight;
 
 use MediaWiki\Config\Config;
+use MediaWiki\Content\CodeHighlighterMetadata;
+use MediaWiki\Content\CodeHighlighterOptions;
+use MediaWiki\Content\CodeHighlighterOutput;
+use MediaWiki\Content\CodeHighlightProvider;
 use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Parser\Parser;
@@ -30,7 +34,7 @@ use Wikimedia\Parsoid\Core\ContentMetadataCollectorStringSets as CMCSS;
 use Wikimedia\Parsoid\DOM\DocumentFragment;
 use Wikimedia\Parsoid\Ext\ParsoidExtensionAPI;
 
-class SyntaxHighlight {
+class SyntaxHighlight extends CodeHighlightProvider {
 
 	/** @var string CSS class for syntax-highlighted code. Public as used by the updateCSS maintenance script. */
 	public const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
@@ -441,6 +445,48 @@ class SyntaxHighlight {
 
 		$status->value = $output;
 		return $status;
+	}
+
+	/** @inheritDoc */
+	public function highlight( string $code, CodeHighlighterOptions $options ): CodeHighlighterOutput {
+		$args = [
+			'lang' => $options->language,
+		];
+		if ( $options->inline ) {
+			$args['inline'] = 'y';
+		}
+		if ( $options->dir ) {
+			$args['dir'] = $options->dir;
+		}
+		if ( $options->classes ) {
+			$args['class'] = implode( ' ', $options->classes );
+		}
+		if ( $options->includeLineNumbers ) {
+			$args['line'] = 'y';
+			if ( $options->startingLineNumber ) {
+				$args['start'] = strval( $options->startingLineNumber );
+			}
+			if ( $options->includeLineLinks ) {
+				$args['linelinks'] = $options->linkLinkAnchorPrefix;
+			}
+		}
+		if ( $options->highlightLines ) {
+			$args['highlight'] = $options->highlightLines;
+		}
+		if ( $options->isCopiable ) {
+			$args['copy'] = 'y';
+		}
+
+		$output = $this->syntaxHighlight( $code, $options->language, $args );
+
+		return new CodeHighlighterOutput(
+			html: $output->getValue(),
+			metadata: new CodeHighlighterMetadata(
+				modules: [ 'ext.pygments.view' ],
+				moduleStyles: self::getModuleStyles(),
+				warnings: $output->getMessages(),
+			)
+		);
 	}
 
 	/**

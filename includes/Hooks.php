@@ -3,23 +3,17 @@
 namespace MediaWiki\SyntaxHighlight;
 
 use MediaWiki\Api\Hook\ApiFormatHighlightHook;
-use MediaWiki\Content\Content;
-use MediaWiki\Content\Hook\ContentAlterParserOutputHook;
-use MediaWiki\Content\TextContent;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Parser\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
-use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderRegisterModulesHook;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use MediaWiki\Specials\Hook\SoftwareInfoHook;
-use MediaWiki\Title\Title;
 
 class Hooks implements
 	ParserFirstCallInitHook,
-	ContentAlterParserOutputHook,
 	ResourceLoaderRegisterModulesHook,
 	ApiFormatHighlightHook,
 	SoftwareInfoHook
@@ -44,47 +38,6 @@ class Hooks implements
 	public function onParserFirstCallInit( $parser ) {
 		$parser->setHook( 'source', $this->syntaxHighlight->parserHookSource( ... ) );
 		$parser->setHook( 'syntaxhighlight', $this->syntaxHighlight->parserHook( ... ) );
-	}
-
-	/**
-	 * Hook to alter the parser output to provide syntax highlighting for
-	 * script content.
-	 *
-	 * @param Content $content Content to render
-	 * @param Title $title Title of the page, as context
-	 * @param ParserOutput $parserOutput ParserOutput to manipulate
-	 */
-	public function onContentAlterParserOutput( $content, $title, $parserOutput ) {
-		if ( !( $content instanceof TextContent ) ) {
-			return;
-		}
-
-		// Determine the SyntaxHighlight language from the page's
-		// content model. Extensions can extend the default CSS/JS
-		// mapping by setting the SyntaxHighlightModels attribute.
-		$extension = ExtensionRegistry::getInstance();
-		$models = $extension->getAttribute( 'SyntaxHighlightModels' ) + [
-			CONTENT_MODEL_CSS => 'css',
-			CONTENT_MODEL_JAVASCRIPT => 'javascript',
-			CONTENT_MODEL_VUE => 'vue',
-		];
-		$model = $content->getModel();
-		if ( !isset( $models[$model] ) ) {
-			// We don't care about this model, carry on.
-			return;
-		}
-		$lexer = $models[$model];
-		$text = $content->getText();
-
-		$status = $this->syntaxHighlight->syntaxHighlight( $text, $lexer, [ 'line' => true, 'linelinks' => 'L' ] );
-		if ( !$status->isOK() ) {
-			return;
-		}
-		$out = $status->getValue();
-
-		$parserOutput->addModuleStyles( SyntaxHighlight::getModuleStyles() );
-		$parserOutput->addModules( [ 'ext.pygments.view' ] );
-		$parserOutput->setContentHolderText( $out );
 	}
 
 	/**

@@ -35,6 +35,15 @@
 		"localBasePath": "modules",
 		"remoteExtPath": "SyntaxHighlight_GeSHi/modules"
 	},
+	"CodeHighlightProviders": [
+		{
+			"class": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight",
+			"services": [
+				"MainConfig",
+				"MainWANObjectCache"
+			]
+		}
+	],
 	"ResourceModules": {
 		"ext.pygments": {
 			"class": "MediaWiki\\SyntaxHighlight\\ResourceLoaderPygmentsModule",
@@ -81,7 +90,6 @@
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "main",
-		"ContentAlterParserOutput": "main",
 		"ApiFormatHighlight": "main",
 		"SoftwareInfo": "main",
 		"ResourceLoaderRegisterModules": "main"
@@ -98,9 +106,6 @@
 		"MediaWiki\\SyntaxHighlight\\ParsoidExt"
 	],
 	"attributes": {
-		"SyntaxHighlight": {
-			"Models": {}
-		},
 		"VisualEditor": {
 			"PluginModules": [
 				"ext.geshi.visualEditor"
