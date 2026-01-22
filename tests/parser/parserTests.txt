@@ -226,7 +226,7 @@ cat
 nohtml
 !! wikitext
 <source lang="python">print('Hi')</source>
-!! metadata/php
+!! metadata
 cat=Pages_using_deprecated_source_tags sort=
 !! end
 

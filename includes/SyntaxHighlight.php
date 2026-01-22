@@ -28,10 +28,9 @@ use RuntimeException;
 use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Parsoid\Core\ContentMetadataCollectorStringSets as CMCSS;
 use Wikimedia\Parsoid\DOM\DocumentFragment;
-use Wikimedia\Parsoid\Ext\ExtensionTagHandler;
 use Wikimedia\Parsoid\Ext\ParsoidExtensionAPI;
 
-class SyntaxHighlight extends ExtensionTagHandler {
+class SyntaxHighlight {
 
 	/** @var string CSS class for syntax-highlighted code. Public as used by the updateCSS maintenance script. */
 	public const HIGHLIGHT_CSS_CLASS = 'mw-highlight';
@@ -160,8 +159,15 @@ class SyntaxHighlight extends ExtensionTagHandler {
 		return $result['html'];
 	}
 
-	/** @inheritDoc */
-	public function sourceToDom(
+	/**
+	 * Handles conversion of tag content to Parsoid DOM.
+	 *
+	 * @param ParsoidExtensionAPI $extApi
+	 * @param string $text
+	 * @param array $extArgs
+	 * @return DocumentFragment|null
+	 */
+	public function handleParsoidTag(
 		ParsoidExtensionAPI $extApi, string $text, array $extArgs
 	): ?DocumentFragment {
 		$result = $this->processContent( $text, $extApi->extArgsToArray( $extArgs ) );
