@@ -279,7 +279,7 @@ class SyntaxHighlight {
 			$options['linenos'] = 'inline';
 		}
 
-		if ( $lexer === 'php' && strpos( $code, '<?php' ) === false ) {
+		if ( $lexer === 'php' && !str_contains( $code, '<?php' ) ) {
 			$options['startinline'] = 1;
 		}
 
@@ -437,9 +437,7 @@ class SyntaxHighlight {
 				$output = $marker;
 			}
 
-			$output = Html::openElement( 'div', $htmlAttribs ) .
-				$output .
-				Html::closeElement( 'div' );
+			$output = Html::rawElement( 'div', $htmlAttribs, $output );
 		}
 
 		$status->value = $output;
@@ -470,12 +468,12 @@ class SyntaxHighlight {
 	 */
 	protected function parseHighlightLines( $lineSpec ) {
 		$lines = [];
-		$values = array_map( 'trim', explode( ',', $lineSpec ) );
+		$values = array_map( trim( ... ), explode( ',', $lineSpec ) );
 		foreach ( $values as $value ) {
 			if ( ctype_digit( $value ) ) {
 				$lines[] = (int)$value;
-			} elseif ( strpos( $value, '-' ) !== false ) {
-				[ $start, $end ] = array_map( 'intval', explode( '-', $value ) );
+			} elseif ( str_contains( $value, '-' ) ) {
+				[ $start, $end ] = array_map( intval( ... ), explode( '-', $value ) );
 				if ( $this->validHighlightRange( $start, $end ) ) {
 					for ( $i = $start; $i <= $end; $i++ ) {
 						$lines[] = $i;

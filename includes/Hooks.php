@@ -42,8 +42,8 @@ class Hooks implements
 	 * @param Parser $parser
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		$parser->setHook( 'source', [ $this->syntaxHighlight, 'parserHookSource' ] );
-		$parser->setHook( 'syntaxhighlight', [ $this->syntaxHighlight, 'parserHook' ] );
+		$parser->setHook( 'source', $this->syntaxHighlight->parserHookSource( ... ) );
+		$parser->setHook( 'syntaxhighlight', $this->syntaxHighlight->parserHook( ... ) );
 	}
 
 	/**
