@@ -23,8 +23,8 @@ use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\Sanitizer;
-use MediaWiki\Status\Status;
 use RuntimeException;
+use StatusValue;
 use Wikimedia\ObjectCache\WANObjectCache;
 use Wikimedia\Parsoid\Core\ContentMetadataCollectorStringSets as CMCSS;
 use Wikimedia\Parsoid\DOM\DocumentFragment;
@@ -223,10 +223,10 @@ class SyntaxHighlight {
 	 * @param string|null $lang
 	 * @param array $args
 	 * @param Parser|null $parser Parser, if generating content to be parsed.
-	 * @return Status<string>
+	 * @return StatusValue<string>
 	 */
 	private function highlightInner( $code, $lang = null, $args = [], ?Parser $parser = null ) {
-		$status = new Status;
+		$status = new StatusValue();
 
 		$lexer = self::getLexer( $lang );
 		if ( $lexer === null && $lang !== null ) {
@@ -355,7 +355,7 @@ class SyntaxHighlight {
 	 *   of the value. Similar to the lineanchors+linespans features in Pygments.
 	 *  If it contains a 'copy' key, a link will be shown for copying content to the clipboard.
 	 * @param Parser|null $parser Parser, if generating content to be parsed.
-	 * @return Status<string> Status object, with HTML representing the highlighted
+	 * @return StatusValue<string> Status object, with HTML representing the highlighted
 	 *  code as its value.
 	 */
 	public function syntaxHighlight( $code, $lang = null, $args = [], ?Parser $parser = null ) {
