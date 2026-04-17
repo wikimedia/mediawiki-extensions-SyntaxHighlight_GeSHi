@@ -7,14 +7,14 @@ use MediaWiki\Content\Content;
 use MediaWiki\Content\Hook\ContentAlterParserOutputHook;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Context\IContextSource;
-use MediaWiki\Hook\ParserFirstCallInitHook;
-use MediaWiki\Hook\SoftwareInfoHook;
+use MediaWiki\Parser\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderRegisterModulesHook;
 use MediaWiki\ResourceLoader\ResourceLoader;
+use MediaWiki\Specials\Hook\SoftwareInfoHook;
 use MediaWiki\Title\Title;
 
 class Hooks implements
