@@ -84,7 +84,7 @@ class Hooks implements
 
 		$parserOutput->addModuleStyles( SyntaxHighlight::getModuleStyles() );
 		$parserOutput->addModules( [ 'ext.pygments.view' ] );
-		$parserOutput->setRawText( $out );
+		$parserOutput->setContentHolderText( $out );
 	}
 
 	/**
