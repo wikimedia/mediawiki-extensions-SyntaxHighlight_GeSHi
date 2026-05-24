@@ -303,8 +303,12 @@ class SyntaxHighlight extends CodeHighlightProvider {
 			$options['linenostart'] = (int)$args['start'];
 		}
 
-		if ( !empty( $args['linelinks'] ) ) {
-			$options['linespans'] = $args['linelinks'];
+		if (
+			!empty( $args['linelinks'] )
+			// Protect against injecting arbitrary Pygmentize options, as those are separated with commas
+			&& !str_contains( $args['linelinks'], ',' )
+		) {
+			$options['linespans'] = htmlspecialchars( $args['linelinks'] );
 		}
 
 		if ( $isInline ) {
