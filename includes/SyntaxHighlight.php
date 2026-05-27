@@ -445,6 +445,15 @@ class SyntaxHighlight {
 	}
 
 	/**
+	 * Check if a given language is supported
+	 * @param string $lang
+	 * @return bool
+	 */
+	public function isSupportedLanguage( string $lang ): bool {
+		return self::getLexer( $lang ) !== null;
+	}
+
+	/**
 	 * Construct a cache key for the results of a Pygments invocation.
 	 *
 	 * @param string $code Code to be highlighted.
