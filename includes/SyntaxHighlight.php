@@ -348,8 +348,7 @@ class SyntaxHighlight {
 	 *  If it contains a 'line' key, the output will include line numbers.
 	 *  If it includes a 'highlight' key, the value will be parsed as a
 	 *   comma-separated list of lines and line-ranges to highlight.
-	 *  If it contains a 'start' key, the value will be used as the line at which to
-	 *   start highlighting.
+	 *  If it contains a 'start' key, the value will be used as the initial line number.
 	 *  If it contains a 'inline' key, the output will not be wrapped in `<div><pre/></div>`.
 	 *  If it contains a 'linelinks' key, lines will have links and anchors with a prefix
 	 *   of the value. Similar to the lineanchors+linespans features in Pygments.
