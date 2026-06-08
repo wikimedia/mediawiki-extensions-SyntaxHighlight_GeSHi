@@ -12,15 +12,29 @@ $( () => {
 		element.appendChild( link ); // put link inside syntax-highlighted string
 	}
 
-	// List of functions whose parameters should be linked if they meet the given condition
+	// List of functions whose first parameter would be linked to the returned title.
+	// No link is created if false or null is returned.
 	const parametersToLink = {
 		// JavaScript
-		importScript: () => true,
-		importStylesheet: () => true,
+		importScript: ( page ) => mw.Title.newFromText( page ),
+		importStylesheet: ( page ) => mw.Title.newFromText( page ),
 		// Scribunto
-		require: ( title ) => [ 828, 850 ].includes( title.getNamespaceId() ), // NS_MODULE, NS_PACKAGE
-		'mw.loadData': ( title ) => title.getNamespaceId() === 828,
-		'mw.loadJsonData': () => true
+		require: ( page ) => {
+			const title = mw.Title.newFromText( page );
+			if ( title && [ 828, 850 ].includes( title.getNamespaceId() ) ) { // NS_MODULE, NS_PACKAGE
+				return title;
+			}
+			return null;
+		},
+		'mw.loadData': ( page ) => {
+			const title = mw.Title.newFromText( page );
+			if ( title && title.getNamespaceId() === 828 ) {
+				return title;
+			}
+			return null;
+		},
+		'mw.loadJsonData': ( page ) => mw.Title.newFromText( page ),
+		'mw.ext.TemplateStyles.link': ( page ) => mw.Title.newFromText( page, 10 )
 	};
 
 	mw.hook( 'wikipage.content' ).add( ( $content ) => {
@@ -68,9 +82,9 @@ $( () => {
 					partIdx--;
 				}
 				const page = node.firstChild.nodeValue.slice( 1, -1 );
-				const condition = parametersToLink[ invocation ];
-				const title = mw.Title.newFromText( page );
-				if ( title && condition( title ) ) {
+				const titleBuilder = parametersToLink[ invocation ];
+				const title = titleBuilder( page );
+				if ( title ) {
 					addLink( node, title );
 				}
 			} );
