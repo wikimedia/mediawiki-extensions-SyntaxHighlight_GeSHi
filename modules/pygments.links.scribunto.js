@@ -27,20 +27,28 @@ $( () => {
 			.concat( $content.find( '.s2' ).get() );
 
 		stringNodes.forEach( ( node ) => {
-			if ( !node.nextElementSibling ||
-				!node.nextElementSibling.firstChild ||
-				!node.nextElementSibling.firstChild.nodeValue ||
-				node.nextElementSibling.firstChild.nodeValue.indexOf( ')' ) !== 0 ) {
+			let nextNode = node.nextElementSibling,
+				prevNode = node.previousElementSibling;
+
+			// Skip over whitespace
+			if ( nextNode && nextNode.classList.contains( 'w' ) ) {
+				nextNode = nextNode.nextElementSibling;
+			}
+			if ( prevNode && prevNode.classList.contains( 'w' ) ) {
+				prevNode = prevNode.previousElementSibling;
+			}
+
+			if ( !nextNode || !nextNode.firstChild || !nextNode.firstChild.nodeValue ||
+				!nextNode.firstChild.nodeValue.startsWith( ')' ) ) {
 				return;
 			}
-			if ( !node.previousElementSibling || !node.previousElementSibling.firstChild ||
-				node.previousElementSibling.firstChild.nodeValue !== '(' ) {
+			if ( !prevNode || !prevNode.firstChild || prevNode.firstChild.nodeValue !== '(' ) {
 				return;
 			}
 			Object.keys( parametersToLink ).forEach( ( invocation ) => {
 				const parts = invocation.split( '.' );
 				let partIdx = parts.length - 1;
-				let curNode = node.previousElementSibling && node.previousElementSibling.previousElementSibling;
+				let curNode = prevNode.previousElementSibling;
 				while ( partIdx >= 0 ) {
 					if ( !curNode || curNode.firstChild.nodeValue !== parts[ partIdx ] ) {
 						return;
