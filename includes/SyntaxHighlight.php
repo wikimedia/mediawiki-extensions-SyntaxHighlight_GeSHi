@@ -150,6 +150,9 @@ class SyntaxHighlight extends CodeHighlightProvider {
 	 */
 	public function parserHook( $text, $args, $parser ) {
 		// Replace strip markers (For e.g. {{#tag:syntaxhighlight|<nowiki>...}})
+		// T398967: With Parsoid installed, this should be a no-op regardless
+		// of the parser used.  However, it's kept around until the stripNowiki
+		// config option is no longer Parsoid-only.
 		$out = $parser->getStripState()->unstripNoWiki( $text ?? '' );
 
 		$result = $this->processContent( $out, $args, $parser );

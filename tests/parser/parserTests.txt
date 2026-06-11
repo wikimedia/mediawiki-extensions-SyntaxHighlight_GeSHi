@@ -240,3 +240,14 @@ nohtml
 !! metadata
 cat=Pages_using_deprecated_enclose_attributes sort=
 !! end
+
+!! test
+T398967: Nowiki escaping content to parser function
+!! wikitext
+{{#tag:syntaxhighlight|<nowiki>{{test}}<div>123</div></nowiki>|lang="text"}}
+!! html/php
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>{{test}}&lt;div&gt;123&lt;/div&gt;
+</pre></div>
+!! html/parsoid
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" data-mw='{"name":"syntaxhighlight","attrs":{"lang":"text"},"body":{"extsrc":"{{test}}&lt;div>123&lt;/div>"},"parts":[{"template":{"target":{"wt":"#tag:syntaxhighlight","function":"tag"},"params":{"1":{"wt":"&lt;nowiki>{{test}}&lt;div>123&lt;/div>&lt;/nowiki>"},"2":{"wt":"lang=\"text\""}},"i":0}}]}' dir="ltr" typeof="mw:Extension/syntaxhighlight mw:Transclusion"><pre><span></span>{{test}}&lt;div>123&lt;/div></pre></div>
+!! end
