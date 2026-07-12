@@ -351,12 +351,15 @@ class Pygmentize {
 			->firejailDefaultSeccomp()
 			->routeName( 'syntaxhighlight-pygments' );
 
+		// Set HOME so Python does not do a getpwuid() lookup at startup.
+		$environment = [ 'HOME' => wfTempDir() ];
+
 		if ( wfIsWindows() ) {
 			// Python requires the SystemRoot environment variable to initialize (T300223)
-			$command->environment( [
-				'SystemRoot' => getenv( 'SystemRoot' ),
-			] );
+			$environment['SystemRoot'] = getenv( 'SystemRoot' );
 		}
+
+		$command->environment( $environment );
 
 		return $command;
 	}
