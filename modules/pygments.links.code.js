@@ -14,6 +14,10 @@ $( () => {
 
 	// List of functions whose parameters should be linked if they meet the given condition
 	const parametersToLink = {
+		// JavaScript
+		importScript: () => true,
+		importStylesheet: () => true,
+		// Scribunto
 		require: ( title ) => title.getNamespaceId() === 828,
 		'mw.loadData': ( title ) => title.getNamespaceId() === 828,
 		'mw.loadJsonData': () => true
@@ -23,8 +27,8 @@ $( () => {
 
 		// s1 is the class applied by Pygments to single-quoted strings
 		// s2 is the class applied by Pygments to double-quoted strings
-		const stringNodes = $content.find( '.mw-highlight-lang-lua .s1' ).get()
-			.concat( $content.find( '.mw-highlight-lang-lua .s2' ).get() );
+		const stringNodes = $content.find( '.s1' ).get()
+			.concat( $content.find( '.s2' ).get() );
 
 		stringNodes.forEach( ( node ) => {
 			let nextNode = node.nextElementSibling,

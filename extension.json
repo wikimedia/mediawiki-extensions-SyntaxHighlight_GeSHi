@@ -51,6 +51,25 @@
 				"pygments.wrapper.less"
 			]
 		},
+		"ext.pygments.view": {
+			"scripts": [
+				"pygments.linenumbers.js",
+				"pygments.links.js",
+				"pygments.copy.js",
+				"pygments.links.code.js"
+			],
+			"styles": [
+				"pygments.copy.less"
+			],
+			"messages": [
+				"syntaxhighlight-button-copy",
+				"syntaxhighlight-button-copied"
+			],
+			"dependencies": [
+				"mediawiki.util",
+				"mediawiki.Title"
+			]
+		},
 		"ext.geshi.visualEditor": {
 			"scripts": [
 				"ve-syntaxhighlight/ve.dm.MWSyntaxHighlightNode.js",
@@ -90,8 +109,7 @@
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "main",
-		"SoftwareInfo": "main",
-		"ResourceLoaderRegisterModules": "main"
+		"SoftwareInfo": "main"
 	},
 	"HookHandlers": {
 		"main": {
