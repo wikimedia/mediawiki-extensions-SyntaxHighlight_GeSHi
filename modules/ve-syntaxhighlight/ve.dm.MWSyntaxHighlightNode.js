@@ -26,6 +26,9 @@ ve.dm.MWSyntaxHighlightNode.static.name = 'mwSyntaxHighlight';
 
 ve.dm.MWSyntaxHighlightNode.static.extensionName = 'syntaxhighlight';
 
+// The rendering shows the source, so it is also the node's plain text value
+ve.dm.MWSyntaxHighlightNode.static.usesSourceAsPlainText = true;
+
 ve.dm.MWSyntaxHighlightNode.static.getMatchRdfaTypes = function () {
 	return [ 'mw:Extension/syntaxhighlight', 'mw:Extension/source' ];
 };
