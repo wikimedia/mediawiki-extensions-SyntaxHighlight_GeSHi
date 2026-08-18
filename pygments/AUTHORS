@@ -54,6 +54,7 @@ Other contributors, listed alphabetically, are:
 * Leaf Corcoran -- MoonScript lexer
 * Fraser Cormack -- TableGen lexer
 * Gabriel Corona -- ASN.1 lexer
+* Radu Costache -- Boogie and Civl Verifier lexer improvements
 * Christopher Creutzig -- MuPAD lexer
 * Daniël W. Crompton -- Pike lexer
 * Pete Curry -- bugfixes
@@ -94,6 +95,7 @@ Other contributors, listed alphabetically, are:
 * Patrick Gotthardt -- PHP namespaces support
 * Hubert Gruniaux -- C and C++ lexer improvements
 * Olivier Guibe -- Asymptote lexer
+* Armin Günther -- Go lexer improvements
 * Phil Hagelberg -- Fennel lexer
 * Florian Hahn -- Boogie lexer
 * Martin Harriman -- SNOBOL lexer
@@ -119,6 +121,7 @@ Other contributors, listed alphabetically, are:
 * Hiroaki Itoh -- Shell console rewrite, Lexers for PowerShell session,
   MSDOS session, BC, WDiff
 * Brian R. Jackson -- Tea lexer
+* Alex Jeffery, ChromaWay AB -- Rell lexer
 * Christian Jann -- ShellSession lexer
 * Jonas Camillus Jeppesen -- Line numbers and line highlighting for 
   RTF-formatter
@@ -165,6 +168,7 @@ Other contributors, listed alphabetically, are:
 * Kurt McKee -- Tera Term macro lexer, PostgreSQL updates, MySQL overhaul, JSON lexer
 * Joe Eli McIlvain -- Savi lexer
 * Lukas Meuser -- BBCode formatter, Lua lexer
+* Bruno Mesquita -- Night Owl style
 * Cat Miller -- Pig lexer
 * Paul Miller -- LiveScript lexer
 * Hong Minhee -- HTTP lexer
@@ -257,12 +261,13 @@ Other contributors, listed alphabetically, are:
 * Matthias Vallentin -- Bro lexer
 * Benoît Vinot -- AMPL lexer
 * Linh Vu Hong -- RSL lexer
-* Taavi Väänänen -- Debian control lexer
+* Taavi Väänänen -- Debian control, PHP lexers
 * Immanuel Washington -- Smithy lexer
 * Nathan Weizenbaum -- Haml and Sass lexers
 * Nathan Whetsell -- Csound lexers
 * Dietmar Winkler -- Modelica lexer
 * Nils Winter -- Smalltalk lexer
+* Trevor Woerner -- BitBake lexer
 * Davy Wybiral -- Clojure lexer
 * Whitney Young -- ObjectiveC lexer
 * Diego Zamboni -- CFengine3 lexer
