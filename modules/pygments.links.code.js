@@ -18,7 +18,7 @@ $( () => {
 		importScript: () => true,
 		importStylesheet: () => true,
 		// Scribunto
-		require: ( title ) => title.getNamespaceId() === 828,
+		require: ( title ) => [ 828, 850 ].includes( title.getNamespaceId() ), // NS_MODULE, NS_PACKAGE
 		'mw.loadData': ( title ) => title.getNamespaceId() === 828,
 		'mw.loadJsonData': () => true
 	};
