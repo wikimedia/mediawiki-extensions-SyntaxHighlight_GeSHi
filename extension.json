@@ -43,7 +43,8 @@
 			"class": "MediaWiki\\SyntaxHighlight\\SyntaxHighlight",
 			"services": [
 				"MainConfig",
-				"MainWANObjectCache"
+				"MainWANObjectCache",
+				"SyntaxHighlight.Pygmentize"
 			]
 		}
 	],
@@ -118,6 +119,7 @@
 		"main": {
 			"class": "MediaWiki\\SyntaxHighlight\\Hooks",
 			"services": [
+				"SyntaxHighlight.Pygmentize",
 				"SyntaxHighlight.SyntaxHighlight"
 			]
 		}

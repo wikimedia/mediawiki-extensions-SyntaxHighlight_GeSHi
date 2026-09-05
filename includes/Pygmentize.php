@@ -20,42 +20,53 @@
 
 namespace MediaWiki\SyntaxHighlight;
 
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Config\Config;
+use MediaWiki\Shell\CommandFactory;
 use Psr\Http\Client\ClientExceptionInterface;
 use Shellbox\Command\BoxedCommand;
 use Shellbox\ShellboxError;
+use Wikimedia\ObjectCache\BagOStuff;
+use Wikimedia\ObjectCache\WANObjectCache;
+use Wikimedia\Stats\StatsFactory;
 
 /**
  * Wrapper around the `pygmentize` command
  */
 class Pygmentize {
 
+	public function __construct(
+		private readonly Config $config,
+		private readonly BagOStuff $srvCache,
+		private readonly WANObjectCache $wanCache,
+		private readonly CommandFactory $commandFactory,
+		private readonly StatsFactory $statsFactory,
+	) {
+	}
+
 	/**
 	 * If no pygmentize is configured, use bundled
 	 */
-	public static function useBundled(): bool {
-		$config = MediaWikiServices::getInstance()->getMainConfig();
-		return $config->get( 'PygmentizePath' ) === false;
+	public function useBundled(): bool {
+		return $this->config->get( 'PygmentizePath' ) === false;
 	}
 
 	/**
 	 * Get a real path to pygmentize
 	 */
-	private static function getPath(): string {
-		$config = MediaWikiServices::getInstance()->getMainConfig();
+	private function getPath(): string {
 		// If $wgPygmentizePath is unset, use the bundled copy.
-		return $config->get( 'PygmentizePath' ) ?: __DIR__ . '/../pygments/pygmentize';
+		return $this->config->get( 'PygmentizePath' ) ?: __DIR__ . '/../pygments/pygmentize';
 	}
 
 	/**
 	 * Get the version of pygments (cached)
 	 */
-	public static function getVersion(): string {
+	public function getVersion(): string {
 		static $version;
 		if ( $version !== null ) {
 			return $version;
 		}
-		if ( self::useBundled() ) {
+		if ( $this->useBundled() ) {
 			$version = self::getBundledVersion();
 			return $version;
 		}
@@ -69,18 +80,16 @@ class Pygmentize {
 		// frequent cache misses by by sharing the values with other servers via Memcached
 		// as well.
 
-		$srvCache = MediaWikiServices::getInstance()->getLocalServerObjectCache();
-		return $srvCache->getWithSetCallback(
-			$srvCache->makeGlobalKey( 'pygmentize-version' ),
+		return $this->srvCache->getWithSetCallback(
+			$this->srvCache->makeGlobalKey( 'pygmentize-version' ),
 			// Spread between 55 min and 1 hour
-			mt_rand( 55 * $srvCache::TTL_MINUTE, 60 * $srvCache::TTL_MINUTE ),
-			static function () {
-				$wanCache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-				return $wanCache->getWithSetCallback(
-					$wanCache->makeGlobalKey( 'pygmentize-version' ),
+			mt_rand( 55 * $this->srvCache::TTL_MINUTE, 60 * $this->srvCache::TTL_MINUTE ),
+			function () {
+				return $this->wanCache->getWithSetCallback(
+					$this->wanCache->makeGlobalKey( 'pygmentize-version' ),
 					// Must be under 55 min to avoid renewing stale data in upper layer
-					30 * $wanCache::TTL_MINUTE,
-					self::fetchVersion( ... )
+					30 * $this->wanCache::TTL_MINUTE,
+					$this->fetchVersion( ... )
 				);
 			}
 		);
@@ -99,12 +108,12 @@ class Pygmentize {
 	 * @internal For use by WANObjectCache/BagOStuff only
 	 * @throws PygmentsException
 	 */
-	public static function fetchVersion(): string {
-		$result = self::boxedCommand()
-			->params( self::getPath(), '-V' )
+	public function fetchVersion(): string {
+		$result = $this->boxedCommand()
+			->params( $this->getPath(), '-V' )
 			->includeStderr()
 			->execute();
-		self::recordShellout( 'version' );
+		$this->recordShellout( 'version' );
 
 		$output = $result->getStdout();
 		if ( $result->getExitCode() != 0 ||
@@ -122,16 +131,15 @@ class Pygmentize {
 	 * Note: if using bundled, the CSS is already available
 	 * in modules/pygments.generated.css.
 	 */
-	public static function getGeneratedCSS(): string {
+	public function getGeneratedCSS(): string {
 		// This is rarely called as the result gets HTTP-cached via long-expiry load.php.
 		// When it gets called once, after a deployment, during that brief spike of
 		// dedicated requests from each wiki. Leverage Memcached to share this.
 		// Its likely not needed again on the same server for a while after that.
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
-		return $cache->getWithSetCallback(
-			$cache->makeGlobalKey( 'pygmentize-css', self::getVersion() ),
-			$cache::TTL_WEEK,
-			self::fetchGeneratedCSS( ... )
+		return $this->wanCache->getWithSetCallback(
+			$this->wanCache->makeGlobalKey( 'pygmentize-css', $this->getVersion() ),
+			$this->wanCache::TTL_WEEK,
+			$this->fetchGeneratedCSS( ... )
 		);
 	}
 
@@ -141,20 +149,20 @@ class Pygmentize {
 	 * @internal Only public for updateCSS.php
 	 * @throws PygmentsException
 	 */
-	public static function fetchGeneratedCSS(): string {
-		$lightModeRun = self::boxedCommand()
+	public function fetchGeneratedCSS(): string {
+		$lightModeRun = $this->boxedCommand()
 			->params(
-				self::getPath(), '-f', 'html',
+				$this->getPath(), '-f', 'html',
 				'-S', 'default', '-a', '.mw-highlight' )
 			->includeStderr()
 			->execute();
-		$darkModeRun = self::boxedCommand()
+		$darkModeRun = $this->boxedCommand()
 			->params(
-				self::getPath(), '-f', 'html',
+				$this->getPath(), '-f', 'html',
 				'-S', 'monokai', '-a', '    .skin-theme-clientpref-night .mw-highlight' )
 			->includeStderr()
 			->execute();
-		self::recordShellout( 'generated_css' );
+		$this->recordShellout( 'generated_css' );
 
 		$lightModeOutput = trim( $lightModeRun->getStdout() );
 		if ( $lightModeRun->getExitCode() != 0 ) {
@@ -190,8 +198,8 @@ class Pygmentize {
 	 *
 	 * @return array<string,true>
 	 */
-	public static function getLexers(): array {
-		if ( self::useBundled() ) {
+	public function getLexers(): array {
+		if ( $this->useBundled() ) {
 			return require __DIR__ . '/../SyntaxHighlight.lexers.php';
 		}
 
@@ -200,11 +208,10 @@ class Pygmentize {
 		// on each server separately. This is made up for with a high TTL,
 		// which is fine because we vary by version, thus ensuring quick
 		// propagation separate from the TTL.
-		$cache = MediaWikiServices::getInstance()->getLocalServerObjectCache();
-		return $cache->getWithSetCallback(
-			$cache->makeGlobalKey( 'pygmentize-lexers', self::getVersion() ),
-			$cache::TTL_WEEK,
-			self::fetchLexers( ... )
+		return $this->srvCache->getWithSetCallback(
+			$this->srvCache->makeGlobalKey( 'pygmentize-lexers', $this->getVersion() ),
+			$this->srvCache::TTL_WEEK,
+			$this->fetchLexers( ... )
 		);
 	}
 
@@ -213,8 +220,8 @@ class Pygmentize {
 	 *
 	 * @return bool
 	 */
-	private static function pygmentsSupportsJsonOutput(): bool {
-		$version = self::getVersion();
+	private function pygmentsSupportsJsonOutput(): bool {
+		$version = $this->getVersion();
 		return ( version_compare( $version, '2.11.0' ) !== -1 );
 	}
 
@@ -225,23 +232,23 @@ class Pygmentize {
 	 * @return array<string,true>
 	 * @throws PygmentsException
 	 */
-	public static function fetchLexers(): array {
-		$cliParams = [ self::getPath(), '-L', 'lexer' ];
-		if ( self::pygmentsSupportsJsonOutput() ) {
+	public function fetchLexers(): array {
+		$cliParams = [ $this->getPath(), '-L', 'lexer' ];
+		if ( $this->pygmentsSupportsJsonOutput() ) {
 			$cliParams[] = '--json';
 		}
 
-		$result = self::boxedCommand()
+		$result = $this->boxedCommand()
 			->params( $cliParams )
 			->includeStderr()
 			->execute();
-		self::recordShellout( 'fetch_lexers' );
+		$this->recordShellout( 'fetch_lexers' );
 		$output = $result->getStdout();
 		if ( $result->getExitCode() != 0 ) {
 			throw new PygmentsException( $output );
 		}
 
-		if ( self::pygmentsSupportsJsonOutput() ) {
+		if ( $this->pygmentsSupportsJsonOutput() ) {
 			$lexers = self::parseLexersFromJson( $output );
 		} else {
 			$lexers = self::parseLexersFromText( $output );
@@ -303,17 +310,17 @@ class Pygmentize {
 	 * @return string
 	 * @throws PygmentsException
 	 */
-	public static function highlight( $lexer, $code, array $options ): string {
+	public function highlight( $lexer, $code, array $options ): string {
 		$optionPairs = [];
 		foreach ( $options as $k => $v ) {
 			$optionPairs[] = "{$k}={$v}";
 		}
-		self::recordShellout( 'highlight' );
+		$this->recordShellout( 'highlight' );
 
 		try {
-			$result = self::boxedCommand()
+			$result = $this->boxedCommand()
 				->params(
-					self::getPath(),
+					$this->getPath(),
 					'-l', $lexer,
 					'-f', 'html',
 					'-O', implode( ',', $optionPairs ),
@@ -344,8 +351,8 @@ class Pygmentize {
 		return $output;
 	}
 
-	private static function boxedCommand(): BoxedCommand {
-		$command = MediaWikiServices::getInstance()->getShellCommandFactory()
+	private function boxedCommand(): BoxedCommand {
+		$command = $this->commandFactory
 			->createBoxed( 'syntaxhighlight' )
 			->disableNetwork()
 			->firejailDefaultSeccomp()
@@ -366,8 +373,8 @@ class Pygmentize {
 	 *
 	 * @param string $type Type of shellout
 	 */
-	private static function recordShellout( $type ) {
-		MediaWikiServices::getInstance()->getStatsFactory()
+	private function recordShellout( $type ) {
+		$this->statsFactory
 			->getCounter( 'syntaxhighlight_shell_total' )
 			->setLabel( 'type', $type )
 			->increment();

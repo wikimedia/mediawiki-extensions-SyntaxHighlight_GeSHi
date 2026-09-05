@@ -20,6 +20,7 @@
 
 namespace MediaWiki\SyntaxHighlight;
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader as RL;
 
 /**
@@ -27,6 +28,7 @@ use MediaWiki\ResourceLoader as RL;
  */
 class ResourceLoaderPygmentsModule extends RL\FileModule {
 
+	private readonly Pygmentize $pygmentize;
 	private readonly bool $useBundled;
 
 	/** @inheritDoc */
@@ -35,7 +37,9 @@ class ResourceLoaderPygmentsModule extends RL\FileModule {
 		$localBasePath = null,
 		$remoteBasePath = null
 	) {
-		$this->useBundled = Pygmentize::useBundled();
+		$this->pygmentize = MediaWikiServices::getInstance()
+			->getService( 'SyntaxHighlight.Pygmentize' );
+		$this->useBundled = $this->pygmentize->useBundled();
 		if ( $this->useBundled ) {
 			// Generated styles before our overrides
 			array_unshift( $options['styles'], 'pygments.generated.css' );
@@ -57,7 +61,7 @@ class ResourceLoaderPygmentsModule extends RL\FileModule {
 		$styles = parent::getStyles( $context );
 		if ( !$this->useBundled ) {
 			// Generated styles before our overrides
-			$styles['all'] = Pygmentize::getGeneratedCSS() . ( $styles['all'] ?? '' );
+			$styles['all'] = $this->pygmentize->getGeneratedCSS() . ( $styles['all'] ?? '' );
 		}
 
 		return $styles;
@@ -67,7 +71,7 @@ class ResourceLoaderPygmentsModule extends RL\FileModule {
 	public function getDefinitionSummary( RL\Context $context ) {
 		$summary = parent::getDefinitionSummary( $context );
 		if ( !$this->useBundled ) {
-			$summary[] = Pygmentize::getVersion();
+			$summary[] = $this->pygmentize->getVersion();
 		}
 		return $summary;
 	}
