@@ -11,6 +11,7 @@ class Hooks implements
 	SoftwareInfoHook
 {
 	public function __construct(
+		private readonly Pygmentize $pygmentize,
 		private readonly SyntaxHighlight $syntaxHighlight,
 	) {
 	}
@@ -33,7 +34,7 @@ class Hooks implements
 	 */
 	public function onSoftwareInfo( &$software ) {
 		try {
-			$software['[https://pygments.org/ Pygments]'] = Pygmentize::getVersion();
+			$software['[https://pygments.org/ Pygments]'] = $this->pygmentize->getVersion();
 		} catch ( PygmentsException ) {
 			// pass
 		}

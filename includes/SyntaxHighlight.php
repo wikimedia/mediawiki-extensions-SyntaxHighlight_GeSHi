@@ -50,6 +50,7 @@ class SyntaxHighlight extends CodeHighlightProvider {
 	public function __construct(
 		Config $config,
 		private readonly WANObjectCache $cache,
+		private readonly Pygmentize $pygmentize,
 	) {
 		$this->maxLines = $config->get( 'SyntaxHighlightMaxLines' );
 		$this->maxBytes = $config->get( 'SyntaxHighlightMaxBytes' );
@@ -61,14 +62,14 @@ class SyntaxHighlight extends CodeHighlightProvider {
 	 * @param string|null $lang Language name.
 	 * @return string|null Lexer name, or null if no matching lexer.
 	 */
-	private static function getLexer( $lang ) {
+	private function getLexer( $lang ) {
 		static $lexers = null;
 
 		if ( $lang === null ) {
 			return null;
 		}
 
-		$lexers ??= Pygmentize::getLexers();
+		$lexers ??= $this->pygmentize->getLexers();
 
 		$lexer = strtolower( $lang );
 
@@ -235,7 +236,7 @@ class SyntaxHighlight extends CodeHighlightProvider {
 	private function highlightInner( $code, $lang = null, $args = [], ?Parser $parser = null ) {
 		$status = new StatusValue();
 
-		$lexer = self::getLexer( $lang );
+		$lexer = $this->getLexer( $lang );
 		if ( $lexer === null && $lang !== null ) {
 			$status->warning( 'syntaxhighlight-error-unknown-language', $lang );
 		}
@@ -319,9 +320,9 @@ class SyntaxHighlight extends CodeHighlightProvider {
 		$output = $this->cache->getWithSetCallback(
 			$this->cache->makeGlobalKey( 'highlight', self::makeCacheKeyHash( $code, $lexer, $options ) ),
 			$this->cache::TTL_MONTH,
-			static function ( $oldValue, &$ttl ) use ( $code, $lexer, $options, &$error ) {
+			function ( $oldValue, &$ttl ) use ( $code, $lexer, $options, &$error ) {
 				try {
-					return Pygmentize::highlight( $lexer, $code, $options );
+					return $this->pygmentize->highlight( $lexer, $code, $options );
 				} catch ( PygmentsException $e ) {
 					$ttl = WANObjectCache::TTL_UNCACHEABLE;
 					$error = $e->getMessage();
@@ -374,7 +375,7 @@ class SyntaxHighlight extends CodeHighlightProvider {
 
 		$isInline = isset( $args['inline'] );
 		$showLines = isset( $args['line'] );
-		$lexer = self::getLexer( $lang );
+		$lexer = $this->getLexer( $lang );
 
 		// Post-Pygment HTML transformations.
 
@@ -502,7 +503,7 @@ class SyntaxHighlight extends CodeHighlightProvider {
 	 * @return bool
 	 */
 	public function isSupportedLanguage( string $lang ): bool {
-		return self::getLexer( $lang ) !== null;
+		return $this->getLexer( $lang ) !== null;
 	}
 
 	/**
