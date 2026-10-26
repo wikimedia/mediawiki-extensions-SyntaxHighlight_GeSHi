@@ -247,7 +247,7 @@ class SyntaxHighlight extends CodeHighlightProvider {
 		}
 
 		$length = strlen( $code );
-		if ( strlen( $code ) > $this->maxBytes ) {
+		if ( $length > $this->maxBytes ) {
 			// Disable syntax highlighting
 			$lexer = null;
 			$status->warning(
