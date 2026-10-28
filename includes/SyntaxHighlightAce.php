@@ -23,7 +23,7 @@ namespace MediaWiki\SyntaxHighlight;
  */
 class SyntaxHighlightAce {
 	/** @var array<string,string[]> This map is inverted, because it is easier to maintain this way */
-	private static $aceLexers = [
+	private const ACE_LEXERS = [
 		'ABAP'         => [ 'abap' ],
 		'ABC'          => [],
 		'ActionScript' => [ 'actionscript', 'actionscript3' ],
@@ -165,7 +165,7 @@ class SyntaxHighlightAce {
 	 */
 	public static function getPygmentsToAceMap(): array {
 		$result = [];
-		foreach ( self::$aceLexers as $aceName => $pygmentsLexers ) {
+		foreach ( self::ACE_LEXERS as $aceName => $pygmentsLexers ) {
 			foreach ( $pygmentsLexers as $lexer ) {
 				if ( strcasecmp( $lexer, $aceName ) === 0 ) {
 					continue;
