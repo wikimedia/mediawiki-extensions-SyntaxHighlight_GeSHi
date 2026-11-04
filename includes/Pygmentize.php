@@ -62,38 +62,53 @@ class Pygmentize {
 
 	/**
 	 * Get the version of pygments (cached)
+	 *
+	 * WARNING: This is called a lot in the critical path
+	 *
+	 * An error here will fatal page views, edits, and load.php requests (T292663).
+	 *
+	 * This value controls cache invalidation and propagation (by virtue of being
+	 * part of other cache keys in this class). In order for a Pygments upgrade to
+	 * take effect and to avoid runtime warnings from mixing different versions
+	 * (i.e. validating against old lexer list from getLexers), this version must
+	 * be bumped shortly after every upgrade, but not before the upgrade (as that
+	 * would cache old data under new keys without self-correcting).
 	 */
 	public function getVersion(): string {
+		// Optimization: Process-cache because this is called N times during a request
 		static $version;
-		if ( $version !== null ) {
-			return $version;
-		}
-		if ( $this->useBundled() ) {
-			$version = self::getBundledVersion();
-			return $version;
-		}
-
-		// This is called a lot, during both page views, edits, and load.php startup request.
-		// It also gets called multiple times during the same request. As such, prefer
-		// low latency via php-apcu.
-		//
-		// This value also controls cache invalidation and propagation through embedding
-		// in other keys from this class, and thus has a low expiry. Avoid latency from
-		// frequent cache misses by sharing the values with other servers via Memcached.
-
-		return $this->srvCache->getWithSetCallback(
-			$this->srvCache->makeGlobalKey( 'pygmentize-version' ),
-			// Spread between 55 min and 1 hour
-			mt_rand( 55 * $this->srvCache::TTL_MINUTE, 60 * $this->srvCache::TTL_MINUTE ),
-			function () {
-				return $this->wanCache->getWithSetCallback(
-					$this->wanCache->makeGlobalKey( 'pygmentize-version' ),
-					// Must be under 55 min to avoid renewing stale data in upper layer
-					30 * $this->wanCache::TTL_MINUTE,
-					$this->fetchVersion( ... )
+		if ( $version === null ) {
+			if ( $this->useBundled() ) {
+				$version = self::getBundledVersion();
+			} else {
+				$version = $this->srvCache->getWithSetCallback(
+					$this->srvCache->makeGlobalKey( 'pygmentize-version' ),
+					// Optimization: Spread by 60 seconds to reduce stampedes
+					BagOStuff::TTL_HOUR + mt_rand( 0, 60 ),
+					function () {
+						return $this->wanCache->buildGetWithSetCallback()
+							->globalKey( 'pygmentize-version' )
+							// Should be less than 1h to avoid upper layer renewing stale data
+							->lifetime( 30 * WANObjectCache::TTL_MINUTE )
+							// Avoid fatal errors by renewing the last known version
+							// if Shellbox responds HTTP 503 (T292663)
+							->allowStale( WANObjectCache::TTL_WEEK )
+							// Avoid fatal errors by falling back to a placeholder (T292663)
+							//
+							// The placeholder must differ from any real version to avoid
+							// cache corruption.
+							//
+							// The placeholder should be close to the real version, because
+							// there are some low-stakes compare_version calls with it.
+							->busyValue( self::getBundledVersion() . '-samebutdifferent' )
+							->callback( $this->fetchVersion( ... ) )
+							->fetch();
+					}
 				);
 			}
-		);
+		}
+
+		return $version;
 	}
 
 	/**
