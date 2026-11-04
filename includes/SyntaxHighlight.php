@@ -334,9 +334,9 @@ class SyntaxHighlight extends CodeHighlightProvider {
 		if ( $error !== null || $output === null ) {
 			$status->warning( 'syntaxhighlight-error-pygments-invocation-failure' );
 			if ( $error !== null ) {
-				wfWarn( 'Failed to invoke Pygments: ' . $error );
+				trigger_error( 'Failed to invoke Pygments: ' . $error, E_USER_NOTICE );
 			} else {
-				wfWarn( 'Invoking Pygments returned blank output with no error response' );
+				trigger_error( 'Invoking Pygments returned blank output with no error response', E_USER_NOTICE );
 			}
 
 			// Fall back to preformatted code without syntax highlighting
