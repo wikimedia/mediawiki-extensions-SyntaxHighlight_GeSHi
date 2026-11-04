@@ -52,8 +52,10 @@ class Pygmentize {
 
 	/**
 	 * Get a real path to pygmentize
+	 *
+	 * @internal Only public for updateLexerList.php
 	 */
-	private function getPath(): string {
+	public function getPath(): string {
 		// If $wgPygmentizePath is unset, use the bundled copy.
 		return $this->config->get( 'PygmentizePath' ) ?: __DIR__ . '/../pygments/pygmentize';
 	}
@@ -77,8 +79,7 @@ class Pygmentize {
 		//
 		// This value also controls cache invalidation and propagation through embedding
 		// in other keys from this class, and thus has a low expiry. Avoid latency from
-		// frequent cache misses by by sharing the values with other servers via Memcached
-		// as well.
+		// frequent cache misses by sharing the values with other servers via Memcached.
 
 		return $this->srvCache->getWithSetCallback(
 			$this->srvCache->makeGlobalKey( 'pygmentize-version' ),
@@ -194,111 +195,26 @@ class Pygmentize {
 	}
 
 	/**
-	 * Get the list of supported lexers by pygments (cached)
+	 * Get the list of supported lexers by pygments
 	 *
 	 * @return array<string,true>
 	 */
 	public function getLexers(): array {
-		if ( $this->useBundled() ) {
-			return require __DIR__ . '/../SyntaxHighlight.lexers.php';
-		}
-
-		// This is called during page views and edits, and may be called
-		// repeatedly. Trade low latency for higher shell rate by caching
-		// on each server separately. This is made up for with a high TTL,
-		// which is fine because we vary by version, thus ensuring quick
-		// propagation separate from the TTL.
-		return $this->srvCache->getWithSetCallback(
-			$this->srvCache->makeGlobalKey( 'pygmentize-lexers', $this->getVersion() ),
-			$this->srvCache::TTL_WEEK,
-			$this->fetchLexers( ... )
-		);
-	}
-
-	/**
-	 * Determine if the pygments command line supports the --json option
-	 *
-	 * @return bool
-	 */
-	private function pygmentsSupportsJsonOutput(): bool {
-		$version = $this->getVersion();
-		return ( version_compare( $version, '2.11.0' ) !== -1 );
-	}
-
-	/**
-	 * Shell out to get supported lexers by pygments
-	 *
-	 * @internal Only public for updateLexerList.php
-	 * @return array<string,true>
-	 * @throws PygmentsException
-	 */
-	public function fetchLexers(): array {
-		$cliParams = [ $this->getPath(), '-L', 'lexer' ];
-		if ( $this->pygmentsSupportsJsonOutput() ) {
-			$cliParams[] = '--json';
-		}
-
-		$result = $this->boxedCommand()
-			->params( $cliParams )
-			->includeStderr()
-			->execute();
-		$this->recordShellout( 'fetch_lexers' );
-		$output = $result->getStdout();
-		if ( $result->getExitCode() != 0 ) {
-			throw new PygmentsException( $output );
-		}
-
-		if ( $this->pygmentsSupportsJsonOutput() ) {
-			$lexers = self::parseLexersFromJson( $output );
-		} else {
-			$lexers = self::parseLexersFromText( $output );
-		}
-
-		sort( $lexers );
-		return array_fill_keys( $lexers, true );
-	}
-
-	/**
-	 * Parse json output of the pygments lexers list and return as php array
-	 *
-	 * @param string $output JSON formatted output of pygments lexers list
-	 * @return array
-	 * @throws PygmentsException
-	 */
-	private static function parseLexersFromJson( $output ): array {
-		$data = json_decode( $output, true );
-		if ( $data === null ) {
-			throw new PygmentsException(
-				'Got invalid JSON from Pygments: ' . $output );
-		}
-		$lexers = [];
-		foreach ( array_values( $data['lexers'] ) as $lexer ) {
-			$lexers = array_merge( $lexers, $lexer['aliases'] );
-		}
-		return $lexers;
-	}
-
-	/**
-	 * Parse original stdout of the pygments lexers list
-	 * This was the only format available before pygments 2.11.0
-	 * NOTE: Should be removed when pygments 2.11 is the minimum version expected to be installed
-	 *
-	 * @param string $output Textual list of pygments lexers
-	 * @return array
-	 */
-	private static function parseLexersFromText( $output ): array {
-		$lexers = [];
-		foreach ( explode( "\n", $output ) as $line ) {
-			if ( str_starts_with( $line, '*' ) ) {
-				$newLexers = explode( ', ', trim( $line, "* :\r\n" ) );
-
-				// Skip internal, unnamed lexers
-				if ( $newLexers[0] !== '' ) {
-					$lexers = array_merge( $lexers, $newLexers );
-				}
-			}
-		}
-		return $lexers;
+		// Optimization: Always return lexers from bundled version (T292663)
+		//
+		// If using $wgPygmentizePath with Shellbox (like WMF), this will be
+		// briefly out of sync until the bundled version and Shellbox are both updated.
+		//
+		// Impact:
+		// - New lexer, Shellbox updated first:
+		//   Fallback to no highlighting, no warning because expected and statically rejected.
+		// - New lexer, bundled updated first:
+		//   Fallback to no highlighting, with runtime warning.
+		// - Lexer removed, Shellbox updated first:
+		//   Fallback to no highlighting, with runtime warning.
+		// - Lexer removed, bundled updated first:
+		//   Fallback to no highlighting, no warning because expected and statically rejected.
+		return require __DIR__ . '/../SyntaxHighlight.lexers.php';
 	}
 
 	/**
@@ -351,7 +267,10 @@ class Pygmentize {
 		return $output;
 	}
 
-	private function boxedCommand(): BoxedCommand {
+	/**
+	 * @internal Only public for updateLexerList.php
+	 */
+	public function boxedCommand(): BoxedCommand {
 		$command = $this->commandFactory
 			->createBoxed( 'syntaxhighlight' )
 			->disableNetwork()

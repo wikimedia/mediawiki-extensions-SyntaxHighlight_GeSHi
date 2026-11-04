@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\MainConfigNames;
 use MediaWiki\Shell\CommandFactory;
 use MediaWiki\SyntaxHighlight\SyntaxHighlight;
 use MediaWiki\SyntaxHighlight\Tests\TestPSRClientException;
@@ -18,8 +17,6 @@ class PygmentizeTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValues( [
 			// Run with the default useBundled=true
 			'PygmentizePath' => false,
-			// Silence wfWarn for the expected Shellbox error
-			MainConfigNames::DevelopmentWarnings => false,
 		] );
 	}
 
@@ -85,7 +82,8 @@ class PygmentizeTest extends MediaWikiIntegrationTestCase {
 	public function testHighlightBasic( ?BoxedResult $result, ?Exception $e, string $expect ) {
 		$this->stubShellbox( $result, $e );
 
-		$status = $this->newInstance()->syntaxHighlight( '"example"', 'json' );
+		// Silence trigger_error for the expected Shellbox error
+		$status = @$this->newInstance()->syntaxHighlight( '"example"', 'json' );
 		$this->assertSame( $expect, $status->getValue() );
 	}
 
