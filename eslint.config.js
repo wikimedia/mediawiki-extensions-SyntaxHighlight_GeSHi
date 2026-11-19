@@ -12,7 +12,12 @@ const rootDirs = {
 module.exports = defineConfig( [
 	globalIgnores( [
 		// Build
-		'vendor/'
+		'vendor/',
+
+		// Language files written automatically by TranslateWiki
+		'**/i18n/**/*.json',
+		'!**/i18n/**/en.json',
+		'!**/i18n/**/qqq.json'
 	] ),
 
 	// Gruntfile.js, etc.
